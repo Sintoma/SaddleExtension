@@ -42,7 +42,8 @@
 %\tcbuselibrary{theorems}
 %\tcbuselibrary{skins}
 
-%\usepackage{pgf,tikz}
+\usepackage{pgf,tikz}
+\usetikzlibrary{fadings}
 %\usepackage{mathrsfs}
 %\usetikzlibrary{arrows}
 
@@ -512,7 +513,7 @@ Then, for every $\theta \in (0,1)$ there exists a constant $R^*$ depending only 
 Before proving this result, let us explain why we need to introduce the notion of ``downstairs-narrowness''\!. We will use this maximum principle in a domain of the form $\{0<u<\delta\}\cap \left(\ocal\times (0,+\infty)\right) =: \Omega$, where $u$ is a saddle-shaped solution to \eqref{Eq:AllenCahnWithExtension}. Let us point out two facts. The first one is that, by the asymptotic result in Theorem~\ref{Th:Summary}, $\partial_0\Omega$ is contained in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ (see the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}). On the other hand, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{n+1}_+$, as in Figure~\ref{Fig:DownstairsNarrow}. However, a second fact is that $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled almost all $\ocal\times (0,+\infty)$. From these two facts, it follows readily that $\Omega$ is ``downstairs-narrow'' ---using, again, that balls in this notion are centered ``downstairs'' (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
 
 \begin{figure}
-\includegraphics[scale=0.55]{DownstairsNarrow.png}
+\input{DownstairsNarrow.tex}
 \caption{An example of a domain which is ``downstairs-narrow''\!.}
 \label{Fig:DownstairsNarrow}
 \end{figure}
