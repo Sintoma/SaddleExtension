@@ -560,12 +560,26 @@ Now, we proceed in two steps in order to arrive at contradiction.
 \textbf{Step 1.}
 First, we claim that if $\partial_0 \Omega_+$ is nonempty then $\sup_{\Omega_+} v = \sup_{\partial_0 \Omega_+} v $. That is, if we call $\overline{v} = v - \sup_{\partial_0 \Omega_+} v$, it is enough to show that $\overline{v} \leq 0$ in $\Omega_+$. To do it, we use a classical Phragmen-Lindelöf-type argument, as follows. Similar methods appear, among many others, in the proof of Theorem~1.2 of \cite{BerestyckiCaffarelliNiremberg-Monotonicity}, or Section~2.4 of \cite{CabreSolaMorales}.
 
-Note that, since the cone $E$ is open , there exists a nonempty open cone $E'\subset E$ satisfying
+Note that, since the cone $E$ is open, there exists a nonempty open cone $E'\subset E$ satisfying
 \begin{equation}
 \label{Eq:DistanceCones}
 |x-y| \geq c_0 > 0 \quad \text{ for every } x\in E^c \ \text{ and } y \in \overline{E'}\,.
 \end{equation}
-Indeed, since $E$ is an open cone, there exists a circular cone inside $E$ with the same vertex. Then, by moving this circular cone in the direction of its axis, we obtain a new open cone $E'\subset E$ satisfying \eqref{Eq:DistanceCones}.
+Indeed, since $E$ is an open cone, there exists a circular cone inside $E$ with the same vertex, that we call $z$. Then, by moving this circular cone in the direction of its axis, that can be assume to be $e_n = (0,...,0,1)$, we obtain a new open cone $E'\subset E$ satisfying \eqref{Eq:DistanceCones}. That is, if $x\in E^c$ and $ y\in E'$, then
+$$x_n-z_n < C |x'-z'| \quad \text{ and } \quad y_n-z_n \geq t + C |y'-z'|, $$
+for some positive constants $C$ and $t$. Here, we are using the notation $z = (z',z_n)$. Now, we can distinguish two cases:
+\begin{itemize}
+	\item If $ \big||y'-z'|-|x'-z'| \big| \leq \frac{t}{2C} $, then
+	\begin{align*}
+		|y-x| &\geq y_n-x_n \geq t + C(|y'-z'|-|x'-z'|) \\ 
+		&\geq t + C(-\big||y'-z'|-|x'-z'| \big| ) \geq t+C\left(-\frac{t}{2C} \right) = \frac{t}{2}.
+	\end{align*}
+	\item If $ \big||y'-z'|-|x'-z'| \big| \geq \frac{t}{2C} $, then
+	\begin{align*}
+	|y-x| &\geq |y'-x'| \geq \big||y'-z'|-|x'-z'| \big| = \frac{t}{2C}.
+	\end{align*}
+\end{itemize}
+Therefore, $ |x-y|\geq t/2\,\min\{1,1/C\} >0$ and \eqref{Eq:DistanceCones} is satisfied.
 
 Now, without loss of generality, we may assume that the vertex of $E'$ is the origin. Let $E''$ be an open cone with the same vertex as $E'$, and such that $\overline{E''\cap \Sph^{n-1}} \subset E'\cap \Sph^{n-1}$. Let $\phi$ be the first eigenfunction of the Laplace-Beltrami operator in $\Sph^{n-1} \setminus \overline{E''}\subset \R^n$ with zero Dirichlet boundary conditions on $\partial E'' \cap \Sph^{n-1}$, and let $\mu>0$ be its associated eigenvalue. Since $\partial E'' \cap \Sph^{n-1}$ is contained in $E'$, there exists a positive constant $\delta$ such that $\phi\geq \delta > 0$ in $\Sph^{n-1} \setminus \overline{E'}$. Now, define the auxiliary function
 $$ 
