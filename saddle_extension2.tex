@@ -565,21 +565,13 @@ Note that, since the cone $E$ is open, there exists a nonempty open cone $E'\sub
 \label{Eq:DistanceCones}
 |x-y| \geq c_0 > 0 \quad \text{ for every } x\in E^c \ \text{ and } y \in \overline{E'}\,.
 \end{equation}
-Indeed, since $E$ is an open cone, there exists a circular cone inside $E$ with the same vertex, that we call $z$. Then, by moving this circular cone in the direction of its axis, that can be assumed to be $e_n = (0,...,0,1)$, we obtain a new open cone $E'\subset E$ satisfying \eqref{Eq:DistanceCones}. That is, if $x\in E^c$ and $ y\in\overline{E'}$, then
-$$x_n-z_n \leq C |x'-z'| \quad \text{ and } \quad y_n-z_n \geq t + C |y'-z'|, $$
-for some positive constants $C$ and $t$. Here, we are using the notation $z = (z',z_n)$. Now, we can distinguish two cases:
-\begin{itemize}
-	\item If $ \big||y'-z'|-|x'-z'| \big| \leq t/(1+C) $, then
-	\begin{align*}
-		|y-x| &\geq y_n-x_n \geq t + C(|y'-z'|-|x'-z'|) \\ 
-		&\geq t + C(-\big||y'-z'|-|x'-z'| \big| ) \geq t+C\left(-\frac{t}{1+C} \right) = \frac{t}{1+C}.
-	\end{align*}
-	\item If $ \big||y'-z'|-|x'-z'| \big| \geq t/(1+C) $, then
-	\begin{align*}
-	|y-x| &\geq |y'-x'| \geq \big||y'-z'|-|x'-z'| \big| = \frac{t}{1+C}.
-	\end{align*}
-\end{itemize}
-Therefore, $ |x-y|\geq t/(1+C) >0$ and \eqref{Eq:DistanceCones} is satisfied.
+Indeed, since $E$ is an open cone, there exists a circular cone inside $E$ with the same vertex, that we call $z$. Then, by moving this circular cone in the direction of its axis, that can be assumed to be $e_n = (0,...,0,1)$, we obtain a new open cone $E'\subset E$. Let us show \eqref{Eq:DistanceCones}. Since $E'\subset E$, it is enough to prove \eqref{Eq:DistanceCones} for $x\in \partial E$ and $ y\in\partial E'$. Hence, we have
+$$x_n-z_n = C |x'-z'| \quad \text{ and } \quad y_n-z_n = t + C |y'-z'|, $$
+for some positive constants $C$ and $t$. Here, we are using the notation $z = (z',z_n)$. Now, if we call $\sigma = |y'-z'|-|x'-z'|$, we get
+\begin{align*}
+|x-y|^2 &= |x'-y'|^2 + |x_n-y_n|^2 \geq \sigma^2 + (t^2 + C^2 \sigma^2 + 2tC\sigma)   \\
+&= \left ( \sqrt{1+C^2} \sigma + \dfrac{Ct}{\sqrt{1+C^2}}\right )^2 + \dfrac{t^2}{1+C^2}\geq\dfrac{t^2}{1+C^2}.
+\end{align*}
 
 Now, without loss of generality, we may assume that the vertex of $E'$ is the origin. Let $E''$ be an open cone with the same vertex as $E'$, and such that $\overline{E''\cap \Sph^{n-1}} \subset E'\cap \Sph^{n-1}$. Let $\phi$ be the first eigenfunction of the Laplace-Beltrami operator in $\Sph^{n-1} \setminus \overline{E''}\subset \R^n$ with zero Dirichlet boundary conditions on $\partial E'' \cap \Sph^{n-1}$, and let $\mu>0$ be its associated eigenvalue. Since $\partial E'' \cap \Sph^{n-1}$ is contained in $E'$, there exists a positive constant $\delta$ such that $\phi\geq \delta > 0$ in $\Sph^{n-1} \setminus \overline{E'}$. Now, define the auxiliary function
 $$ 
