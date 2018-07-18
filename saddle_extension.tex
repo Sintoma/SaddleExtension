@@ -495,7 +495,9 @@ Once the quantity  $R_a(\Omega,\theta)$ is defined, we can state precisely the m
 
 \begin{proposition}
 \label{Prop:MaxPrincipleNarrow}
-Let $a\in (-1,1)$ and $\Omega \subset \R^{n+1}_+$ be an open set with $\partial_0 \Omega \neq \varnothing$ and assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $E \times (0,+\infty)\cap \Omega$ is empty. Let $v \in C^2 (\Omega)\cap C(\overline{\Omega})$ be a function bounded from above such that $\lambda^a v_\lambda \in C (\overline{\Omega})$, and assume that it satisfies
+Let $a\in (-1,1)$ and $\Omega \subset \R^{n+1}_+$ be an open set with $\partial_0 \Omega \neq \varnothing$ and assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap \Omega$ is empty. 
+
+Let $v \in C^2 (\Omega)\cap C(\overline{\Omega})$ be a function bounded from above such that $\lambda^a v_\lambda \in C (\overline{\Omega})$, and assume that it satisfies
 $$
 \beqc{\PDEsystem}
 -\div(\lambda^a \nabla v) &\leq& b(x,\lambda) v & \text{ in } \Omega\,, \\
@@ -510,7 +512,7 @@ Then, for every $\theta \in (0,1)$ there exists a constant $R^*$ depending only 
 \end{proposition}
 
 
-Before proving this result, let us explain why we need to introduce the notion of ``downstairs-narrowness''\!. We will use this maximum principle in a domain of the form $\{0<u<\delta\}\cap \left(\ocal\times (0,+\infty)\right) =: \Omega$, where $u$ is a saddle-shaped solution to \eqref{Eq:AllenCahnWithExtension}. Let us point out two facts. The first one is that, by the asymptotic result in Theorem~\ref{Th:Summary}, $\partial_0\Omega$ is contained in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ (see the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}). On the other hand, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{n+1}_+$, as in Figure~\ref{Fig:DownstairsNarrow}. However, a second fact is that $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled almost all $\ocal\times (0,+\infty)$. From these two facts, it follows readily that $\Omega$ is ``downstairs-narrow'' ---using, again, that balls in this notion are centered ``downstairs'' (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
+Before proving this result, let us explain why we need to introduce the notion of ``downstairs-narrowness''\!. We will use this maximum principle in a domain of the form $\Omega:=\{0<u<\delta\}\cap \left(\ocal\times (0,+\infty)\right) $, where $u$ is a saddle-shaped solution to \eqref{Eq:AllenCahnWithExtension}. Let us point out two facts. First, by the asymptotic result in Theorem~\ref{Th:Summary}, $\partial_0\Omega$ is contained in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ (see the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}). On the other hand, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{n+1}_+$, as in Figure~\ref{Fig:DownstairsNarrow}. However, a second fact is that $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled almost all $\ocal\times (0,+\infty)$. From these two facts, it follows readily that $\Omega$ is ``downstairs-narrow'' ---using, again, that balls in this notion are centered ``downstairs'' (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
 
 \begin{figure}
 \input{DownstairsNarrow.tex}
@@ -558,38 +560,33 @@ $$
 Now, we proceed in two steps in order to arrive at contradiction.
 
 \textbf{Step 1.}
-First, we claim that if $\partial_0 \Omega_+$ is nonempty then $\sup_{\Omega_+} v = \sup_{\partial_0 \Omega_+} v $. That is, if we call $\overline{v} = v - \sup_{\partial_0 \Omega_+} v$, it is enough to show that $\overline{v} \leq 0$ in $\Omega_+$. To do it, we use a classical Phragmen-Lindelöf-type argument, as follows. Similar methods appear, among many others, in the proof of Theorem~1.2 of \cite{BerestyckiCaffarelliNiremberg-Monotonicity}, or Section~2.4 of \cite{CabreSolaMorales}.
+First, we claim that if $\partial_0 \Omega_+$ is nonempty then $\sup_{\Omega_+} v = \sup_{\partial_0 \Omega_+} v $. That is, if we call $\overline{v} = v - \sup_{\partial_0 \Omega_+} v$, we then have $\overline{v} \leq 0$ in $\Omega_+$. To prove this, we use a classical Phragmen-Lindelöf-type argument, as follows. Similar methods appear, among many others, in the proof of Theorem~1.2 of \cite{BerestyckiCaffarelliNiremberg-Monotonicity}, or Section~2.4 of \cite{CabreSolaMorales}.
 
-Note that, since the cone $E$ is open, there exists a nonempty open cone $E'\subset E$ satisfying
+We now claim that, since the cone $E$ is open, there exists a nonempty open cone $F \subset E$ satisfying
 \begin{equation}
 \label{Eq:DistanceCones}
-|x-y| \geq c_0 > 0 \quad \text{ for every } x\in E^c \ \text{ and } y \in \overline{E'}\,.
+|x-y| \geq c_0 > 0 \quad \text{ for every } x\in E^c \ \text{ and } y \in \overline{F}\,,
 \end{equation}
-Indeed, since $E$ is an open cone, there exists a circular cone inside $E$ with the same vertex, that we call $z$. Then, by moving this circular cone in the direction of its axis, that can be assumed to be $e_n = (0,...,0,1)$, we obtain a new open cone $E'\subset E$ satisfying \eqref{Eq:DistanceCones}. That is, if $x\in E^c$ and $ y\in\overline{E'}$, then
-$$x_n-z_n \leq C |x'-z'| \quad \text{ and } \quad y_n-z_n \geq t + C |y'-z'|, $$
-for some positive constants $C$ and $t$. Here, we are using the notation $z = (z',z_n)$. Now, we can distinguish two cases:
-\begin{itemize}
-	\item If $ \big||y'-z'|-|x'-z'| \big| \leq t/(1+C) $, then
-	\begin{align*}
-		|y-x| &\geq y_n-x_n \geq t + C(|y'-z'|-|x'-z'|) \\ 
-		&\geq t + C(-\big||y'-z'|-|x'-z'| \big| ) \geq t+C\left(-\frac{t}{1+C} \right) = \frac{t}{1+C}.
-	\end{align*}
-	\item If $ \big||y'-z'|-|x'-z'| \big| \geq t/(1+C) $, then
-	\begin{align*}
-	|y-x| &\geq |y'-x'| \geq \big||y'-z'|-|x'-z'| \big| = \frac{t}{1+C}.
-	\end{align*}
-\end{itemize}
-Therefore, $ |x-y|\geq t/(1+C) >0$ and \eqref{Eq:DistanceCones} is satisfied.
+for some positive constant $c_0$.
 
-Now, without loss of generality, we may assume that the vertex of $E'$ is the origin. Let $E''$ be an open cone with the same vertex as $E'$, and such that $\overline{E''\cap \Sph^{n-1}} \subset E'\cap \Sph^{n-1}$. Let $\phi$ be the first eigenfunction of the Laplace-Beltrami operator in $\Sph^{n-1} \setminus \overline{E''}\subset \R^n$ with zero Dirichlet boundary conditions on $\partial E'' \cap \Sph^{n-1}$, and let $\mu>0$ be its associated eigenvalue. Since $\partial E'' \cap \Sph^{n-1}$ is contained in $E'$, there exists a positive constant $\delta$ such that $\phi\geq \delta > 0$ in $\Sph^{n-1} \setminus \overline{E'}$. Now, define the auxiliary function
+Indeed, since $E$ is an open cone (with vertex, say, $z\in \partial E$), there exists a circular cone $E'\subset E$ with the same vertex $z$. Then, by sliding this circular cone in the direction of its axis, which can be assumed to be $e_n = (0,...,0,1)$, we obtain a new open cone $F\subset E$. Let us now show \eqref{Eq:DistanceCones}. Since $F \subset E' \subset E$, it is enough to prove \eqref{Eq:DistanceCones} for $x\in \partial E'$ and $ y\in\partial F$. Hence, we have
+$$x_n-z_n = \mu |x'-z'| \quad \text{ and } \quad y_n-z_n = \tau + \mu |y'-z'|, $$
+for some positive constants $\mu$ and $\tau$. Here, we are using the notation $z = (z',z_n)$. Now, if we call $\sigma = |x'-z'|-|y'-z'|$, we have $|x'-y'|\geq |\sigma|$ and thus
+\begin{align*}
+|x-y|^2 &= |x'-y'|^2 + |x_n-y_n|^2 \geq \sigma^2 + (\tau- \mu \sigma)^2   \\
+&= \left ( \sqrt{1+\mu^2} \sigma - \dfrac{\mu\tau}{\sqrt{1+\mu^2}}\right )^2 + \dfrac{\tau^2}{1+\mu^2}\geq\dfrac{\tau^2}{1+\mu^2},
+\end{align*}
+where the last constant is in fact the minimum distance between points on $\partial E'$ and $\partial F$. 
+
+Now, without loss of generality, we may assume that the vertex of $F$ is the origin. Let $F'$ be an open cone with the same vertex as $F$, and such that $\overline{F'\cap \Sph^{n-1}} \subset F\cap \Sph^{n-1}$. Let $\phi$ be the first eigenfunction of the Laplace-Beltrami operator in $\Sph^{n-1} \setminus \overline{F'}\subset \R^n$ with zero Dirichlet boundary conditions on $\partial F' \cap \Sph^{n-1}$, and let $\mu>0$ be its associated eigenvalue. Since $\partial F' \cap \Sph^{n-1}$ is contained in $F$, there exists a positive constant $\delta$ such that $\phi\geq \delta > 0$ in $\Sph^{n-1} \setminus \overline{F}$. Now, define the auxiliary function
 $$ 
 \psi(x,\lambda) = (1+\lambda^{2\s}) |x|^\beta \phi(x/|x|), 
 $$
-where $\beta$ is a positive real number. Then, $\phi(x/|x|)\geq \delta$ for each $(x,\lambda) \in\Omega_+$,  since $x/|x| \in \Sph^{n-1} \setminus \overline{E'}$. Moreover, by \eqref{Eq:DistanceCones} with $y=0$, we deduce that
+where $\beta$ is a positive real number. Then, $\phi(x/|x|)\geq \delta$ for each $(x,\lambda) \in\Omega_+$,  since $x/|x| \in \Sph^{n-1} \setminus \overline{F}$. Moreover, by \eqref{Eq:DistanceCones} with $y=0$, we deduce that
 $$ 
 \psi(x,\lambda) \geq \delta (1+\lambda^{2\s}) |x|^\beta \geq \delta c_0^\beta > 0 \ \ \text{ in } \Omega_+,
 $$
-since $0$ is the vertex of $E'$.
+since $0$ is the vertex of $F$.
 On the other hand, note that if we choose $\beta>0$ solving $\beta(\beta+n-2)=\mu$, we have that $\psi$ satisfies
 $$
 \beqc{\PDEsystem}
@@ -1012,6 +1009,7 @@ $$ u_s, \ u_t,\ u_{st} \in C(\overline{\R^{2m+1}_+}).  $$
 Before proceeding with the proof of Proposition~\ref{Prop:MonotonicityProperties}, we first need the following asymptotic result for the second derivatives of $u$, that is not proved in \cite{Cinti-Saddle, Cinti-Saddle2}. It will be used to show that $u_{st}>0$ in $\{s>t>0\}\times [0,+\infty)$.
 
 \begin{lemma}
+\label{Lemma:AsymptoticSecondDerivative}
 Let $f$ satisfy conditions \eqref{Eq:fHypotheses}, and let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahnWithExtension}. Then, denoting $U(x,\lambda) := u_0((s - t)/\sqrt{2},\lambda) = u_0(z,\lambda)$ we have
 $$ ||D^2_x u(\cdot,\lambda) - D^2_x U(\cdot,\lambda)||_{L^\infty(\R^{2m}\setminus B_R)} \to 0, \ \ \ \text{ as } \ R\to+\infty, $$
 for every $\lambda \in [0,+\infty)$.
@@ -1106,7 +1104,7 @@ d_\s \dfrac{\partial u_{st}}{\partial \nu^a}& = & f'(u)u_{st} + f''(u)u_s u_t \g
 \eeqc
 $$
 Here we have used that $f''(\tau) \leq 0$ if $\tau \in (0,1)$ and that $u_s u_t \leq 0$ in  $\{ s > t > 0 , \ \lambda = 0\}$.
-Note that by symmetry, $u_{st}= 0$ on $\{s=t, \ \lambda \geq 0 \}$. Moreover, since $u_t(s,0,\lambda) = 0$ for every $s > 0$ and $\lambda \geq 0$, $u_{st}= 0$ on $\{t=0, \ \lambda \geq 0 \}$. Therefore, $u_{st}= 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\}$. Moreover, by the asymptotic result of Lemma~\ref{Lemma:MonotonicityLayer} and the monotonicity properties of the layer solution we have
+Note that by symmetry, $u_{st}= 0$ on $\{s=t, \ \lambda \geq 0 \}$. Moreover, since $u_t(s,0,\lambda) = 0$ for every $s > 0$ and $\lambda \geq 0$, $u_{st}= 0$ on $\{t=0, \ \lambda \geq 0 \}$. Therefore, $u_{st}= 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\}$. Moreover, by the asymptotic result of Lemma~\ref{Lemma:AsymptoticSecondDerivative} and the monotonicity properties of the layer solution (Lemma~\ref{Lemma:MonotonicityLayer}), we have
 $$
 \liminf_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_{st}(s,t,\lambda) \geq 0\,,
 $$
