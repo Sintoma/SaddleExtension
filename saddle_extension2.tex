@@ -1009,6 +1009,7 @@ $$ u_s, \ u_t,\ u_{st} \in C(\overline{\R^{2m+1}_+}).  $$
 Before proceeding with the proof of Proposition~\ref{Prop:MonotonicityProperties}, we first need the following asymptotic result for the second derivatives of $u$, that is not proved in \cite{Cinti-Saddle, Cinti-Saddle2}. It will be used to show that $u_{st}>0$ in $\{s>t>0\}\times [0,+\infty)$.
 
 \begin{lemma}
+\label{Lemma:AsymptoticSecondDerivative}
 Let $f$ satisfy conditions \eqref{Eq:fHypotheses}, and let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahnWithExtension}. Then, denoting $U(x,\lambda) := u_0((s - t)/\sqrt{2},\lambda) = u_0(z,\lambda)$ we have
 $$ ||D^2_x u(\cdot,\lambda) - D^2_x U(\cdot,\lambda)||_{L^\infty(\R^{2m}\setminus B_R)} \to 0, \ \ \ \text{ as } \ R\to+\infty, $$
 for every $\lambda \in [0,+\infty)$.
@@ -1103,7 +1104,7 @@ d_\s \dfrac{\partial u_{st}}{\partial \nu^a}& = & f'(u)u_{st} + f''(u)u_s u_t \g
 \eeqc
 $$
 Here we have used that $f''(\tau) \leq 0$ if $\tau \in (0,1)$ and that $u_s u_t \leq 0$ in  $\{ s > t > 0 , \ \lambda = 0\}$.
-Note that by symmetry, $u_{st}= 0$ on $\{s=t, \ \lambda \geq 0 \}$. Moreover, since $u_t(s,0,\lambda) = 0$ for every $s > 0$ and $\lambda \geq 0$, $u_{st}= 0$ on $\{t=0, \ \lambda \geq 0 \}$. Therefore, $u_{st}= 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\}$. Moreover, by the asymptotic result of Lemma~\ref{Lemma:MonotonicityLayer} and the monotonicity properties of the layer solution we have
+Note that by symmetry, $u_{st}= 0$ on $\{s=t, \ \lambda \geq 0 \}$. Moreover, since $u_t(s,0,\lambda) = 0$ for every $s > 0$ and $\lambda \geq 0$, $u_{st}= 0$ on $\{t=0, \ \lambda \geq 0 \}$. Therefore, $u_{st}= 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\}$. Moreover, by the asymptotic result of Lemma~\ref{Lemma:AsymptoticSecondDerivative} and the monotonicity properties of the layer solution (Lemma~\ref{Lemma:MonotonicityLayer}), we have
 $$
 \liminf_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_{st}(s,t,\lambda) \geq 0\,,
 $$
