@@ -475,44 +475,45 @@ The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prov
 In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' domains. In our case, the use of the extension problem requires a similar maximum principle but in domains that we will call ``downstairs-narrow''\!, defined next.
 
 \begin{definition}[``Downstairs-narrow'' domains]
-Let $\Omega \subset \R^{n+1}_+$ be an open set, not necessarily bounded, such that $\partial_0 \Omega$ is nonempty. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(\Omega,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
+Let $H \subset \R^{n+1}_+$ be an open set, not necessarily bounded, such that $\partial_0 H$ is nonempty. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(H,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
 \begin{equation}
 \label{Eq:Narrow}
-\dfrac{|B^+_R(x)\setminus \Omega|_a}{|B^+_R(x)|_a} \geq \theta \quad \text{ for every } x \in \partial_0 \Omega\,,
+\dfrac{|B^+_R(x)\setminus H|_a}{|B^+_R(x)|_a} \geq \theta \quad \text{ for every } x \in \partial_0 H\,,
 \end{equation}
 where 
 $$
 |E|_a := \int_E \lambda^a \dx \d \lambda\,.
 $$
-We say that $R_a(\Omega,\theta) = + \infty$ if no such radius exists.
+We say that $R_a(H,\theta) = + \infty$ if no such radius exists.
 
-From this definition, we will say that a domain is ``downstairs-narrow'' if $R_a(\Omega,\theta)$ is small enough depending on certain quantities.
+From this definition, we will say that a domain is ``downstairs-narrow'' if $R_a(H,\theta)$ is small enough depending on certain quantities.
 \end{definition}
 
-Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in \Omega$, we recover the usual definition of ``narrow'' domain. Here, instead, we only consider half-balls centered at points $x\in \partial_0\Omega$.
+Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in H$, we recover the usual definition of ``narrow'' domain. Here, instead, we only consider half-balls centered at points $x\in \partial_0H$.
 
-Once the quantity  $R_a(\Omega,\theta)$ is defined, we can state precisely the maximum principle in ``downstairs-narrow'' domains.
+Once the quantity  $R_a(H,\theta)$ is defined, we can state precisely the maximum principle in ``downstairs-narrow'' domains.
 
 \begin{proposition}
 \label{Prop:MaxPrincipleNarrow}
-Let $a\in (-1,1)$ and $\Omega \subset \R^{n+1}_+$ be an open set with $\partial_0 \Omega \neq \varnothing$ and assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap \Omega$ is empty. 
+Let $a\in (-1,1)$ and $H \subset \R^{n+1}_+$ be an open set with $\partial_0 H \neq \varnothing$ and assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap H$ is empty. 
 
-Let $v \in C^2 (\Omega)\cap C(\overline{\Omega})$ be a function bounded from above such that $\lambda^a v_\lambda \in C (\overline{\Omega})$, and assume that it satisfies
-$$
-\beqc{\PDEsystem}
--\div(\lambda^a \nabla v) &\leq& b(x,\lambda) v & \text{ in } \Omega\,, \\
-\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \partial_0 \Omega \,, \\
-v & \leq & 0 & \text{ on } \partial_L \Omega\,,\\
-\ds \limsup_{x \in \partial_0\Omega,\ |x|\to +\infty} v(x,0) & \leq & 0\,,
-\eeqc
-$$
-where $b \leq 0$ in $\Omega$ and $c$ is bounded from below on $\partial_0 \Omega$.
+Let $v \in C^2 (H)\cap C(\overline{H})$ be a function bounded from above such that $\lambda^a v_\lambda \in C (\overline{H})$, and assume that it satisfies
+\begin{equation}
+\label{Eq:MaxPrincipleNarrow}
+	\beqc{\PDEsystem}
+	-\div(\lambda^a \nabla v) &\leq& b(x,\lambda) v & \text{ in } H\,, \\
+	\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \partial_0 H \,, \\
+	v & \leq & 0 & \text{ on } \partial_L H\,,\\
+	\ds \limsup_{x \in \partial_0H,\ |x|\to +\infty} v(x,0) & \leq & 0\,,
+	\eeqc
+\end{equation}
+where $b \leq 0$ in $H$ and $c$ is bounded from below on $\partial_0 H$.
 
-Then, for every $\theta \in (0,1)$ there exists a constant $R^*$ depending only on $n$, $a$, $\theta$, and $\norm{c_-}_{L^\infty(\partial_0 \Omega)}$, such that $v\leq 0 $ in $\overline{\Omega}$ whenever $R_a(\Omega,\theta) \leq R^*$.
+Then, for every $\theta \in (0,1)$ there exists a constant $R^*$ depending only on $n$, $a$, $\theta$, and $\norm{c_-}_{L^\infty(\partial_0 H)}$, such that $v\leq 0 $ in $H$ whenever $R_a(H,\theta) \leq R^*$.
 \end{proposition}
 
 
-Before proving this result, let us explain why we need to introduce the notion of ``downstairs-narrowness''\!. We will use this maximum principle in a domain of the form $\Omega:=\{0<u<\delta\}\cap \left(\ocal\times (0,+\infty)\right) $, where $u$ is a saddle-shaped solution to \eqref{Eq:AllenCahnWithExtension}. Let us point out two facts. First, by the asymptotic result in Theorem~\ref{Th:Summary}, $\partial_0\Omega$ is contained in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ (see the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}). On the other hand, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{n+1}_+$, as in Figure~\ref{Fig:DownstairsNarrow}. However, a second fact is that $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled almost all $\ocal\times (0,+\infty)$. From these two facts, it follows readily that $\Omega$ is ``downstairs-narrow'' ---using, again, that balls in this notion are centered ``downstairs'' (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
+Before proving this result, let us explain why we need to introduce the notion of ``downstairs-narrowness''\!. We will use this maximum principle in a domain of the form $H:=\{0<u<\delta\}\cap \left(\ocal\times (0,+\infty)\right) $, where $u$ is a saddle-shaped solution to \eqref{Eq:AllenCahnWithExtension}. Let us point out two facts. First, by the asymptotic result in Theorem~\ref{Th:Summary}, $\partial_0H$ is contained in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ (see the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}). On the other hand, $H$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{n+1}_+$, as in Figure~\ref{Fig:DownstairsNarrow}. However, a second fact is that $\ocal^c\times (0,+\infty)$ is contained in the complement of $H$ --- even if $H$ filled almost all $\ocal\times (0,+\infty)$. From these two facts, it follows readily that $H$ is ``downstairs-narrow'' ---using, again, that balls in this notion are centered ``downstairs'' (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
 
 \begin{figure}
 \input{DownstairsNarrow.tex}
@@ -536,9 +537,9 @@ $$
 Then, there exists a constant $p_0 > 0$, depending only on $n$ and $a$, such that for all $p\leq p_0$,
 \begin{equation}
 \label{Eq:WeakHarnack}
-\left( \int_{B_{R/2}^+} \lambda^a v^p \dx \d \lambda \right )^{1/p} \leq C_H R^{\frac{n+1+a}{p} } \inf_{B^+_{R/4}} v\,,
+\left( \int_{B_{R/2}^+} \lambda^a v^p \dx \d \lambda \right )^{1/p} \leq C_h R^{\frac{n+1+a}{p} } \inf_{B^+_{R/4}} v\,,
 \end{equation}
-for a positive constant $C_H$ depending only on $n$ and $a$.
+for a positive constant $C_h$ depending only on $n$ and $a$.
 \end{proposition}
 
 With this result available, we can now present the proof of the maximum principle in ``downstairs-narrow'' domains.
@@ -546,21 +547,21 @@ With this result available, we can now present the proof of the maximum principl
 \begin{proof}[Proof of Proposition~\ref{Prop:MaxPrincipleNarrow}] 
 By contradiction, suppose that the set 
 $$
-\Omega_+ := \left\{(x,\lambda) \in \Omega \ : \ v(x,\lambda)>0 \right\}
+H_+ := \left\{(x,\lambda) \in H \ : \ v(x,\lambda)>0 \right\}
 $$ 
 is nonempty. Then, since $b\leq 0$, it is easy to check that $v$ satisfies
 $$
 \beqc{\PDEsystem}
--\div(\lambda^a \nabla v) &\leq& 0 & \text{ in } \Omega_+\,, \\
-\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \partial_0 \Omega_+ \text{ (if this set is nonempty)}\,, \\
-v & \leq & 0 & \text{ on } \partial_L \Omega_+\,,\\
-\ds \limsup_{x \in \partial_0\Omega_+,\ |x|\to +\infty} v(x,0) & \leq & 0\,.
+-\div(\lambda^a \nabla v) &\leq& 0 & \text{ in } H_+\,, \\
+\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \partial_0 H_+ \text{ (if this set is nonempty)}\,, \\
+v & \leq & 0 & \text{ on } \partial_L H_+\,,\\
+\ds \limsup_{x \in \partial_0H_+,\ |x|\to +\infty} v(x,0) & \leq & 0\,.
 \eeqc
 $$
 Now, we proceed in two steps in order to arrive at contradiction.
 
 \textbf{Step 1.}
-First, we claim that if $\partial_0 \Omega_+$ is nonempty then $\sup_{\Omega_+} v = \sup_{\partial_0 \Omega_+} v $. That is, if we call $\overline{v} = v - \sup_{\partial_0 \Omega_+} v$, we then have $\overline{v} \leq 0$ in $\Omega_+$. To prove this, we use a classical Phragmen-Lindelöf-type argument, as follows. Similar methods appear, among many others, in the proof of Theorem~1.2 of \cite{BerestyckiCaffarelliNiremberg-Monotonicity}, or Section~2.4 of \cite{CabreSolaMorales}.
+First, we claim that if $\partial_0 H_+$ is nonempty then $\sup_{H_+} v = \sup_{\partial_0 H_+} v $. That is, if we call $\overline{v} = v - \sup_{\partial_0 H_+} v$, we then have $\overline{v} \leq 0$ in $H_+$. To prove this, we use a classical Phragmen-Lindelöf-type argument, as follows. Similar methods appear, among many others, in the proof of Theorem~1.2 of \cite{BerestyckiCaffarelliNiremberg-Monotonicity}, or Section~2.4 of \cite{CabreSolaMorales}.
 
 We now claim that, since the cone $E$ is open, there exists a nonempty open cone $F \subset E$ satisfying
 \begin{equation}
@@ -582,36 +583,36 @@ Now, without loss of generality, we may assume that the vertex of $F$ is the ori
 $$ 
 \psi(x,\lambda) = (1+\lambda^{2\s}) |x|^\beta \phi(x/|x|), 
 $$
-where $\beta$ is a positive real number. Then, $\phi(x/|x|)\geq \delta$ for each $(x,\lambda) \in\Omega_+$,  since $x/|x| \in \Sph^{n-1} \setminus \overline{F}$. Moreover, by \eqref{Eq:DistanceCones} with $y=0$, we deduce that
+where $\beta$ is a positive real number. Then, $\phi(x/|x|)\geq \delta$ for each $(x,\lambda) \in H_+$,  since $x/|x| \in \Sph^{n-1} \setminus \overline{F}$. Moreover, by \eqref{Eq:DistanceCones} with $y=0$, we deduce that
 $$ 
-\psi(x,\lambda) \geq \delta (1+\lambda^{2\s}) |x|^\beta \geq \delta c_0^\beta > 0 \ \ \text{ in } \Omega_+,
+\psi(x,\lambda) \geq \delta (1+\lambda^{2\s}) |x|^\beta \geq \delta c_0^\beta > 0 \ \ \text{ in } H_+,
 $$
 since $0$ is the vertex of $F$.
 On the other hand, note that if we choose $\beta>0$ solving $\beta(\beta+n-2)=\mu$, we have that $\psi$ satisfies
 $$
 \beqc{\PDEsystem}
--\div(\lambda^a \nabla \psi) &=& 0 & \text{ in } \Omega_+\,, \\
-\ds \lim_{(x,\lambda)\in \Omega_+, \ |(x,\lambda)|\to +\infty} \psi & = & +\infty.
+-\div(\lambda^a \nabla \psi) &=& 0 & \text{ in } H_+\,, \\
+\ds \lim_{(x,\lambda)\in H_+, \ |(x,\lambda)|\to +\infty} \psi & = & +\infty.
 \eeqc
 $$
-Thus, if we define $\overline{w}=\overline{v}/\psi$, proving that $\overline{v} \leq 0$ in $\Omega_+$ is equivalent to showing that $\overline{w}\leq 0$ in $\Omega_+$, since $\psi$ is positive. Now, since $\sup_{\partial_0 \Omega_+} v \geq 0$, it is easy to show that $\overline{w}$ satisfies
+Thus, if we define $\overline{w}=\overline{v}/\psi$, proving that $\overline{v} \leq 0$ in $H_+$ is equivalent to showing that $\overline{w}\leq 0$ in $H_+$, since $\psi$ is positive. Now, since $\sup_{\partial_0 H_+} v \geq 0$, it is easy to show that $\overline{w}$ satisfies
 \begin{equation}
 \label{Eq:wTildeEquationNarrow}
 \beqc{\PDEsystem}
--\div(\lambda^a \nabla \overline{w})-2\lambda^a\dfrac{\nabla \psi}{\psi}\cdot\nabla \overline{w} &\leq& 0 & \text{ in } \Omega_+\,, \\
-\overline{w} &\leq& 0 & \text{ on } \partial\Omega_+\,, \\
-\ds \lim_{(x,\lambda)\in \Omega, \ |(x,\lambda)|\to +\infty} \overline{w} & \leq & 0\,.
+-\div(\lambda^a \nabla \overline{w})-2\lambda^a\dfrac{\nabla \psi}{\psi}\cdot\nabla \overline{w} &\leq& 0 & \text{ in } H_+\,, \\
+\overline{w} &\leq& 0 & \text{ on } \partial H_+\,, \\
+\ds \lim_{(x,\lambda)\in H, \ |(x,\lambda)|\to +\infty} \overline{w} & \leq & 0\,.
 \eeqc
 \end{equation}
-Then, by the maximum principle we deduce that $\overline{w}\leq 0$ in $\Omega_+$, which yields $\overline{v}\leq 0$ in $\Omega_+$.
+Then, by the maximum principle we deduce that $\overline{w}\leq 0$ in $H_+$, which yields $\overline{v}\leq 0$ in $H_+$.
 
-Note that if $\partial_0 \Omega_+$ is empty, the same argument applied to $v$ instead of $\overline{v}$ yields a contradiction with the assumption that $\Omega_+$ is nonempty. From now on in this proof, we will assume that $\partial_0 \Omega_+ \neq \varnothing$.
+Note that if $\partial_0 H_+$ is empty, the same argument applied to $v$ instead of $\overline{v}$ yields a contradiction with the assumption that $H_+$ is nonempty. From now on in this proof, we will assume that $\partial_0 H_+ \neq \varnothing$.
 
 \textbf{Step 2.}
-By Step 1 and the hypotheses assumed on $v$ at infinity and at $\partial_L \Omega_+$, since $v>0$ in $\Omega_+$ it is clear that $\sup_{\Omega_+} v$ is attained at a point $(x_0,0)\in \partial_0 \Omega_+$. Moreover, we get that  
+By Step 1 and the hypotheses assumed on $v$ at infinity and at $\partial_L H_+$, since $v>0$ in $H_+$ it is clear that $\sup_{H_+} v$ is attained at a point $(x_0,0)\in \partial_0 H_+$. Moreover, we get that  
 \begin{equation}
 \label{Eq:PositiveSuprem}
-v(x_0)= v(x_0,0) = \sup_{\partial_0 \Omega_+} v = \sup_{\Omega_+} v  > 0\,,
+v(x_0)= v(x_0,0) = \sup_{\partial_0 H_+} v = \sup_{H_+} v  > 0\,,
 \end{equation}
 where here we are identifying $v$ with its trace on $\R^{2m}$ to simplify the notation. Now, given any $R>0$, let $\overline{c}_{n,\s}$ be the constant such that
 $$
@@ -628,13 +629,13 @@ $$
 \dfrac{\partial \phi}{\partial \nu^a} & = & \dfrac{c_1 v(x_0)}{d_\s} & \text{ on } \partial_0 B^+_R(x_0)\,.
 \eeqc
 $$
-Moreover, on $\partial_0 B^+_R(x_0) \cap \partial_0\Omega_+$ we have
+Moreover, on $\partial_0 B^+_R(x_0) \cap \partial_0H_+$ we have
 $$
-\dfrac{\partial v}{\partial \nu^a} \leq - c v  \leq \norm{c_-}_{L^\infty (\partial_0\Omega)} v \leq  \norm{c_-}_{L^\infty (\partial_0\Omega)} v(x_0) \leq \dfrac{\partial \phi}{\partial \nu^a}
+\dfrac{\partial v}{\partial \nu^a} \leq - c v  \leq \norm{c_-}_{L^\infty (\partial_0H)} v \leq  \norm{c_-}_{L^\infty (\partial_0 H)} v(x_0) \leq \dfrac{\partial \phi}{\partial \nu^a}
 $$
-if we choose $c_1 > d_\s\norm{c_-}_{L^\infty (\partial_0\Omega)}$\,.
+if we choose $c_1 > d_\s\norm{c_-}_{L^\infty (\partial_0 H)}$\,.
 
-Thus, $v-\phi$ is $\s$-subharmonic in $B^+_R(x_0) \cap \Omega_+$ and has a nonpositive flux on $\partial_0 B^+_R(x_0) \cap \partial_0\Omega_+$. In addition, $v-\phi \leq v \leq 0$ in $B_R^+(x_0)\cap \partial_L \Omega_+$. Therefore, its positive part $(v-\phi)_+$ extended to be zero in $B_R^+(x_0)\setminus \Omega_+ $ is a continuous function which is $\s$-subharmonic in $B^+_R(x_0)$ and has a nonpositive flux on $\partial_0 B^+_R(x_0)$, both properties in a weak sense.
+Thus, $v-\phi$ is $\s$-subharmonic in $B^+_R(x_0) \cap  H_+$ and has a nonpositive flux on $\partial_0 B^+_R(x_0) \cap \partial_0 H_+$. In addition, $v-\phi \leq v \leq 0$ in $B_R^+(x_0)\cap \partial_L  H_+$. Therefore, its positive part $(v-\phi)_+$ extended to be zero in $B_R^+(x_0)\setminus  H_+ $ is a continuous function which is $\s$-subharmonic in $B^+_R(x_0)$ and has a nonpositive flux on $\partial_0 B^+_R(x_0)$, both properties in a weak sense.
 
 We define $w := v(x_0)-(v-\phi)_+$, which is a continuous nonnegative function and satisfies in a weak sense
 $$
@@ -645,30 +646,33 @@ $$
 $$
 Hence, $w$ fulfills the hypotheses of Proposition~\ref{Prop:WeakHarnack} and thus \eqref{Eq:WeakHarnack} holds.
 
-Then, if we take $R = 2\,R_a(\Omega,\theta)$, and $p$ as in \eqref{Eq:WeakHarnack}, we have
+Then, if we take $R = 2\,R_a( H,\theta)$, and $p$ as in \eqref{Eq:WeakHarnack}, we have
 \begin{align*}
-\theta^{1/p} v(x_0) & \leq \left (  \dfrac{|B^+_{R/2}(x_0)\setminus  \Omega|_a}{|B^+_{R/2}(x_0)|_a}  v(x_0)^p \right)^{1/p} \\
-& \leq \left (  \dfrac{|B^+_{R/2}(x_0)\setminus \Omega_+|_a}{|B^+_{R/2}(x_0)|_a}  v(x_0)^p \right)^{1/p} \\
-&= \dfrac{1}{|B^+_{R/2}(x)|_a^{1/p}}  \left (  \int_{B^+_{R/2}(x_0)\setminus \Omega_+} \lambda ^a v(x_0)^p \d x \d \lambda  \right)^{1/p} \\
+\theta^{1/p} v(x_0) & \leq \left (  \dfrac{|B^+_{R/2}(x_0)\setminus   H|_a}{|B^+_{R/2}(x_0)|_a}  v(x_0)^p \right)^{1/p} \\
+& \leq \left (  \dfrac{|B^+_{R/2}(x_0)\setminus  H_+|_a}{|B^+_{R/2}(x_0)|_a}  v(x_0)^p \right)^{1/p} \\
+&= \dfrac{1}{|B^+_{R/2}(x)|_a^{1/p}}  \left (  \int_{B^+_{R/2}(x_0)\setminus  H_+} \lambda ^a v(x_0)^p \d x \d \lambda  \right)^{1/p} \\
 &\leq |B_1^+|_a^{-1/p} (R/2)^{- \frac{n+1+a}{p}} \left (  \int_{B^+_{R/2}(x_0)} \lambda ^a w^p \d x \d \lambda  \right)^{1/p} \\
-&\leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_H \inf_{B^+_{R/4}(x_0)} w \\
-& \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_H \,  w(x_0).
+&\leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \inf_{B^+_{R/4}(x_0)} w \\
+& \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \,  w(x_0).
 \end{align*}
-Here we have used the definition of $R_a(\Omega,\theta)$, the fact that $w \equiv v(x_0)$ in $B^+_R(x_0)\setminus\Omega_+$, the scaling of $|\cdot |_a$ and the weak Harnak inequality \eqref{Eq:WeakHarnack}. Now, if $c_1 \overline{c}_{n,\s} R^{2\s} < 1$, then $w(x_0) = \phi(x_0)$ and therefore
+Here we have used the definition of $R_a( H,\theta)$, the fact that $w \equiv v(x_0)$ in $B^+_R(x_0)\setminus H_+$, the scaling of $|\cdot |_a$ and the weak Harnak inequality \eqref{Eq:WeakHarnack}. Now, if $c_1 \overline{c}_{n,\s} R^{2\s} < 1$, then $w(x_0) = \phi(x_0)$ and therefore
 $$
-\theta^{1/p} v(x_0) \leq  2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_H c_1 \overline{c}_{n,\s} R^{2\s} v(x_0)\,.
+\theta^{1/p} v(x_0) \leq  2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} R^{2\s} v(x_0)\,.
 $$
-Hence, if we take $R_a(\Omega,\theta)$ small enough so that $ 2^{\frac{n+1+a}{p}} |B_1^+|_a^{-1/p} C_H c_1 \overline{c}_{n,\s} (2 R_a(\Omega,\theta))^{2\s} < \theta^{1/p}$ and $c_1 \overline{c}_{n,\s} (2 R_a(\Omega,\theta))^{2\s} < 1$, we conclude that $v(x_0) \leq 0$, which contradicts equation \eqref{Eq:PositiveSuprem}. Therefore, our initial assumption stating that $\Omega_+$ is not empty is false, which means that $v\leq 0$ in $\overline{\Omega}$.
+
+Hence, if we take $R_a( H,\theta)$ small enough so that $ 2^{\frac{n+1+a}{p}} |B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} (2 R_a( H,\theta))^{2\s} < \theta^{1/p}$ and $c_1 \overline{c}_{n,\s} (2 R_a( H,\theta))^{2\s} < 1$, we conclude that $v(x_0) \leq 0$, which contradicts \eqref{Eq:PositiveSuprem}. Therefore, our initial assumption stating that $ H_+$ is not empty is false. This means that $v\leq 0$ in $H$.
 \end{proof}
 
-As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, we establish below that the maximum principle holds in sets $\Omega \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ with $\partial_0 \Omega$ contained in an $\varepsilon$-neighborhood of the Simons cone.
+As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, we establish below that the maximum principle holds in sets $ H \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ with $\partial_0  H$ contained in an $\varepsilon$-neighborhood of the Simons cone.
 
 \begin{corollary}
 \label{Cor:MaxPrincipleNarrowSaddle}
-Let $H\subset \ocal \times (0, +\infty) \subset \R^{2m + 1}_+$ be an open set such that $\partial_0 H$ is nonempty and $\partial_0 H \subset \ncal_\varepsilon := \{t < s < t+\varepsilon, \ \lambda= 0 \}$. Then, if $\varepsilon$ is small enough, the maximum principle holds in $H$ in the sense of Proposition~\ref{Prop:MaxPrincipleNarrow}.
+Let $H\subset \ocal \times (0, +\infty) \subset \R^{2m + 1}_+$ be an open set such that $\partial_0 H$ is nonempty and $\partial_0 H \subset \ncal_\varepsilon := \{t < s < t+\varepsilon, \ \lambda= 0 \}$. 
+
+Then, if $\varepsilon$ is small enough, the maximum principle holds in $H$ in the sense of Proposition~\ref{Prop:MaxPrincipleNarrow}. That is, if $v \in C^2 (H)\cap C(\overline{H})$ is bounded from above, $\lambda^a v_\lambda \in C (\overline{H})$, and $v$ satisfies \eqref{Eq:MaxPrincipleNarrow}, then $v\leq 0$ in $H$.
 \end{corollary}
 
-To prove it, it is enough to realize that the Simons cone separates every ball centered at a point in the cone into two regions with comparable measure. However, it is interesting that in fact these two regions have the same measure, as stated next.
+To prove it, it is enough to realize that the Simons cone separates every ball centered at a point in the cone into two regions with comparable measure. In fact, it is interesting to note that these two regions have exactly the same measure, as stated next.
 
 \begin{lemma}
 \label{Lemma:HalfBallSimonsCone}
@@ -678,18 +682,18 @@ $$ | B_r(x_0)\cap \ocal| = | B_r(x_0)\setminus \ocal| = \frac{1}{2} |B_r(x_0)| \
 
 This result was stated in \cite{Cabre-Saddle}, but without a proof. For the sake of completeness, we include here a simple one.
 
-\begin{proof}
-First, let us call $\ical := \R^{2m}\setminus \overline{\ocal}$. By definition of the Simons cone we have that $x_0 = (x_0',x_0'')\in \R^m \times \R^m$ satisfies that $|x_0'|=|x_0''|$. Therefore, there exists an orthogonal transformation $R\in O(m)$ such that $R(x_0') = x_0''$. Let us define $\overline{R}:\R^{2m}\to\R^{2m}$ such that $\overline{R}(x',x'') = (R(x'),x'')$, which is a linear isometry that keeps invariant $\ocal$ and $\ical$. With these properties it is easy to check that
+\begin{proof}[Proof of Lemma~\ref{Lemma:HalfBallSimonsCone}]
+First, let us call $\ical := \R^{2m}\setminus \overline{\ocal}$. Since $x_0\in \ccal$, we have that $x_0 = (x_0',x_0'')\in \R^m \times \R^m$ satisfies that $|x_0'|=|x_0''|$. Therefore, there exists an orthogonal transformation $R\in O(m)$ such that $R  x_0' = x_0''$. Let us define $\overline{R}:\R^{2m}\to\R^{2m}$ by $\overline{R}(x',x'') = (R x',x'')$, which is a linear isometry that keeps invariant $\ocal$ and $\ical$. With these properties it is easy to check that for every $y\in \R^{2m}$ it holds
 \begin{equation}
 \label{Eq:IsometrySimonsCone1}
-|B_r(x)\cap \ical| = |\overline{R} \left( B_r(x)\cap \ical\right)| = | B_r(\overline{R}x) \cap \ical |\,,
+|B_r(y)\cap \ical| = |\overline{R} \left( B_r(y)\cap \ical\right)| = | B_r(\overline{R}y) \cap \ical |\,,
 \end{equation}
-and the same for $\ocal$.
+and the same replacing $\ical$ with $\ocal$.
 
-On the other hand, let us define $S:\R^{2m}\to\R^{2m}$ such that $S(x',x'') = (x'',x')$ which is also a linear isometry that transforms $\ocal$ into $\ical$ and vice versa. Therefore, it is satisfied that
+On the other hand, let us define $S:\R^{2m}\to\R^{2m}$ by $S(x',x'') = (x'',x')$, which is also a linear isometry that transforms $\ocal$ into $\ical$ and vice versa. Therefore, for every $y\in \R^{2m}$ we have
 \begin{equation}
 \label{Eq:IsometrySimonsCone2}
-|B_r(x)\cap \ical| = |S \left( B_r(x)\cap \ical\right)| = | B_r(Sx) \cap \ocal |\,.
+|B_r(y)\cap \ical| = |S \left( B_r(y)\cap \ical\right)| = | B_r(Sy) \cap \ocal |\,.
 \end{equation}
 
 Finally, note that by the definition of $\overline{R}$, $S\overline{R} x_0 = \overline{R} x_0$. By combining this with \eqref{Eq:IsometrySimonsCone1} and \eqref{Eq:IsometrySimonsCone2}, we obtain
