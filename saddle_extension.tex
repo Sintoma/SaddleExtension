@@ -595,7 +595,9 @@ $$
 \ds \lim_{(x,\lambda)\in H_+, \ |(x,\lambda)|\to +\infty} \psi & = & +\infty.
 \eeqc
 $$
-Thus, if we define $\overline{w}=\overline{v}/\psi$, proving that $\overline{v} \leq 0$ in $H_+$ is equivalent to showing that $\overline{w}\leq 0$ in $H_+$, since $\psi$ is positive. Now, since $\sup_{\partial_0 H_+} v \geq 0$, it is easy to show that $\overline{w}$ satisfies
+Thus, if we define 
+$$\overline{w}=\overline{v}/\psi\,$$
+proving that $\overline{v} \leq 0$ in $H_+$ is equivalent to showing that $\overline{w}\leq 0$ in $H_+$, since $\psi$ is positive. Now, since $\sup_{\partial_0 H_+} v \geq 0$, it is easy to show that $\overline{w}$ satisfies
 \begin{equation}
 \label{Eq:wTildeEquationNarrow}
 \beqc{\PDEsystem}
@@ -663,7 +665,7 @@ $$
 Hence, if we take $R_a( H,\theta)$ small enough so that $ 2^{\frac{n+1+a}{p}} |B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} (2 R_a( H,\theta))^{2\s} < \theta^{1/p}$ and $c_1 \overline{c}_{n,\s} (2 R_a( H,\theta))^{2\s} < 1$, we conclude that $v(x_0) \leq 0$, which contradicts \eqref{Eq:PositiveSuprem}. Therefore, our initial assumption stating that $ H_+$ is not empty is false. This means that $v\leq 0$ in $H$.
 \end{proof}
 
-As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, we establish below that the maximum principle holds in sets $ H \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ with $\partial_0  H$ contained in an $\varepsilon$-neighborhood of the Simons cone.
+As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in sets $ H \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ with $\partial_0  H$ contained in an $\varepsilon$-neighborhood of the Simons cone.
 
 \begin{corollary}
 \label{Cor:MaxPrincipleNarrowSaddle}
@@ -707,23 +709,23 @@ Note that $\R^{2m} \setminus \overline{\ocal}$ is an open cone outside $\ocal$, 
 $$
 B_{\varepsilon/4}^+ (\overline{x})\setminus \big( \ocal \times (0, +\infty)\big) \subset B_{\varepsilon/4}^+ (\overline{x})\setminus H \subset B_\varepsilon^+ (x)\setminus H\,.
 $$
-Hence, by the scaling of $|\cdot|_a$ and Lemma~\ref{Lemma:HalfBallSimonsCone} ---used at each level $\{\lambda = \lambda_0\}$, with $\lambda_0\in (0,\varepsilon/4)$---, we have
+Hence, by the scaling properties of $|\cdot|_a$ and Lemma~\ref{Lemma:HalfBallSimonsCone} ---used at each level $\{\lambda = \lambda_0\}$, with $\lambda_0\in (0,\varepsilon/4)$---, we have
 $$
 2^{-4m - 3-2a} |B^+_\varepsilon (x)|_a = \dfrac{1}{2} |B_{\varepsilon/4}^+(\overline{x}) |_a = |B_{\varepsilon/4}^+ (\overline{x})\setminus \big( \ocal \times (0, +\infty)\big)  |_a \leq |B_\varepsilon^+ (x)\setminus H |_a\,.
 $$
 \end{proof}
 
 
-With this result at hand we can now establish the maximum principle for the linearized operator in $\ocal$.
+With this result at hand we can now establish the maximum principle for the linearized operator in $\ocal\times (0,+\infty)$ at a saddle-shaped solution.
 
 
 \begin{proof}[Proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}]
-The key point in all the proof is the following. Since $u>0$ in $\partial_0\Omega \subset \ocal$, 
+Let $u$ be a saddle-shaped solution. A key point in the proof is that $u$ is a positive supersolution in $\ocal\times(0,+\infty)$ of the linearized problem. Indeed, since $u>0$ in $\partial_0\Omega \subset \ocal$,
 \begin{equation}
 \label{Eq:uSupersolLinearized}
-\mathscr{L}u = d_\s \dfrac{\partial u}{\partial \nu^a}  -f'(u) u = f(u) - f'(u) u > 0\quad \text{ on } \partial_0\Omega \,,
+\mathscr{L}u = d_\s \dfrac{\partial u}{\partial \nu^a}  -f'(u) u = f(u) - f'(u) u > 0\quad \text{ on } \partial_0\Omega \,.
 \end{equation}
-where we have used that since $f$ is strictly concave in $(0,1)$ and $f(0)=0$, it satisfies $f'(\tau)\tau < f(\tau)$ for all $\tau\in (0,1)$.
+We have used that since $f''<0$ in $(0,1)$ and $f(0)=0$, it satisfies $f'(\tau)\tau < f(\tau)$ for all $\tau\in (0,1)$.
 
 For $\varepsilon > 0$, set
 $$
