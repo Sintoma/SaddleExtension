@@ -657,7 +657,7 @@ Then, if we take $R = 2\,R_a( H,\theta)$, and $p$ as in \eqref{Eq:WeakHarnack}, 
 &\leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \inf_{B^+_{R/4}(x_0)} w \\
 & \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \,  w(x_0).
 \end{align*}
-Here we have used the definition of $R_a( H,\theta)$, the fact that $w \equiv v(x_0)$ in $B^+_R(x_0)\setminus H_+$, the scaling of $|\cdot |_a$ and the weak Harnak inequality \eqref{Eq:WeakHarnack}. Now, if $c_1 \overline{c}_{n,\s} R^{2\s} < 1$, then $w(x_0) = \phi(x_0)$ and therefore
+Here we have used the definition of $R_a( H,\theta)$, the fact that $w \equiv v(x_0)$ in $B^+_R(x_0)\setminus H_+$, the scaling properties of $|\cdot |_a$ and the weak Harnak inequality \eqref{Eq:WeakHarnack}. Now, if $c_1 \overline{c}_{n,\s} R^{2\s} < 1$, then $w(x_0) = \phi(x_0)$ and therefore
 $$
 \theta^{1/p} v(x_0) \leq  2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} R^{2\s} v(x_0)\,.
 $$
@@ -671,7 +671,7 @@ As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish
 \label{Cor:MaxPrincipleNarrowSaddle}
 Let $H\subset \ocal \times (0, +\infty) \subset \R^{2m + 1}_+$ be an open set such that $\partial_0 H$ is nonempty and $\partial_0 H \subset \ncal_\varepsilon := \{t < s < t+\varepsilon, \ \lambda= 0 \}$. 
 
-Then, if $\varepsilon$ is small enough, the maximum principle holds in $H$ in the sense of Proposition~\ref{Prop:MaxPrincipleNarrow}. That is, if $v \in C^2 (H)\cap C(\overline{H})$ is bounded from above, $\lambda^a v_\lambda \in C (\overline{H})$, and $v$ satisfies \eqref{Eq:MaxPrincipleNarrow}, then $v\leq 0$ in $H$.
+Then, if $\varepsilon$ is small enough (depending only on $n$, $\s$, and $\norm{c_-}_{L^\infty(\partial_0 H)}$), the maximum principle holds in $H$ in the sense of Proposition~\ref{Prop:MaxPrincipleNarrow}. That is, if $v \in C^2 (H)\cap C(\overline{H})$ is bounded from above, $\lambda^a v_\lambda \in C (\overline{H})$, and $v$ satisfies \eqref{Eq:MaxPrincipleNarrow}, then $v\leq 0$ in $H$.
 \end{corollary}
 
 To prove it, it is enough to realize that the Simons cone separates every ball centered at a point in the cone into two regions with comparable measure. In fact, it is interesting to note that these two regions have exactly the same measure, as stated next.
@@ -705,7 +705,7 @@ $$ |B_r(x_0)\cap \ical| = | B_r(\overline{R}x_0) \cap \ical | = | B_r(S\overline
 With this lemma available we proceed with the proof of Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}.
 
 \begin{proof}[Proof of Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}]
-Note that $\R^{2m} \setminus \overline{\ocal}$ is an open cone outside $\ocal$, and thus $\{ (\R^{2m} \setminus \overline{\ocal}) \times (0, +\infty) \} \cap H $ is empty. Hence, we can use Proposition~\ref{Prop:MaxPrincipleNarrow} by noticing that,  if we take $\theta = 2^{-4m - 3-2a}$, then $R_a(H,\theta)\leq \varepsilon$. Indeed, let $x\in \partial_0 H$ and let $\overline{x}$ be a projection \todo{Explicar} of $x$ in the cone $\ccal$. Since $x\in \partial_0 H \subset \ncal_\varepsilon$, we have that $|x-\overline{x}| \leq \varepsilon /\sqrt{2} < 3\varepsilon /4$ and therefore
+Note that $\R^{2m} \setminus \overline{\ocal}$ is an open cone outside $\ocal$, and thus $\{ (\R^{2m} \setminus \overline{\ocal}) \times (0, +\infty) \} \cap H $ is empty. Hence, we can use Proposition~\ref{Prop:MaxPrincipleNarrow} by noticing that,  if we take $\theta = 2^{-4m - 3-2a}$, then $R_a(H,\theta)\leq \varepsilon$. Indeed, recall first that by Lemma~4.2 in \cite{CabreTerraI}, $|s-t|/\sqrt{2}$ is the distance to the cone. Then, let $x\in \partial_0 H$ and let $\overline{x}\in \ccal$ a point realizing this distance. Since $x\in \partial_0 H \subset \ncal_\varepsilon$, we have that $|x-\overline{x}| \leq \varepsilon /\sqrt{2} < 3\varepsilon /4$ and therefore
 $$
 B_{\varepsilon/4}^+ (\overline{x})\setminus \big( \ocal \times (0, +\infty)\big) \subset B_{\varepsilon/4}^+ (\overline{x})\setminus H \subset B_\varepsilon^+ (x)\setminus H\,.
 $$
