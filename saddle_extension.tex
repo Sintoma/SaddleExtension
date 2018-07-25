@@ -823,7 +823,7 @@ On the other hand, observe that
 $$
 d_\s u^2 \dfrac{\partial w}{\partial \nu^a} = d_\s  \dfrac{\partial v}{\partial \nu^a} u  - d_\s  \dfrac{\partial u}{\partial \nu^a} v = u \mathscr{L}v  -  v \mathscr{L}u \leq -v \mathscr{L}u \quad \text{ on } \partial_0 \Omega \subset \ocal\,,
 $$
-since $u>0$ in $\ocal$ and $\mathscr{L}v \leq 0$ in $\partial_0 \Omega $. Therefore, at the point $x_0$ we have, by \eqref{Eq:uSupersolLinearized}, 
+since $u>0$ in $\ocal$ and $\mathscr{L}v \leq 0$ in $\partial_0 \Omega $. Therefore, at the point $x_0$ we have, using also \eqref{Eq:uSupersolLinearized}, 
 $$
 \dfrac{\partial w}{\partial \nu^a}(x_0) \leq -\dfrac{S}{d_\s u(x_0)} \mathscr{L}u(x_0) < 0\,,
 $$
@@ -838,10 +838,10 @@ Hence, the assumption $S>0$ is false and therefore $w \leq 0$ in $E$. Since $u >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Uniqueness of the saddle-shaped solution}
 \label{Sec:Uniqueness}
-Thanks to the maximum principle for the linearized operator we can now establish the uniqueness of the saddle-shaped solution.
+Thanks to the maximum principle in $\ocal\times (0,+\infty)$ for the linearized operator we can now establish the uniqueness of the saddle-shaped solution.
 
 \begin{proof}[Proof of Theorem~\ref{Thm:Uniqueness}]
-	Let $u_1$ and $u_2$ be two saddle-shaped solutions. Define $v := u_1 - u_2$, which is a function that depends only on $s$ and $t$ and that is odd with respect to $\ccal$. Then, $\div(\lambda^a \nabla v) = 0$ in $\ocal \times (0,+\infty)$, $v=0$ on $\partial_L \left( \ocal \times (0,+\infty) \right) = \ccal \times [0,+\infty)$ and
+	Let $u_1$ and $u_2$ be two saddle-shaped solutions. Define $v := u_1 - u_2$, a function that depends only on $s$ and $t$ and that is odd with respect to $\ccal$. Then, $\div(\lambda^a \nabla v) = 0$ in $\ocal \times (0,+\infty)$, $v=0$ on $\partial_L \left( \ocal \times (0,+\infty) \right) = \ccal \times [0,+\infty)$ and
 	$$
 	\dfrac{\partial v}{\partial \nu^a} = f(u_1) - f(u_2) \leq f'(u_2) (u_1 - u_2) = f'(u_2) v \quad \textrm{ on } \ocal \times \{0\}\,,
 	$$
@@ -849,7 +849,8 @@ Thanks to the maximum principle for the linearized operator we can now establish
 	$$
 	\limsup_{x \in \ocal,\ |x|\to +\infty} v(x, 0) = 0\,.
 	$$
-	Then, by the maximum principle for the linearized operator in $\ocal\times (0,+\infty)$(see Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}), we deduce that $v \leq 0$ in $\ocal \times [0, +\infty)$, which yields $u_1 \leq u_2$ in $\ocal \times [0, +\infty)$. Repeating the  argument with $-v = u_2 - u_1$ we obtain $u_1 \geq u_2$ in $\ocal \times [0, +\infty)$. Therefore, $u_1 = u_2$ in $\overline{\R^{2m+1}_+}$.
+	
+	Finally, by the maximum principle for the linearized operator in $\ocal\times (0,+\infty)$, see Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we deduce that $v \leq 0$ in $\ocal \times [0, +\infty)$, which yields $u_1 \leq u_2$ in $\ocal \times [0, +\infty)$. Interchanging $u_1$ and $u_2$, we obtain $u_1 \geq u_2$ in $\ocal \times [0, +\infty)$. Therefore, $u_1 = u_2$ in $\R^{2m+1}_+$.
 \end{proof}
 
 
@@ -858,7 +859,7 @@ Thanks to the maximum principle for the linearized operator we can now establish
 \section{The layer solution and a pointwise estimate for the saddle-shaped solution}
 \label{Sec:Layer}
 
-This section is devoted to establish some monotonicity properties of the layer solution $u_0$ and a pointwise estimate for the saddle-shaped solution. We start with a maximum principle similar to Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, but with the linearized operator at $u_0$.
+This section is devoted to establish some monotonicity properties of the layer solution $u_0$ and a pointwise estimate for the saddle-shaped solution. We start with a maximum principle similar to Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, but for the linearized operator at $u_0$.
 
 \begin{proposition}
 \label{Prop:MaxPrincipleLinearizedOperator2D}
@@ -866,8 +867,9 @@ Let $u_0:\overline{\R^2_+}\to \R$ be the layer solution of \eqref{Eq:LayerSoluti
 $$
 \mathscr{L}_0v := d_\s \dfrac{\partial v}{\partial \nu^a}  -f'(u_0) v\,\ \ \text{ on } \ \R=\partial_0\R^2_+\,.
 $$
-Let $\Omega \subset (0,+\infty) \times (0,+\infty)$ be an open set such that $\partial_0 \Omega$ is nonempty and let $v \in C^2 (\Omega)\cap C(\overline{\Omega})$ be bounded from above and satisfying $\lambda^a v_\lambda \in C (\overline{\Omega})$. 
-Assume that
+Let $\Omega \subset (0,+\infty) \times (0,+\infty)$ be an open set such that $\partial_0 \Omega$ is nonempty. 
+
+Let $v \in C^2 (\Omega)\cap C(\overline{\Omega})$ be bounded from above and satisfying $\lambda^a v_\lambda \in C (\overline{\Omega})$. Assume that
 $$
 \beqc{\PDEsystem}
 -\div(\lambda^a \nabla v) &\leq& b v & \text{ in } \Omega \subset (0, +\infty)\times (0,+\infty)\,, \\
@@ -880,21 +882,21 @@ with $b \leq 0$. Then, $v\leq 0$ in $\overline{\Omega}$.
 \end{proposition}
 
 \begin{proof}
-It is analogous to the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, so we just give here a sketch mentioning the points where one needs to adapt the arguments to this case. The key fact is also that, since $u_0>0$ on $(0,+\infty)\times\{0\}$,
+Since it is analogous to the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we just give here a sketch pointing out what needs to be adapted. The key fact is also that, since $u_0>0$ on $(0,+\infty)\times\{0\}$,
 \begin{equation}
 \label{Eq:u0SupersolLinearized}
 d_\s \dfrac{\partial u_0}{\partial \nu^a}  = f(u_0) > f'(u_0) u_0 \quad \textrm{ on } (0, +\infty)\times \{0\}\,,
 \end{equation}
-where we have used that since $f$ is strictly concave in $(0,1)$ and $f(0)=0$, it satisfies $f'(\tau)\tau < f(\tau)$ for all $\tau\in (0,1)$.
+where we have used that $f''<0$ in $(0,1)$ and $f(0)=0$.
 
-Then, one defines $w = v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}. Step~1 follows immediately from the fact that, since $u_0(x,0)$ is increasing, $u_0 \geq \delta > 0$ in $(\varepsilon, +\infty)\times \{0\}$ for a certain $\delta$ depending on $\varepsilon$. In Step~2, one can use a simpler function $\psi$ than the one used in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, for instance 
+Then, one defines $w = v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively, and $u$ by $u_0$. Step~1 follows immediately from the fact that, since $u_0(x,0)$ is increasing, $u_0 \geq \delta > 0$ in $(\varepsilon, +\infty)\times \{0\}$ for a certain $\delta$ depending on $\varepsilon$. Step 1 is completely analogous and in Step~2, one can use a simpler function $\psi$ than the one used in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, for instance 
 $$
 \psi(x,\lambda) = (1+\lambda^{2\s})(1+x)\,.
 $$
-Finally, Step~3 and Step~4 are completely analogous by using \eqref{Eq:u0SupersolLinearized}.
+Finally, Step~3 and Step~4 are also completely analogous by using \eqref{Eq:u0SupersolLinearized}.
 \end{proof}
 
-With this maximum principle we can now prove the following monotonicity properties of the layer solution.
+With this maximum principle we can now prove the following monotonicity and concavity properties of the layer solution.
 
 \begin{lemma}
 \label{Lemma:MonotonicityLayer}
@@ -925,7 +927,7 @@ v & = & 0 & \text{ on } \{0\} \times (0,+\infty) \,, \\
 Notice that $v = 0$ on $\{0\} \times (0,+\infty)$ since $v$ is an odd function with respect to the first variable (recall that $u_0$ is odd in $x$). Therefore, by Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D} we deduce that $v\leq 0$ in $[0,+\infty)\times [0,+\infty)$. Finally, we get that it is in fact negative in $(0,+\infty)\times [0,+\infty)$ by applying the strong maximum principle.
 \end{proof}
 
-Now we state some properties of the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$. First of all, note that a simple computation in $s$, $t$ and $\lambda$ variables shows that
+Now we prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$ is a barrier for the saddle-shaped solution. First of all, note that a simple computation in $s$, $t$ and $\lambda$ variables shows that
 \begin{equation}
 \label{Eq:EqForULayer}
 \div (\lambda^a \nabla U) = \lambda^a \dfrac{m-1}{\sqrt{2}} \partial_x u_0 \bpar{\dfrac{s-t}{\sqrt{2}}, \lambda} \dfrac{t-s}{st} \quad \text{ in } \R^{2m + 1}_+ \setminus \{st=0\}\,.
@@ -942,12 +944,12 @@ Let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahnWithExtension} and l
 \end{proposition}
 
 \begin{proof}
-First, let us define $v:= u - U$ and $\Omega := \{s>t>0, \ \lambda > 0\} \subset \ocal \times (0, +\infty)$. By \eqref{Eq:EqForULayer}, it is easy to see by using Lemma~\ref{Lemma:MonotonicityLayer} that $-\div (\lambda^a \nabla v) \leq 0$ in $\Omega$. Moreover, both $u$ and $U$ vanish at $\ccal \times [0,+\infty)$ and by the asymptotic behavior of $u$ (see Theorem~\ref{Th:Summary}), we have $\lim_{x\in  \ocal,\ |x|\to +\infty} v(x,0) = 0\,$. On the other hand, since $f$ is strictly concave in $(0,1)$ we get $d_\s \partial_{\nu^a} v = f(u) - f(U) \leq f'(U)v$ on $\partial_0 \Omega$. Collecting all these facts, $v$ satisfies the following problem:
+First, let us define $v:= u - U$ and $\Omega := \{s>t>0, \ \lambda > 0\} \subset \ocal \times (0, +\infty)$. It is easy to see, by using \eqref{Eq:EqForULayer} and Lemma~\ref{Lemma:MonotonicityLayer}, that $-\div (\lambda^a \nabla v) \leq 0$ in $\Omega$. Moreover, both $u$ and $U$ vanish at $\ccal \times [0,+\infty)$ and by the asymptotic behavior of $u$ (see Theorem~\ref{Th:Summary}), we have $\lim_{x\in  \ocal,\ |x|\to +\infty} v(x,0) = 0\,$. On the other hand, since $f$ is concave in $(0,1)$ we get $d_\s \partial_{\nu^a} v = f(u) - f(U) \leq f'(U)v$ on $\partial_0 \Omega$. Collecting all these facts, $v$ satisfies the following problem:
 $$
 \beqc{\PDEsystem}
 -\div(\lambda^a \nabla v) &\leq& 0 & \text{ in } \Omega \subset \ocal \times (0,+\infty)\,, \\
 \mathscr{L}_U v &\leq & 0 & \text{ on } \partial_0 \Omega \subset \ocal \,, \\
-v & = & 0 & \text{ on } \{s=t,\, \lambda \geq 0\}\subsetneq\partial_L \Omega \,,\\
+v & = & 0 & \text{ on } \{s=t,\, \lambda \geq 0\}\varsubsetneq\partial_L \Omega \,,\\
 \ds \limsup_{x\in \partial_0 \Omega, \ |x|\to +\infty} v(x,0) & = & 0\,,
 \eeqc
 $$
@@ -955,11 +957,13 @@ where the operator $\mathscr{L}_U$ is defined by
 $$
 \mathscr{L}_U v := d_\s \dfrac{\partial v}{\partial \nu^a}  -f'(U) v \,.
 $$
-The idea is to apply a maximum principle, similar to the ones in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} and Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D}, in order to conclude that $v\leq 0$ in $\Omega$ and, by continuity, in $\ocal\times[0,+\infty)$. Nevertheless, in this case we do not know the sign of $v$ in the whole lateral boundary $\partial_L \Omega$ ---the part where the sign of $v$ is unknown is $\{s > t= 0,\ \lambda \geq 0\}$. 
-Despite this fact, we can proceed as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} thanks to the fact that $U$ is a Lipschitz function with, roughly speaking, a ``good angle'' at the non regular points, at least in one direction (see \eqref{Eq:ULipschitz1} and \eqref{Eq:ULipschitz2} below), as we explain next.
+
+The idea is to apply a maximum principle, similar to the ones in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} and Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D}, in order to conclude that $v\leq 0$ in $\Omega$ and, by continuity, in $\ocal\times[0,+\infty)$. Nevertheless, in this case we do not know the sign of $v$ in the whole lateral boundary $\partial_L \Omega$ ---the part where the sign of $v$ is unknown is $\{s > t= 0,\ \lambda \geq 0\}$. We will see that $U$ is not $C^1$ in this set. Despite this, we can proceed as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} thanks to the fact that $U$ is a Lipschitz function with, say, a ``good angle'' for the maximum principle at the nonregular points, at least in one direction (see \eqref{Eq:ULipschitz1} and \eqref{Eq:ULipschitz2} below), as we explain next.
 
 
-We follow the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing $u$ (the saddle solution) by $U$. Step~ 1 is completely analogous and it is in Step~2 where the main difference appears. At this point, we define as before $\overline{w} = (v - S_0^+)/\psi$, where $S_0^+ = \max \{0, \sup_{\partial_0 \Omega} v\}$, and we assume by contradiction that $\sup_{\Omega} \overline{w}>0$. In the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we directly concluded that $\overline{w}$ must be negative, arriving to a contradiction. Here, since we do not know the sign of $v$ in the whole lateral boundary, we can only conclude that such maximum must be attained at a point of the form $(\tilde{x}',0, \tilde{\lambda})\in \{s > t= 0,\ \lambda \geq 0\}\subset \R^m \times \R^m \times [0,+\infty)$. Note now that, for every $\lambda \geq 0$,
+We follow the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing $u$ (the saddle solution) by $U$. Step~ 1 is completely analogous and it is in Step~2 where the main difference appears. At this point, we define as before 
+$$\overline{w} := \frac{v - S_0^+U}{\psi} = \frac{u - (1+S_0^+)U}{\psi},$$
+where $S_0^+ = \max \{0, \sup_{\partial_0 \Omega} v\}$, and we assume by contradiction that $\sup_{\Omega} \overline{w}>0$. In the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we directly concluded that $\overline{w}$ must be negative, arriving to a contradiction. Here, since we do not know the sign of $v$ in the whole lateral boundary, we can only conclude that such maximum must be attained at a point of the form $(\tilde{x}',0, \tilde{\lambda})\in \{s > t= 0,\ \lambda \geq 0\}\subset \R^m \times \R^m \times [0,+\infty)$. Note now that, for every $\lambda \geq 0$,
 \begin{equation}
 \label{Eq:ULipschitz1}
 \lim_{\tau\to 0^-} \partial_{x_{m+1}}  U(x_1,...x_m,\tau,0,...,0,\lambda) = \frac{1}{\sqrt{2}}\partial_xu_0\left(\frac{s}{\sqrt{2}},\lambda\right)>0\,, 
@@ -970,8 +974,10 @@ and
 \lim_{\tau\to 0^+} \partial_{x_{m+1}} U(x_1,...x_m,\tau,0,...,0,\lambda) = -\frac{1}{\sqrt{2}}\partial_xu_0\left(\frac{s}{\sqrt{2}},\lambda\right) <0\,.
 \end{equation}
 From this, since $U$ is continuous, $u$ and $\psi$ are $C^1$, and $\psi > 0$, we deduce that
-$$ \lim_{\tau\to 0^+} \partial_{x_{m+1}} \overline{w} (\tilde{x}',\tau e_1,\tilde{\lambda}) - \lim_{\tau \to 0^-} \partial_{x_{m+1}} \overline{w} (\tilde{x}',\tau e_1,\tilde{\lambda}) = \sqrt{2} \partial_xu_0\left(\frac{s}{\sqrt{2}},\tilde{\lambda} \right) \dfrac{1}{\psi}>0\,,  
-$$
+\begin{align*}
+	\lim_{\tau\to 0^+} \partial_{x_{m+1}} \overline{w} (\tilde{x}',\tau e_1,\tilde{\lambda}) &- \lim_{\tau \to 0^-} \partial_{x_{m+1}} \overline{w} (\tilde{x}',\tau e_1,\tilde{\lambda}) \\
+	&= (1+S_0^+) \sqrt{2} \partial_xu_0\left(\frac{s}{\sqrt{2}},\tilde{\lambda} \right) \dfrac{1}{\psi(\tilde{x}',0, \tilde{\lambda})}>0\,,  
+\end{align*}
 where $e_1$ is the first vector of the canonical basis in $\R^{m}$. This last inequality contradicts the fact that the supremum is attained at $(\tilde{x}',0, \tilde{\lambda})$. Thus, $\overline{w}\leq 0$ in $\Omega$, which yields exactly as before,  that $\sup _\Omega v = \sup_{\partial_0 \Omega} v$. This completes Step~2 in the proof. In Step~3, we have to use the same type of argument to rule out the possibility of the supremum to be attained at a point in $\{s > t = 0,\ \lambda = 0\}$. The rest of the proof is completely analogous to the one of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}.
 
 Therefore, we conclude that $v\leq 0$ in $\Omega$ and, by continuity, in $\ocal\times[0,+\infty)$. Finally, by the odd symmetry of $u$ and $U$, we get \eqref{Eq:SaddleUnderLayer}. Note that we cannot avoid the previous technicality at $\{st=0\}$ by considering $\Omega$ to be the whole set $\ocal \times (0,+\infty)$, since the function $U$ is only Lipschitz (and not $C^2$) across $\{st=0\}$.
