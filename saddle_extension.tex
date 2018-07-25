@@ -596,7 +596,7 @@ $$
 \eeqc
 $$
 Thus, if we define 
-$$\overline{w}:=\overline{v}/\psi\,$$
+$$\overline{w}:=\overline{v}/\psi\,,$$
 proving that $\overline{v} \leq 0$ in $H_+$ is equivalent to showing that $\overline{w}\leq 0$ in $H_+$, since $\psi$ is positive. Now, since $\sup_{\partial_0 H_+} v \geq 0$, it is easy to show that $\overline{w}$ satisfies
 \begin{equation}
 \label{Eq:wTildeEquationNarrow}
@@ -671,7 +671,7 @@ As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish
 \label{Cor:MaxPrincipleNarrowSaddle}
 Let $H\subset \ocal \times (0, +\infty) \subset \R^{2m + 1}_+$ be an open set such that $\partial_0 H$ is nonempty and $\partial_0 H \subset \ncal_\varepsilon := \{t < s < t+\varepsilon, \ \lambda= 0 \}$. 
 
-Then, if $\varepsilon$ is small enough (depending only on $n$, $\s$, and $\norm{c_-}_{L^\infty(\partial_0 H)}$), the maximum principle holds in $H$ in the sense of Proposition~\ref{Prop:MaxPrincipleNarrow}. That is, if $v \in C^2 (H)\cap C(\overline{H})$ is bounded from above, $\lambda^a v_\lambda \in C (\overline{H})$, and $v$ satisfies \eqref{Eq:MaxPrincipleNarrow}, then $v\leq 0$ in $H$.
+Then, if $\varepsilon$ is small enough, depending only on $n$, $\s$, and $\norm{c_-}_{L^\infty(\partial_0 H)}$, the maximum principle holds in $H$ in the sense of Proposition~\ref{Prop:MaxPrincipleNarrow}. That is, if $v \in C^2 (H)\cap C(\overline{H})$ is bounded from above, $\lambda^a v_\lambda \in C (\overline{H})$, and $v$ satisfies \eqref{Eq:MaxPrincipleNarrow}, then $v\leq 0$ in $H$.
 \end{corollary}
 
 To prove it, it is enough to realize that the Simons cone separates every ball centered at a point in the cone into two regions with comparable measure. In fact, it is interesting to note that these two regions have exactly the same measure, as stated next.
@@ -728,27 +728,27 @@ Let $u$ be a saddle-shaped solution. A key point in the proof is that $u$ is a p
 We have used that since $f''<0$ in $(0,1)$ and $f(0)=0$, it satisfies $f'(\tau)\tau < f(\tau)$ for all $\tau\in (0,1)$.
 
 
-Now, in $\Omega$ we define
+Now, we define
 $$
 w := \dfrac{v}{u}\,.
 $$
-Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $(\partial \ocal )\times [0,+\infty)$. Thus, in the following arguments we will consider the supremum of $w$ in a set at a positive distance to the zero level set of $u$ and using the maximum principle in ``downstairs-narrow'' domains we will see that this supremum is in fact the supremum on the whole set $\Omega$ (see Step~1 below) ...\todo{acabar de explicar} The same strategy was used by Cabré in \cite{Cabre-Saddle} but here we have to refine the argument due to the extension problem.
+Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $\ccal\times [0,+\infty)$ and $\partial \Omega$ could intersect this set. Thus, in the following arguments we will consider the supremum of $w$ in a set at a positive distance to the zero level set of $u$, where the supremum is finite. Then, using the maximum principle in ``downstairs-narrow'' domains we will see that if we assume that this supremum is positive, it is in fact the supremum on the whole set $\Omega$ (see Step~1 below). After some arguments, we will arrive at a contradiction. The same strategy was used by Cabré in \cite{Cabre-Saddle} but here we must refine the argument due to the extension problem.
 
 
-For $\varepsilon > 0$, set
-\begin{equation}
-\label{Eq:DefOcalEps}
+Les us proceed with the details. For $\varepsilon > 0$, set
+$$
 \ocal_\varepsilon := \{t +\varepsilon < s,\ \lambda = 0 \} \quad \textrm{ and } \quad \mathcal{N}_\varepsilon := \{t < s < t+\varepsilon ,\ \lambda = 0 \}\,,
-\end{equation}
+$$
 and take $\varepsilon$ small enough such that each set $H \subset \ocal \times (0,+\infty)$ satisfying $\partial_0 H \subset \mathcal{N}_\varepsilon$  is ``downstairs-narrow'' and hence the maximum principle holds in $H$ as in Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}. 
 
 Next, we claim that
-$$
-u \geq \delta >0\ \ \text{ in }   \ocal_\varepsilon
-$$
+\begin{equation}
+	\label{Eq:u>delta}
+	u \geq \delta >0\ \ \text{ in }   \ocal_\varepsilon
+\end{equation}
 for some positive constant $\delta$. Indeed, thanks to the asymptotic behavior of $u$ (see part (ii) of Theorem~\ref{Th:Summary}), and since $U(x) \geq u_0(\varepsilon/\sqrt{2})$ for $x\in \ocal_\varepsilon$,  there exists a radius $R>0$ such that $u(x) \geq u_0(\varepsilon/\sqrt{2})/2$ if $|x|>R$ and $x\in \ocal_\varepsilon$. Since $u$ is positive in the compact set $\overline{\ocal_\varepsilon} \cap \overline{B_R}$, we conclude the claim.
 
-Let us consider the sets 
+Let us now consider the sets 
 \begin{equation}
 \label{Eq:DefOfE&H}
 E :=\Omega  \cap \{u > \delta/2\} \subset \R^{2m}_+ \qquad \textrm{ and } \qquad H := \Omega \setminus \overline{E}\,.
@@ -807,7 +807,7 @@ To show this, let $\varphi' := v - S_{\varepsilon'}u$ and define
 $$
 H' := \{\varphi' > 0\}\cap \Omega\,.
 $$
-Note that if $H'=\varnothing$, \eqref{Eq:ProofMaxPrincipleStep3} follows trivially, and thus we can assume that it is not empty. Then, since $\varphi' \leq 0$ in $\overline{\partial_0 \Omega \cap \ocal_{\varepsilon'}}$, we have that $\partial_0 H' \subset \ncal_{\epsilon'}$. Suppose that $\partial_0H'$ is nonempty. Since $S_{\varepsilon'}\geq 0$, it is easy to check that $\varphi'$ satisfies
+Note that if $H'=\varnothing$,  then \eqref{Eq:ProofMaxPrincipleStep3} follows trivially, and thus we can assume that it is not empty. Now, since $\varphi' \leq 0$ in $\overline{\partial_0 \Omega \cap \ocal_{\varepsilon'}}$, we have that $\partial_0 H' \subset \ncal_{\epsilon'}$. Suppose that $\partial_0H'$ is nonempty. Since $S_{\varepsilon'}\geq 0$, it is easy to check that $\varphi'$ satisfies
 $$
 \beqc{\PDEsystem}
 -\div(\lambda^a \nabla \varphi') &\leq& b(x,\lambda)\varphi' & \text{ in } H' \,, \\
@@ -819,7 +819,7 @@ $$
 with $c(x) = f'(u) / d_\s$. The maximum principle in the ``downstairs-narrow'' domain $H'$ yields that $\varphi' \leq 0$ in $H'$, a contradiction with the definition of $H'$. Therefore, $\partial_0H'$ is empty, i.e., $w\leq S_{\varepsilon'}$ in $\partial_0 \Omega$. Hence, \eqref{Eq:ProofMaxPrincipleStep3} holds. 
 
 
-Finally, by the hypothesis at infinity on $v$ and the fact that $u>\delta$ in $\ocal_{\varepsilon'}$, we have that $S_{\varepsilon'}$ is attained at some point $(x_0,0) \in \overline{\partial_0 \Omega \cap \ocal_{\varepsilon'}}$. By \eqref{Eq:ProofMaxPrincipleStep3}, $S$ is achieved at the same point. Moreover, since $v\leq 0$ on $\partial_L\Omega$ and $u>0$ on $\ocal$, it is clear that the $(x_0,0) \notin (\overline{\partial_0\Omega} \setminus \partial_0 \Omega)\cap \ocal$. Therefore $(x_0,0)\in\partial_0\Omega$.
+Finally, by the hypothesis at infinity on $v$ and the fact that $u>\delta'$ in $\ocal_{\varepsilon'}$ for some $\delta'>0$, we have that $S_{\varepsilon'}$ is attained at some point $(x_0,0) \in \overline{\partial_0 \Omega \cap \ocal_{\varepsilon'}}$. By \eqref{Eq:ProofMaxPrincipleStep3}, $S$ is achieved at the same point. Moreover, since $v\leq 0$ on $\partial_L\Omega$ and $u>0$ on $\ocal$, it is clear that the $(x_0,0) \notin (\overline{\partial_0\Omega} \setminus \partial_0 \Omega)\cap \ocal$. Therefore $(x_0,0)\in\partial_0\Omega$.
 
  
 
@@ -900,8 +900,9 @@ Since it is analogous to the proof of Proposition~\ref{Prop:MaxPrincipleLineariz
 d_\s \dfrac{\partial u_0}{\partial \nu^a}  = f(u_0) > f'(u_0) u_0 \quad \textrm{ on } (0, +\infty)\times \{0\}\,,
 \end{equation}
 where we have used that $f''<0$ in $(0,1)$ and $f(0)=0$.
-
-Then, one defines $w = v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively, and $u$ by $u_0$. Step~1 follows immediately from the fact that, since $u_0(x,0)$ is increasing, $u_0 \geq \delta > 0$ in $(\varepsilon, +\infty)\times \{0\}$ for a certain $\delta$ depending on $\varepsilon$. Step 1 is completely analogous and in Step~2, one can use a simpler function $\psi$ than the one used in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, for instance 
+ 
+ 
+Then, one defines $w := v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing  $u$ by $u_0$ in the whole argument, and also replacing  $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively. Once $E$ and $H$ are defined by \eqref{Eq:DefOfE&H} (with $u_0$ instead of $u$), Step~1 follows immediately from the fact that, since $u_0(x,0)$ is increasing, $u_0 \geq \delta > 0$ in $(\varepsilon, +\infty)\times \{0\}$ for a certain $\delta$ depending on $\varepsilon$. Step 1 is completely analogous and in Step~2, one can use a simpler function $\psi$ than the one used in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, for instance 
 $$
 \psi(x,\lambda) = (1+\lambda^{2\s})(1+x)\,.
 $$
