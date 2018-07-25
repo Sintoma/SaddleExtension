@@ -662,7 +662,7 @@ $$
 \theta^{1/p} v(x_0) \leq  2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} R^{2\s} v(x_0)\,.
 $$
 
-Hence, if we take $R_a( H,\theta)$ small enough so that $ 2^{\frac{n+1+a}{p}} |B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} (2 R_a( H,\theta))^{2\s} < \theta^{1/p}$ and $c_1 \overline{c}_{n,\s} (2 R_a( H,\theta))^{2\s} < 1$, we conclude that $v(x_0) \leq 0$, which contradicts \eqref{Eq:PositiveSuprem}. Therefore, our initial assumption stating that $ H_+$ is not empty is false. This means that $v\leq 0$ in $H$.
+Hence, if we take $R_a( H,\theta)$ small enough such that $c_1 \overline{c}_{n,\s} (2 R_a( H,\theta))^{2\s} < 1$ and $ 2^{\frac{n+1+a}{p}} |B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} (2 R_a( H,\theta))^{2\s} < \theta^{1/p}$, we conclude that $v(x_0) \leq 0$, which contradicts \eqref{Eq:PositiveSuprem}. Therefore, our initial assumption stating that $ H_+$ is not empty is false. This means that $v\leq 0$ in $H$.
 \end{proof}
 
 As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in sets $ H \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ with $\partial_0  H$ contained in an $\varepsilon$-neighborhood of the Simons cone.
@@ -732,7 +732,7 @@ Now, we define
 $$
 w := \dfrac{v}{u}\,.
 $$
-Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $\ccal\times [0,+\infty)$ and $\partial \Omega$ could intersect this set. Thus, in the following arguments we will consider the supremum of $w$ in a set at a positive distance to the zero level set of $u$, where the supremum is finite. Then, using the maximum principle in ``downstairs-narrow'' domains we will see that if we assume that this supremum is positive, it is in fact the supremum on the whole set $\Omega$ (see Step~1 below). After some arguments, we will arrive at a contradiction. The same strategy was used by Cabré in \cite{Cabre-Saddle} but here we must refine the argument due to the extension problem.
+Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $\ccal\times [0,+\infty)$ and $\partial \Omega$ could intersect this set. Thus, in the following arguments we will consider the supremum of $w$ in some set, which is at a positive distance to the zero level set of $u$, where the supremum is finite. Then, using the maximum principle in ``downstairs-narrow'' domains we will see that if we assume that this supremum is positive, it is in fact the supremum on the whole set $\Omega$ (see Step~1 below). After some arguments, we will arrive at a contradiction. The same strategy was used by Cabré in \cite{Cabre-Saddle} but here we must refine the argument due to the extension problem.
 
 
 Les us proceed with the details. For $\varepsilon > 0$, set
@@ -902,7 +902,7 @@ d_\s \dfrac{\partial u_0}{\partial \nu^a}  = f(u_0) > f'(u_0) u_0 \quad \textrm{
 where we have used that $f''<0$ in $(0,1)$ and $f(0)=0$.
  
  
-First, one defines $w := v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing  $u$ by $u_0$ in the whole argument, and also replacing  $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively. Once $E$ and $H$ are defined by \eqref{Eq:DefOfE&H} (with $u_0$ instead of $u$), \eqref{Eq:u>delta} follows immediately from the fact that $u_0(x,0)$ is increasing. After this, Step 1 is completely analogous and in Step~2 one can use a simpler function $\psi$ than the one used in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, for instance 
+First, one defines $w := v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing  $u$ by $u_0$ in the whole argument, and also replacing  $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively. Then, \eqref{Eq:u>delta} follows immediately from the fact that $u_0(x,0)$ is increasing. Once $E$ and $H$ are defined by \eqref{Eq:DefOfE&H} (with $u_0$ instead of $u$), Step 1 is completely analogous. In Step~2 one can use a simpler function $\psi$ than the one used in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, for instance 
 $$
 \psi(x,\lambda) = (1+\lambda^{2\s})(1+x)\,.
 $$
@@ -923,11 +923,9 @@ $$ \frac{\partial^2}{\partial x^2} u_0(x,\lambda) < 0 \ \ \ \text{in} \ \ \ (0,+
 First of all, let us remark that $u_0$ has the required regularity to apply the following arguments by the results of \cite{CabreSireI} (see Section~\ref{Sec:Monotonicity} for more details).
 
 
-The monotonicity of the first derivative was already stated in Remark~4.7 of \cite{CabreSireI}, but we include here the short proof for completeness. By differentiating \eqref{Eq:LayerSolution} with respect to $x$, we obtain that 
-$$\div(\lambda^a \nabla (\partial_x u_0)) = 0\ \ \ \text{in} \ \ \ \R\times (0,+\infty)\,.$$ 
-Moreover, we also know that $\partial_x u_0(x,0) > 0$ for every $x\in \R$. Then, the result follows directly from the Poisson formula.
+The monotonicity of the first derivative was already stated in Remark~4.7 of \cite{CabreSireI}, but we include here the short proof for completeness. By differentiating \eqref{Eq:LayerSolution} with respect to $x$, we obtain that $\div(\lambda^a \nabla (\partial_x u_0)) = 0$ in $\R\times (0,+\infty)$. Moreover, we also know that $\partial_x u_0(x,0) > 0$ for every $x\in \R$. Then, the result follows directly from the Poisson formula.
 
-We show the second statement. If we call $v(x,\lambda) = \partial^2_{xx} u_0(x,\lambda)$, by differentiating \eqref{Eq:LayerSolution} twice with respect to $x$, we get
+Now, we show the second statement. If we call $v(x,\lambda) = \partial_{xx} u_0(x,\lambda)$, by differentiating \eqref{Eq:LayerSolution} twice with respect to $x$, we get
 \begin{equation*}
 \beqc{\PDEsystem}
 \div(\lambda^a \nabla v) &=& 0 & \text{ in } (0,+\infty)\times (0,+\infty) \,, \\
@@ -937,7 +935,7 @@ v & = & 0 & \text{ on } \{0\} \times (0,+\infty)\,.
 \end{equation*}
 Notice that $v = 0$ on $\{0\} \times (0,+\infty)$ since $v$ is an odd function with respect to the first variable (recall that $u_0$ is odd in $x$).
 
-Moreover, by repeating the argument in Lemma~4.8 of \cite{CabreSireI} for $\partial^2_{xx} u_0$ (using Lemma~4.4 from the same paper), it is easy to see that $\partial^2_{xx} u_0(x,0) \to 0$ as $|x|\to +\infty$. Therefore, by Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D} we deduce that $v\leq 0$ in $[0,+\infty)\times [0,+\infty)$. Finally, we get that it is in fact negative in $(0,+\infty)\times [0,+\infty)$ by applying the strong maximum principle.
+Moreover, by repeating the argument of Lemma~4.8 in \cite{CabreSireI} for $\partial^2_{xx} u_0$, it is easy to see that $\partial_{xx} u_0(x,0) \to 0$ as $|x|\to +\infty$. Therefore, by Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D} we deduce that $v\leq 0$ in $[0,+\infty)\times [0,+\infty)$. Finally, we get that it is in fact negative in $(0,+\infty)\times [0,+\infty)$ by applying the strong maximum principle.
 \end{proof}
 
 Now we prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$ is a barrier for the saddle-shaped solution. First of all, note that a simple computation in $s$, $t$ and $\lambda$ variables shows that
@@ -974,9 +972,9 @@ $$
 The idea is to apply a maximum principle, similar to the ones in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} and Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D}, in order to conclude that $v\leq 0$ in $\Omega$ and, by continuity, in $\ocal\times[0,+\infty)$. Nevertheless, in this case we do not know the sign of $v$ in the whole lateral boundary $\partial_L \Omega$ ---the part where the sign of $v$ is unknown is $\{s > t= 0,\ \lambda \geq 0\}$. We will see that $U$ is not $C^1$ in this set. Despite this, we can proceed as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} thanks to the fact that $U$ is a Lipschitz function with, say, a ``good angle'' for the maximum principle at the nonregular points, at least in one direction (see \eqref{Eq:ULipschitz1} and \eqref{Eq:ULipschitz2} below), as we explain next.
 
 
-We follow the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing $u$ (the saddle solution) by $U$. Step~ 1 is completely analogous and it is in Step~2 where the main difference appears. At this point, we define as before 
-$$\overline{w} := \frac{v - S_0^+U}{\psi} = \frac{u - (1+S_0^+)U}{\psi},$$
-where $S_0^+ = \max \{0, \sup_{\partial_0 \Omega} v\}$, and we assume by contradiction that $\sup_{\Omega} \overline{w}>0$. In the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we directly concluded that $\overline{w}$ must be negative, arriving to a contradiction. Here, since we do not know the sign of $v$ in the whole lateral boundary, we can only conclude that such maximum must be attained at a point of the form $(\tilde{x}',0, \tilde{\lambda})\in \{s > t= 0,\ \lambda \geq 0\}\subset \R^m \times \R^m \times [0,+\infty)$. Note now that, for every $\lambda \geq 0$,
+We follow the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing $u$ (the saddle solution) by $U$. We define $w:= v/U$ and Step~ 1 is completely analogous. It is in Step~2 where the main difference appears. At this point, we define as before 
+$$\overline{w} := \frac{(w - S_0^+)U}{\psi} = \frac{u - (1+S_0^+)U}{\psi},$$
+where $S_0^+ = \max \{0, \sup_{\partial_0 \Omega} w\}$, and we assume by contradiction that $\sup_{\Omega} \overline{w}>0$. In the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we directly concluded that $\overline{w}$ must be negative, arriving to a contradiction. Here, since we do not know the sign of $v$ in the whole lateral boundary, we can only conclude that the supremum of $\overline{w}$ must be attained at a point of the form $(\tilde{x}',0, \tilde{\lambda})\in \{s > t= 0,\ \lambda \geq 0\}\subset \R^m \times \R^m \times [0,+\infty)$. Note now that, for every $\lambda \geq 0$,
 \begin{equation}
 \label{Eq:ULipschitz1}
 \lim_{\tau\to 0^-} \partial_{x_{m+1}}  U(x_1,...x_m,\tau,0,...,0,\lambda) = \frac{1}{\sqrt{2}}\partial_xu_0\left(\frac{s}{\sqrt{2}},\lambda\right)>0\,, 
@@ -991,7 +989,7 @@ From this, since $U$ is continuous, $u$ and $\psi$ are $C^1$, and $\psi > 0$, we
 	\lim_{\tau\to 0^+} \partial_{x_{m+1}} \overline{w} (\tilde{x}',\tau e_1,\tilde{\lambda}) &- \lim_{\tau \to 0^-} \partial_{x_{m+1}} \overline{w} (\tilde{x}',\tau e_1,\tilde{\lambda}) \\
 	&= (1+S_0^+) \sqrt{2} \partial_xu_0\left(\frac{s}{\sqrt{2}},\tilde{\lambda} \right) \dfrac{1}{\psi(\tilde{x}',0, \tilde{\lambda})}>0\,,  
 \end{align*}
-where $e_1$ is the first vector of the canonical basis in $\R^{m}$. This last inequality contradicts the fact that the supremum is attained at $(\tilde{x}',0, \tilde{\lambda})$. Thus, $\overline{w}\leq 0$ in $\Omega$, which yields exactly as before,  that $\sup _\Omega v = \sup_{\partial_0 \Omega} v$. This completes Step~2 in the proof. In Step~3, we have to use the same type of argument to rule out the possibility of the supremum to be attained at a point in $\{s > t = 0,\ \lambda = 0\}$. The rest of the proof is completely analogous to the one of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}.
+where $e_1$ is the first vector of the canonical basis in $\R^{m}$. This last inequality contradicts the fact that the supremum is attained at $(\tilde{x}',0, \tilde{\lambda})$. Thus, $\overline{w}\leq 0$ in $\Omega$, which yields exactly as before,  that $\sup _\Omega w = \sup_{\partial_0 \Omega} w$. This completes Step~2 in the proof. In Step~3, we have to use the same type of argument to rule out the possibility of the supremum to be attained at a point in $\{s > t = 0,\ \lambda = 0\}$. The rest of the proof is completely analogous to the one of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}.
 
 Therefore, we conclude that $v\leq 0$ in $\Omega$ and, by continuity, in $\ocal\times[0,+\infty)$. Finally, by the odd symmetry of $u$ and $U$, we get \eqref{Eq:SaddleUnderLayer}. Note that we cannot avoid the previous technicality at $\{st=0\}$ by considering $\Omega$ to be the whole set $\ocal \times (0,+\infty)$, since the function $U$ is only Lipschitz (and not $C^2$) across $\{st=0\}$.
 \end{proof}
