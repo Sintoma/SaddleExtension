@@ -902,7 +902,7 @@ d_\s \dfrac{\partial u_0}{\partial \nu^a}  = f(u_0) > f'(u_0) u_0 \quad \textrm{
 where we have used that $f''<0$ in $(0,1)$ and $f(0)=0$.
  
  
-Then, one defines $w := v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing  $u$ by $u_0$ in the whole argument, and also replacing  $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively. Once $E$ and $H$ are defined by \eqref{Eq:DefOfE&H} (with $u_0$ instead of $u$), Step~1 follows immediately from the fact that, since $u_0(x,0)$ is increasing, $u_0 \geq \delta > 0$ in $(\varepsilon, +\infty)\times \{0\}$ for a certain $\delta$ depending on $\varepsilon$. Step 1 is completely analogous and in Step~2, one can use a simpler function $\psi$ than the one used in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, for instance 
+First, one defines $w := v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing  $u$ by $u_0$ in the whole argument, and also replacing  $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively. Once $E$ and $H$ are defined by \eqref{Eq:DefOfE&H} (with $u_0$ instead of $u$), \eqref{Eq:u>delta} follows immediately from the fact that $u_0(x,0)$ is increasing. After this, Step 1 is completely analogous and in Step~2 one can use a simpler function $\psi$ than the one used in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, for instance 
 $$
 \psi(x,\lambda) = (1+\lambda^{2\s})(1+x)\,.
 $$
@@ -923,21 +923,21 @@ $$ \frac{\partial^2}{\partial x^2} u_0(x,\lambda) < 0 \ \ \ \text{in} \ \ \ (0,+
 First of all, let us remark that $u_0$ has the required regularity to apply the following arguments by the results of \cite{CabreSireI} (see Section~\ref{Sec:Monotonicity} for more details).
 
 
-We show the statement on the first derivative. By differentiating \eqref{Eq:LayerSolution} with respect to $x$, we obtain that 
+The monotonicity of the first derivative was already stated in Remark~4.7 of \cite{CabreSireI}, but we include here the short proof for completeness. By differentiating \eqref{Eq:LayerSolution} with respect to $x$, we obtain that 
 $$\div(\lambda^a \nabla (\partial_x u_0)) = 0\ \ \ \text{in} \ \ \ \R\times (0,+\infty)\,.$$ 
-Moreover, we also know that $\partial_x u_0(x,0) > 0$ for every $x\in \R$. Then, the first statement follows directly from the Poisson formula.
+Moreover, we also know that $\partial_x u_0(x,0) > 0$ for every $x\in \R$. Then, the result follows directly from the Poisson formula.
 
-To show the second statement, let us note that by Lemma~4.8 and Proposition~4.6 in \cite{CabreSireI}, it follows that $\partial^2_{xx} u_0(x,0) \to 0$ as $|x|\to +\infty$.
-Then, if we call $v(x,\lambda) = \partial^2_{xx} u_0(x,\lambda)$, by differentiating \eqref{Eq:LayerSolution} twice with respect to $x$, we get
+We show the second statement. If we call $v(x,\lambda) = \partial^2_{xx} u_0(x,\lambda)$, by differentiating \eqref{Eq:LayerSolution} twice with respect to $x$, we get
 \begin{equation*}
 \beqc{\PDEsystem}
 \div(\lambda^a \nabla v) &=& 0 & \text{ in } (0,+\infty)\times (0,+\infty) \,, \\
 d_a\,\dfrac{\partial v}{\partial \nu^a} - f'(u_0) v = f''(u_0) (\partial_x u_0) ^2 &\leq & 0 & \text{ on } (0,+\infty) \times \{0\} \,, \\
-v & = & 0 & \text{ on } \{0\} \times (0,+\infty) \,, \\
-\ds \lim_{x\to +\infty} \partial^2_{xx} u_0(x,0)  &= &0\,.
+v & = & 0 & \text{ on } \{0\} \times (0,+\infty)\,.
 \eeqc
 \end{equation*}
-Notice that $v = 0$ on $\{0\} \times (0,+\infty)$ since $v$ is an odd function with respect to the first variable (recall that $u_0$ is odd in $x$). Therefore, by Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D} we deduce that $v\leq 0$ in $[0,+\infty)\times [0,+\infty)$. Finally, we get that it is in fact negative in $(0,+\infty)\times [0,+\infty)$ by applying the strong maximum principle.
+Notice that $v = 0$ on $\{0\} \times (0,+\infty)$ since $v$ is an odd function with respect to the first variable (recall that $u_0$ is odd in $x$).
+
+Moreover, by repeating the argument in Lemma~4.8 of \cite{CabreSireI} for $\partial^2_{xx} u_0$ (using Lemma~4.4 from the same paper), it is easy to see that $\partial^2_{xx} u_0(x,0) \to 0$ as $|x|\to +\infty$. Therefore, by Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D} we deduce that $v\leq 0$ in $[0,+\infty)\times [0,+\infty)$. Finally, we get that it is in fact negative in $(0,+\infty)\times [0,+\infty)$ by applying the strong maximum principle.
 \end{proof}
 
 Now we prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$ is a barrier for the saddle-shaped solution. First of all, note that a simple computation in $s$, $t$ and $\lambda$ variables shows that
