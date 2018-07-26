@@ -328,16 +328,17 @@ The importance of the layer solution comes from the fact that the associated fun
 \label{Eq:DefULayer}
 U(x,\lambda) := u_0\left( \frac{s-t}{\sqrt{2}},\lambda \right) \ \ \ \text{ for } x\in\R^{2m},
 \end{equation}
-which is odd with respect to the Simons cone and positive in $\ocal$, describes the asymptotic behavior of saddle-shaped solutions at infinity (as shown in \cite{Cinti-Saddle, Cinti-Saddle2}; see Theorem~\ref{Th:Summary} below). Moreover, we will show in Proposition~\ref{Prop:SaddleUnderLayer} that the saddle-shaped solution lies below $U$ in $\ocal$, as it occurs in the local case (see Proposition 1.5 in \cite{CabreTerraI}).
-
-Note that from Lemma~4.2 in \cite{CabreTerraI}, we know that $|s-t|/\sqrt{2}$ is the distance to the Simons cone. Therefore, we can understand the function $U$ as the layer solution centered at each point of the Simons cone and oriented in the normal direction to the cone.
+which is odd with respect to the Simons cone and positive in $\ocal$, describes the asymptotic behavior of saddle-shaped solutions at infinity (as shown in \cite{Cinti-Saddle, Cinti-Saddle2}; see Theorem~\ref{Th:Summary} below). Moreover, we will show in Proposition~\ref{Prop:SaddleUnderLayer} that the saddle-shaped solution lies below $U$ in $\ocal$, as it occurs in the local case (see Proposition 1.5 in \cite{CabreTerraI}). Note that from Lemma~4.2 in \cite{CabreTerraI}, we know that $|s-t|/\sqrt{2}$ is the distance to the Simons cone. Therefore, we can understand the function $U$ as the layer solution centered at each point of the Simons cone and oriented in the normal direction to the cone.
 
 It is sometimes useful to consider also the following variables:
 $$
 y = \dfrac{s+t}{\sqrt{2}} \quad \text{ and } \quad z = \dfrac{s-t}{\sqrt{2}} \,,
 $$
 which satisfy $y\geq 0$ and $-y \leq z \leq y$. In these variables, $\ccal = \{ z = 0\}$ and $\ocal = \{ z > 0\}$. Therefore, we can write $U(x,\lambda) = u_0(z, \lambda)$.
- 
+
+
+
+
  
 To study the minimality and stability of the saddle-shaped solution, we recall the energy functional associated to equation \eqref{Eq:AllenCahnWithExtension}:
 $$
@@ -382,7 +383,7 @@ Our first main result is the uniqueness of the saddle-shaped solution. As a cons
 Let $\s \in (0,1)$  and let $f$ be a function satisfying \eqref{Eq:fHypotheses}. Then, for every even dimension $2m\geq 2$, there exists a unique saddle-shaped solution to problem~\eqref{Eq:AllenCahnWithExtension}.
 \end{theorem}
 
-As in the paper of Cabré \cite{Cabre-Saddle} for the classical case, the proof of the uniqueness result follows from the asymptotic behavior of the saddle solution (point (ii) in Theorem~\ref{Th:Summary}) and a maximum principle for the linearized operator at a saddle-shaped solution. The maximum principle is the following.
+As in the paper of Cabré \cite{Cabre-Saddle} for the classical case, the proof of the uniqueness result follows from the asymptotic behavior of the saddle solution (point (ii) in Theorem~\ref{Th:Summary}) and a maximum principle in $\ocal$ for the linearized operator at a saddle-shaped solution. The maximum principle is the following.
 
 \begin{proposition}
 \label{Prop:MaxPrincipleLinearizedOperator}
@@ -409,7 +410,22 @@ with $b \leq 0$. Then, $v\leq 0$ in $\overline{\Omega}$.
 To establish the previous maximum principle we follow the proof of the analogous result for the local case ($\s = 1$) in \cite{Cabre-Saddle}. It involves a maximum principle in ``narrow'' domains (see also \cite{Cabre-Topics,BerestyckiNirembergVaradhan}). The main difference between our proof and the one in \cite{Cabre-Saddle} is that, since we are using the extension problem, a new notion of narrowness is needed to carry out the same type of arguments (see Section~\ref{Sec:MaximumPrinciple} for the details).
 
 
-The second main result of the present paper establishes the stability of the saddle solution in high dimensions. This is an extension of Theorem~1.4 in \cite{Cabre-Saddle} to the nonlocal case. For its proof, it is crucial to use the extension problem.
+
+
+The second main result of this paper is the following pointwise estimate for the saddle-shaped solution. We prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$ is a barrier for the saddle-shaped solution. This result was established in the local setting ($\s = 1$) in \cite{CabreTerraI}, but in such case the proof is quite simple by using the so-called Modica estimate (see \cite{CabreTerraI} for the details) \todo{Poner algo mas?}. In the fractional framework, as pointed out in this estimate is not available, only some nonlocal versions exist in dimension 1 (see \cite{CabreSolaMorales, CabreSireI}) and therefore we need another type of argument. What we do is to use a maximum principle for the linearized operator at $U$, similar to the one in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}. The result is the following.
+
+\begin{proposition}
+	\label{Prop:SaddleUnderLayer}
+	Let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahnWithExtension} and let $u_0$ be the layer solution given by \eqref{Eq:LayerSolution}. Then, 
+	\begin{equation}
+	\label{Eq:SaddleUnderLayer}
+	|u(x,\lambda)| \leq |U(x,\lambda)| = |u_0 ( \dist(x, \ccal), \lambda) | \quad \text{ for every } (x,\lambda)\in \overline{\R^{2m+1}_+}\,.
+	\end{equation}
+\end{proposition}
+
+
+
+The third main result of the present paper establishes the stability of the saddle solution in high dimensions. This is an extension of Theorem~1.4 in \cite{Cabre-Saddle} to the nonlocal case. For its proof, it is crucial to use the extension problem.
 
 \begin{theorem}
 \label{Thm:Stability}
@@ -475,10 +491,10 @@ The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prov
 In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' domains. In our case, the use of the extension problem requires a similar maximum principle but in domains that we will call ``downstairs-narrow''\!, defined next.
 
 \begin{definition}[``Downstairs-narrow'' domains]
-Let $H \subset \R^{n+1}_+$ be an open set, not necessarily bounded, such that $\partial_0 H$ is nonempty. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(H,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
+Let $H \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma_\mathrm{N} \subset \partial_0 H$ be a nonempty subset. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(H,\Gamma_\mathrm{N},\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
 \begin{equation}
 \label{Eq:Narrow}
-\dfrac{|B^+_R(x)\setminus H|_a}{|B^+_R(x)|_a} \geq \theta \quad \text{ for every } x \in \partial_0 H\,,
+\dfrac{|B^+_R(x)\setminus H|_a}{|B^+_R(x)|_a} \geq \theta \quad \text{ for every } x \in \Gamma_\mathrm{N}\,,
 \end{equation}
 where 
 $$
@@ -486,30 +502,29 @@ $$
 $$
 We say that $R_a(H,\theta) = + \infty$ if no such radius exists.
 
-From this definition, we will say that a domain is ``downstairs-narrow'' if $R_a(H,\theta)$ is small enough depending on certain quantities.
+From this definition, we will say that a pair $(H, \Gamma_\mathrm{N})$ is ``extension-narrow'' if $R_a(H,\Gamma_\mathrm{N},\theta)$ is small enough depending on certain quantities.
 \end{definition}
 
-Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in H$, we recover the usual definition of ``narrow'' domain. Here, instead, we only consider half-balls centered at points $x\in \partial_0H$.
+Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in H$, we recover the usual definition of ``narrow'' domain. Here, instead, we only consider half-balls centered at points $x\in \Gamma_\mathrm{N} \subset \partial_0H$.
 
-Once the quantity  $R_a(H,\theta)$ is defined, we can state precisely the maximum principle in ``downstairs-narrow'' domains.
+Once the quantity  $R_a(H,\Gamma_\mathrm{N}, \theta)$ is defined, we can state precisely the maximum principle in ``downstairs-narrow'' domains.
 
-\begin{proposition}
+\begin{proposition}[Maximum principle in ``extension-narrow'' sets]
 \label{Prop:MaxPrincipleNarrow}
-Let $a\in (-1,1)$ and $H \subset \R^{n+1}_+$ be an open set with $\partial_0 H \neq \varnothing$ and assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap H$ is empty. 
+Let $H \subset \R^{n+1}_+$ be an open set, and let $\Gamma_\mathrm{N} \subset \partial_0 H$ be a nonempty subset. Assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap H$ is empty. 
 
-Let $v \in C^2 (H)\cap C(\overline{H})$ be a function bounded from above such that $\lambda^a v_\lambda \in C (\overline{H})$, and assume that it satisfies
+Let $a\in (-1,1)$ and let $v \in C^2 (H)\cap C(\overline{H})$ be a function bounded from above such that $\lambda^a v_\lambda \in C (\overline{H})$, and assume that it satisfies
 \begin{equation}
 \label{Eq:MaxPrincipleNarrow}
 	\beqc{\PDEsystem}
 	-\div(\lambda^a \nabla v) &\leq& b(x,\lambda) v & \text{ in } H\,, \\
-	\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \partial_0 H \,, \\
-	v & \leq & 0 & \text{ on } \partial_L H\,,\\
-	\ds \limsup_{x \in \partial_0H,\ |x|\to +\infty} v(x,0) & \leq & 0\,,
+	\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \Gamma_\mathrm{N} \,, \\
+	v & \leq & 0 & \text{ on } \partial H \setminus \Gamma_\mathrm{N} \,,
 	\eeqc
 \end{equation}
-where $b \leq 0$ in $H$ and $c$ is bounded from below on $\partial_0 H$.
+where $b \leq 0$ in $H$ and $c$ is bounded from below on $\Gamma_\mathrm{N}$.
 
-Then, for every $\theta \in (0,1)$ there exists a constant $R^*$ depending only on $n$, $a$, $\theta$, and $\norm{c_-}_{L^\infty(\partial_0 H)}$, such that $v\leq 0 $ in $H$ whenever $R_a(H,\theta) \leq R^*$.
+Then, for every $\theta \in (0,1)$ there exists a constant $R^*$ depending only on $n$, $a$, $\theta$, and $\norm{c_-}_{L^\infty(\partial_0 H)}$, such that $v\leq 0 $ in $H$ whenever $R_a(H,\Gamma_\mathrm{N},\theta) \leq R^*$.
 \end{proposition}
 
 
@@ -925,7 +940,11 @@ First of all, let us remark that $u_0$ has the required regularity to apply the 
 
 The monotonicity of the first derivative was already stated in Remark~4.7 of \cite{CabreSireI}, but we include here the short proof for completeness. By differentiating \eqref{Eq:LayerSolution} with respect to $x$, we obtain that $\div(\lambda^a \nabla (\partial_x u_0)) = 0$ in $\R\times (0,+\infty)$. Moreover, we also know that $\partial_x u_0(x,0) > 0$ for every $x\in \R$. Then, the result follows directly from the Poisson formula.
 
-Now, we show the second statement. If we call $v(x,\lambda) = \partial_{xx} u_0(x,\lambda)$, by differentiating \eqref{Eq:LayerSolution} twice with respect to $x$, we get
+Now, we show the second statement. If we call 
+$$
+v(x,\lambda) := \partial_{xx} u_0(x,\lambda)\,,
+$$
+by differentiating \eqref{Eq:LayerSolution} twice with respect to $x$, we get
 \begin{equation*}
 \beqc{\PDEsystem}
 \div(\lambda^a \nabla v) &=& 0 & \text{ in } (0,+\infty)\times (0,+\infty) \,, \\
@@ -945,16 +964,9 @@ Now we prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)
 \end{equation}
 As a consequence, $U$ is $\s$-superharmonic in $\{s>t>0\} \subset \ocal \times (0, +\infty)$. This leads to the following pointwise estimate for the saddle-shaped solution.
 
-\begin{proposition}
-\label{Prop:SaddleUnderLayer}
-Let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahnWithExtension} and let $u_0$ be the layer solution given by \eqref{Eq:LayerSolution}. Then, 
-\begin{equation}
-\label{Eq:SaddleUnderLayer}
-|u(x,\lambda)| \leq |U(x,\lambda)| = |u_0 ( \dist(x, \ccal), \lambda) | \quad \text{ for every } (x,\lambda)\in \overline{\R^{2m+1}_+}\,.
-\end{equation}
-\end{proposition}
+\todo[inline]{algo?}
 
-\begin{proof}
+\begin{proof}[Proof of Proposition~\ref{Prop:SaddleUnderLayer}]
 First, let us define $v:= u - U$ and $\Omega := \{s>t>0, \ \lambda > 0\} \subset \ocal \times (0, +\infty)$. It is easy to see, by using \eqref{Eq:EqForULayer} and Lemma~\ref{Lemma:MonotonicityLayer}, that $-\div (\lambda^a \nabla v) \leq 0$ in $\Omega$. Moreover, both $u$ and $U$ vanish at $\ccal \times [0,+\infty)$ and by the asymptotic behavior of $u$ (see Theorem~\ref{Th:Summary}), we have $\lim_{x\in  \ocal,\ |x|\to +\infty} v(x,0) = 0\,$. On the other hand, since $f$ is concave in $(0,1)$ we get $d_\s \partial_{\nu^a} v = f(u) - f(U) \leq f'(U)v$ on $\partial_0 \Omega$. Collecting all these facts, $v$ satisfies the following problem:
 $$
 \beqc{\PDEsystem}
