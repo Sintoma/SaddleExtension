@@ -489,10 +489,10 @@ The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prov
 \section{Maximum principles for the linearized operator}
 \label{Sec:MaximumPrinciple}
 
-In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' domains. In our case, the use of the extension problem requires a similar maximum principle but in domains that we will call ``downstairs-narrow''\!, defined next.
+In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' domains. In our case, the use of the extension problem requires a similar maximum principle but in domains that we will call ``extension-narrow''\!, defined next.
 
-\begin{definition}[``Downstairs-narrow'' domains]
-	Let $H \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma_\mathrm{N} \subset \partial_0 H$ be a nonempty subset. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(H,\Gamma,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
+\begin{definition}[``Extension-narrow'' sets]
+	Let $H \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma \subset \partial_0 H$ be a nonempty subset. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(H,\Gamma,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
 	\begin{equation}
 	\label{Eq:Narrow}
 	\dfrac{|B^+_R(x)\setminus H|_a}{|B^+_R(x)|_a} \geq \theta \quad \text{ for every } x \in \Gamma\,,
@@ -501,7 +501,7 @@ In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperato
 	$$
 	|E|_a := \int_E \lambda^a \dx \d \lambda\,.
 	$$
-	We say that $R_a(H,\theta) = + \infty$ if no such radius exists.
+	We say that $R_a(H,\Gamma,\theta) = + \infty$ if no such radius exists.
 	
 	From this definition, we will say that a pair $(H, \Gamma)$ is ``extension-narrow'' if $R_a(H,\Gamma,\theta)$ is small enough depending on certain quantities.
 \end{definition}
@@ -636,7 +636,7 @@ With this result available, we can now present the proof of the maximum principl
 	\end{equation}
 	Moreover, using also Step 1 and the hypotheses assumed on $v$ at $\partial H_+\setminus \Gamma_+$, it is clear that for every $k > 0$ there exists a point $(x_k,0)\in \Gamma_+$ such that
 	$$
-	v(x_k) = v(x_k,0) \geq M - \dfrac{1}{k}\,,
+	v(x_k) = v(x_k,0) \geq M \bpar{1- \dfrac{1}{k}}\,,
 	$$
 	where we are identifying $v$ with its trace on $\R^n$ to simplify the notation. Now, given any $R>0$, let $\overline{c}_{n,\s}$ be the constant such that
 	$$
@@ -655,9 +655,9 @@ With this result available, we can now present the proof of the maximum principl
 	$$
 	Moreover, on $\partial_0 B^+_R(x_k) \cap \Gamma_+$ we have
 	$$
-	\dfrac{\partial v}{\partial \nu^a} \leq - c v  \leq \norm{c_-}_{L^\infty (\partial_0H)} v \leq  \norm{c_-}_{L^\infty (\Gamma_+)} M \leq \dfrac{\partial \phi}{\partial \nu^a}
+	\dfrac{\partial v}{\partial \nu^a} \leq - c v  \leq \norm{c_-}_{L^\infty (\Gamma)} v \leq  \norm{c_-}_{L^\infty (\Gamma)} M \leq \dfrac{\partial \phi}{\partial \nu^a}
 	$$
-	if we choose $c_1 > d_\s\norm{c_-}_{L^\infty (\Gamma_+)}$\,.
+	if we choose $c_1 > d_\s\norm{c_-}_{L^\infty (\Gamma)}$\,.
 	
 	Thus, $v-\phi$ is $\s$-subharmonic in $B^+_R(x_k) \cap  H_+$ and has a nonpositive flux on $\partial_0 B^+_R(x_k) \cap \Gamma_+$. In addition, $v-\phi \leq v \leq 0$ in $B_R^+(x_k)\cap (\partial  H_+ \setminus \Gamma_+)$. Therefore, its positive part $(v-\phi)_+$ extended to be zero in $B_R^+(x_k)\setminus  H_+ $ is a continuous function which is $\s$-subharmonic in $B^+_R(x_k)$ and has a nonpositive flux on $\partial_0 B^+_R(x_k)$, both properties in a weak sense.
 	
@@ -679,24 +679,25 @@ With this result available, we can now present the proof of the maximum principl
 	&\leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \inf_{B^+_{R/4}(x_k)} w \\
 	& \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \,  w(x_k).
 	\end{align*}
-	Here we have used the definition of $R_a( H,\Gamma,\theta)$, the fact that $w \equiv M$ in $B^+_R(x_k)\setminus H_+$, the scaling properties of $|\cdot |_a$ and the weak Harnack inequality \eqref{Eq:WeakHarnack}. Now, if $c_1 \overline{c}_{n,\s} R^{2\s} < 1$, then $w(x_k) = M - v(x_k) + \phi(x_k)$ and therefore
-	$$
-	\theta^{1/p} M \leq  2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \{M - v(x_k) + \phi(x_k) \} \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \{1/k + c_1 M \overline{c}_{n,\s} R^{2\s} \}\,.
-	$$
+	Here we have used the definition of $R_a( H,\Gamma,\theta)$, the fact that $w \equiv M$ in $B^+_R(x_k)\setminus H_+$, the scaling properties of $|\cdot |_a$ and the weak Harnack inequality \eqref{Eq:WeakHarnack}. Now, if $c_1 \overline{c}_{n,\s} R^{2\s} < 1$, then there exists $k_0>0$ depending only on $n$, $\s$, $R$, and $c_1$, such that $w(x_k) = M - v(x_k) + \phi(x_k)$ for every $k>k_0$. Therefore, for such $k$ we have
+	\begin{align*}
+		\theta^{1/p} M &\leq  2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \{M - v(x_k) + \phi(x_k) \} \\
+		& \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \{1/k + c_1  \overline{c}_{n,\s} R^{2\s} \}M\,.
+	\end{align*}
 	Hence, if we take $R_a( H,\Gamma, \theta)$ small enough such that $c_1 \overline{c}_{n,\s} (2 R_a( H,\Gamma, \theta))^{2\s} < 1$ and $ 2^{\frac{n+1+a}{p}} |B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} (2 R_a( H,\Gamma, \theta))^{2\s} < \theta^{1/p}$, we get that
 	$$
-	M \leq \dfrac{C}{k}
+	M \bpar{1- \dfrac{C}{k}}\leq 0
 	$$
-	for some positive constant $C$ independent of $k$. Since this holds for every $k>0$, we conclude that $M \leq 0$, which contradicts \eqref{Eq:PositiveSup}. Therefore, our initial assumption stating that $ H_+$ is not empty is false. This means that $v\leq 0$ in $H$.
+	for some positive constant $C$ independent of $k$. Since this holds for every $k>k_0$, we conclude that $M \leq 0$, which contradicts \eqref{Eq:PositiveSup}. Therefore, our initial assumption stating that $ H_+$ is not empty is false. This means that $v\leq 0$ in $H$.
 \end{proof}
 
 As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in sets $ H \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ with $\Gamma \subset \partial_0  H$ contained in an $\varepsilon$-neighborhood of the Simons cone.
 
 \begin{corollary}
 \label{Cor:MaxPrincipleNarrowSaddle}
-Let $H\subset \ocal \times (0, +\infty) \subset \R^{2m + 1}_+$ be an open set such that $\partial_0 H$ is nonempty and $\partial_0 H \subset \ncal_\varepsilon := \{t < s < t+\varepsilon, \ \lambda= 0 \}$. 
+Let $H\subset \ocal \times (0, +\infty) \subset \R^{2m + 1}_+$ be an open set such that $\Gamma \subset \partial_0 H$ is nonempty and assume that $\Gamma \subset \ncal_\varepsilon := \{t < s < t+\varepsilon, \ \lambda= 0 \}$. 
 
-Then, if $\varepsilon$ is small enough, depending only on $n$, $\s$, and $\norm{c_-}_{L^\infty(\partial_0 H)}$, the maximum principle holds in $H$ in the sense of Proposition~\ref{Prop:MaxPrincipleNarrow}. That is, if $v \in C^2 (H)\cap C(\overline{H})$ is bounded from above, $\lambda^a v_\lambda \in C (\overline{H})$, and $v$ satisfies \eqref{Eq:MaxPrincipleNarrow}, then $v\leq 0$ in $H$.
+Then, if $\varepsilon$ is small enough, depending only on $n$, $\s$, and $\norm{c_-}_{L^\infty(\Gamma)}$, the maximum principle holds in $H$ in the sense of Proposition~\ref{Prop:MaxPrincipleNarrow}. That is, if $v \in C^2 (H)\cap C(\overline{H})$ is bounded from above, $\lambda^a v_\lambda \in C (\overline{H})$, and $v$ satisfies \eqref{Eq:MaxPrincipleNarrow}, then $v\leq 0$ in $H$.
 \end{corollary}
 
 To prove it, it is enough to realize that the Simons cone separates every ball centered at a point in the cone into two regions with comparable measure. In fact, it is interesting to note that these two regions have exactly the same measure, as stated next.
@@ -730,7 +731,7 @@ $$ |B_r(x_0)\cap \ical| = | B_r(\overline{R}x_0) \cap \ical | = | B_r(S\overline
 With this lemma available we proceed with the proof of Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}.
 
 \begin{proof}[Proof of Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}]
-Note that $\R^{2m} \setminus \overline{\ocal}$ is an open cone outside $\ocal$, and thus $\{ (\R^{2m} \setminus \overline{\ocal}) \times (0, +\infty) \} \cap H $ is empty. Hence, we can use Proposition~\ref{Prop:MaxPrincipleNarrow} by noticing that,  if we take $\theta = 2^{-4m - 3-2a}$, then $R_a(H,\theta)\leq \varepsilon$. Indeed, recall first that by Lemma~4.2 in \cite{CabreTerraI}, $|s-t|/\sqrt{2}$ is the distance to the cone. Then, let $x\in \partial_0 H$ and let $\overline{x}\in \ccal$ a point realizing this distance. Since $x\in \partial_0 H \subset \ncal_\varepsilon$, we have that $|x-\overline{x}| \leq \varepsilon /\sqrt{2} < 3\varepsilon /4$ and therefore
+Note that $\R^{2m} \setminus \overline{\ocal}$ is an open cone outside $\ocal$, and thus $\{ (\R^{2m} \setminus \overline{\ocal}) \times (0, +\infty) \} \cap H $ is empty. Hence, we can use Proposition~\ref{Prop:MaxPrincipleNarrow} by noticing that,  if we take $\theta = 2^{-4m - 3-2a}$, then $R_a(H,\Gamma,\theta)\leq \varepsilon$. Indeed, recall first that by Lemma~4.2 in \cite{CabreTerraI}, $|s-t|/\sqrt{2}$ is the distance to the cone. Then, let $x\in \Gamma$ and let $\overline{x}\in \ccal$ a point realizing this distance. Since $x\in \Gamma \subset \ncal_\varepsilon$, we have that $|x-\overline{x}| \leq \varepsilon /\sqrt{2} < 3\varepsilon /4$ and therefore
 $$
 B_{\varepsilon/4}^+ (\overline{x})\setminus \big( \ocal \times (0, +\infty)\big) \subset B_{\varepsilon/4}^+ (\overline{x})\setminus H \subset B_\varepsilon^+ (x)\setminus H\,.
 $$
