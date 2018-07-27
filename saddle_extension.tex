@@ -483,6 +483,7 @@ The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prov
 
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Maximum principles for the linearized operator}
@@ -491,196 +492,205 @@ The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prov
 In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' domains. In our case, the use of the extension problem requires a similar maximum principle but in domains that we will call ``downstairs-narrow''\!, defined next.
 
 \begin{definition}[``Downstairs-narrow'' domains]
-Let $H \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma_\mathrm{N} \subset \partial_0 H$ be a nonempty subset. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(H,\Gamma_\mathrm{N},\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
-\begin{equation}
-\label{Eq:Narrow}
-\dfrac{|B^+_R(x)\setminus H|_a}{|B^+_R(x)|_a} \geq \theta \quad \text{ for every } x \in \Gamma_\mathrm{N}\,,
-\end{equation}
-where 
-$$
-|E|_a := \int_E \lambda^a \dx \d \lambda\,.
-$$
-We say that $R_a(H,\theta) = + \infty$ if no such radius exists.
-
-From this definition, we will say that a pair $(H, \Gamma_\mathrm{N})$ is ``extension-narrow'' if $R_a(H,\Gamma_\mathrm{N},\theta)$ is small enough depending on certain quantities.
+	Let $H \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma_\mathrm{N} \subset \partial_0 H$ be a nonempty subset. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(H,\Gamma,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
+	\begin{equation}
+	\label{Eq:Narrow}
+	\dfrac{|B^+_R(x)\setminus H|_a}{|B^+_R(x)|_a} \geq \theta \quad \text{ for every } x \in \Gamma\,,
+	\end{equation}
+	where 
+	$$
+	|E|_a := \int_E \lambda^a \dx \d \lambda\,.
+	$$
+	We say that $R_a(H,\theta) = + \infty$ if no such radius exists.
+	
+	From this definition, we will say that a pair $(H, \Gamma)$ is ``extension-narrow'' if $R_a(H,\Gamma,\theta)$ is small enough depending on certain quantities.
 \end{definition}
 
-Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in H$, we recover the usual definition of ``narrow'' domain. Here, instead, we only consider half-balls centered at points $x\in \Gamma_\mathrm{N} \subset \partial_0H$.
+Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in H$, we recover the usual definition of ``narrow'' domain. Here, instead, we only consider half-balls centered at points $x\in \Gamma \subset \partial_0H$.
 
-Once the quantity  $R_a(H,\Gamma_\mathrm{N}, \theta)$ is defined, we can state precisely the maximum principle in ``downstairs-narrow'' domains.
+Once the quantity  $R_a(H,\Gamma, \theta)$ is defined, we can state precisely the maximum principle in ``downstairs-narrow'' domains.
 
 \begin{proposition}[Maximum principle in ``extension-narrow'' sets]
-\label{Prop:MaxPrincipleNarrow}
-Let $H \subset \R^{n+1}_+$ be an open set, and let $\Gamma_\mathrm{N} \subset \partial_0 H$ be a nonempty subset. Assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap H$ is empty. 
-
-Let $a\in (-1,1)$ and let $v \in C^2 (H)\cap C(\overline{H})$ be a function bounded from above such that $\lambda^a v_\lambda \in C (\overline{H})$, and assume that it satisfies
-\begin{equation}
-\label{Eq:MaxPrincipleNarrow}
+	\label{Prop:MaxPrincipleNarrow}
+	Let $H \subset \R^{n+1}_+$ be an open set, and let $\Gamma \subset \partial_0 H$ be a nonempty subset. Assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap H$ is empty. 
+	
+	Let $a\in (-1,1)$ and let $v \in C^2 (H)\cap C(\overline{H})$ be a function bounded from above such that $\lambda^a v_\lambda \in C (\overline{H})$, and assume that it satisfies
+	\begin{equation}
+	\label{Eq:MaxPrincipleNarrow}
 	\beqc{\PDEsystem}
 	-\div(\lambda^a \nabla v) &\leq& b(x,\lambda) v & \text{ in } H\,, \\
-	\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \Gamma_\mathrm{N} \,, \\
-	v & \leq & 0 & \text{ on } \partial H \setminus \Gamma_\mathrm{N} \,,
+	\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \Gamma \,, \\
+	v & \leq & 0 & \text{ on } \partial H \setminus \Gamma \,,
 	\eeqc
-\end{equation}
-where $b \leq 0$ in $H$ and $c$ is bounded from below on $\Gamma_\mathrm{N}$.
-
-Then, for every $\theta \in (0,1)$ there exists a constant $R^*$ depending only on $n$, $a$, $\theta$, and $\norm{c_-}_{L^\infty(\partial_0 H)}$, such that $v\leq 0 $ in $H$ whenever $R_a(H,\Gamma_\mathrm{N},\theta) \leq R^*$.
+	\end{equation}
+	where $b \leq 0$ in $H$ and $c$ is bounded from below on $\Gamma$.
+	
+	Then, for every $\theta \in (0,1)$ there exists a constant $R^*$ depending only on $n$, $a$, $\theta$, and $\norm{c_-}_{L^\infty(\Gamma)}$, such that $v\leq 0 $ in $H$ whenever $R_a(H,\Gamma,\theta) \leq R^*$.
 \end{proposition}
 
 
-Before proving this result, let us explain why we need to introduce the notion of ``downstairs-narrowness''\!. We will use this maximum principle in a domain of the form $H:=\{0<u<\delta\}\cap \left(\ocal\times (0,+\infty)\right) $, where $u$ is a saddle-shaped solution to \eqref{Eq:AllenCahnWithExtension}. Let us point out two facts. First, by the asymptotic result in Theorem~\ref{Th:Summary}, $\partial_0H$ is contained in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ (see the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}). On the other hand, $H$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{n+1}_+$, as in Figure~\ref{Fig:DownstairsNarrow}. However, a second fact is that $\ocal^c\times (0,+\infty)$ is contained in the complement of $H$ --- even if $H$ filled almost all $\ocal\times (0,+\infty)$. From these two facts, it follows readily that $H$ is ``downstairs-narrow'' ---using, again, that balls in this notion are centered ``downstairs'' (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
+
+\todo[inline]{Rehacer explicación}
+%Before proving this result, let us explain why we need to introduce the notion of ``downstairs-narrowness''\!. We will use this maximum principle in a domain of the form $H:=\{0<u<\delta\}\cap \left(\ocal\times (0,+\infty)\right) $, where $u$ is a saddle-shaped solution to \eqref{Eq:AllenCahnWithExtension}. Let us point out two facts. First, by the asymptotic result in Theorem~\ref{Th:Summary}, $\partial_0H$ is contained in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ (see the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}). On the other hand, $H$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{n+1}_+$, as in Figure~\ref{Fig:DownstairsNarrow}. However, a second fact is that $\ocal^c\times (0,+\infty)$ is contained in the complement of $H$ --- even if $H$ filled almost all $\ocal\times (0,+\infty)$. From these two facts, it follows readily that $H$ is ``downstairs-narrow'' ---using, again, that balls in this notion are centered ``downstairs'' (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
 
 \begin{figure}
-\input{DownstairsNarrow.tex}
-\caption{An example of a domain which is ``downstairs-narrow''\!.}
-\label{Fig:DownstairsNarrow}
+\input{ExtensionNarrow.tex}
+\caption{An example of a pair $(H,\Gamma)$ which is ``extension-narrow''\!.}
+\label{Fig:ExtensionNarrow}
 \end{figure}
 
 
 To prove Proposition~\ref{Prop:MaxPrincipleNarrow} we need the following weak Harnack inequality.
 
 \begin{proposition}[Proposition 3.2 of \cite{TanXiong}]
-\label{Prop:WeakHarnack}
-Let $v \in H^1(B_R^+, \lambda^a)$ be a nonnegative function that weakly satisfies 
-$$
-\beqc{\PDEsystem}
--\div(\lambda^a \nabla v) &\geq& 0 & \textrm{ in } B_R^+\,, \\
-\dfrac{\partial v}{\partial \nu^a} &\geq & 0 & \textrm{ on }  \partial_0 B_R^+\,.
-\eeqc
-$$
-
-Then, there exists a constant $p_0 > 0$, depending only on $n$ and $a$, such that for all $p\leq p_0$,
-\begin{equation}
-\label{Eq:WeakHarnack}
-\left( \int_{B_{R/2}^+} \lambda^a v^p \dx \d \lambda \right )^{1/p} \leq C_h R^{\frac{n+1+a}{p} } \inf_{B^+_{R/4}} v\,,
-\end{equation}
-for a positive constant $C_h$ depending only on $n$ and $a$.
+	\label{Prop:WeakHarnack}
+	Let $v \in H^1(B_R^+, \lambda^a)$ be a nonnegative function that weakly satisfies 
+	$$
+	\beqc{\PDEsystem}
+	-\div(\lambda^a \nabla v) &\geq& 0 & \textrm{ in } B_R^+\,, \\
+	\dfrac{\partial v}{\partial \nu^a} &\geq & 0 & \textrm{ on }  \partial_0 B_R^+\,.
+	\eeqc
+	$$
+	
+	Then, there exists a constant $p_0 > 0$, depending only on $n$ and $a$, such that for all $p\leq p_0$,
+	\begin{equation}
+	\label{Eq:WeakHarnack}
+	\left( \int_{B_{R/2}^+} \lambda^a v^p \dx \d \lambda \right )^{1/p} \leq C_h R^{\frac{n+1+a}{p} } \inf_{B^+_{R/4}} v\,,
+	\end{equation}
+	for a positive constant $C_h$ depending only on $n$ and $a$.
 \end{proposition}
 
 With this result available, we can now present the proof of the maximum principle in ``downstairs-narrow'' domains.
 
 \begin{proof}[Proof of Proposition~\ref{Prop:MaxPrincipleNarrow}] 
-By contradiction, suppose that the set 
-$$
-H_+ := \left\{(x,\lambda) \in H \ : \ v(x,\lambda)>0 \right\}
-$$ 
-is nonempty. Then, since $b\leq 0$, it is easy to check that $v$ satisfies
-$$
-\beqc{\PDEsystem}
--\div(\lambda^a \nabla v) &\leq& 0 & \text{ in } H_+\,, \\
-\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \partial_0 H_+ \text{ (if this set is nonempty)}\,, \\
-v & \leq & 0 & \text{ on } \partial_L H_+\,,\\
-\ds \limsup_{x \in \partial_0H_+,\ |x|\to +\infty} v(x,0) & \leq & 0\,.
-\eeqc
-$$
-Now, we proceed in two steps in order to arrive at contradiction.
-
-\textbf{Step 1.}
-First, we claim that if $\partial_0 H_+$ is nonempty then $\sup_{H_+} v = \sup_{\partial_0 H_+} v $. That is, if we call $\overline{v} = v - \sup_{\partial_0 H_+} v$, we then have $\overline{v} \leq 0$ in $H_+$. To prove this, we use a classical Phragmen-Lindelöf-type argument, as follows. Similar methods appear, among many others, in the proof of Theorem~1.2 of \cite{BerestyckiCaffarelliNiremberg-Monotonicity}, or Section~2.4 of \cite{CabreSolaMorales}.
-
-We now claim that, since the cone $E$ is open, there exists a nonempty open cone $F \subset E$ satisfying
-\begin{equation}
-\label{Eq:DistanceCones}
-|x-y| \geq c_0 > 0 \quad \text{ for every } x\in E^c \ \text{ and } y \in \overline{F}\,,
-\end{equation}
-for some positive constant $c_0$.
-
-Indeed, since $E$ is an open cone (with vertex, say, $z\in \partial E$), there exists a circular cone $E'\subset E$ with the same vertex $z$. Then, by sliding this circular cone in the direction of its axis, which can be assumed to be $e_n = (0,...,0,1)$, we obtain a new open cone $F\subset E$. Let us now show \eqref{Eq:DistanceCones}. Since $F \subset E' \subset E$, it is enough to prove \eqref{Eq:DistanceCones} for $x\in \partial E'$ and $ y\in\partial F$. Hence, we have
-$$x_n-z_n = \mu |x'-z'| \quad \text{ and } \quad y_n-z_n = \tau + \mu |y'-z'|, $$
-for some positive constants $\mu$ and $\tau$. Here, we are using the notation $z = (z',z_n)$. Now, if we call $\sigma = |x'-z'|-|y'-z'|$, we have $|x'-y'|\geq |\sigma|$ and thus
-\begin{align*}
-|x-y|^2 &= |x'-y'|^2 + |x_n-y_n|^2 \geq \sigma^2 + (\tau- \mu \sigma)^2   \\
-&= \left ( \sqrt{1+\mu^2} \sigma - \dfrac{\mu\tau}{\sqrt{1+\mu^2}}\right )^2 + \dfrac{\tau^2}{1+\mu^2}\geq\dfrac{\tau^2}{1+\mu^2},
-\end{align*}
-where the last constant is in fact the minimum distance between points on $\partial E'$ and $\partial F$. 
-
-Now, without loss of generality, we may assume that the vertex of $F$ is the origin. Let $F'$ be an open cone with the same vertex as $F$, and such that $\overline{F'\cap \Sph^{n-1}} \subset F\cap \Sph^{n-1}$. Let $\phi$ be the first eigenfunction of the Laplace-Beltrami operator in $\Sph^{n-1} \setminus \overline{F'}\subset \R^n$ with zero Dirichlet boundary conditions on $\partial F' \cap \Sph^{n-1}$, and let $\mu>0$ be its associated eigenvalue. Since $\partial F' \cap \Sph^{n-1}$ is contained in $F$, there exists a positive constant $\delta$ such that $\phi\geq \delta > 0$ in $\Sph^{n-1} \setminus \overline{F}$. Now, define the auxiliary function
-$$ 
-\psi(x,\lambda) = (1+\lambda^{2\s}) |x|^\beta \phi(x/|x|), 
-$$
-where $\beta$ is a positive real number. Then, $\phi(x/|x|)\geq \delta$ for each $(x,\lambda) \in H_+$,  since $x/|x| \in \Sph^{n-1} \setminus \overline{F}$. Moreover, by \eqref{Eq:DistanceCones} with $y=0$, we deduce that
-$$ 
-\psi(x,\lambda) \geq \delta (1+\lambda^{2\s}) |x|^\beta \geq \delta c_0^\beta > 0 \ \ \text{ in } H_+,
-$$
-since $0$ is the vertex of $F$.
-On the other hand, note that if we choose $\beta>0$ solving $\beta(\beta+n-2)=\mu$, we have that $\psi$ satisfies
-$$
-\beqc{\PDEsystem}
--\div(\lambda^a \nabla \psi) &=& 0 & \text{ in } H_+\,, \\
-\ds \lim_{(x,\lambda)\in H_+, \ |(x,\lambda)|\to +\infty} \psi & = & +\infty.
-\eeqc
-$$
-Thus, if we define 
-$$\overline{w}:=\overline{v}/\psi\,,$$
-proving that $\overline{v} \leq 0$ in $H_+$ is equivalent to showing that $\overline{w}\leq 0$ in $H_+$, since $\psi$ is positive. Now, since $\sup_{\partial_0 H_+} v \geq 0$, it is easy to show that $\overline{w}$ satisfies
-\begin{equation}
-\label{Eq:wTildeEquationNarrow}
-\beqc{\PDEsystem}
--\div(\lambda^a \nabla \overline{w})-2\lambda^a\dfrac{\nabla \psi}{\psi}\cdot\nabla \overline{w} &\leq& 0 & \text{ in } H_+\,, \\
-\overline{w} &\leq& 0 & \text{ on } \partial H_+\,, \\
-\ds \lim_{(x,\lambda)\in H, \ |(x,\lambda)|\to +\infty} \overline{w} & \leq & 0\,.
-\eeqc
-\end{equation}
-Then, by the maximum principle we deduce that $\overline{w}\leq 0$ in $H_+$, which yields $\overline{v}\leq 0$ in $H_+$.
-
-Note that if $\partial_0 H_+$ is empty, the same argument applied to $v$ instead of $\overline{v}$ yields a contradiction with the assumption that $H_+$ is nonempty. From now on in this proof, we will assume that $\partial_0 H_+ \neq \varnothing$.
-
-\textbf{Step 2.}
-By Step 1 and the hypotheses assumed on $v$ at infinity and at $\partial_L H_+$, since $v>0$ in $H_+$ it is clear that $\sup_{H_+} v$ is attained at a point $(x_0,0)\in \partial_0 H_+$. Moreover, we get that  
-\begin{equation}
-\label{Eq:PositiveSuprem}
-v(x_0)= v(x_0,0) = \sup_{\partial_0 H_+} v = \sup_{H_+} v  > 0\,,
-\end{equation}
-where here we are identifying $v$ with its trace on $\R^{2m}$ to simplify the notation. Now, given any $R>0$, let $\overline{c}_{n,\s}$ be the constant such that
-$$
-\fraclaplacian \{ \overline{c}_{n,\s} (R^2 - |x-x_0|^2)^\s_+ \} = 1 \quad \text{ in } B_R (x_0)\,,
-$$
-(see \cite{BogdanEtAl} for its explicit value) and take $\phi = \phi(x,\lambda)$ to be the $\s$-harmonic extension of 
-$$
-\phi(x,0) = c_1 v(x_0)  \overline{c}_{n,\s}  (R^2 - |x-x_0|^2)^\s_+\,,
-$$
-where $c_1$ is a positive constant to be chosen later. Thus, $\phi$ solves
-$$
-\beqc{\PDEsystem}
--\div(\lambda^a \nabla \phi) &=& 0 & \text{ in } B^+_R(x_0)\,, \\
-\dfrac{\partial \phi}{\partial \nu^a} & = & \dfrac{c_1 v(x_0)}{d_\s} & \text{ on } \partial_0 B^+_R(x_0)\,.
-\eeqc
-$$
-Moreover, on $\partial_0 B^+_R(x_0) \cap \partial_0H_+$ we have
-$$
-\dfrac{\partial v}{\partial \nu^a} \leq - c v  \leq \norm{c_-}_{L^\infty (\partial_0H)} v \leq  \norm{c_-}_{L^\infty (\partial_0 H)} v(x_0) \leq \dfrac{\partial \phi}{\partial \nu^a}
-$$
-if we choose $c_1 > d_\s\norm{c_-}_{L^\infty (\partial_0 H)}$\,.
-
-Thus, $v-\phi$ is $\s$-subharmonic in $B^+_R(x_0) \cap  H_+$ and has a nonpositive flux on $\partial_0 B^+_R(x_0) \cap \partial_0 H_+$. In addition, $v-\phi \leq v \leq 0$ in $B_R^+(x_0)\cap \partial_L  H_+$. Therefore, its positive part $(v-\phi)_+$ extended to be zero in $B_R^+(x_0)\setminus  H_+ $ is a continuous function which is $\s$-subharmonic in $B^+_R(x_0)$ and has a nonpositive flux on $\partial_0 B^+_R(x_0)$, both properties in a weak sense.
-
-We define $w := v(x_0)-(v-\phi)_+$, which is a continuous nonnegative function and satisfies in a weak sense
-$$
-\beqc{\PDEsystem}
--\div(\lambda^a \nabla w) &\geq & 0 & \text{ in } B^+_R(x_0) \,, \\
-\dfrac{\partial w}{\partial \nu^a} & \geq & 0 & \text{ on } \partial_0 B^+_R(x_0)  \,.
-\eeqc
-$$
-Hence, $w$ fulfills the hypotheses of Proposition~\ref{Prop:WeakHarnack} and thus \eqref{Eq:WeakHarnack} holds.
-
-Then, if we take $R = 2\,R_a( H,\theta)$, and $p$ as in \eqref{Eq:WeakHarnack}, we have
-\begin{align*}
-\theta^{1/p} v(x_0) & \leq \left (  \dfrac{|B^+_{R/2}(x_0)\setminus   H|_a}{|B^+_{R/2}(x_0)|_a}  v(x_0)^p \right)^{1/p} \\
-& \leq \left (  \dfrac{|B^+_{R/2}(x_0)\setminus  H_+|_a}{|B^+_{R/2}(x_0)|_a}  v(x_0)^p \right)^{1/p} \\
-&= \dfrac{1}{|B^+_{R/2}(x)|_a^{1/p}}  \left (  \int_{B^+_{R/2}(x_0)\setminus  H_+} \lambda ^a v(x_0)^p \d x \d \lambda  \right)^{1/p} \\
-&\leq |B_1^+|_a^{-1/p} (R/2)^{- \frac{n+1+a}{p}} \left (  \int_{B^+_{R/2}(x_0)} \lambda ^a w^p \d x \d \lambda  \right)^{1/p} \\
-&\leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \inf_{B^+_{R/4}(x_0)} w \\
-& \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \,  w(x_0).
-\end{align*}
-Here we have used the definition of $R_a( H,\theta)$, the fact that $w \equiv v(x_0)$ in $B^+_R(x_0)\setminus H_+$, the scaling properties of $|\cdot |_a$ and the weak Harnak inequality \eqref{Eq:WeakHarnack}. Now, if $c_1 \overline{c}_{n,\s} R^{2\s} < 1$, then $w(x_0) = \phi(x_0)$ and therefore
-$$
-\theta^{1/p} v(x_0) \leq  2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} R^{2\s} v(x_0)\,.
-$$
-
-Hence, if we take $R_a( H,\theta)$ small enough such that $c_1 \overline{c}_{n,\s} (2 R_a( H,\theta))^{2\s} < 1$ and $ 2^{\frac{n+1+a}{p}} |B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} (2 R_a( H,\theta))^{2\s} < \theta^{1/p}$, we conclude that $v(x_0) \leq 0$, which contradicts \eqref{Eq:PositiveSuprem}. Therefore, our initial assumption stating that $ H_+$ is not empty is false. This means that $v\leq 0$ in $H$.
+	Define the sets 
+	$$
+	H_+ := \left\{(x,\lambda) \in H \ : \ v(x,\lambda)>0 \right\} 
+	\quad \text{ and } \quad 
+	\Gamma_+ := \partial H_+ \cap \Gamma\,,
+	$$ 
+	and by contradiction assume that $H_+$ is nonempty. Then, since $b\leq 0$, it is easy to check that $v$ satisfies
+	$$
+	\beqc{\PDEsystem}
+	-\div(\lambda^a \nabla v) &\leq& 0 & \text{ in } H_+\,, \\
+	\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \Gamma_+ \text{ (if this set is nonempty)}\,, \\
+	v & \leq & 0 & \text{ on } \partial H_+ \setminus \Gamma_+\,.
+	\eeqc
+	$$
+	Now, we proceed in two steps in order to arrive at contradiction.
+	
+	\textbf{Step 1.}
+	First, we claim that if $\Gamma_+$ is nonempty then $\sup_{H_+} v = \sup_{\Gamma_+} v $. That is, if we call $\overline{v} = v - \sup_{\Gamma_+} v$, we then have $\overline{v} \leq 0$ in $H_+$. To prove this, we use a classical Phragmen-Lindelöf-type argument, as follows. Similar methods appear, among many others, in the proof of Theorem~1.2 of \cite{BerestyckiCaffarelliNiremberg-Monotonicity}, or Section~2.4 of \cite{CabreSolaMorales}.
+	
+	We now claim that, since the cone $E$ is open, there exists a nonempty open cone $F \subset E$ satisfying
+	\begin{equation}
+	\label{Eq:DistanceCones}
+	|x-y| \geq c_0 > 0 \quad \text{ for every } x\in E^c \ \text{ and } y \in \overline{F}\,,
+	\end{equation}
+	for some positive constant $c_0$.
+	
+	Indeed, since $E$ is an open cone (with vertex, say, $z\in \partial E$), there exists a circular cone $E'\subset E$ with the same vertex $z$. Then, by sliding this circular cone in the direction of its axis, which can be assumed to be $e_n = (0,...,0,1)$, we obtain a new open cone $F\subset E$. Let us now show \eqref{Eq:DistanceCones}. Since $F \subset E' \subset E$, it is enough to prove \eqref{Eq:DistanceCones} for $x\in \partial E'$ and $ y\in\partial F$. Hence, we have
+	$$x_n-z_n = \mu |x'-z'| \quad \text{ and } \quad y_n-z_n = \tau + \mu |y'-z'|, $$
+	for some positive constants $\mu$ and $\tau$. Here, we are using the notation $z = (z',z_n)$. Now, if we call $\sigma = |x'-z'|-|y'-z'|$, we have $|x'-y'|\geq |\sigma|$ and thus
+	\begin{align*}
+	|x-y|^2 &= |x'-y'|^2 + |x_n-y_n|^2 \geq \sigma^2 + (\tau- \mu \sigma)^2   \\
+	&= \left ( \sqrt{1+\mu^2} \sigma - \dfrac{\mu\tau}{\sqrt{1+\mu^2}}\right )^2 + \dfrac{\tau^2}{1+\mu^2}\geq\dfrac{\tau^2}{1+\mu^2},
+	\end{align*}
+	where the last constant is in fact the minimum distance between points on $\partial E'$ and $\partial F$. 
+	
+	Now, without loss of generality, we may assume that the vertex of $F$ is the origin. Let $F'$ be an open cone with the same vertex as $F$, and such that $\overline{F'\cap \Sph^{n-1}} \subset F\cap \Sph^{n-1}$. Let $\phi$ be the first eigenfunction of the Laplace-Beltrami operator in $\Sph^{n-1} \setminus \overline{F'}\subset \R^n$ with zero Dirichlet boundary conditions on $\partial F' \cap \Sph^{n-1}$, and let $\mu>0$ be its associated eigenvalue. Since $\partial F' \cap \Sph^{n-1}$ is contained in $F$, there exists a positive constant $\delta$ such that $\phi\geq \delta > 0$ in $\Sph^{n-1} \setminus \overline{F}$. Now, define the auxiliary function
+	$$ 
+	\psi(x,\lambda) = (1+\lambda^{2\s}) |x|^\beta \phi(x/|x|), 
+	$$
+	where $\beta$ is a positive real number. Then, $\phi(x/|x|)\geq \delta$ for each $(x,\lambda) \in H_+$,  since $x/|x| \in \Sph^{n-1} \setminus \overline{F}$. Moreover, by \eqref{Eq:DistanceCones} with $y=0$, we deduce that
+	$$ 
+	\psi(x,\lambda) \geq \delta (1+\lambda^{2\s}) |x|^\beta \geq \delta c_0^\beta > 0 \ \ \text{ in } H_+,
+	$$
+	since $0$ is the vertex of $F$.
+	On the other hand, note that if we choose $\beta>0$ solving $\beta(\beta+n-2)=\mu$, we have that $\psi$ satisfies
+	$$
+	\beqc{\PDEsystem}
+	-\div(\lambda^a \nabla \psi) &=& 0 & \text{ in } H_+\,, \\
+	\ds \lim_{(x,\lambda)\in H_+, \ |(x,\lambda)|\to +\infty} \psi & = & +\infty.
+	\eeqc
+	$$
+	Thus, if we define 
+	$$\overline{w}:=\overline{v}/\psi\,,$$
+	proving that $\overline{v} \leq 0$ in $H_+$ is equivalent to showing that $\overline{w}\leq 0$ in $H_+$, since $\psi$ is positive. Now, since $\sup_{\Gamma_+} v \geq 0$, it is easy to show that $\overline{w}$ satisfies
+	\begin{equation}
+	\label{Eq:wTildeEquationNarrow}
+	\beqc{\PDEsystem}
+	-\div(\lambda^a \nabla \overline{w})-2\lambda^a\dfrac{\nabla \psi}{\psi}\cdot\nabla \overline{w} &\leq& 0 & \text{ in } H_+\,, \\
+	\overline{w} &\leq& 0 & \text{ on } \partial H_+\,, \\
+	\ds \lim_{(x,\lambda)\in H, \ |(x,\lambda)|\to +\infty} \overline{w} & \leq & 0\,.
+	\eeqc
+	\end{equation}
+	Then, by the maximum principle we deduce that $\overline{w}\leq 0$ in $H_+$, which yields $\overline{v}\leq 0$ in $H_+$.
+	
+	Note that if $\Gamma_+$ is empty, the same argument applied to $v$ instead of $\overline{v}$ yields a contradiction with the assumption that $H_+$ is nonempty. From now on in this proof, we will assume that $\Gamma_+ \neq \varnothing$.
+	
+	\textbf{Step 2.} By Step 1 and the definition of $H_+$, we have that
+	\begin{equation}
+	\label{Eq:PositiveSup}
+	M := \sup_{\Gamma_+} v > 0\,.
+	\end{equation}
+	Moreover, using also Step 1 and the hypotheses assumed on $v$ at $\partial H_+\setminus \Gamma_+$, it is clear that for every $k > 0$ there exists a point $(x_k,0)\in \Gamma_+$ such that
+	$$
+	v(x_k) = v(x_k,0) \geq M - \dfrac{1}{k}\,,
+	$$
+	where we are identifying $v$ with its trace on $\R^n$ to simplify the notation. Now, given any $R>0$, let $\overline{c}_{n,\s}$ be the constant such that
+	$$
+	\fraclaplacian \{ \overline{c}_{n,\s} (R^2 - |x-x_k|^2)^\s_+ \} = 1 \quad \text{ in } B_R (x_k)\,,
+	$$
+	(see \cite{BogdanEtAl} for its explicit value) and take $\phi = \phi(x,\lambda)$ to be the $\s$-harmonic extension of 
+	$$
+	\phi(x,0) = c_1 M  \overline{c}_{n,\s}  (R^2 - |x-x_k|^2)^\s_+\,,
+	$$
+	where $c_1$ is a positive constant to be chosen later. Thus, $\phi$ solves
+	$$
+	\beqc{\PDEsystem}
+	-\div(\lambda^a \nabla \phi) &=& 0 & \text{ in } B^+_R(x_k)\,, \\
+	\dfrac{\partial \phi}{\partial \nu^a} & = & \dfrac{c_1 M}{d_\s} & \text{ on } \partial_0 B^+_R(x_k)\,.
+	\eeqc
+	$$
+	Moreover, on $\partial_0 B^+_R(x_k) \cap \Gamma_+$ we have
+	$$
+	\dfrac{\partial v}{\partial \nu^a} \leq - c v  \leq \norm{c_-}_{L^\infty (\partial_0H)} v \leq  \norm{c_-}_{L^\infty (\Gamma_+)} M \leq \dfrac{\partial \phi}{\partial \nu^a}
+	$$
+	if we choose $c_1 > d_\s\norm{c_-}_{L^\infty (\Gamma_+)}$\,.
+	
+	Thus, $v-\phi$ is $\s$-subharmonic in $B^+_R(x_k) \cap  H_+$ and has a nonpositive flux on $\partial_0 B^+_R(x_k) \cap \Gamma_+$. In addition, $v-\phi \leq v \leq 0$ in $B_R^+(x_k)\cap (\partial  H_+ \setminus \Gamma_+)$. Therefore, its positive part $(v-\phi)_+$ extended to be zero in $B_R^+(x_k)\setminus  H_+ $ is a continuous function which is $\s$-subharmonic in $B^+_R(x_k)$ and has a nonpositive flux on $\partial_0 B^+_R(x_k)$, both properties in a weak sense.
+	
+	We define $w := M -(v-\phi)_+$, which is a continuous nonnegative function and satisfies in a weak sense
+	$$
+	\beqc{\PDEsystem}
+	-\div(\lambda^a \nabla w) &\geq & 0 & \text{ in } B^+_R(x_k) \,, \\
+	\dfrac{\partial w}{\partial \nu^a} & \geq & 0 & \text{ on } \partial_0 B^+_R(x_k)  \,.
+	\eeqc
+	$$
+	Hence, $w$ fulfills the hypotheses of Proposition~\ref{Prop:WeakHarnack} and thus \eqref{Eq:WeakHarnack} holds.
+	
+	Then, if we take $R = 2\,R_a( H,\Gamma, \theta)$, and $p$ as in \eqref{Eq:WeakHarnack}, we have
+	\begin{align*}
+	\theta^{1/p} M & \leq \left (  \dfrac{|B^+_{R/2}(x_k)\setminus   H|_a}{|B^+_{R/2}(x_k)|_a}  M^p \right)^{1/p} \\
+	& \leq \left (  \dfrac{|B^+_{R/2}(x_k)\setminus  H_+|_a}{|B^+_{R/2}(x_k)|_a}  M^p \right)^{1/p} \\
+	&= \dfrac{1}{|B^+_{R/2}(x_k)|_a^{1/p}}  \left (  \int_{B^+_{R/2}(x_k)\setminus  H_+} \lambda ^a M^p \d x \d \lambda  \right)^{1/p} \\
+	&\leq |B_1^+|_a^{-1/p} (R/2)^{- \frac{n+1+a}{p}} \left (  \int_{B^+_{R/2}(x_k)} \lambda ^a w^p \d x \d \lambda  \right)^{1/p} \\
+	&\leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \inf_{B^+_{R/4}(x_k)} w \\
+	& \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \,  w(x_k).
+	\end{align*}
+	Here we have used the definition of $R_a( H,\Gamma,\theta)$, the fact that $w \equiv M$ in $B^+_R(x_k)\setminus H_+$, the scaling properties of $|\cdot |_a$ and the weak Harnack inequality \eqref{Eq:WeakHarnack}. Now, if $c_1 \overline{c}_{n,\s} R^{2\s} < 1$, then $w(x_k) = M - v(x_k) + \phi(x_k)$ and therefore
+	$$
+	\theta^{1/p} M \leq  2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \{M - v(x_k) + \phi(x_k) \} \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \{1/k + c_1 M \overline{c}_{n,\s} R^{2\s} \}\,.
+	$$
+	Hence, if we take $R_a( H,\Gamma, \theta)$ small enough such that $c_1 \overline{c}_{n,\s} (2 R_a( H,\Gamma, \theta))^{2\s} < 1$ and $ 2^{\frac{n+1+a}{p}} |B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} (2 R_a( H,\Gamma, \theta))^{2\s} < \theta^{1/p}$, we get that
+	$$
+	M \leq \dfrac{C}{k}
+	$$
+	for some positive constant $C$ independent of $k$. Since this holds for every $k>0$, we conclude that $M \leq 0$, which contradicts \eqref{Eq:PositiveSup}. Therefore, our initial assumption stating that $ H_+$ is not empty is false. This means that $v\leq 0$ in $H$.
 \end{proof}
 
-As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in sets $ H \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ with $\partial_0  H$ contained in an $\varepsilon$-neighborhood of the Simons cone.
+As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in sets $ H \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ with $\Gamma \subset \partial_0  H$ contained in an $\varepsilon$-neighborhood of the Simons cone.
 
 \begin{corollary}
 \label{Cor:MaxPrincipleNarrowSaddle}
