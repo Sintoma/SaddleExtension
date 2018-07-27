@@ -109,6 +109,7 @@
 \newcommand{\laplacian}{\Delta}
 \newcommand{\s}{\gamma}
 \newcommand{\fraclaplacian}{(-\Delta)^\s}
+\newcommand{\Lip}{\mathrm{Lip}}
 \newcommand{\loc}{\mathrm{loc}}
 \renewcommand{\d}{\,\mathrm{d}} %straight d with small space before
 \newcommand{\dx}{\,\mathrm{d}x} %The usual differential of x
@@ -328,7 +329,7 @@ The importance of the layer solution comes from the fact that the associated fun
 \label{Eq:DefULayer}
 U(x,\lambda) := u_0\left( \frac{s-t}{\sqrt{2}},\lambda \right) \ \ \ \text{ for } x\in\R^{2m},
 \end{equation}
-which is odd with respect to the Simons cone and positive in $\ocal$, describes the asymptotic behavior of saddle-shaped solutions at infinity (as shown in \cite{Cinti-Saddle, Cinti-Saddle2}; see Theorem~\ref{Th:Summary} below). Moreover, we will show in Proposition~\ref{Prop:SaddleUnderLayer} that the saddle-shaped solution lies below $U$ in $\ocal$, as it occurs in the local case (see Proposition 1.5 in \cite{CabreTerraI}). Note that from Lemma~4.2 in \cite{CabreTerraI}, we know that $|s-t|/\sqrt{2}$ is the distance to the Simons cone. Therefore, we can understand the function $U$ as the layer solution centered at each point of the Simons cone and oriented in the normal direction to the cone.
+which is odd with respect to the Simons cone and positive in $\ocal$, describes the asymptotic behavior of saddle-shaped solutions at infinity (as shown in \cite{Cinti-Saddle, Cinti-Saddle2}; see Theorem~\ref{Th:Summary} below).  Note that from Lemma~4.2 in \cite{CabreTerraI}, we know that $|s-t|/\sqrt{2}$ is the distance to the Simons cone. Therefore, we can understand the function $U$ as the layer solution centered at each point of the Simons cone and oriented in the normal direction to the cone. Moreover, in this paper we  show (see Proposition~\ref{Prop:SaddleUnderLayer}) that the saddle-shaped solution lies below $U$ in $\ocal$, as it occurs in the local case (see Proposition 1.5 in \cite{CabreTerraI}).
 
 It is sometimes useful to consider also the following variables:
 $$
@@ -390,16 +391,16 @@ As in the paper of Cabré \cite{Cabre-Saddle} for the classical case, the proof 
 Let $u$ be a saddle-shaped solution of \eqref{Eq:AllenCahnWithExtension}. 
 Let $\Omega \subset \ocal \times (0,+\infty) \subset \R^{2m+1}_+$ be an open set such that $\partial_0 \Omega$ is nonempty. Let $v \in C^2 (\Omega)\cap C(\overline{\Omega})$ be bounded from above and such that $\lambda^a v_\lambda \in C(\overline{\Omega})$. 
 
-Consider the operator $\mathscr{L}$ defined by 
+Consider the operator $\mathscr{L}_u $ defined by 
 \begin{equation}
 \label{Eq:LinearizedOperator}
-\mathscr{L}v := d_\s \dfrac{\partial v}{\partial \nu^a}  -f'(u) v \ \ \text{ on } \ \partial_0 \Omega \subset \R^{2m}\times\{0\},
+\mathscr{L}_u v := d_\s \dfrac{\partial v}{\partial \nu^a}  -f'(u) v \ \ \text{ on } \ \partial_0 \Omega \subset \R^{2m}\times\{0\},
 \end{equation}
 and assume that
 $$
 \beqc{\PDEsystem}
 -\div(\lambda^a \nabla v) &\leq& b(x,\lambda) v & \text{ in } \Omega \subset \ocal \times (0,+\infty)\,, \\
-\mathscr{L}v &\leq & 0 & \text{ on } \partial_0 \Omega \subset \ocal \,, \\
+\mathscr{L}_u v &\leq & 0 & \text{ on } \partial_0 \Omega \subset \ocal \,, \\
 v & \leq & 0 & \text{ on } \partial_L \Omega \,,\\
 \ds \limsup_{x\in \partial_0 \Omega, \  |x|\to +\infty} v(x,0) & \leq & 0\,,
 \eeqc
@@ -407,12 +408,12 @@ $$
 with $b \leq 0$. Then, $v\leq 0$ in $\overline{\Omega}$.
 \end{proposition}
 
-To establish the previous maximum principle we follow the proof of the analogous result for the local case ($\s = 1$) in \cite{Cabre-Saddle}. It involves a maximum principle in ``narrow'' domains (see also \cite{Cabre-Topics,BerestyckiNirembergVaradhan}). The main difference between our proof and the one in \cite{Cabre-Saddle} is that, since we are using the extension problem, a new notion of narrowness is needed to carry out the same type of arguments (see Section~\ref{Sec:MaximumPrinciple} for the details).
+To establish the previous maximum principle we follow the proof of the analogous result for the local case ($\s = 1$) in \cite{Cabre-Saddle}. It involves a maximum principle in ``narrow'' sets (see also \cite{Cabre-Topics,BerestyckiNirembergVaradhan}). The main difference between our proof and the one in \cite{Cabre-Saddle} is that, since we are using the extension problem, a new notion of narrowness is needed to carry out the same type of arguments (see Section~\ref{Sec:MaximumPrinciple} for the details).
 
 
 
 
-The second main result of this paper is the following pointwise estimate for the saddle-shaped solution. We prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$ is a barrier for the saddle-shaped solution. This result was established in the local setting ($\s = 1$) in \cite{CabreTerraI}, but in such case the proof is quite simple by using the so-called Modica estimate (see \cite{CabreTerraI} for the details) \todo{Poner algo mas?}. In the fractional framework, as pointed out in this estimate is not available, only some nonlocal versions exist in dimension 1 (see \cite{CabreSolaMorales, CabreSireI}) and therefore we need another type of argument. What we do is to use a maximum principle for the linearized operator at $U$, similar to the one in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}. The result is the following.
+The second main result of this paper is the following pointwise estimate for the saddle-shaped solution. We prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$ is a barrier for the saddle-shaped solution. This result was established in the local setting ($\s = 1$) in \cite{CabreTerraI}, but in such case the proof is quite simple by using the so-called Modica estimate (see \cite{CabreTerraI} for the details). In the fractional framework, this estimate is only available (in a nonlocal form) in dimension 1 (see \cite{CabreSolaMorales, CabreSireI}) and therefore we need another type of argument. What we do is to use a maximum principle for the linearized operator at $U$, similar to the one in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}. The result is the following.
 
 \begin{proposition}
 	\label{Prop:SaddleUnderLayer}
@@ -435,7 +436,7 @@ Its stability is a consequence of the following fact. For every constant $b>0$ s
 $$
 \varphi := t^{-b} \, u_s - s^{-b} u_t, 
 $$
-defined in $\R^{2m+1}_+\setminus\{st=0\}$, is even with respect to the Simons cone and is a positive supersolution of the linearized operator. That is, $-\div(\lambda^a \nabla \varphi) \geq 0$ and $\mathscr{L} \varphi \geq 0$, where $\mathscr{L}$ is defined in \eqref{Eq:LinearizedOperator}.
+defined in $\R^{2m+1}_+\setminus\{st=0\}$, is even with respect to the Simons cone and is a positive supersolution of the linearized operator. That is, $-\div(\lambda^a \nabla \varphi) \geq 0$ and $\mathscr{L}_u \varphi \geq 0$, where $\mathscr{L}_u$ is defined in \eqref{Eq:LinearizedOperator}.
 \end{theorem}
 
 An important consequence of this result is Corollary~\ref{Cor:SimonsConeStableDim14}, stated next, on the stability of the Simons cone as a $(2\s)$-minimal surface in dimensions $2m\geq 14$. This is the first analytical proof of its stability for some $\s$ and $m$. It follows directly from the convergence results proved in \cite{CabreCintiSerra-Stable} for stable solutions of the Allen-Cahn equation after a blow-down, together with the preservation of the stability along this procedure (see also the comments at the end of this introduction).
@@ -489,9 +490,9 @@ The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prov
 \section{Maximum principles for the linearized operator}
 \label{Sec:MaximumPrinciple}
 
-In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' domains. In our case, the use of the extension problem requires a similar maximum principle but in domains that we will call ``extension-narrow''\!, defined next.
+In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' sets. In our case, the use of the extension problem requires a similar maximum principle but in sets that we will call ``extension-narrow''\!, defined next.
 
-\begin{definition}[``Extension-narrow'' sets]
+\begin{definition}[``Extension-narrow'' pair]
 	Let $\Omega \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma \subset \partial_0 \Omega$ be a nonempty subset. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(\Omega,\Gamma,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
 	\begin{equation}
 	\label{Eq:Narrow}
@@ -506,11 +507,11 @@ In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperato
 	From this definition, we will say that a pair $(\Omega, \Gamma)$ is ``extension-narrow'' if $R_a(\Omega,\Gamma,\theta)$ is small enough depending on certain quantities.
 \end{definition}
 
-Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in \Omega$, we recover the usual definition of ``narrow'' domain. Here, instead, we only consider half-balls centered at points $x\in \Gamma \subset \partial_0\Omega$.
+Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in \Omega$, we recover the usual definition of ``narrow'' set. Here, instead, we only consider half-balls centered at points $x\in \Gamma \subset \partial_0\Omega$.
 
-Once the quantity  $R_a(\Omega,\Gamma, \theta)$ is defined, we can state precisely the maximum principle in ``downstairs-narrow'' domains.
+Once the quantity  $R_a(\Omega,\Gamma, \theta)$ is defined, we can state precisely the maximum principle in ``downstairs-narrow'' sets.
 
-\begin{proposition}[Maximum principle in ``extension-narrow'' sets]
+\begin{proposition}[Maximum principle in ``extension-narrow'' pairs]
 	\label{Prop:MaxPrincipleNarrow}
 	Let $\Omega \subset \R^{n+1}_+$ be an open set, and let $\Gamma \subset \partial_0 \Omega$ be a nonempty subset. Assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap \Omega$ is empty. 
 	
@@ -530,8 +531,7 @@ Once the quantity  $R_a(\Omega,\Gamma, \theta)$ is defined, we can state precise
 
 
 
-\todo[inline]{Rehacer explicación}
-%Before proving this result, let us explain why we need to introduce the notion of ``downstairs-narrowness''\!. We will use this maximum principle in a domain of the form $\Omega:=\{0<u<\delta\}\cap \left(\ocal\times (0,+\infty)\right) $, where $u$ is a saddle-shaped solution to \eqref{Eq:AllenCahnWithExtension}. Let us point out two facts. First, by the asymptotic result in Theorem~\ref{Th:Summary}, $\partial_0\Omega$ is contained in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ (see the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}). On the other hand, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{n+1}_+$, as in Figure~\ref{Fig:DownstairsNarrow}. However, a second fact is that $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled almost all $\ocal\times (0,+\infty)$. From these two facts, it follows readily that $\Omega$ is ``downstairs-narrow'' ---using, again, that balls in this notion are centered ``downstairs'' (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
+Before proving this result, let us explain why we need to introduce the notion of ``extension-narrowness''\!. We will use this maximum principle in a pair $(\Omega, \Gamma)$ with $\Gamma \subset \partial_0 \Omega$ in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ . In this case, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{2m+1}_+$, as in Figure~\ref{Fig:ExtensionNarrow}. However, $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled all $\ocal\times (0,+\infty)$. Thus, it follows readily that $(\Omega,\Gamma)$ is ``extension-narrow'' by using that balls in this notion are centered in $\Gamma$ (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
 
 \begin{figure}
 \input{ExtensionNarrow.tex}
@@ -560,7 +560,7 @@ To prove Proposition~\ref{Prop:MaxPrincipleNarrow} we need the following weak Ha
 	for a positive constant $C_h$ depending only on $n$ and $a$.
 \end{proposition}
 
-With this result available, we can now present the proof of the maximum principle in ``downstairs-narrow'' domains.
+With this result available, we can now present the proof of the maximum principle in ``downstairs-narrow'' sets.
 
 \begin{proof}[Proof of Proposition~\ref{Prop:MaxPrincipleNarrow}] 
 	Define the sets 
@@ -691,7 +691,13 @@ With this result available, we can now present the proof of the maximum principl
 	for some positive constant $C$ independent of $k$. Since this holds for every $k>k_0$, we conclude that $M \leq 0$, which contradicts \eqref{Eq:PositiveSup}. Therefore, our initial assumption stating that $ \Omega_+$ is not empty is false. This means that $v\leq 0$ in $\Omega$.
 \end{proof}
 
-As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in sets $ \Omega \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ with $\Gamma \subset \partial_0  \Omega$ contained in an $\varepsilon$-neighborhood of the Simons cone.
+
+\begin{remark}
+	\label{Remark:WeakMPNarrow}
+	Notice that the previous result (and as a consequence, Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}) is also valid if we do not require $v$ to be $C^2$ in the whole $\Omega$. Indeed, we only need to assume that the equation $\div (\lambda^a \nabla v) \leq b(x,\lambda)v$ holds pointwise where $v$ is regular, and that $v$ cannot have a local maximum at a nonregular point. In particular, this will be used in the proof of Proposition~\ref{Prop:SaddleUnderLayer} with $v = u- CU$ in $\Omega = \ocal \times (0,+\infty)$, where $u$ is a saddle-shaped solution, $U$ is defined by \eqref{Eq:DefULayer}, and $C$ is a positive constant. Note that $U$ is no more regular than Lipschitz (and not $C^2$) in $\{t=0, \lambda\geq 0\}$. As we will see in Section~\ref{Sec:Layer}, $U$ is only $\s$-superharmonic in $\Omega \setminus \{t=0, \lambda\geq 0\}$. Nevertheless, Proposition~\ref{Prop:MaxPrincipleNarrow} holds in this case thanks to the fact that $v = u-U$ has, say, a ``good angle'' for the maximum principle in its nonregular points (see the proof of Proposition~\ref{Prop:SaddleUnderLayer} for the details).
+\end{remark}
+
+As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in pairs $(\Omega, \Gamma)$ with $ \Omega \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ and $\Gamma \subset \partial_0  \Omega$ contained in an $\varepsilon$-neighborhood of the Simons cone.
 
 \begin{corollary}
 \label{Cor:MaxPrincipleNarrowSaddle}
@@ -749,7 +755,7 @@ With this result at hand we can now establish the maximum principle for the line
 Let $u$ be a saddle-shaped solution. A key point in the proof is that $u$ is a positive supersolution in $\ocal\times(0,+\infty)$ of the linearized problem. Indeed, since $u>0$ in $\partial_0\Omega \subset \ocal$,
 \begin{equation}
 \label{Eq:uSupersolLinearized}
-\mathscr{L}u = d_\s \dfrac{\partial u}{\partial \nu^a}  -f'(u) u = f(u) - f'(u) u > 0\quad \text{ on } \partial_0\Omega \,.
+\mathscr{L}_u u = d_\s \dfrac{\partial u}{\partial \nu^a}  -f'(u) u = f(u) - f'(u) u > 0\quad \text{ on } \partial_0\Omega \,.
 \end{equation}
 We have used that since $f''<0$ in $(0,1)$ and $f(0)=0$, it satisfies $f'(\tau)\tau < f(\tau)$ for all $\tau\in (0,1)$.
 
@@ -758,7 +764,7 @@ Now, we define
 $$
 w := \dfrac{v}{u}\,.
 $$
-Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $\ccal\times [0,+\infty)$ and $\partial \Omega$ could intersect this set. Thus, in the following arguments we will consider the supremum of $w$ in some subset of $\partial_0 \Omega$, which is at a positive distance to the zero level set of $u$, where the supremum is finite. Then, using the maximum principle in ``extension-narrow'' sets we will see that if we assume that this supremum is positive, it is in fact the supremum on the whole set $\Omega$ (see Step~1 below). After some arguments, we will arrive at a contradiction. A similar strategy was used by Cabré in \cite{Cabre-Saddle}, to prove an analogous maximum principle in the local case $\s = 1$.
+Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $\ccal\times [0,+\infty)$ and $\partial \Omega$ could intersect this set. Thus, in the following arguments we will consider the supremum of $w$ in some subset of $\partial_0 \Omega$, which is at a positive distance to the zero level set of $u$, where the supremum is finite. Then, using the maximum principle in ``extension-narrow'' pairs we will see that, if we assume that this supremum is positive, it is in fact the supremum on the whole set $\Omega$ (see the details below). After some arguments, we will arrive at a contradiction. A similar strategy was used by Cabré in \cite{Cabre-Saddle}, to prove an analogous maximum principle in the local case $\s = 1$.
 
 
 Les us proceed with the details. For $\varepsilon > 0$, set
@@ -794,7 +800,7 @@ $$
 $$
 with $c(x) = f'(u) / d_\s$. By the maximum principle in the ``extension-narrow'' pair $(\Omega,\Gamma)$, we have $\varphi \leq 0$ in $\Omega$, which yields $w = v/u \leq S$ in $\Omega$. Thus, the claim is proved.
 
-Now, by the hypothesis at infinity on $v$ and the fact that $u>\delta$ in $\ocal_{\varepsilon}$, we have that $S$ is attained at some point  $(x_0,0)\in\partial_0\Omega \subset \ocal$. At this point we have
+Now, by the hypothesis on $\partial_L \Omega$ and at infinity on $v$, and the fact that $u>\delta$ in $\ocal_{\varepsilon}$, we have that $S$ is attained at some point  $(x_0,0)\in\partial_0\Omega \subset \ocal$. At this point we have
 \begin{equation}
 \label{Eq:NormalDerivativeAtMaximum}
 \dfrac{\partial w}{\partial \nu^a}(x_0) = -\lim_{\lambda \downarrow 0} \lambda^a w_\lambda (x_0,\lambda) = \lim_{\lambda \downarrow 0} \dfrac{w(x_0,0) - w(x_0, \lambda)}{\lambda^{2\s}} \geq 0\,,
@@ -803,13 +809,13 @@ since $w(x_0,0)$ is the maximum.
 
 On the other hand, observe that
 $$
-d_\s u^2 \dfrac{\partial w}{\partial \nu^a} = d_\s  \dfrac{\partial v}{\partial \nu^a} u  - d_\s  \dfrac{\partial u}{\partial \nu^a} v = u \mathscr{L}v  -  v \mathscr{L}u \leq -v \mathscr{L}u \quad \text{ on } \partial_0 \Omega \subset \ocal\,,
+d_\s u^2 \dfrac{\partial w}{\partial \nu^a} = d_\s  \dfrac{\partial v}{\partial \nu^a} u  - d_\s  \dfrac{\partial u}{\partial \nu^a} v = u \mathscr{L}_u v  -  v \mathscr{L}_u u \leq -v \mathscr{L}_u u \quad \text{ on } \partial_0 \Omega \subset \ocal\,,
 $$
-since $u>0$ in $\ocal$ and $\mathscr{L}v \leq 0$ in $\partial_0 \Omega $. Therefore, at the point $x_0$ we have, using also \eqref{Eq:uSupersolLinearized}, 
+since $u>0$ in $\ocal$ and $\mathscr{L}_u v \leq 0$ in $\partial_0 \Omega $. Therefore, at the point $x_0$ we have, using also \eqref{Eq:uSupersolLinearized}, 
 $$
-\dfrac{\partial w}{\partial \nu^a}(x_0) \leq -\dfrac{S}{d_\s u(x_0)} \mathscr{L}u(x_0) < 0\,,
+\dfrac{\partial w}{\partial \nu^a}(x_0) \leq -\dfrac{S}{d_\s u(x_0)} \mathscr{L}_u u(x_0) < 0\,,
 $$
-which contradicts \eqref{Eq:NormalDerivativeAtMaximum}. Note that in this last argument is crucial the fact that $x_0 \in \partial_0 \Omega \subset \ocal$ and thus $u(x_0)>0$ and $\mathscr{L}u (x_0) > 0$. 
+which contradicts \eqref{Eq:NormalDerivativeAtMaximum}. Note that in this last argument is crucial the fact that $x_0 \in \partial_0 \Omega \subset \ocal$ and thus $u(x_0)>0$ and $\mathscr{L}_u u (x_0) > 0$. 
 
 Hence, the assumption $S>0$ is false and therefore $w \leq 0$ in $\partial_0 \Omega \cap \ocal_\varepsilon $. Since $u > 0$ in $\ocal$, this yields that $v \leq 0$ in $\partial_0 \Omega \cap \ocal_\varepsilon $. Finally, by the maximum principle in the ``extension-narrow'' pair $(\Omega, \Gamma)$ applied to $v$, it follows that $v\leq 0$ in $\Omega$.
 \end{proof}
@@ -845,9 +851,9 @@ This section is devoted to establish some monotonicity properties of the layer s
 
 \begin{proposition}
 \label{Prop:MaxPrincipleLinearizedOperator2D}
-Let $u_0:\overline{\R^2_+}\to \R$ be the layer solution of \eqref{Eq:LayerSolution} and let $\mathscr{L}_0$ be defined by 
+Let $u_0:\overline{\R^2_+}\to \R$ be the layer solution of \eqref{Eq:LayerSolution} and let $\mathscr{L}_{u_0} $ be defined by 
 $$
-\mathscr{L}_0v := d_\s \dfrac{\partial v}{\partial \nu^a}  -f'(u_0) v\,\ \ \text{ on } \ \R=\partial_0\R^2_+\,.
+\mathscr{L}_{u_0} v := d_\s \dfrac{\partial v}{\partial \nu^a}  -f'(u_0) v\,\ \ \text{ on } \ \R=\partial_0\R^2_+\,.
 $$
 Let $\Omega \subset (0,+\infty) \times (0,+\infty)$ be an open set such that $\partial_0 \Omega$ is nonempty. 
 
@@ -855,7 +861,7 @@ Let $v \in C^2 (\Omega)\cap C(\overline{\Omega})$ be bounded from above and sati
 $$
 \beqc{\PDEsystem}
 -\div(\lambda^a \nabla v) &\leq& b v & \text{ in } \Omega \subset (0, +\infty)\times (0,+\infty)\,, \\
-\mathscr{L}_0v &\leq & 0 & \text{ on } \partial_0 \Omega \subset (0,+\infty) \,, \\
+\mathscr{L}_{u_0} v &\leq & 0 & \text{ on } \partial_0 \Omega \subset (0,+\infty) \,, \\
 v & \leq & 0 & \text{ on } \partial_L \Omega\,,\\
 \ds \limsup_{x\in \partial_0 \Omega,\ |x|\to +\infty} v(x,0) & \leq & 0\,,
 \eeqc
@@ -864,20 +870,15 @@ with $b \leq 0$. Then, $v\leq 0$ in $\overline{\Omega}$.
 \end{proposition}
 
 \begin{proof}
-Since it is analogous to the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we just give here a sketch pointing out what needs to be adapted. The key fact is also that, since $u_0>0$ on $(0,+\infty)\times\{0\}$,
+Since it is analogous to the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we just give here a sketch pointing out what needs to be adapted. The key fact is also that, since $u_0>0$ on $(0,+\infty)\times\{0\}$, then $u_0$ is a positive supersolution to the linearized problem. That is,
 \begin{equation}
 \label{Eq:u0SupersolLinearized}
 d_\s \dfrac{\partial u_0}{\partial \nu^a}  = f(u_0) > f'(u_0) u_0 \quad \textrm{ on } (0, +\infty)\times \{0\}\,,
 \end{equation}
 where we have used that $f''<0$ in $(0,1)$ and $f(0)=0$.
+
  
- \todo{revisar}
- 
-First, one defines $w := v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing  $u$ by $u_0$ in the whole argument, and also replacing  $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively. Then, \eqref{Eq:u>delta} follows immediately from the fact that $u_0(x,0)$ is increasing. Once $E$ and $H$ are defined by \eqref{Eq:DefOfE&H} (with $u_0$ instead of $u$), Step 1 is completely analogous. In Step~2 one can use a simpler function $\psi$ than the one used in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, for instance 
-$$
-\psi(x,\lambda) = (1+\lambda^{2\s})(1+x)\,.
-$$
-Finally, Step~3 and Step~4 are also completely analogous by using \eqref{Eq:u0SupersolLinearized}.
+Then, one defines $w := v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing  $u$ by $u_0$ in the whole argument, and also replacing  $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively. Then, \eqref{Eq:u>delta} follows immediately from the fact that $u_0(x,0)$ is increasing. The rest of the proof is completely analogous by using \eqref{Eq:u0SupersolLinearized}.
 \end{proof}
 
 With this maximum principle we can now prove the following monotonicity and concavity properties of the layer solution.
@@ -913,53 +914,55 @@ Notice that $v = 0$ on $\{0\} \times (0,+\infty)$ since $v$ is an odd function w
 Moreover, by repeating the argument of Lemma~4.8 in \cite{CabreSireI} for $\partial^2_{xx} u_0$, it is easy to see that $\partial_{xx} u_0(x,0) \to 0$ as $|x|\to +\infty$. Therefore, by Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D} we deduce that $v\leq 0$ in $[0,+\infty)\times [0,+\infty)$. Finally, we get that it is in fact negative in $(0,+\infty)\times [0,+\infty)$ by applying the strong maximum principle.
 \end{proof}
 
-Now we prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$ is a barrier for the saddle-shaped solution. First of all, note that a simple computation in $s$, $t$ and $\lambda$ variables shows that
+Now we prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$ is a barrier for the saddle-shaped solution. To do it, we will use a maximum principle for the linearized problem at $U$.
+
+
+\begin{proof}[Proof of Proposition~\ref{Prop:SaddleUnderLayer}]
+The idea is to repeat the arguments in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, but using $U$ instead of $u$ as the positive supersolution to the linearized problem with the operator 
+$$
+\mathscr{L}_U w:= d_\s \dfrac{\partial w}{\partial \nu^a}  -f'(U)w. 
+$$ 
+In order to do it, we need to point out several facts.
+	
+First, note that 
+$$
+U\in C^2\big( (\ocal\times (0,+\infty))\setminus \{t=0,\ \lambda > 0\} \big ) \cap \Lip \big( \overline{\R^{2m+1}_+}\big )\,,
+$$
+and $U$ cannot have a local minimum at $\{t=0,\ \lambda \geq 0\}$. Indeed, for every $\lambda \geq 0$,
+$$
+\lim_{\tau\to 0^-} \partial_{x_{m+1}}  U(x_1,...x_m,\tau,0,...,0,\lambda) = \frac{1}{\sqrt{2}}\partial_xu_0\left(\frac{s}{\sqrt{2}},\lambda\right)>0\,, 
+$$
+and
+$$
+\lim_{\tau\to 0^+} \partial_{x_{m+1}} U(x_1,...x_m,\tau,0,...,0,\lambda) = -\frac{1}{\sqrt{2}}\partial_xu_0\left(\frac{s}{\sqrt{2}},\lambda\right) <0\,.
+$$
+
+
+Next, we claim that $U$ is a positive supersolution in $\ocal$ to the linearized problem for $\mathscr{L}_U$. Indeed, by the concavity of $f$, we have that
+$$
+\mathscr{L}_U U  = f(U) - f'(U)U> 0 \quad \text{ in } \ocal\,.
+$$
+Moreover, note that a simple computation in $(s, t, \lambda)$ variables shows that
 \begin{equation}
 \label{Eq:EqForULayer}
 \div (\lambda^a \nabla U) = \lambda^a \dfrac{m-1}{\sqrt{2}} \partial_x u_0 \bpar{\dfrac{s-t}{\sqrt{2}}, \lambda} \dfrac{t-s}{st} \quad \text{ in } \R^{2m + 1}_+ \setminus \{st=0\}\,.
 \end{equation}
-As a consequence, $U$ is $\s$-superharmonic in $\{s>t>0\} \subset \ocal \times (0, +\infty)$. This leads to the following pointwise estimate for the saddle-shaped solution.
+Therefore, $U$ is $\s$-superharmonic in $ (\ocal \times (0, +\infty) )\setminus \{t=0,\ \lambda > 0\}$ ---recall that $ \partial_x u_0 > 0$ by Lemma~\ref{Lemma:MonotonicityLayer}. 
 
-\todo[inline]{algo?}
 
-\begin{proof}[Proof of Proposition~\ref{Prop:SaddleUnderLayer}]
-First, let us define $v:= u - U$ and $\Omega := \{s>t>0, \ \lambda > 0\} \subset \ocal \times (0, +\infty)$. It is easy to see, by using \eqref{Eq:EqForULayer} and Lemma~\ref{Lemma:MonotonicityLayer}, that $-\div (\lambda^a \nabla v) \leq 0$ in $\Omega$. Moreover, both $u$ and $U$ vanish at $\ccal \times [0,+\infty)$ and by the asymptotic behavior of $u$ (see Theorem~\ref{Th:Summary}), we have $\lim_{x\in  \ocal,\ |x|\to +\infty} v(x,0) = 0\,$. On the other hand, since $f$ is concave in $(0,1)$ we get $d_\s \partial_{\nu^a} v = f(u) - f(U) \leq f'(U)v$ on $\partial_0 \Omega$. Collecting all these facts, $v$ satisfies the following problem:
+Now, we define 
+$$ v:= u - U \quad \text{ and } \quad \Omega :=  \ocal \times (0, +\infty)\,,
 $$
-\beqc{\PDEsystem}
--\div(\lambda^a \nabla v) &\leq& 0 & \text{ in } \Omega \subset \ocal \times (0,+\infty)\,, \\
-\mathscr{L}_U v &\leq & 0 & \text{ on } \partial_0 \Omega \subset \ocal \,, \\
-v & = & 0 & \text{ on } \{s=t,\, \lambda \geq 0\}\varsubsetneq\partial_L \Omega \,,\\
-\ds \limsup_{x\in \partial_0 \Omega, \ |x|\to +\infty} v(x,0) & = & 0\,,
-\eeqc
+and we want to see that $v\leq 0$ in $\Omega$. First, since $u$ is $\s$-harmonic, we have that 
+$$ 
+-\div (\lambda^a \nabla v) \leq 0 \quad \text{ in }\Omega \setminus \{t=0,\ \lambda > 0\}\,,
 $$
-where the operator $\mathscr{L}_U$ is defined by 
+and $v$ cannot have a local minimum at $\{t=0,\ \lambda \geq 0\}$. In addition, both $u$ and $U$ vanish at $\ccal \times [0,+\infty)$ and by the asymptotic behavior of $u$ (see Theorem~\ref{Th:Summary}), we have $\lim_{x\in  \ocal,\ |x|\to +\infty} v(x,0) = 0\,$. On the other hand, since $f$ is concave in $(0,1)$, we get 
 $$
-\mathscr{L}_U v := d_\s \dfrac{\partial v}{\partial \nu^a}  -f'(U) v \,.
-$$
-
-The idea is to apply a maximum principle, similar to the ones in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} and Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D}, in order to conclude that $v\leq 0$ in $\Omega$ and, by continuity, in $\ocal\times[0,+\infty)$. Nevertheless, in this case we do not know the sign of $v$ in the whole lateral boundary $\partial_L \Omega$ ---the part where the sign of $v$ is unknown is $\{s > t= 0,\ \lambda \geq 0\}$. We will see that $U$ is not $C^1$ in this set. Despite this, we can proceed as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} thanks to the fact that $U$ is a Lipschitz function with, say, a ``good angle'' for the maximum principle at the nonregular points, at least in one direction (see \eqref{Eq:ULipschitz1} and \eqref{Eq:ULipschitz2} below), as we explain next.
+d_\s \dfrac{\partial v}{\partial \nu^a}  = f(u) - f(U) \leq f'(U)v \quad \text{ on } \partial_0 \Omega\,.$$
 
 
-We follow the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing $u$ (the saddle solution) by $U$. We define $w:= v/U$ and Step~ 1 is completely analogous. It is in Step~2 where the main difference appears. At this point, we define as before 
-$$\overline{w} := \frac{(w - S_0^+)U}{\psi} = \frac{u - (1+S_0^+)U}{\psi},$$
-where $S_0^+ = \max \{0, \sup_{\partial_0 \Omega} w\}$, and we assume by contradiction that $\sup_{\Omega} \overline{w}>0$. In the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we directly concluded that $\overline{w}$ must be negative, arriving to a contradiction. Here, since we do not know the sign of $v$ in the whole lateral boundary, we can only conclude that the supremum of $\overline{w}$ must be attained at a point of the form $(\tilde{x}',0, \tilde{\lambda})\in \{s > t= 0,\ \lambda \geq 0\}\subset \R^m \times \R^m \times [0,+\infty)$. Note now that, for every $\lambda \geq 0$,
-\begin{equation}
-\label{Eq:ULipschitz1}
-\lim_{\tau\to 0^-} \partial_{x_{m+1}}  U(x_1,...x_m,\tau,0,...,0,\lambda) = \frac{1}{\sqrt{2}}\partial_xu_0\left(\frac{s}{\sqrt{2}},\lambda\right)>0\,, 
-\end{equation}
-and
-\begin{equation}
-\label{Eq:ULipschitz2}
-\lim_{\tau\to 0^+} \partial_{x_{m+1}} U(x_1,...x_m,\tau,0,...,0,\lambda) = -\frac{1}{\sqrt{2}}\partial_xu_0\left(\frac{s}{\sqrt{2}},\lambda\right) <0\,.
-\end{equation}
-From this, since $U$ is continuous, $u$ and $\psi$ are $C^1$, and $\psi > 0$, we deduce that
-\begin{align*}
-	\lim_{\tau\to 0^+} \partial_{x_{m+1}} \overline{w} (\tilde{x}',\tau e_1,\tilde{\lambda}) &- \lim_{\tau \to 0^-} \partial_{x_{m+1}} \overline{w} (\tilde{x}',\tau e_1,\tilde{\lambda}) \\
-	&= (1+S_0^+) \sqrt{2} \partial_xu_0\left(\frac{s}{\sqrt{2}},\tilde{\lambda} \right) \dfrac{1}{\psi(\tilde{x}',0, \tilde{\lambda})}>0\,,  
-\end{align*}
-where $e_1$ is the first vector of the canonical basis in $\R^{m}$. This last inequality contradicts the fact that the supremum is attained at $(\tilde{x}',0, \tilde{\lambda})$. Thus, $\overline{w}\leq 0$ in $\Omega$, which yields exactly as before,  that $\sup _\Omega w = \sup_{\partial_0 \Omega} w$. This completes Step~2 in the proof. In Step~3, we have to use the same type of argument to rule out the possibility of the supremum to be attained at a point in $\{s > t = 0,\ \lambda = 0\}$. The rest of the proof is completely analogous to the one of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}.
-
-Therefore, we conclude that $v\leq 0$ in $\Omega$ and, by continuity, in $\ocal\times[0,+\infty)$. Finally, by the odd symmetry of $u$ and $U$, we get \eqref{Eq:SaddleUnderLayer}. Note that we cannot avoid the previous technicality at $\{st=0\}$ by considering $\Omega$ to be the whole set $\ocal \times (0,+\infty)$, since the function $U$ is only Lipschitz (and not $C^2$) across $\{st=0\}$.
+Collecting all these facts, we can repeat the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, using $U$ instead of $u$ as the positive supersolution to the linearized problem for $\mathscr{L}_U$ to see that $v\leq 0$ in $\Omega$. All the arguments are analogous, taking into account Remark~\ref{Remark:WeakMPNarrow} when using the maximum principles in ``extension-narrow'' pairs. Therefore, we conclude that $v\leq 0$ in $\Omega$. and, by the odd symmetry of $u$ and $U$, we get \eqref{Eq:SaddleUnderLayer}.
 \end{proof}
 
 
@@ -1124,7 +1127,7 @@ Let us show that $\varphi = t^{-b}u_s - s^{-b}u_t$, with $b(b-m+2)+m-1\leq 0$ an
 and  
 \begin{equation}
 \label{Eq:VarphiSupersolution2}
-\mathscr{L}\varphi \geq 0 \quad \text{ on } \R^{2m}  \setminus \{st=0\}\,.
+\mathscr{L}_u \varphi \geq 0 \quad \text{ on } \R^{2m}  \setminus \{st=0\}\,.
 \end{equation} 
 
 First, note that $ \varphi(t,s,\lambda) = \varphi(s,t,\lambda) $ by the symmetry of $u$, and $\varphi>0$ in $\{st>0\}\times[0,+\infty)$ by the monotonicity properties of $u$ (Proposition~\ref{Prop:MonotonicityProperties}). Moreover, \eqref{Eq:VarphiSupersolution2} follows readily, since $\varphi$  satisfies 
