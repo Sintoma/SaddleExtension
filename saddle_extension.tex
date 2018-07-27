@@ -492,50 +492,50 @@ The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prov
 In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' domains. In our case, the use of the extension problem requires a similar maximum principle but in domains that we will call ``extension-narrow''\!, defined next.
 
 \begin{definition}[``Extension-narrow'' sets]
-	Let $H \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma \subset \partial_0 H$ be a nonempty subset. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(H,\Gamma,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
+	Let $\Omega \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma \subset \partial_0 \Omega$ be a nonempty subset. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(\Omega,\Gamma,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
 	\begin{equation}
 	\label{Eq:Narrow}
-	\dfrac{|B^+_R(x)\setminus H|_a}{|B^+_R(x)|_a} \geq \theta \quad \text{ for every } x \in \Gamma\,,
+	\dfrac{|B^+_R(x)\setminus \Omega|_a}{|B^+_R(x)|_a} \geq \theta \quad \text{ for every } x \in \Gamma\,,
 	\end{equation}
 	where 
 	$$
 	|E|_a := \int_E \lambda^a \dx \d \lambda\,.
 	$$
-	We say that $R_a(H,\Gamma,\theta) = + \infty$ if no such radius exists.
+	We say that $R_a(\Omega,\Gamma,\theta) = + \infty$ if no such radius exists.
 	
-	From this definition, we will say that a pair $(H, \Gamma)$ is ``extension-narrow'' if $R_a(H,\Gamma,\theta)$ is small enough depending on certain quantities.
+	From this definition, we will say that a pair $(\Omega, \Gamma)$ is ``extension-narrow'' if $R_a(\Omega,\Gamma,\theta)$ is small enough depending on certain quantities.
 \end{definition}
 
-Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in H$, we recover the usual definition of ``narrow'' domain. Here, instead, we only consider half-balls centered at points $x\in \Gamma \subset \partial_0H$.
+Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in \Omega$, we recover the usual definition of ``narrow'' domain. Here, instead, we only consider half-balls centered at points $x\in \Gamma \subset \partial_0\Omega$.
 
-Once the quantity  $R_a(H,\Gamma, \theta)$ is defined, we can state precisely the maximum principle in ``downstairs-narrow'' domains.
+Once the quantity  $R_a(\Omega,\Gamma, \theta)$ is defined, we can state precisely the maximum principle in ``downstairs-narrow'' domains.
 
 \begin{proposition}[Maximum principle in ``extension-narrow'' sets]
 	\label{Prop:MaxPrincipleNarrow}
-	Let $H \subset \R^{n+1}_+$ be an open set, and let $\Gamma \subset \partial_0 H$ be a nonempty subset. Assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap H$ is empty. 
+	Let $\Omega \subset \R^{n+1}_+$ be an open set, and let $\Gamma \subset \partial_0 \Omega$ be a nonempty subset. Assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap \Omega$ is empty. 
 	
-	Let $a\in (-1,1)$ and let $v \in C^2 (H)\cap C(\overline{H})$ be a function bounded from above such that $\lambda^a v_\lambda \in C (\overline{H})$, and assume that it satisfies
+	Let $a\in (-1,1)$ and let $v \in C^2 (\Omega)\cap C(\overline{\Omega})$ be a function bounded from above such that $\lambda^a v_\lambda \in C (\overline{\Omega})$, and assume that it satisfies
 	\begin{equation}
 	\label{Eq:MaxPrincipleNarrow}
 	\beqc{\PDEsystem}
-	-\div(\lambda^a \nabla v) &\leq& b(x,\lambda) v & \text{ in } H\,, \\
+	-\div(\lambda^a \nabla v) &\leq& b(x,\lambda) v & \text{ in } \Omega\,, \\
 	\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \Gamma \,, \\
-	v & \leq & 0 & \text{ on } \partial H \setminus \Gamma \,,
+	v & \leq & 0 & \text{ on } \partial \Omega \setminus \Gamma \,,
 	\eeqc
 	\end{equation}
-	where $b \leq 0$ in $H$ and $c$ is bounded from below on $\Gamma$.
+	where $b \leq 0$ in $\Omega$ and $c$ is bounded from below on $\Gamma$.
 	
-	Then, for every $\theta \in (0,1)$ there exists a constant $R^*$ depending only on $n$, $a$, $\theta$, and $\norm{c_-}_{L^\infty(\Gamma)}$, such that $v\leq 0 $ in $H$ whenever $R_a(H,\Gamma,\theta) \leq R^*$.
+	Then, for every $\theta \in (0,1)$ there exists a constant $R^*$ depending only on $n$, $a$, $\theta$, and $\norm{c_-}_{L^\infty(\Gamma)}$, such that $v\leq 0 $ in $\Omega$ whenever $R_a(\Omega,\Gamma,\theta) \leq R^*$.
 \end{proposition}
 
 
 
 \todo[inline]{Rehacer explicación}
-%Before proving this result, let us explain why we need to introduce the notion of ``downstairs-narrowness''\!. We will use this maximum principle in a domain of the form $H:=\{0<u<\delta\}\cap \left(\ocal\times (0,+\infty)\right) $, where $u$ is a saddle-shaped solution to \eqref{Eq:AllenCahnWithExtension}. Let us point out two facts. First, by the asymptotic result in Theorem~\ref{Th:Summary}, $\partial_0H$ is contained in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ (see the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}). On the other hand, $H$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{n+1}_+$, as in Figure~\ref{Fig:DownstairsNarrow}. However, a second fact is that $\ocal^c\times (0,+\infty)$ is contained in the complement of $H$ --- even if $H$ filled almost all $\ocal\times (0,+\infty)$. From these two facts, it follows readily that $H$ is ``downstairs-narrow'' ---using, again, that balls in this notion are centered ``downstairs'' (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
+%Before proving this result, let us explain why we need to introduce the notion of ``downstairs-narrowness''\!. We will use this maximum principle in a domain of the form $\Omega:=\{0<u<\delta\}\cap \left(\ocal\times (0,+\infty)\right) $, where $u$ is a saddle-shaped solution to \eqref{Eq:AllenCahnWithExtension}. Let us point out two facts. First, by the asymptotic result in Theorem~\ref{Th:Summary}, $\partial_0\Omega$ is contained in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ (see the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}). On the other hand, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{n+1}_+$, as in Figure~\ref{Fig:DownstairsNarrow}. However, a second fact is that $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled almost all $\ocal\times (0,+\infty)$. From these two facts, it follows readily that $\Omega$ is ``downstairs-narrow'' ---using, again, that balls in this notion are centered ``downstairs'' (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
 
 \begin{figure}
 \input{ExtensionNarrow.tex}
-\caption{An example of a pair $(H,\Gamma)$ which is ``extension-narrow''\!.}
+\caption{An example of a pair $(\Omega,\Gamma)$ which is ``extension-narrow''\!.}
 \label{Fig:ExtensionNarrow}
 \end{figure}
 
@@ -565,22 +565,22 @@ With this result available, we can now present the proof of the maximum principl
 \begin{proof}[Proof of Proposition~\ref{Prop:MaxPrincipleNarrow}] 
 	Define the sets 
 	$$
-	H_+ := \left\{(x,\lambda) \in H \ : \ v(x,\lambda)>0 \right\} 
+	\Omega_+ := \left\{(x,\lambda) \in \Omega \ : \ v(x,\lambda)>0 \right\} 
 	\quad \text{ and } \quad 
-	\Gamma_+ := \partial H_+ \cap \Gamma\,,
+	\Gamma_+ := \partial \Omega_+ \cap \Gamma\,,
 	$$ 
-	and by contradiction assume that $H_+$ is nonempty. Then, since $b\leq 0$, it is easy to check that $v$ satisfies
+	and by contradiction assume that $\Omega_+$ is nonempty. Then, since $b\leq 0$, it is easy to check that $v$ satisfies
 	$$
 	\beqc{\PDEsystem}
-	-\div(\lambda^a \nabla v) &\leq& 0 & \text{ in } H_+\,, \\
+	-\div(\lambda^a \nabla v) &\leq& 0 & \text{ in } \Omega_+\,, \\
 	\dfrac{\partial v}{\partial \nu^a}  + c(x) v &\leq & 0 & \text{ on } \Gamma_+ \text{ (if this set is nonempty)}\,, \\
-	v & \leq & 0 & \text{ on } \partial H_+ \setminus \Gamma_+\,.
+	v & \leq & 0 & \text{ on } \partial \Omega_+ \setminus \Gamma_+\,.
 	\eeqc
 	$$
 	Now, we proceed in two steps in order to arrive at contradiction.
 	
 	\textbf{Step 1.}
-	First, we claim that if $\Gamma_+$ is nonempty then $\sup_{H_+} v = \sup_{\Gamma_+} v $. That is, if we call $\overline{v} = v - \sup_{\Gamma_+} v$, we then have $\overline{v} \leq 0$ in $H_+$. To prove this, we use a classical Phragmen-Lindelöf-type argument, as follows. Similar methods appear, among many others, in the proof of Theorem~1.2 of \cite{BerestyckiCaffarelliNiremberg-Monotonicity}, or Section~2.4 of \cite{CabreSolaMorales}.
+	First, we claim that if $\Gamma_+$ is nonempty then $\sup_{\Omega_+} v = \sup_{\Gamma_+} v $. That is, if we call $\overline{v} = v - \sup_{\Gamma_+} v$, we then have $\overline{v} \leq 0$ in $\Omega_+$. To prove this, we use a classical Phragmen-Lindelöf-type argument, as follows. Similar methods appear, among many others, in the proof of Theorem~1.2 of \cite{BerestyckiCaffarelliNiremberg-Monotonicity}, or Section~2.4 of \cite{CabreSolaMorales}.
 	
 	We now claim that, since the cone $E$ is open, there exists a nonempty open cone $F \subset E$ satisfying
 	\begin{equation}
@@ -602,39 +602,39 @@ With this result available, we can now present the proof of the maximum principl
 	$$ 
 	\psi(x,\lambda) = (1+\lambda^{2\s}) |x|^\beta \phi(x/|x|), 
 	$$
-	where $\beta$ is a positive real number. Then, $\phi(x/|x|)\geq \delta$ for each $(x,\lambda) \in H_+$,  since $x/|x| \in \Sph^{n-1} \setminus \overline{F}$. Moreover, by \eqref{Eq:DistanceCones} with $y=0$, we deduce that
+	where $\beta$ is a positive real number. Then, $\phi(x/|x|)\geq \delta$ for each $(x,\lambda) \in \Omega_+$,  since $x/|x| \in \Sph^{n-1} \setminus \overline{F}$. Moreover, by \eqref{Eq:DistanceCones} with $y=0$, we deduce that
 	$$ 
-	\psi(x,\lambda) \geq \delta (1+\lambda^{2\s}) |x|^\beta \geq \delta c_0^\beta > 0 \ \ \text{ in } H_+,
+	\psi(x,\lambda) \geq \delta (1+\lambda^{2\s}) |x|^\beta \geq \delta c_0^\beta > 0 \ \ \text{ in } \Omega_+,
 	$$
 	since $0$ is the vertex of $F$.
 	On the other hand, note that if we choose $\beta>0$ solving $\beta(\beta+n-2)=\mu$, we have that $\psi$ satisfies
 	$$
 	\beqc{\PDEsystem}
-	-\div(\lambda^a \nabla \psi) &=& 0 & \text{ in } H_+\,, \\
-	\ds \lim_{(x,\lambda)\in H_+, \ |(x,\lambda)|\to +\infty} \psi & = & +\infty.
+	-\div(\lambda^a \nabla \psi) &=& 0 & \text{ in } \Omega_+\,, \\
+	\ds \lim_{(x,\lambda)\in \Omega_+, \ |(x,\lambda)|\to +\infty} \psi & = & +\infty.
 	\eeqc
 	$$
 	Thus, if we define 
 	$$\overline{w}:=\overline{v}/\psi\,,$$
-	proving that $\overline{v} \leq 0$ in $H_+$ is equivalent to showing that $\overline{w}\leq 0$ in $H_+$, since $\psi$ is positive. Now, since $\sup_{\Gamma_+} v \geq 0$, it is easy to show that $\overline{w}$ satisfies
+	proving that $\overline{v} \leq 0$ in $\Omega_+$ is equivalent to showing that $\overline{w}\leq 0$ in $\Omega_+$, since $\psi$ is positive. Now, since $\sup_{\Gamma_+} v \geq 0$, it is easy to show that $\overline{w}$ satisfies
 	\begin{equation}
 	\label{Eq:wTildeEquationNarrow}
 	\beqc{\PDEsystem}
-	-\div(\lambda^a \nabla \overline{w})-2\lambda^a\dfrac{\nabla \psi}{\psi}\cdot\nabla \overline{w} &\leq& 0 & \text{ in } H_+\,, \\
-	\overline{w} &\leq& 0 & \text{ on } \partial H_+\,, \\
-	\ds \lim_{(x,\lambda)\in H, \ |(x,\lambda)|\to +\infty} \overline{w} & \leq & 0\,.
+	-\div(\lambda^a \nabla \overline{w})-2\lambda^a\dfrac{\nabla \psi}{\psi}\cdot\nabla \overline{w} &\leq& 0 & \text{ in } \Omega_+\,, \\
+	\overline{w} &\leq& 0 & \text{ on } \partial \Omega_+\,, \\
+	\ds \lim_{(x,\lambda)\in \Omega, \ |(x,\lambda)|\to +\infty} \overline{w} & \leq & 0\,.
 	\eeqc
 	\end{equation}
-	Then, by the maximum principle we deduce that $\overline{w}\leq 0$ in $H_+$, which yields $\overline{v}\leq 0$ in $H_+$.
+	Then, by the maximum principle we deduce that $\overline{w}\leq 0$ in $\Omega_+$, which yields $\overline{v}\leq 0$ in $\Omega_+$.
 	
-	Note that if $\Gamma_+$ is empty, the same argument applied to $v$ instead of $\overline{v}$ yields a contradiction with the assumption that $H_+$ is nonempty. From now on in this proof, we will assume that $\Gamma_+ \neq \varnothing$.
+	Note that if $\Gamma_+$ is empty, the same argument applied to $v$ instead of $\overline{v}$ yields a contradiction with the assumption that $\Omega_+$ is nonempty. From now on in this proof, we will assume that $\Gamma_+ \neq \varnothing$.
 	
-	\textbf{Step 2.} By Step 1 and the definition of $H_+$, we have that
+	\textbf{Step 2.} By Step 1 and the definition of $\Omega_+$, we have that
 	\begin{equation}
 	\label{Eq:PositiveSup}
 	M := \sup_{\Gamma_+} v > 0\,.
 	\end{equation}
-	Moreover, using also Step 1 and the hypotheses assumed on $v$ at $\partial H_+\setminus \Gamma_+$, it is clear that for every $k > 0$ there exists a point $(x_k,0)\in \Gamma_+$ such that
+	Moreover, using also Step 1 and the hypotheses assumed on $v$ at $\partial \Omega_+\setminus \Gamma_+$, it is clear that for every $k > 0$ there exists a point $(x_k,0)\in \Gamma_+$ such that
 	$$
 	v(x_k) = v(x_k,0) \geq M \bpar{1- \dfrac{1}{k}}\,,
 	$$
@@ -659,7 +659,7 @@ With this result available, we can now present the proof of the maximum principl
 	$$
 	if we choose $c_1 > d_\s\norm{c_-}_{L^\infty (\Gamma)}$\,.
 	
-	Thus, $v-\phi$ is $\s$-subharmonic in $B^+_R(x_k) \cap  H_+$ and has a nonpositive flux on $\partial_0 B^+_R(x_k) \cap \Gamma_+$. In addition, $v-\phi \leq v \leq 0$ in $B_R^+(x_k)\cap (\partial  H_+ \setminus \Gamma_+)$. Therefore, its positive part $(v-\phi)_+$ extended to be zero in $B_R^+(x_k)\setminus  H_+ $ is a continuous function which is $\s$-subharmonic in $B^+_R(x_k)$ and has a nonpositive flux on $\partial_0 B^+_R(x_k)$, both properties in a weak sense.
+	Thus, $v-\phi$ is $\s$-subharmonic in $B^+_R(x_k) \cap  \Omega_+$ and has a nonpositive flux on $\partial_0 B^+_R(x_k) \cap \Gamma_+$. In addition, $v-\phi \leq v \leq 0$ in $B_R^+(x_k)\cap (\partial  \Omega_+ \setminus \Gamma_+)$. Therefore, its positive part $(v-\phi)_+$ extended to be zero in $B_R^+(x_k)\setminus  \Omega_+ $ is a continuous function which is $\s$-subharmonic in $B^+_R(x_k)$ and has a nonpositive flux on $\partial_0 B^+_R(x_k)$, both properties in a weak sense.
 	
 	We define $w := M -(v-\phi)_+$, which is a continuous nonnegative function and satisfies in a weak sense
 	$$
@@ -670,34 +670,34 @@ With this result available, we can now present the proof of the maximum principl
 	$$
 	Hence, $w$ fulfills the hypotheses of Proposition~\ref{Prop:WeakHarnack} and thus \eqref{Eq:WeakHarnack} holds.
 	
-	Then, if we take $R = 2\,R_a( H,\Gamma, \theta)$, and $p$ as in \eqref{Eq:WeakHarnack}, we have
+	Then, if we take $R = 2\,R_a( \Omega,\Gamma, \theta)$, and $p$ as in \eqref{Eq:WeakHarnack}, we have
 	\begin{align*}
-	\theta^{1/p} M & \leq \left (  \dfrac{|B^+_{R/2}(x_k)\setminus   H|_a}{|B^+_{R/2}(x_k)|_a}  M^p \right)^{1/p} \\
-	& \leq \left (  \dfrac{|B^+_{R/2}(x_k)\setminus  H_+|_a}{|B^+_{R/2}(x_k)|_a}  M^p \right)^{1/p} \\
-	&= \dfrac{1}{|B^+_{R/2}(x_k)|_a^{1/p}}  \left (  \int_{B^+_{R/2}(x_k)\setminus  H_+} \lambda ^a M^p \d x \d \lambda  \right)^{1/p} \\
+	\theta^{1/p} M & \leq \left (  \dfrac{|B^+_{R/2}(x_k)\setminus   \Omega|_a}{|B^+_{R/2}(x_k)|_a}  M^p \right)^{1/p} \\
+	& \leq \left (  \dfrac{|B^+_{R/2}(x_k)\setminus  \Omega_+|_a}{|B^+_{R/2}(x_k)|_a}  M^p \right)^{1/p} \\
+	&= \dfrac{1}{|B^+_{R/2}(x_k)|_a^{1/p}}  \left (  \int_{B^+_{R/2}(x_k)\setminus  \Omega_+} \lambda ^a M^p \d x \d \lambda  \right)^{1/p} \\
 	&\leq |B_1^+|_a^{-1/p} (R/2)^{- \frac{n+1+a}{p}} \left (  \int_{B^+_{R/2}(x_k)} \lambda ^a w^p \d x \d \lambda  \right)^{1/p} \\
 	&\leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \inf_{B^+_{R/4}(x_k)} w \\
 	& \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \,  w(x_k).
 	\end{align*}
-	Here we have used the definition of $R_a( H,\Gamma,\theta)$, the fact that $w \equiv M$ in $B^+_R(x_k)\setminus H_+$, the scaling properties of $|\cdot |_a$ and the weak Harnack inequality \eqref{Eq:WeakHarnack}. Now, if $c_1 \overline{c}_{n,\s} R^{2\s} < 1$, then there exists $k_0>0$ depending only on $n$, $\s$, $R$, and $c_1$, such that $w(x_k) = M - v(x_k) + \phi(x_k)$ for every $k>k_0$. Therefore, for such $k$ we have
+	Here we have used the definition of $R_a( \Omega,\Gamma,\theta)$, the fact that $w \equiv M$ in $B^+_R(x_k)\setminus \Omega_+$, the scaling properties of $|\cdot |_a$ and the weak Harnack inequality \eqref{Eq:WeakHarnack}. Now, if $c_1 \overline{c}_{n,\s} R^{2\s} < 1$, then there exists $k_0>0$ depending only on $n$, $\s$, $R$, and $c_1$, such that $w(x_k) = M - v(x_k) + \phi(x_k)$ for every $k>k_0$. Therefore, for such $k$ we have
 	\begin{align*}
 		\theta^{1/p} M &\leq  2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \{M - v(x_k) + \phi(x_k) \} \\
 		& \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \{1/k + c_1  \overline{c}_{n,\s} R^{2\s} \}M\,.
 	\end{align*}
-	Hence, if we take $R_a( H,\Gamma, \theta)$ small enough such that $c_1 \overline{c}_{n,\s} (2 R_a( H,\Gamma, \theta))^{2\s} < 1$ and $ 2^{\frac{n+1+a}{p}} |B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} (2 R_a( H,\Gamma, \theta))^{2\s} < \theta^{1/p}$, we get that
+	Hence, if we take $R_a( \Omega,\Gamma, \theta)$ small enough such that $c_1 \overline{c}_{n,\s} (2 R_a( \Omega,\Gamma, \theta))^{2\s} < 1$ and $ 2^{\frac{n+1+a}{p}} |B_1^+|_a^{-1/p} C_h c_1 \overline{c}_{n,\s} (2 R_a( \Omega,\Gamma, \theta))^{2\s} < \theta^{1/p}$, we get that
 	$$
 	M \bpar{1- \dfrac{C}{k}}\leq 0
 	$$
-	for some positive constant $C$ independent of $k$. Since this holds for every $k>k_0$, we conclude that $M \leq 0$, which contradicts \eqref{Eq:PositiveSup}. Therefore, our initial assumption stating that $ H_+$ is not empty is false. This means that $v\leq 0$ in $H$.
+	for some positive constant $C$ independent of $k$. Since this holds for every $k>k_0$, we conclude that $M \leq 0$, which contradicts \eqref{Eq:PositiveSup}. Therefore, our initial assumption stating that $ \Omega_+$ is not empty is false. This means that $v\leq 0$ in $\Omega$.
 \end{proof}
 
-As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in sets $ H \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ with $\Gamma \subset \partial_0  H$ contained in an $\varepsilon$-neighborhood of the Simons cone.
+As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in sets $ \Omega \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ with $\Gamma \subset \partial_0  \Omega$ contained in an $\varepsilon$-neighborhood of the Simons cone.
 
 \begin{corollary}
 \label{Cor:MaxPrincipleNarrowSaddle}
-Let $H\subset \ocal \times (0, +\infty) \subset \R^{2m + 1}_+$ and let $\Gamma \subset \partial_0 H$ be a nonempty subset. Assume that $\Gamma \subset \ncal_\varepsilon := \{t < s < t+\varepsilon, \ \lambda= 0 \}$. 
+Let $\Omega\subset \ocal \times (0, +\infty) \subset \R^{2m + 1}_+$ and let $\Gamma \subset \partial_0 \Omega$ be a nonempty subset. Assume that $\Gamma \subset \ncal_\varepsilon := \{t < s < t+\varepsilon, \ \lambda= 0 \}$. 
 
-Then, if $\varepsilon$ is small enough, depending only on $n$, $\s$, and $\norm{c_-}_{L^\infty(\Gamma)}$, the maximum principle holds in $H$ in the sense of Proposition~\ref{Prop:MaxPrincipleNarrow}. That is, if $v \in C^2 (H)\cap C(\overline{H})$ is bounded from above, $\lambda^a v_\lambda \in C (\overline{H})$, and $v$ satisfies \eqref{Eq:MaxPrincipleNarrow}, then $v\leq 0$ in $H$.
+Then, if $\varepsilon$ is small enough, depending only on $n$, $\s$, and $\norm{c_-}_{L^\infty(\Gamma)}$, the maximum principle holds in $\Omega$ in the sense of Proposition~\ref{Prop:MaxPrincipleNarrow}. That is, if $v \in C^2 (\Omega)\cap C(\overline{\Omega})$ is bounded from above, $\lambda^a v_\lambda \in C (\overline{\Omega})$, and $v$ satisfies \eqref{Eq:MaxPrincipleNarrow}, then $v\leq 0$ in $\Omega$.
 \end{corollary}
 
 To prove it, it is enough to realize that the Simons cone separates every ball centered at a point in the cone into two regions with comparable measure. In fact, it is interesting to note that these two regions have exactly the same measure, as stated next.
@@ -731,13 +731,13 @@ $$ |B_r(x_0)\cap \ical| = | B_r(\overline{R}x_0) \cap \ical | = | B_r(S\overline
 With this lemma available we proceed with the proof of Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}.
 
 \begin{proof}[Proof of Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}]
-Note that $\R^{2m} \setminus \overline{\ocal}$ is an open cone outside $\ocal$, and thus $\{ (\R^{2m} \setminus \overline{\ocal}) \times (0, +\infty) \} \cap H $ is empty. Hence, we can use Proposition~\ref{Prop:MaxPrincipleNarrow} by noticing that,  if we take $\theta = 2^{-4m - 3-2a}$, then $R_a(H,\Gamma,\theta)\leq \varepsilon$. Indeed, recall first that by Lemma~4.2 in \cite{CabreTerraI}, $|s-t|/\sqrt{2}$ is the distance to the cone. Then, let $x\in \Gamma$ and let $\overline{x}\in \ccal$ a point realizing this distance. Since $x\in \Gamma \subset \ncal_\varepsilon$, we have that $|x-\overline{x}| \leq \varepsilon /\sqrt{2} < 3\varepsilon /4$ and therefore
+Note that $\R^{2m} \setminus \overline{\ocal}$ is an open cone outside $\ocal$, and thus $\{ (\R^{2m} \setminus \overline{\ocal}) \times (0, +\infty) \} \cap \Omega $ is empty. Hence, we can use Proposition~\ref{Prop:MaxPrincipleNarrow} by noticing that,  if we take $\theta = 2^{-4m - 3-2a}$, then $R_a(\Omega,\Gamma,\theta)\leq \varepsilon$. Indeed, recall first that by Lemma~4.2 in \cite{CabreTerraI}, $|s-t|/\sqrt{2}$ is the distance to the cone. Then, let $x\in \Gamma$ and let $\overline{x}\in \ccal$ a point realizing this distance. Since $x\in \Gamma \subset \ncal_\varepsilon$, we have that $|x-\overline{x}| \leq \varepsilon /\sqrt{2} < 3\varepsilon /4$ and therefore
 $$
-B_{\varepsilon/4}^+ (\overline{x})\setminus \big( \ocal \times (0, +\infty)\big) \subset B_{\varepsilon/4}^+ (\overline{x})\setminus H \subset B_\varepsilon^+ (x)\setminus H\,.
+B_{\varepsilon/4}^+ (\overline{x})\setminus \big( \ocal \times (0, +\infty)\big) \subset B_{\varepsilon/4}^+ (\overline{x})\setminus \Omega \subset B_\varepsilon^+ (x)\setminus \Omega\,.
 $$
 Hence, by the scaling properties of $|\cdot|_a$ and Lemma~\ref{Lemma:HalfBallSimonsCone} ---used at each level $\{\lambda = \lambda_0\}$, with $\lambda_0\in (0,\varepsilon/4)$---, we have
 $$
-2^{-4m - 3-2a} |B^+_\varepsilon (x)|_a = \dfrac{1}{2} |B_{\varepsilon/4}^+(\overline{x}) |_a = |B_{\varepsilon/4}^+ (\overline{x})\setminus \big( \ocal \times (0, +\infty)\big)  |_a \leq |B_\varepsilon^+ (x)\setminus H |_a\,.
+2^{-4m - 3-2a} |B^+_\varepsilon (x)|_a = \dfrac{1}{2} |B_{\varepsilon/4}^+(\overline{x}) |_a = |B_{\varepsilon/4}^+ (\overline{x})\setminus \big( \ocal \times (0, +\infty)\big)  |_a \leq |B_\varepsilon^+ (x)\setminus \Omega |_a\,.
 $$
 \end{proof}
 
@@ -758,14 +758,14 @@ Now, we define
 $$
 w := \dfrac{v}{u}\,.
 $$
-Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $\ccal\times [0,+\infty)$ and $\partial \Omega$ could intersect this set. Thus, in the following arguments we will consider the supremum of $w$ in some set, which is at a positive distance to the zero level set of $u$, where the supremum is finite. Then, using the maximum principle in ``downstairs-narrow'' domains we will see that if we assume that this supremum is positive, it is in fact the supremum on the whole set $\Omega$ (see Step~1 below). After some arguments, we will arrive at a contradiction. The same strategy was used by Cabré in \cite{Cabre-Saddle} but here we must refine the argument due to the extension problem.
+Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $\ccal\times [0,+\infty)$ and $\partial \Omega$ could intersect this set. Thus, in the following arguments we will consider the supremum of $w$ in some subset of $\partial_0 \Omega$, which is at a positive distance to the zero level set of $u$, where the supremum is finite. Then, using the maximum principle in ``extension-narrow'' sets we will see that if we assume that this supremum is positive, it is in fact the supremum on the whole set $\Omega$ (see Step~1 below). After some arguments, we will arrive at a contradiction. A similar strategy was used by Cabré in \cite{Cabre-Saddle}, to prove an analogous maximum principle in the local case $\s = 1$.
 
 
 Les us proceed with the details. For $\varepsilon > 0$, set
 $$
 \ocal_\varepsilon := \{t +\varepsilon < s,\ \lambda = 0 \} \quad \textrm{ and } \quad \mathcal{N}_\varepsilon := \{t < s < t+\varepsilon ,\ \lambda = 0 \}\,,
 $$
-and take $\varepsilon$ small enough such that each set $H \subset \ocal \times (0,+\infty)$ satisfying $\partial_0 H \subset \mathcal{N}_\varepsilon$  is ``downstairs-narrow'' and hence the maximum principle holds in $H$ as in Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}. 
+and take $\varepsilon$ small enough such that for each set $\Gamma \subset \partial_0 \Omega$ satisfying $\Gamma \subset \mathcal{N}_\varepsilon$, the pair $(\Omega, \Gamma)$  is ``extension-narrow'' and hence the maximum principle holds in as in Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}. 
 
 Next, we claim that
 \begin{equation}
@@ -774,83 +774,27 @@ Next, we claim that
 \end{equation}
 for some positive constant $\delta$. Indeed, thanks to the asymptotic behavior of $u$ (see part (ii) of Theorem~\ref{Th:Summary}), and since $U(x) \geq u_0(\varepsilon/\sqrt{2})$ for $x\in \ocal_\varepsilon$,  there exists a radius $R>0$ such that $u(x) \geq u_0(\varepsilon/\sqrt{2})/2$ if $|x|>R$ and $x\in \ocal_\varepsilon$. Since $u$ is positive in the compact set $\overline{\ocal_\varepsilon} \cap \overline{B_R}$, we conclude the claim.
 
-Let us now consider the sets 
-\begin{equation}
-\label{Eq:DefOfE&H}
-E :=\Omega  \cap \{u > \delta/2\} \subset \R^{2m}_+ \qquad \textrm{ and } \qquad H := \Omega \setminus \overline{E}\,.
-\end{equation}
-Obviously, $\partial_0 \Omega \cap \ocal_\varepsilon \subset \overline{E} \cap \{\lambda = 0\}$ and thus $H$ satisfies $ \partial_0 H \subset \mathcal{N}_\varepsilon$. Therefore, $H$ fulfills the hypotheses of Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} and the maximum principle holds in such set.
-
-
- Let
+We define
 $$
-S := \sup_E w\,,
+\Gamma := \partial_0 \Omega \cap \ncal_\varepsilon\,,
 $$
-which is finite by the fact that $u$ is bounded from below  by $\delta/2>0$ in $E$ and $v$ is bounded from above. Assume that $S > 0$ and we will arrive at a contradiction in four steps.
+and let
+$$
+S := \sup_{\partial_0 \Omega \cap \ocal_\varepsilon } w\,,
+$$
+which is finite by the fact that $u$ is bounded from below  by $\delta>0$ in $\ocal_\varepsilon$ and $v$ is bounded from above. Assume by contradiction that $S > 0$.
 
-\textbf{Step 1.}
-We claim that $S = \sup_\Omega w$. To see this, we only need to show that $w \leq S$ in $H$. Define $\varphi := v -Su$ and note that since $S>0$, $\varphi$ satisfies 
+First, we claim that $S = \sup_\Omega w$. To see this, we only need to show that $w \leq S$ in $\Omega$. Define $\varphi := v -Su$ and note that since $S\geq 0$, $\varphi$ satisfies 
 $$
 \beqc{\PDEsystem}
--\div(\lambda^a \nabla \varphi) &\leq& b(x,\lambda) \varphi & \text{ in } H \,, \\
-\dfrac{\partial \varphi}{\partial \nu^a}  &\leq & c(x) \varphi & \text{ on } \partial_0 H \,, \\
-\varphi & \leq & 0 & \text{ on } \partial_L H  \,,\\
-\ds \limsup_{x \in \partial_0 H,\ |x|\to +\infty} \varphi(x,0) & \leq & 0\,,
+-\div(\lambda^a \nabla \varphi) &\leq& b(x,\lambda) \varphi & \text{ in } \Omega \,, \\
+\dfrac{\partial \varphi}{\partial \nu^a}  &\leq & c(x) \varphi & \text{ on } \Gamma \,, \\
+\varphi & \leq & 0 & \text{ on } \partial \Omega \setminus \Gamma  \,,
 \eeqc
 $$
-with $c(x) = f'(u) / d_\s$. By the maximum principle in the ``downstairs-narrow'' domain~$H$, we have $\varphi \leq 0$ in $H$, which yields $w = v/u \leq S$ in $H$. Thus, the claim is proved.
+with $c(x) = f'(u) / d_\s$. By the maximum principle in the ``extension-narrow'' pair $(\Omega,\Gamma)$, we have $\varphi \leq 0$ in $\Omega$, which yields $w = v/u \leq S$ in $\Omega$. Thus, the claim is proved.
 
-\textbf{Step 2.}
-We claim that
-\begin{equation}
-\label{Eq:MaxPrincipleForw}
-S = \sup_{\Omega} w = \sup_{\partial_0\Omega} w\,.
-\end{equation}
-Indeed, define $S_0 := \sup_{\partial_0\Omega} w$ and $S_0^+ := \max \{S_0,0\}$. We proceed with a Phragmen-Lindelöf-type argument, as in the proof of Proposition~\ref{Prop:MaxPrincipleNarrow}, using now the function
-$$
-\overline{w} := \dfrac{(w - S_0^+)u}{\psi} = \dfrac{v}{\psi} -S_0^+\dfrac{u}{\psi} \,,
-$$
-where $\psi$ is a positive function as in Step~1 of the proof of Proposition~\ref{Prop:MaxPrincipleNarrow} ---note that $(\R^{2m}\setminus \overline{\ocal})\times (0,+\infty)$ is an open cone outside $\Omega$. Since $S_0^+\geq 0$, it is easy to check that $\overline{w}$ satisfies
-$$
--\div(\lambda^a \nabla \overline{w}) - 2 \lambda^a \dfrac{\nabla \psi}{\psi}\cdot \nabla \overline{w} - b \overline{w} \leq 0 \quad \text{ in } \Omega\,,
-$$
-with $b \leq 0$. Thus, by the definition of $S_0$ we have that $\overline{w}\leq 0$ on $\partial_0 \Omega$, and from the maximum principle (as in the proof of Proposition~\ref{Prop:MaxPrincipleNarrow}) we can conclude that $\overline{w} \leq 0$ in~$\Omega$. 
-
-This yields $w\leq S_0^+$ in $\Omega$, but since $S = \sup_{\Omega} w > 0$, $S_0^+ = S_0$ and thus $w\leq \sup_{\partial_0\Omega} w$ in $\Omega$. This shows \eqref{Eq:MaxPrincipleForw}.
-
-
-\textbf{Step 3.}
-We claim that $S$ is attained at some point $(x_0, 0) \in \partial_0 \Omega\subset \ocal$. First, recall that $\varepsilon$ was taken such that the maximum principle holds in every $H'\subset \ocal \times (0,+\infty)$ satisfying $\partial_0 H' \subset \ncal_{\varepsilon}$ (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}). Now, since $S=\sup_{\partial_0 \Omega } w >0$, there exists $(x_1,0)\in \partial_0\Omega$ such that $w(x_1,0)>S/2$. If $\varepsilon'<\varepsilon$ is small enough, $(x_1,0)\in \ocal_{\varepsilon'}$. As a consequence,
-$$
-S_{\varepsilon'} :=\sup_{\partial_0 \Omega \cap \ocal_{\varepsilon'}} w > 0\,.
-$$
-We claim that
-\begin{equation}
-\label{Eq:ProofMaxPrincipleStep3}
-S_{\varepsilon'} =\sup_{\partial_0 \Omega \cap \ocal_{\varepsilon'}} w =\sup_{\partial_0 \Omega } w = S\,.
-\end{equation}
-To show this, let $\varphi' := v - S_{\varepsilon'}u$ and define 
-$$
-H' := \{\varphi' > 0\}\cap \Omega\,.
-$$
-Note that if $H'=\varnothing$,  then \eqref{Eq:ProofMaxPrincipleStep3} follows trivially, and thus we can assume that it is not empty. Now, since $\varphi' \leq 0$ in $\overline{\partial_0 \Omega \cap \ocal_{\varepsilon'}}$, we have that $\partial_0 H' \subset \ncal_{\epsilon'}$. Suppose that $\partial_0H'$ is nonempty. Since $S_{\varepsilon'}\geq 0$, it is easy to check that $\varphi'$ satisfies
-$$
-\beqc{\PDEsystem}
--\div(\lambda^a \nabla \varphi') &\leq& b(x,\lambda)\varphi' & \text{ in } H' \,, \\
-\dfrac{\partial \varphi'}{\partial \nu^a}  &\leq & c(x) \varphi' & \text{ on } \partial_0 H' \,, \\
-\varphi' & \leq & 0 & \text{ on } \partial_L H'  \,,\\
-\ds \limsup_{x \in \partial_0 H',\ |x|\to +\infty} \varphi'(x,0) & \leq & 0\,,
-\eeqc
-$$
-with $c(x) = f'(u) / d_\s$. The maximum principle in the ``downstairs-narrow'' domain $H'$ yields that $\varphi' \leq 0$ in $H'$, a contradiction with the definition of $H'$. Therefore, $\partial_0H'$ is empty, i.e., $w\leq S_{\varepsilon'}$ in $\partial_0 \Omega$. Hence, \eqref{Eq:ProofMaxPrincipleStep3} holds. 
-
-
-Finally, by the hypothesis at infinity on $v$ and the fact that $u>\delta'$ in $\ocal_{\varepsilon'}$ for some $\delta'>0$, we have that $S_{\varepsilon'}$ is attained at some point $(x_0,0) \in \overline{\partial_0 \Omega \cap \ocal_{\varepsilon'}}$. By \eqref{Eq:ProofMaxPrincipleStep3}, $S$ is achieved at the same point. Moreover, since $v\leq 0$ on $\partial_L\Omega$ and $u>0$ on $\ocal$, it is clear that the $(x_0,0) \notin (\overline{\partial_0\Omega} \setminus \partial_0 \Omega)\cap \ocal$. Therefore $(x_0,0)\in\partial_0\Omega$.
-
- 
-
-\textbf{Step 4.}
-At the point of maximum $x_0 \in \partial_0 \Omega$ of $w$, we have
+Now, by the hypothesis at infinity on $v$ and the fact that $u>\delta$ in $\ocal_{\varepsilon}$, we have that $S$ is attained at some point  $(x_0,0)\in\partial_0\Omega \subset \ocal$. At this point we have
 \begin{equation}
 \label{Eq:NormalDerivativeAtMaximum}
 \dfrac{\partial w}{\partial \nu^a}(x_0) = -\lim_{\lambda \downarrow 0} \lambda^a w_\lambda (x_0,\lambda) = \lim_{\lambda \downarrow 0} \dfrac{w(x_0,0) - w(x_0, \lambda)}{\lambda^{2\s}} \geq 0\,,
@@ -867,7 +811,7 @@ $$
 $$
 which contradicts \eqref{Eq:NormalDerivativeAtMaximum}. Note that in this last argument is crucial the fact that $x_0 \in \partial_0 \Omega \subset \ocal$ and thus $u(x_0)>0$ and $\mathscr{L}u (x_0) > 0$. 
 
-Hence, the assumption $S>0$ is false and therefore $w \leq 0$ in $E$. Since $u > 0$ in $\ocal$, this yields that $v \leq 0$ in $E$. Finally, by the maximum principle in the ``downstairs-narrow'' domain $H$ applied to $v$, it follows that $v\leq 0$ in $\Omega$.
+Hence, the assumption $S>0$ is false and therefore $w \leq 0$ in $\partial_0 \Omega \cap \ocal_\varepsilon $. Since $u > 0$ in $\ocal$, this yields that $v \leq 0$ in $\partial_0 \Omega \cap \ocal_\varepsilon $. Finally, by the maximum principle in the ``extension-narrow'' pair $(\Omega, \Gamma)$ applied to $v$, it follows that $v\leq 0$ in $\Omega$.
 \end{proof}
 
 
@@ -927,6 +871,7 @@ d_\s \dfrac{\partial u_0}{\partial \nu^a}  = f(u_0) > f'(u_0) u_0 \quad \textrm{
 \end{equation}
 where we have used that $f''<0$ in $(0,1)$ and $f(0)=0$.
  
+ \todo{revisar}
  
 First, one defines $w := v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing  $u$ by $u_0$ in the whole argument, and also replacing  $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively. Then, \eqref{Eq:u>delta} follows immediately from the fact that $u_0(x,0)$ is increasing. Once $E$ and $H$ are defined by \eqref{Eq:DefOfE&H} (with $u_0$ instead of $u$), Step 1 is completely analogous. In Step~2 one can use a simpler function $\psi$ than the one used in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, for instance 
 $$
