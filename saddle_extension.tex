@@ -231,7 +231,7 @@ This paper is devoted to the study of saddle-shaped solutions to the fractional 
 \end{equation}
 where $n=2m$ is an even integer, $f$ is of bistable type (see \eqref{Eq:fHypotheses} below), and $\fraclaplacian$ is the fractional Laplacian, defined for $\s\in(0,1)$ by
 $$
-\fraclaplacian u (x):= c_{n,\s}  \PV \int_{\R^{n}} \dfrac{u(x) - u(\overline{x})}{|x-\overline{x}|^{n+2\s}} \d \overline{x}\,.
+\fraclaplacian u (x):= c_{n,\s}  \PV \int_{\R^{n}} \dfrac{u(x) - u(\tilde{x})}{|x-\tilde{x}|^{n+2\s}} \d \tilde{x}\,.
 $$
 Here $c_{n,\s}>0$ is a normalizing constant depending only on $n$ and $\s$, and $\PV$ stands for principal value. This problem is motivated by the fractional De Giorgi conjecture and it is closely related to the theory of nonlocal minimal surfaces, as we will explain later in this introduction.
 
@@ -244,7 +244,7 @@ Note that as a consequence we have $f>0$ in $(0,1)$. A typical example of this k
 
 An important role in this paper is played by the Simons cone, which is defined in $\R^{2m}$ by
 $$
-\mathscr{C} = \setcond{x = (x', x'') \in \R^{m}\times \R^m}{|x'| = |x''|}\,.
+\mathscr{C} := \setcond{x = (x', x'') \in \R^{m}\times \R^m}{|x'| = |x''|}\,.
 $$
 It is well known that the Simons cone has zero mean curvature at every point $x \in \ccal \setminus \{0\}$, in every dimension $2m \geq 2$. However, it is only in dimensions $2m \geq 8$ that $\ccal$ is a minimizer of the area functional, as established by Bombieri, De Giorgi, and Giusti in \cite{BombieriDeGiorgiGiusti}. Regarding the fractional setting, for every $\s\in(0,1/2)$, $\ccal$ has zero \emph{nonlocal} mean curvature in every even dimension but it is not known if, in addition,  it is a minimizer of the fractional perimeter in dimensions $2m\geq 8$. We recall that it is only in dimension $2m=2$ where we have a complete classification of minimizing nonlocal minimal cones (see \cite{SavinValdinoci-Cones}). The only other result concerning the possible stability of the Simons cone is established in \cite{DaviladelPinoWei} by Dávila, del Pino, and Wei. In that paper, the authors find a remarkable stability criterion for Lawson cones consisting of an inequality involving hypergeometric quantities depending on $\s$ and the dimension $n$. Although such criterion has not been checked analytically (probably a hard task), it can be verified numerically. With a numerical computation, \cite{DaviladelPinoWei} shows that, in dimensions $n \leq 6$ and for $\s $ close to zero, no Lawson cone with zero nonlocal mean curvature is stable. The Simons cone is a particular case of Lawson cone corresponding to $C_m^m(1)$ in the notation of \cite{DaviladelPinoWei}. Numerics also shows that all Lawson cones in dimension $7$ are stable if $\s$ is close to zero. These results for small $\s$ fit with the general belief that, in the fractional setting, the Simons cone should be stable (and even a minimizer) in dimensions $2m \geq 8$ (as in the local case), probably for all $\s\in(0,1/2)$, though this is still an open problem. 
 
@@ -252,8 +252,8 @@ In the present paper, we make a first contribution to the previous question by s
 
 To introduce saddle-shaped solutions, we define the following variables:
 $$
-s = \sqrt{x_1^2 + \ldots + x_m^2 } \quad \text{ and } \quad 
-t = \sqrt{x_{m+1}^2 + \ldots + x_{2m}^2}\,,
+s := \sqrt{x_1^2 + \ldots + x_m^2 } \quad \text{ and } \quad 
+t := \sqrt{x_{m+1}^2 + \ldots + x_{2m}^2}\,,
 $$
 for which the Simons cone becomes $\mathscr{C} = \{s=t\}$.
 Through the paper we will also use the letter $\ocal$ to denote one side of the cone:
@@ -281,7 +281,7 @@ In the present paper, we prove further properties of these solutions, the main o
 
 In \cite{Cinti-Saddle,Cinti-Saddle2}, the main tool used is the extension problem for the fractional Laplacian, due to Caffarelli and Silvestre \cite{CaffarelliSilvestre} (see \eqref{Eq:AllenCahnWithExtension} below). This is also the approach of the present paper. It should be remarked that the extension technique has the limitation that it only works for the fractional Laplacian, and therefore the same arguments cannot be carried out for more general integro-differential operators of the form
 $$
-L_K u(x) = \PV \int_{\R^n} \{u(x) - u(\overline{x})\} K(x-\overline{x})\d \overline{x}.
+L_K u(x) = \PV \int_{\R^n} \{u(x) - u(\tilde{x})\} K(x-\tilde{x})\d \tilde{x}.
 $$
 In two forthcoming papers \cite{FelipeSanz-Perela:IntegroDifferentialI,FelipeSanz-Perela:IntegroDifferentialII} we address this problem by studying saddle-shaped solutions to equation $L_K u = f(u)$ in $\R^{2m}$, where $L_K$ is an elliptic integro-differential operator of the previous form with a radially symmetric kernel $K$. One of the most basic tools that we need is a maximum principle for the operator acting on  functions which are odd with respect to the Simons cone. In \cite{FelipeSanz-Perela:IntegroDifferentialI} we find a necessary condition to have such a maximum principle and, as we will see there, this will require a certain convexity property of the kernel $K$.
 
@@ -333,7 +333,7 @@ which is odd with respect to the Simons cone and positive in $\ocal$, describes 
 
 It is sometimes useful to consider also the following variables:
 $$
-y = \dfrac{s+t}{\sqrt{2}} \quad \text{ and } \quad z = \dfrac{s-t}{\sqrt{2}} \,,
+y := \dfrac{s+t}{\sqrt{2}} \quad \text{ and } \quad z := \dfrac{s-t}{\sqrt{2}} \,,
 $$
 which satisfy $y\geq 0$ and $-y \leq z \leq y$. In these variables, $\ccal = \{ z = 0\}$ and $\ocal = \{ z > 0\}$. Therefore, we can write $U(x,\lambda) = u_0(z, \lambda)$.
 
@@ -374,7 +374,7 @@ where $U$ is defined in \eqref{Eq:DefULayer}.
 
 Here $\nabla_x$ denotes the gradient only in the horizontal variables $x\in \R^{2m}$, not to be confused with the gradient $\nabla = \nabla_{(x,\lambda)}$ in \eqref{Eq:AllenCahnWithExtension} or \eqref{Eq:StabilityCondition}, for instance.
 
-Points (i) and (ii) of Theorem~\ref{Th:Summary} were proved by Cinti, first for $\s = 1/2$  in \cite{Cinti-Saddle} and then extended to all powers $\s \in (0,1)$ in \cite{Cinti-Saddle2}. Instability in dimension $2m = 2$ follows from a general result on stable solutions established by \cite{CabreSireII} (previously proved for $\s = 1/2$ by \cite{CabreSolaMorales}). Instead, instability in dimensions $2m=4$ and $2m=6$ was proved by \cite{Cinti-Saddle,Cinti-Saddle2}.
+Points (i) and (ii) of Theorem~\ref{Th:Summary} were proved by Cinti, first for $\s = 1/2$  in \cite{Cinti-Saddle} and then extended to all powers $\s \in (0,1)$ in \cite{Cinti-Saddle2}. Instability in dimension $2m = 2$ follows from a general result on stable solutions established in \cite{CabreSireII} (previously proved for $\s = 1/2$ in \cite{CabreSolaMorales}). Instead, instability in dimensions $2m=4$ and $2m=6$ was proved in \cite{Cinti-Saddle,Cinti-Saddle2}.
 
 
 Our first main result is the uniqueness of the saddle-shaped solution. As a consequence, such solution to the fractional Allen-Cahn equation becomes a canonical object associated to the cone $\ccal$.
@@ -405,7 +405,7 @@ v & \leq & 0 & \text{ on } \partial_L \Omega \,,\\
 \ds \limsup_{x\in \partial_0 \Omega, \  |x|\to +\infty} v(x,0) & \leq & 0\,,
 \eeqc
 $$
-with $b \leq 0$. Then, $v\leq 0$ in $\overline{\Omega}$.
+with $b \leq 0$. Then, $v\leq 0$ in $\Omega$.
 \end{proposition}
 
 To establish the previous maximum principle we follow the proof of the analogous result for the local case ($\s = 1$) in \cite{Cabre-Saddle}. It involves a maximum principle in ``narrow'' sets (see also \cite{Cabre-Topics,BerestyckiNirembergVaradhan}). The main difference between our proof and the one in \cite{Cabre-Saddle} is that, since we are using the extension problem, a new notion of narrowness is needed to carry out the same type of arguments (see Section~\ref{Sec:MaximumPrinciple} for the details).
@@ -413,11 +413,11 @@ To establish the previous maximum principle we follow the proof of the analogous
 
 
 
-The second main result of this paper is the following pointwise estimate for the saddle-shaped solution. We prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$ is a barrier for the saddle-shaped solution. This result was established in the local setting ($\s = 1$) in \cite{CabreTerraI}, but in such case the proof is quite simple by using the so-called Modica estimate (see \cite{CabreTerraI} for the details). In the fractional framework, this estimate is only available (in a nonlocal form) in dimension 1 (see \cite{CabreSolaMorales, CabreSireI}) and therefore we need another type of argument. What we do is to use a maximum principle for the linearized operator at $U$, similar to the one in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}. The result is the following.
+The second main result of this paper is the following pointwise estimate for the saddle-shaped solution. We prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$ is a barrier for the saddle-shaped solution. This result was established in the local setting ($\s = 1$) in \cite{CabreTerraI}, but in such case the proof is quite simple by using the so-called Modica estimate (see \cite{CabreTerraI} for the details). In the fractional framework, this estimate is only available (in a nonlocal form) in dimension 1 (see \cite{CabreSolaMorales, CabreSireI}) and therefore we need another type of argument. What we do is to use a maximum principle for the linearized operator at $U$, similar to the one in Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}. The pointwise estimate we establish is the following.
 
 \begin{proposition}
 	\label{Prop:SaddleUnderLayer}
-	Let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahnWithExtension} and let $u_0$ be the layer solution given by \eqref{Eq:LayerSolution}. Then, 
+	Let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahnWithExtension},  let $u_0$ be the layer solution given by \eqref{Eq:LayerSolution} and let $U$ be defined by \eqref{Eq:DefULayer}. Then, 
 	\begin{equation}
 	\label{Eq:SaddleUnderLayer}
 	|u(x,\lambda)| \leq |U(x,\lambda)| = |u_0 ( \dist(x, \ccal), \lambda) | \quad \text{ for every } (x,\lambda)\in \overline{\R^{2m+1}_+}\,.
@@ -479,7 +479,7 @@ Let us explain why the Allen-Cahn equation has a very strong connection with the
 
 By a result of Cabré, Cinti, and Serra in \cite{CabreCintiSerra-Stable}, also the stability is preserved in the blow-down limit when $\s\in(0,1/2)$. Therefore, a limit of stable solutions to \eqref{Eq:AllenCahn} with $\s \in (0,1/2)$ will be a stable set for the $(2\s)$-perimeter. Thus, as a consequence of Theorem~\ref{Thm:Stability} we deduce Corollary~\ref{Cor:SimonsConeStableDim14}.
 
-The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prove the maximum principle for the linearized operator in $\ocal$, Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}. Section \ref{Sec:Uniqueness} is devoted to show Theorem~\ref{Thm:Uniqueness} concerning the uniqueness of the saddle-shaped solution. In Section \ref{Sec:Layer} we establish some monotonicity properties of the layer solution $u_0$, as well as a pointwise estimate for the saddle solution in terms of the layer $u_0$. In Section~\ref{Sec:Monotonicity} we prove the monotonicity and convexity properties of the saddle solution stated in Proposition~\ref{Prop:MonotonicityProperties}. Finally, Section~\ref{Sec:Stability} concerns the proof of the stability results, Theorem~\ref{Thm:Stability} and  Corollary~\ref{Cor:SimonsConeStableDim14}.
+The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prove the maximum principle for the linearized operator in $\ocal$, Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}. Section \ref{Sec:Uniqueness} is devoted to show Theorem~\ref{Thm:Uniqueness} concerning the uniqueness of the saddle-shaped solution. In Section \ref{Sec:Layer} we establish some monotonicity properties of the layer solution $u_0$, as well as the pointwise estimate for the saddle solution in terms of the layer $u_0$, stated in Proposition~\ref{Prop:SaddleUnderLayer}. In Section~\ref{Sec:Monotonicity} we prove the monotonicity and convexity properties of the saddle solution stated in Proposition~\ref{Prop:MonotonicityProperties}. Finally, Section~\ref{Sec:Stability} concerns the proof of the stability results, Theorem~\ref{Thm:Stability} and  Corollary~\ref{Cor:SimonsConeStableDim14}.
 
 
 
@@ -509,7 +509,7 @@ In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperato
 
 Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in \Omega$, we recover the usual definition of ``narrow'' set. Here, instead, we only consider half-balls centered at points $x\in \Gamma \subset \partial_0\Omega$.
 
-Once the quantity  $R_a(\Omega,\Gamma, \theta)$ is defined, we can state precisely the maximum principle in ``downstairs-narrow'' sets.
+Once the quantity  $R_a(\Omega,\Gamma, \theta)$ is defined, we can state precisely the maximum principle in ``extension-narrow'' pairs.
 
 \begin{proposition}[Maximum principle in ``extension-narrow'' pairs]
 	\label{Prop:MaxPrincipleNarrow}
@@ -531,7 +531,7 @@ Once the quantity  $R_a(\Omega,\Gamma, \theta)$ is defined, we can state precise
 
 
 
-Before proving this result, let us explain why we need to introduce the notion of ``extension-narrowness''\!. We will use this maximum principle in a pair $(\Omega, \Gamma)$ with $\Gamma \subset \partial_0 \Omega$ in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ . In this case, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{2m+1}_+$, as in Figure~\ref{Fig:ExtensionNarrow}. However, $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled all $\ocal\times (0,+\infty)$. Thus, it follows readily that $(\Omega,\Gamma)$ is ``extension-narrow'' by using that balls in this notion are centered in $\Gamma$ (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
+Before proving this result, let us explain why we need to introduce the notion of ``extension-narrowness''\!. We will use this maximum principle in a pair $(\Omega, \Gamma)$ with $\Omega \subset \ocal \times (0,+\infty)$ and $\Gamma \subset \partial_0 \Omega$ in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ . In this case, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{2m+1}_+$, as in Figure~\ref{Fig:ExtensionNarrow}. However, $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled all $\ocal\times (0,+\infty)$. Thus, it follows readily that $(\Omega,\Gamma)$ is ``extension-narrow'' by using that balls in this notion are centered in $\Gamma$ (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
 
 \begin{figure}
 \input{ExtensionNarrow.tex}
@@ -560,7 +560,7 @@ To prove Proposition~\ref{Prop:MaxPrincipleNarrow} we need the following weak Ha
 	for a positive constant $C_h$ depending only on $n$ and $a$.
 \end{proposition}
 
-With this result available, we can now present the proof of the maximum principle in ``downstairs-narrow'' sets.
+With this result available, we can now present the proof of the maximum principle in ``extension-narrow'' pairs.
 
 \begin{proof}[Proof of Proposition~\ref{Prop:MaxPrincipleNarrow}] 
 	Define the sets 
@@ -590,11 +590,11 @@ With this result available, we can now present the proof of the maximum principl
 	for some positive constant $c_0$.
 	
 	Indeed, since $E$ is an open cone (with vertex, say, $z\in \partial E$), there exists a circular cone $E'\subset E$ with the same vertex $z$. Then, by sliding this circular cone in the direction of its axis, which can be assumed to be $e_n = (0,...,0,1)$, we obtain a new open cone $F\subset E$. Let us now show \eqref{Eq:DistanceCones}. Since $F \subset E' \subset E$, it is enough to prove \eqref{Eq:DistanceCones} for $x\in \partial E'$ and $ y\in\partial F$. Hence, we have
-	$$x_n-z_n = \mu |x'-z'| \quad \text{ and } \quad y_n-z_n = \tau + \mu |y'-z'|, $$
-	for some positive constants $\mu$ and $\tau$. Here, we are using the notation $z = (z',z_n)$. Now, if we call $\sigma = |x'-z'|-|y'-z'|$, we have $|x'-y'|\geq |\sigma|$ and thus
+	$$x_n-z_n = \omega |x'-z'| \quad \text{ and } \quad y_n-z_n = \tau + \omega |y'-z'|, $$
+	for some positive constants $\omega$ and $\tau$. Here, we are using the notation $z = (z',z_n)$. Now, if we call $\sigma = |x'-z'|-|y'-z'|$, we have $|x'-y'|\geq |\sigma|$ and thus
 	\begin{align*}
-	|x-y|^2 &= |x'-y'|^2 + |x_n-y_n|^2 \geq \sigma^2 + (\tau- \mu \sigma)^2   \\
-	&= \left ( \sqrt{1+\mu^2} \sigma - \dfrac{\mu\tau}{\sqrt{1+\mu^2}}\right )^2 + \dfrac{\tau^2}{1+\mu^2}\geq\dfrac{\tau^2}{1+\mu^2},
+	|x-y|^2 &= |x'-y'|^2 + |x_n-y_n|^2 \geq \sigma^2 + (\omega \sigma - \tau)^2   \\
+	&= \left ( \sqrt{1+\omega^2} \sigma - \dfrac{\omega\tau}{\sqrt{1+\omega^2}}\right )^2 + \dfrac{\tau^2}{1+\omega^2}\geq\dfrac{\tau^2}{1+\omega^2},
 	\end{align*}
 	where the last constant is in fact the minimum distance between points on $\partial E'$ and $\partial F$. 
 	
@@ -622,7 +622,7 @@ With this result available, we can now present the proof of the maximum principl
 	\beqc{\PDEsystem}
 	-\div(\lambda^a \nabla \overline{w})-2\lambda^a\dfrac{\nabla \psi}{\psi}\cdot\nabla \overline{w} &\leq& 0 & \text{ in } \Omega_+\,, \\
 	\overline{w} &\leq& 0 & \text{ on } \partial \Omega_+\,, \\
-	\ds \lim_{(x,\lambda)\in \Omega, \ |(x,\lambda)|\to +\infty} \overline{w} & \leq & 0\,.
+	\ds \lim_{(x,\lambda)\in \Omega_+, \ |(x,\lambda)|\to +\infty} \overline{w} & \leq & 0\,.
 	\eeqc
 	\end{equation}
 	Then, by the maximum principle we deduce that $\overline{w}\leq 0$ in $\Omega_+$, which yields $\overline{v}\leq 0$ in $\Omega_+$.
@@ -694,7 +694,7 @@ With this result available, we can now present the proof of the maximum principl
 
 \begin{remark}
 	\label{Remark:WeakMPNarrow}
-	Notice that the previous result (and as a consequence, Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}) is also valid if we do not require $v$ to be $C^2$ in the whole $\Omega$. Indeed, we only need to assume that the equation $\div (\lambda^a \nabla v) \leq b(x,\lambda)v$ holds pointwise where $v$ is regular, and that $v$ cannot have a local maximum at a nonregular point. In particular, this will be used in the proof of Proposition~\ref{Prop:SaddleUnderLayer} with $v = u- CU$ in $\Omega = \ocal \times (0,+\infty)$, where $u$ is a saddle-shaped solution, $U$ is defined by \eqref{Eq:DefULayer}, and $C$ is a positive constant. Note that $U$ is no more regular than Lipschitz (and not $C^2$) in $\{t=0, \lambda\geq 0\}$. As we will see in Section~\ref{Sec:Layer}, $U$ is only $\s$-superharmonic in $\Omega \setminus \{t=0, \lambda\geq 0\}$. Nevertheless, Proposition~\ref{Prop:MaxPrincipleNarrow} holds in this case thanks to the fact that $v = u-U$ has, say, a ``good angle'' for the maximum principle in its nonregular points (see the proof of Proposition~\ref{Prop:SaddleUnderLayer} for the details).
+	Notice that the previous result (and as a consequence, Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}) is also valid if we do not require $v$ to be $C^2$ in the whole $\Omega$. Indeed, we only need to assume that the equation $\div (\lambda^a \nabla v) \leq b(x,\lambda)v$ holds pointwise where $v$ is regular, and that $v$ cannot have a local maximum at a nonregular point. In particular, this will be used in the proof of Proposition~\ref{Prop:SaddleUnderLayer} with $v = u- CU$ in $\Omega = \ocal \times (0,+\infty)$, where $u$ is a saddle-shaped solution, $U$ is defined by \eqref{Eq:DefULayer}, and $C$ is a positive constant. Note that $U$ is no more regular than Lipschitz (and thus not $C^2$) in $\{t=0, \lambda\geq 0\}$. As we will see in Section~\ref{Sec:Layer}, $U$ is only $\s$-superharmonic in $\Omega \setminus \{t=0, \lambda\geq 0\}$. Nevertheless, Proposition~\ref{Prop:MaxPrincipleNarrow} holds in this case thanks to the fact that $v = u-CU$ has, say, a ``good angle'' for the maximum principle in its nonregular points (see the proof of Proposition~\ref{Prop:SaddleUnderLayer} for the details).
 \end{remark}
 
 As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in pairs $(\Omega, \Gamma)$ with $ \Omega \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ and $\Gamma \subset \partial_0  \Omega$ contained in an $\varepsilon$-neighborhood of the Simons cone.
@@ -724,7 +724,7 @@ First, let us call $\ical := \R^{2m}\setminus \overline{\ocal}$. Since $x_0\in \
 \end{equation}
 and the same replacing $\ical$ with $\ocal$.
 
-On the other hand, let us define $S:\R^{2m}\to\R^{2m}$ by $S(x',x'') = (x'',x')$, which is also a linear isometry that transforms $\ocal$ into $\ical$ and vice versa. Therefore, for every $y\in \R^{2m}$ we have
+On the other hand, let us define $S:\R^{2m}\to\R^{2m}$ by $S(x',x'') = (x'',x')$, which is also a linear isometry and transforms $\ocal$ into $\ical$ and vice versa. Therefore, for every $y\in \R^{2m}$ we have
 \begin{equation}
 \label{Eq:IsometrySimonsCone2}
 |B_r(y)\cap \ical| = |S \left( B_r(y)\cap \ical\right)| = | B_r(Sy) \cap \ocal |\,.
@@ -831,7 +831,7 @@ Thanks to the maximum principle in $\ocal\times (0,+\infty)$ for the linearized 
 \begin{proof}[Proof of Theorem~\ref{Thm:Uniqueness}]
 	Let $u_1$ and $u_2$ be two saddle-shaped solutions. Define $v := u_1 - u_2$, a function that depends only on $s$ and $t$ and that is odd with respect to $\ccal$. Then, $\div(\lambda^a \nabla v) = 0$ in $\ocal \times (0,+\infty)$, $v=0$ on $\partial_L \left( \ocal \times (0,+\infty) \right) = \ccal \times [0,+\infty)$ and
 	$$
-	\dfrac{\partial v}{\partial \nu^a} = f(u_1) - f(u_2) \leq f'(u_2) (u_1 - u_2) = f'(u_2) v \quad \textrm{ on } \ocal \times \{0\}\,,
+	d_\s \dfrac{\partial v}{\partial \nu^a} = f(u_1) - f(u_2) \leq f'(u_2) (u_1 - u_2) = f'(u_2) v \quad \textrm{ on } \ocal \times \{0\}\,,
 	$$
 	since $f$ is concave in $(0,1)$. Moreover, by the asymptotic result (see Theorem~\ref{Th:Summary}), we have
 	$$
@@ -847,7 +847,7 @@ Thanks to the maximum principle in $\ocal\times (0,+\infty)$ for the linearized 
 \section{The layer solution and a pointwise estimate for the saddle-shaped solution}
 \label{Sec:Layer}
 
-This section is devoted to establish some monotonicity properties of the layer solution $u_0$ and a pointwise estimate for the saddle-shaped solution. We start with a maximum principle similar to Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, but for the linearized operator at $u_0$.
+This section is devoted to establish some monotonicity properties of the layer solution $u_0$ and a pointwise estimate for the saddle-shaped solution (Proposition~\ref{Prop:SaddleUnderLayer}). We start with a maximum principle similar to Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, but for the linearized operator at $u_0$.
 
 \begin{proposition}
 \label{Prop:MaxPrincipleLinearizedOperator2D}
@@ -957,7 +957,7 @@ and we want to see that $v\leq 0$ in $\Omega$. First, since $u$ is $\s$-harmonic
 $$ 
 -\div (\lambda^a \nabla v) \leq 0 \quad \text{ in }\Omega \setminus \{t=0,\ \lambda > 0\}\,,
 $$
-and $v$ cannot have a local minimum at $\{t=0,\ \lambda \geq 0\}$. In addition, both $u$ and $U$ vanish at $\ccal \times [0,+\infty)$ and by the asymptotic behavior of $u$ (see Theorem~\ref{Th:Summary}), we have $\lim_{x\in  \ocal,\ |x|\to +\infty} v(x,0) = 0\,$. On the other hand, since $f$ is concave in $(0,1)$, we get 
+and $v$ cannot have a local maximum at $\{t=0,\ \lambda \geq 0\}$. In addition, both $u$ and $U$ vanish at $\ccal \times [0,+\infty)$ and by the asymptotic behavior of $u$ (see Theorem~\ref{Th:Summary}), we have $\lim_{x\in  \ocal,\ |x|\to +\infty} v(x,0) = 0\,$. On the other hand, since $f$ is concave in $(0,1)$, we get 
 $$
 d_\s \dfrac{\partial v}{\partial \nu^a}  = f(u) - f(U) \leq f'(U)v \quad \text{ on } \partial_0 \Omega\,.$$
 
@@ -1004,7 +1004,7 @@ Before proceeding with the proof of Proposition~\ref{Prop:MonotonicityProperties
 
 \begin{lemma}
 \label{Lemma:AsymptoticSecondDerivative}
-Let $f$ satisfy conditions \eqref{Eq:fHypotheses}, and let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahnWithExtension}. Then, denoting $U(x,\lambda) := u_0((s - t)/\sqrt{2},\lambda) = u_0(z,\lambda)$ we have
+Let $f$ satisfy conditions \eqref{Eq:fHypotheses}, and let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahnWithExtension}. Then, denoting $U(x,\lambda) := u_0((s - t)/\sqrt{2},\lambda) = u_0(z,\lambda)$, we have
 $$ ||D^2_x u(\cdot,\lambda) - D^2_x U(\cdot,\lambda)||_{L^\infty(\R^{2m}\setminus B_R)} \to 0, \ \ \ \text{ as } \ R\to+\infty, $$
 for every $\lambda \in [0,+\infty)$.
 \end{lemma}
@@ -1013,7 +1013,7 @@ for every $\lambda \in [0,+\infty)$.
 The proof follows the ones of the analogous results in \cite{Cinti-Saddle2,Cabre-Saddle,CabreTerraII}, where a compactness argument is used. Therefore, we only give here the main ideas, since the details can be found in these papers. Arguing by contradiction, let us suppose that the asymptotic result does not hold. Hence, there exists an $\varepsilon>0$ and a sequence $\{x_k\}\subset \ocal$ such that 
 $$ |D^2_x u(x_k,\lambda)-D^2_xU(x_k,\lambda)| \geq \varepsilon \ \ \ \text{ and } \ \ \ |x_k|\to+\infty. $$
 
-Now we distinguish two cases, depending on whether the sequence $\{ \dist(x_k, \ccal) \}$ is unbounded or bounded. In the first case, we show that, up to a subsequence, the function $u_k(x,\lambda) := u(x_k-x,\lambda)$ converges to a solution $u_\infty$ of the semilinear Neumann problem in the half-space $\R^{2m+1}_+$ given in the statement of Theorem 5.3 in \cite{Cinti-Saddle2} (see \cite{LiZhang} for the proof). Using this result and the stability of $u_\infty$ we get that $u_\infty \equiv 1$. Thus, we arrive at a contradiction since $|D^2_x u(x_k,\lambda)| \to 0$ and $|D^2_x U(x_k,\lambda)| \to 0$ from being $|x_k| \to +\infty$. In the second case, since the Simons cone converges to a hyperplane at infinity (see the details in \cite{CabreTerraII}), it can be proved that, up to a subsequence, the function $u_k(x,\lambda) := u(x_k-x,\lambda)$ converges to a positive solution $u_\infty$ of an equation in the quarter of space $\R^{2m+1}_{++}$ with zero boundary conditions, as in the statement of Theorem 5.5 in \cite{Cinti-Saddle2} (see \cite{Tan} for the proof). Applying that theorem and the stability again, we conclude that $u_\infty$ must be the 2D solution $u_0$ depending only on the variables orthogonal to the boundary of the quarter of space. Hence, we arrive at a contradiction since it is easy to check that $D^2_x(u-U)(x_k,\lambda)$ converges to zero.
+Now we distinguish two cases, depending on whether the sequence $\{ \dist(x_k, \ccal) \}$ is unbounded or bounded. In the first case, we show that, up to a subsequence, the function $u_k(x,\lambda) := u(x_k-x,\lambda)$ converges to a solution $u_\infty$ of the semilinear Neumann problem in the half-space $\R^{2m+1}_+$ given in the statement of Theorem 5.3 in \cite{Cinti-Saddle2} (see \cite{LiZhang} for the proof). Using this result and the stability of $u_\infty$ we get that $u_\infty \equiv 1$. Thus, we arrive at a contradiction since $|D^2_x u(x_k,\lambda)| \to 0$ and $|D^2_x U(x_k,\lambda)| \to 0$ from being $|x_k| \to +\infty$. In the second case, since the Simons cone converges to a hyperplane at infinity (see the details in \cite{CabreTerraII}), it can be proved that, up to a subsequence, the function $u_k(x,\lambda) := u(x_k-x,\lambda)$ converges to a positive solution $u_\infty$ of an equation in the quarter of space $\R^{2m+1}_{++} = \R^{2m+1}_{+} \cap \{x_{2m}>0\} $ with zero boundary conditions, as in the statement of Theorem 5.5 in \cite{Cinti-Saddle2} (see \cite{Tan} for the proof). Applying that theorem and the stability again, we conclude that $u_\infty$ must be the 2D solution $u_0$ depending only on the variables orthogonal to the boundary of the quarter of space. Hence, we arrive at a contradiction since it is easy to check that $D^2_x(u-U)(x_k,\lambda)$ converges to zero.
 \end{proof}
 
 With the help of the maximum principle of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, the asymptotic result for the saddle-shaped solution and the monotonicity properties of the layer solution, we can give a proof of Proposition~\ref{Prop:MonotonicityProperties}.
@@ -1163,13 +1163,13 @@ Finally, let us show that if we have a positive supersolution to the linearized 
 	\label{Eq:IneqStabilityProof1}	
 	\int_{\{st>0\}} f'(u) \, \varphi \, \zeta  \d x \leq d_\s \int_0^\infty \int_{\{st>0\}} \lambda^a \nabla{\varphi} \cdot \nabla{\zeta}  \d x \d \lambda\,.
 \end{equation}
-Now, let $\overline{\xi} \in C^\infty_0(\overline{\R^{2m+1}_+}\setminus \{st=0\})$. Since $\varphi > 0$ in $\{st>0\}$, taking $\zeta = \overline{\xi}^2/\varphi$ in \eqref{Eq:IneqStabilityProof1}, we get
+Now, let $\overline{\xi} \in C^\infty_0(\overline{\R^{2m+1}_+}\setminus \{st=0\})$. Since $\varphi > 0$ in $\{st>0\}$, taking $\zeta = \overline{\xi}^2/\varphi$ in \eqref{Eq:IneqStabilityProof1} and using the Cauchy-Schwarz inequality, we get
 \begin{align*}
 \int_{\{st>0\}}  \! f'(u)\,\overline{\xi}^2 \d x &= \int_{\{st>0\}} \! f'(u)\,\varphi \frac{\overline{\xi}^2}{\varphi} \d x \leq d_\s \int_0^\infty \! \!  \int_{\{st>0\}} \! \lambda^a \nabla{\varphi} \cdot \nabla{\left(\frac{\overline{\xi}^2}{\varphi}\right)} \d x \d \lambda \\
 &= d_\s \int_0^\infty \! \! \int_{\{st>0\}}\!  \lambda^a\,\frac{2\overline{\xi}}{\varphi} \,\nabla \varphi\cdot \nabla \overline{\xi}  \d x \d \lambda - d_\s \int_0^\infty \! \!  \int_{\{st>0\}} \!  \lambda^a\,\frac{\overline{\xi}^2}{\varphi^2}|\nabla \varphi|^2  \d x \d \lambda \\
-&\leq d_\s \int_0^\infty \! \! \int_{\{st>0\}} \! \lambda^a\,|\nabla \overline{\xi}|^2  \d x \d \lambda\,,
+&\leq d_\s \int_0^\infty \! \! \int_{\{st>0\}} \! \lambda^a\,|\nabla \overline{\xi}|^2  \d x \d \lambda\,.
 \end{align*}
-where in the last step we have used the Cauchy-Schwarz inequality.
+
 
 To conclude the proof, let us show that the last inequality holds for every smooth function $\xi$ with compact support in $\overline{\R^{2m+1}_+}$. This will give the stability of $u$. Take $\eta_\varepsilon\in C^\infty(\R)$ such that $0\leq \eta_\varepsilon \leq 1$ and
 $$ \eta_\varepsilon = \begin{cases}
