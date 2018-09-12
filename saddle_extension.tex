@@ -246,7 +246,7 @@ An important role in this paper is played by the Simons cone, which is defined i
 $$
 \mathscr{C} := \setcond{x = (x', x'') \in \R^{m}\times \R^m}{|x'| = |x''|}\,.
 $$
-It is well known that the Simons cone has zero mean curvature at every point $x \in \ccal \setminus \{0\}$, in every dimension $2m \geq 2$. However, it is only in dimensions $2m \geq 8$ that $\ccal$ is a minimizer of the area functional, as established by Bombieri, De Giorgi, and Giusti in \cite{BombieriDeGiorgiGiusti}. Regarding the fractional setting, for every $\s\in(0,1/2)$, $\ccal$ has zero \emph{nonlocal} mean curvature in every even dimension but it is not known if, in addition,  it is a minimizer of the fractional perimeter in dimensions $2m\geq 8$. We recall that it is only in dimension $2m=2$ where we have a complete classification of minimizing nonlocal minimal cones (see \cite{SavinValdinoci-Cones}). The only other result concerning the possible stability of the Simons cone is established in \cite{DaviladelPinoWei} by Dávila, del Pino, and Wei. In that paper, the authors find a remarkable stability criterion for Lawson cones consisting of an inequality involving hypergeometric quantities depending on $\s$ and the dimension $n$. Although such criterion has not been checked analytically (probably a hard task), it can be verified numerically. With a numerical computation, \cite{DaviladelPinoWei} shows that, in dimensions $n \leq 6$ and for $\s $ close to zero, no Lawson cone with zero nonlocal mean curvature is stable. The Simons cone is a particular case of Lawson cone corresponding to $C_m^m(1)$ in the notation of \cite{DaviladelPinoWei}. Numerics also shows that all Lawson cones in dimension $7$ are stable if $\s$ is close to zero. These results for small $\s$ fit with the general belief that, in the fractional setting, the Simons cone should be stable (and even a minimizer) in dimensions $2m \geq 8$ (as in the local case), probably for all $\s\in(0,1/2)$, though this is still an open problem. 
+It is well known that the Simons cone has zero mean curvature at every point $x \in \ccal \setminus \{0\}$, in every dimension $2m \geq 2$. However, it is only in dimensions $2m \geq 8$ that $\ccal$ is a minimizer of the area functional, as established by Bombieri, De Giorgi, and Giusti in \cite{BombieriDeGiorgiGiusti}. Regarding the fractional setting, for every $\s\in(0,1/2)$, $\ccal$ has zero \emph{nonlocal} mean curvature in every even dimension but it is not known if, in addition,  it is a minimizer of the fractional perimeter in dimensions $2m\geq 8$. We recall that it is only in dimension $2m=2$ where we have a complete classification of minimizing nonlocal minimal cones (see \cite{SavinValdinoci-Cones}). The only other result concerning the possible minimality of the Simons cone refers to its stability, a weaker property, and it is established in \cite{DaviladelPinoWei} by Dávila, del Pino, and Wei (recall that by stability we understand that the second variation of the energy functional is nonnegative). In that paper, the authors find a remarkable stability criterion for Lawson cones consisting of an inequality involving hypergeometric quantities depending on $\s$ and the dimension $n$. Although such criterion has not been checked analytically (probably a hard task), it can be verified numerically. With a numerical computation, \cite{DaviladelPinoWei} shows that, in dimensions $n \leq 6$ and for $\s $ close to zero, no Lawson cone with zero nonlocal mean curvature is stable. The Simons cone is a particular case of Lawson cone corresponding to $C_m^m(1)$ in the notation of \cite{DaviladelPinoWei}. Numerics also shows that all Lawson cones in dimension $7$ are stable if $\s$ is close to zero. These results for small $\s$ fit with the general belief that, in the fractional setting, the Simons cone should be stable (and even a minimizer) in dimensions $2m \geq 8$ (as in the local case), probably for all $\s\in(0,1/2)$, though this is still an open problem. 
 
 In the present paper, we make a first contribution to the previous question by showing that the Simons cone is a stable $(2\s)$-minimal cone in dimensions $2m\geq 14$. Our proof uses the so-called saddle-shaped solution to the Allen-Cahn equation. As we will see in more detail, by the fractional Modica-Mortola type $\Gamma$-convergence result, the remarks above on the stability of the Simons cone are expected to hold also for saddle-shaped solutions. Indeed, our proof proceeds by establishing the stability of such solution to the fractional Allen-Cahn equation in dimensions $2m \geq 14$ (see Theorem~\ref{Thm:Stability} below). Then, as a consequence of this and a recent result by Cabré, Cinti, and Serra in \cite{CabreCintiSerra-Stable} (see also the comments in \cite{CabreCintiSerra-Cones}) concerning the preservation of stability along a blow-down procedure for the fractional Allen-Cahn equation, we deduce the stability of the Simons cone as a nonlocal minimal surface in these dimensions (see Corollary~\ref{Cor:SimonsConeStableDim14}). 
 
@@ -256,7 +256,7 @@ s := \sqrt{x_1^2 + \ldots + x_m^2 } \quad \text{ and } \quad
 t := \sqrt{x_{m+1}^2 + \ldots + x_{2m}^2}\,,
 $$
 for which the Simons cone becomes $\mathscr{C} = \{s=t\}$.
-Through the paper we will also use the letter $\ocal$ to denote one side of the cone:
+Through the paper we will also use the letter $\ocal$ to denote one the sets in which the cone divides the space:
 $$
 \ocal:= \setcond{x = (x', x'') \in \R^{m}\times \R^m}{|x'| > |x''|} = \{s > t\}.
 $$
@@ -283,7 +283,7 @@ In \cite{Cinti-Saddle,Cinti-Saddle2}, the main tool used is the extension proble
 $$
 L_K u(x) = \PV \int_{\R^n} \{u(x) - u(\tilde{x})\} K(x-\tilde{x})\d \tilde{x}.
 $$
-In two forthcoming papers \cite{FelipeSanz-Perela:IntegroDifferentialI,FelipeSanz-Perela:IntegroDifferentialII} we address this problem by studying saddle-shaped solutions to equation $L_K u = f(u)$ in $\R^{2m}$, where $L_K$ is an elliptic integro-differential operator of the previous form with a radially symmetric kernel $K$. One of the most basic tools that we need is a maximum principle for the operator acting on  functions which are odd with respect to the Simons cone. In \cite{FelipeSanz-Perela:IntegroDifferentialI} we find a necessary condition to have such a maximum principle and, as we will see there, this will require a certain convexity property of the kernel $K$.
+In two forthcoming papers \cite{FelipeSanz-Perela:IntegroDifferentialI,FelipeSanz-Perela:IntegroDifferentialII} we address this problem by studying saddle-shaped solutions to equation $L_K u = f(u)$ in $\R^{2m}$, where $L_K$ is an elliptic integro-differential operator of the previous form with a radially symmetric kernel $K$. One of the most basic tools that we need is a maximum principle for the operator acting on  functions which are odd with respect to the Simons cone. In \cite{FelipeSanz-Perela:IntegroDifferentialI} we find a sufficient condition to have such a maximum principle and, as we will see there, this will require a certain convexity property of the kernel $K$.
 
 Let us now introduce the extension problem for the fractional Laplacian, which is the main tool used in this paper. First we should settle the notation. We call $\R^{n+1}_+ := \R^n \times (0, +\infty)$ and denote points by $(x,\lambda)\in \R^{n+1}_+$ with $x\in \R^n$ and $\lambda > 0$. As it is well known, see~\cite{CaffarelliSilvestre}, if $u:\R^{n+1}_+ \to \R$ solves $\div(\lambda^a \nabla u) = 0$ in $\R^{n+1}_+$ with $a=1-2\s$, then
 $$
@@ -327,9 +327,9 @@ Under the assumptions on $f$ in \eqref{Eq:fHypotheses}, the existence and unique
 The importance of the layer solution comes from the fact that the associated function
 \begin{equation}
 \label{Eq:DefULayer}
-U(x,\lambda) := u_0\left( \frac{s-t}{\sqrt{2}},\lambda \right) \ \ \ \text{ for } x\in\R^{2m},
+U(x,\lambda) := u_0\left( \frac{s-t}{\sqrt{2}},\lambda \right) \ \ \ \text{ for } x\in\R^{2m} \text{ and } \lambda>0,
 \end{equation}
-which is odd with respect to the Simons cone and positive in $\ocal$, describes the asymptotic behavior of saddle-shaped solutions at infinity (as shown in \cite{Cinti-Saddle, Cinti-Saddle2}; see Theorem~\ref{Th:Summary} below).  Note that from Lemma~4.2 in \cite{CabreTerraI}, we know that $|s-t|/\sqrt{2}$ is the distance to the Simons cone. Therefore, we can understand the function $U$ as the layer solution centered at each point of the Simons cone and oriented in the normal direction to the cone. Moreover, in this paper we  show (see Proposition~\ref{Prop:SaddleUnderLayer}) that the saddle-shaped solution lies below $U$ in $\ocal$, as it occurs in the local case (see Proposition 1.5 in \cite{CabreTerraI}).
+which is odd with respect to the Simons cone and positive in $\ocal\times [0,+\infty)$, describes the asymptotic behavior of saddle-shaped solutions at infinity (as shown in \cite{Cinti-Saddle, Cinti-Saddle2}; see Theorem~\ref{Th:Summary} below).  Note that from Lemma~4.2 in \cite{CabreTerraI}, we know that $|s-t|/\sqrt{2}$ is the distance to the Simons cone. Therefore, we can understand the function $U$ as the layer solution centered at each point of the Simons cone and oriented in the normal direction to the cone. Moreover, in this paper we  show (see Proposition~\ref{Prop:SaddleUnderLayer}) that the saddle-shaped solution lies below $U$ in $\ocal$, as it occurs in the local case (see Proposition 1.5 in \cite{CabreTerraI}).
 
 It is sometimes useful to consider also the following variables:
 $$
@@ -479,7 +479,7 @@ Let us explain why the Allen-Cahn equation has a very strong connection with the
 
 By a result of Cabré, Cinti, and Serra in \cite{CabreCintiSerra-Stable}, also the stability is preserved in the blow-down limit when $\s\in(0,1/2)$. Therefore, a limit of stable solutions to \eqref{Eq:AllenCahn} with $\s \in (0,1/2)$ will be a stable set for the $(2\s)$-perimeter. Thus, as a consequence of Theorem~\ref{Thm:Stability} we deduce Corollary~\ref{Cor:SimonsConeStableDim14}.
 
-The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prove the maximum principle for the linearized operator in $\ocal$, Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}. Section \ref{Sec:Uniqueness} is devoted to show Theorem~\ref{Thm:Uniqueness} concerning the uniqueness of the saddle-shaped solution. In Section \ref{Sec:Layer} we establish some monotonicity properties of the layer solution $u_0$, as well as the pointwise estimate for the saddle solution in terms of the layer $u_0$, stated in Proposition~\ref{Prop:SaddleUnderLayer}. In Section~\ref{Sec:Monotonicity} we prove the monotonicity and convexity properties of the saddle solution stated in Proposition~\ref{Prop:MonotonicityProperties}. Finally, Section~\ref{Sec:Stability} concerns the proof of the stability results, Theorem~\ref{Thm:Stability} and  Corollary~\ref{Cor:SimonsConeStableDim14}.
+The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prove the maximum principle for the linearized operator in $\ocal$, Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}. Section \ref{Sec:Uniqueness} is devoted to show Theorem~\ref{Thm:Uniqueness} concerning the uniqueness of the saddle-shaped solution. In Section \ref{Sec:Layer} we establish some monotonicity properties of the layer solution $u_0$, as well as the pointwise estimate for the saddle solution in terms of the layer $u_0$, stated in Proposition~\ref{Prop:SaddleUnderLayer}. In Section~\ref{Sec:Monotonicity} we prove the monotonicity and second derivative properties of the saddle solution stated in Proposition~\ref{Prop:MonotonicityProperties}. Finally, Section~\ref{Sec:Stability} concerns the proof of the stability results, Theorem~\ref{Thm:Stability} and  Corollary~\ref{Cor:SimonsConeStableDim14}.
 
 
 
@@ -490,7 +490,7 @@ The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prov
 \section{Maximum principles for the linearized operator}
 \label{Sec:MaximumPrinciple}
 
-In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' sets. In our case, the use of the extension problem requires a similar maximum principle but in sets that we will call ``extension-narrow''\!, defined next.
+In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' sets. In our case, the use of the extension problem requires a similar maximum principle but in pairs of sets that we will call ``extension-narrow''\!, defined next.
 
 \begin{definition}[``Extension-narrow'' pair]
 	Let $\Omega \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma \subset \partial_0 \Omega$ be a nonempty subset. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(\Omega,\Gamma,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
@@ -730,7 +730,7 @@ On the other hand, let us define $S:\R^{2m}\to\R^{2m}$ by $S(x',x'') = (x'',x')$
 |B_r(y)\cap \ical| = |S \left( B_r(y)\cap \ical\right)| = | B_r(Sy) \cap \ocal |\,.
 \end{equation}
 
-Finally, note that by the definition of $\overline{R}$, $S\overline{R} x_0 = \overline{R} x_0$. By combining this with \eqref{Eq:IsometrySimonsCone1} and \eqref{Eq:IsometrySimonsCone2}, we obtain
+Finally, note that by the definition of $\overline{R}$, it is satisfied $S\overline{R} x_0 = \overline{R} x_0$. By combining this with \eqref{Eq:IsometrySimonsCone1} and \eqref{Eq:IsometrySimonsCone2} applied to $y=x_0$ and $y=\overline{R}x_0$ respectively, we obtain
 $$ |B_r(x_0)\cap \ical| = | B_r(\overline{R}x_0) \cap \ical | = | B_r(S\overline{R}x_0) \cap \ocal | = | B_r(\overline{R}x_0) \cap \ocal | = |B_r(x_0)\cap \ocal|\,. $$
 \end{proof}
 
@@ -752,7 +752,7 @@ With this result at hand we can now establish the maximum principle for the line
 
 
 \begin{proof}[Proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}]
-Let $u$ be a saddle-shaped solution. A key point in the proof is that $u$ is a positive supersolution in $\ocal\times(0,+\infty)$ of the linearized problem. Indeed, since $u>0$ in $\partial_0\Omega \subset \ocal$,
+Let $u$ be a saddle-shaped solution. A key point in the proof is that $u$ is a positive supersolution in $\ocal\times(0,+\infty)$ of the linearized problem at $u$. Indeed, since $u>0$ in $\partial_0\Omega \subset \ocal$,
 \begin{equation}
 \label{Eq:uSupersolLinearized}
 \mathscr{L}_u u = d_\s \dfrac{\partial u}{\partial \nu^a}  -f'(u) u = f(u) - f'(u) u > 0\quad \text{ on } \partial_0\Omega \,.
@@ -764,7 +764,7 @@ Now, we define
 $$
 w := \dfrac{v}{u}\,.
 $$
-Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $\ccal\times [0,+\infty)$ and $\partial \Omega$ could intersect this set. Thus, in the following arguments we will consider the supremum of $w$ in some subset of $\partial_0 \Omega$, which is at a positive distance to the zero level set of $u$, where the supremum is finite. Then, using the maximum principle in ``extension-narrow'' pairs we will see that, if we assume that this supremum is positive, it is in fact the supremum on the whole set $\Omega$ (see the details below). After some arguments, we will arrive at a contradiction. A similar strategy was used by Cabré in \cite{Cabre-Saddle}, to prove an analogous maximum principle in the local case $\s = 1$.
+Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $\ccal\times [0,+\infty)$ and $\partial \Omega$ could intersect this set. Thus, in the following arguments we will consider the supremum of $w$ in some subset of $\partial_0 \Omega$, which is at a positive distance to the zero level set of $u$, where the supremum is finite. Then, using the maximum principle in ``extension-narrow'' pairs we will see that, if we assume that this supremum is positive, it is in fact the supremum in the whole set $\Omega$ (see the details below). After some arguments, we will arrive at a contradiction. A similar strategy was used by Cabré in \cite{Cabre-Saddle}, to prove an analogous maximum principle in the local case $\s = 1$.
 
 
 Les us proceed with the details. For $\varepsilon > 0$, set
@@ -895,7 +895,7 @@ $$ \frac{\partial^2}{\partial x^2} u_0(x,\lambda) < 0 \ \ \ \text{in} \ \ \ (0,+
 First of all, let us remark that $u_0$ has the required regularity to apply the following arguments by the results of \cite{CabreSireI} (see Section~\ref{Sec:Monotonicity} for more details).
 
 
-The monotonicity of the first derivative was already stated in Remark~4.7 of \cite{CabreSireI}, but we include here the short proof for completeness. By differentiating \eqref{Eq:LayerSolution} with respect to $x$, we obtain that $\div(\lambda^a \nabla (\partial_x u_0)) = 0$ in $\R\times (0,+\infty)$. Moreover, we also know that $\partial_x u_0(x,0) > 0$ for every $x\in \R$. Then, the result follows directly from the Poisson formula.
+The monotonicity of the first derivative was already stated in Remark~4.7 of \cite{CabreSireI}, but we include here the short proof for completeness. By differentiating \eqref{Eq:LayerSolution} with respect to $x$, we obtain that $\div(\lambda^a \nabla (\partial_x u_0)) = 0$ in $\R\times (0,+\infty)$. Moreover, we also know by definition that $\partial_x u_0(x,0) > 0$ for every $x\in \R$. Then, the result follows directly from the Poisson formula.
 
 Now, we show the second statement. If we call 
 $$
@@ -936,7 +936,7 @@ and
 $$
 \lim_{\tau\to 0^+} \partial_{x_{m+1}} U(x_1,...x_m,\tau,0,...,0,\lambda) = -\frac{1}{\sqrt{2}}\partial_xu_0\left(\frac{s}{\sqrt{2}},\lambda\right) <0\,.
 $$
-
+Note that the same property concerning a local minimum at $\{t=0,\ \lambda \geq 0\}$ holds if we add to $U$ a regular function.
 
 Next, we claim that $U$ is a positive supersolution in $\ocal$ to the linearized problem for $\mathscr{L}_U$. Indeed, by the concavity of $f$, we have that
 $$
@@ -1047,9 +1047,9 @@ Indeed, if $u_0$ is the layer solution,
 $$
 \partial_s U (x,\lambda) = \dfrac{1}{\sqrt{2}} \partial_1 u_0\bpar{\dfrac{s-t}{\sqrt{2}}, \lambda} \geq 0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_s- \partial_s U)(\cdot,\lambda)}_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
 $$
-Thus, by the maximum principle (Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}) applied to $v=-u_s$, with $b(x) = -(m-1)\lambda^a / s^2\leq 0$, we conclude that $u_s \geq 0$ in $\{s \geq t,\ \lambda \geq 0\}$.
+Thus, by the maximum principle (Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}) applied to $v=-u_s$, with $b(x,\lambda) = -(m-1)\lambda^a / s^2\leq 0$, we conclude that $u_s \geq 0$ in $\{s \geq t,\ \lambda \geq 0\}$.
 
-Now, we differentiate \eqref{Eq:AllenCahnEithExtensionST} with respect to $t$ and we obtain
+Similarly, if we differentiate \eqref{Eq:AllenCahnEithExtensionST} with respect to $t$, we obtain
 $$
 \beqc{\PDEsystem}
 \div (\lambda^a \nabla u_t) &=& (m-1) \dfrac{\lambda^a}{t^2}u_t & \text{ in } \{ s > t > 0 ,\ \lambda > 0\}\,, \\
@@ -1080,7 +1080,7 @@ $$
 d_\s \dfrac{\partial u_y}{\partial \nu^a}& = & f'(u)u_y& \text{ on }  \{ s > t > 0 , \ \lambda = 0\}\,.
 \eeqc
 $$
-Note that, since $u$ vanishes at $\ccal \times [0, +\infty)$, $u_y = 0$ on $\{ s=t, \ \lambda \geq 0\}$. Moreover, $u_s\geq 0$ and $u_t = 0$ on $\{t=0, \ \lambda \geq 0\}$. Therefore, $u_y \geq 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\} = \{s = t,\ \lambda \geq 0 \}\cup \{t=0, \ \lambda \geq 0\}$. Moreover, by the asymptotic result and the monotonicity properties of the layer solution we have
+Note that, since $u$ vanishes at $\ccal \times [0, +\infty)$, $u_y = 0$ on $\{ s=t, \ \lambda \geq 0\}$. Moreover, $u_s\geq 0$ and $u_t = 0$ on $\{t=0, \ \lambda \geq 0\}$. Therefore, $u_y \geq 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\} = \{s = t,\ \lambda \geq 0 \}\cup \{t=0, \ \lambda \geq 0\}$. Furthermore, by the asymptotic result and the monotonicity properties of the layer solution we have
 $$
 \limsup_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_y(s,t,\lambda) = 0\,,
 $$
@@ -1158,7 +1158,7 @@ Note that the existence of $b>0$ such that $b(b-m+2)\leq -(m-1)$ is guaranteed b
 
 
 
-Finally, let us show that if we have a positive supersolution to the linearized operator on $\R^{2m}\setminus \{st=0\}$, we can deduce the stability of $u$. We have to check that \eqref{Eq:StabilityCondition} holds. Multiply \eqref{Eq:VarphiSupersolution1} by a nonnegative function $\zeta\in C^1(\R^{2m+1}_+)$ with compact support in $\{st>0\}\times [0,+\infty)$ and integrate by parts. Thus, using \eqref{Eq:VarphiSupersolution2} we obtain
+Finally, let us show that if we have a positive supersolution to the linearized operator on $\R^{2m}\setminus \{st=0\}$, we can deduce the stability of $u$. We have to check that \eqref{Eq:StabilityCondition} holds. Let us multiply \eqref{Eq:VarphiSupersolution1} by a nonnegative function $\zeta\in C^1(\R^{2m+1}_+)$ with compact support in $\{st>0\}\times [0,+\infty)$ and integrate by parts. Thus, using \eqref{Eq:VarphiSupersolution2} we obtain
 \begin{equation}
 	\label{Eq:IneqStabilityProof1}	
 	\int_{\{st>0\}} f'(u) \, \varphi \, \zeta  \d x \leq d_\s \int_0^\infty \int_{\{st>0\}} \lambda^a \nabla{\varphi} \cdot \nabla{\zeta}  \d x \d \lambda\,.
