@@ -436,7 +436,7 @@ Its stability is a consequence of the following fact. For every constant $b>0$ s
 $$
 \varphi := t^{-b} \, u_s - s^{-b} u_t, 
 $$
-defined in $\R^{2m+1}_+\setminus\{st=0\}$, is even with respect to the Simons cone and is a positive supersolution of the linearized operator. That is, $-\div(\lambda^a \nabla \varphi) \geq 0$ and $\mathscr{L}_u \varphi \geq 0$, where $\mathscr{L}_u$ is defined in \eqref{Eq:LinearizedOperator}.
+defined in $\R^{2m+1}_+\setminus\{st=0\}$, is even with respect to the Simons cone and is a positive supersolution of the linearized operator. More precisely, $-\div(\lambda^a \nabla \varphi) \geq 0$ in $\R^{2m+1}_+\setminus\{st=0\}$ and $\mathscr{L}_u \varphi \geq 0$ in $\R^{2m}\setminus\{st=0\}$, where $\mathscr{L}_u$ is defined in \eqref{Eq:LinearizedOperator}.
 \end{theorem}
 
 An important consequence of this result is Corollary~\ref{Cor:SimonsConeStableDim14}, stated next, on the stability of the Simons cone as a $(2\s)$-minimal surface in dimensions $2m\geq 14$. This is the first analytical proof of its stability for some $\s$ and $m$. It follows directly from the convergence results proved in \cite{CabreCintiSerra-Stable} for stable solutions to the Allen-Cahn equation after a blow-down, together with the preservation of the stability along this procedure (see also the comments at the end of this introduction).
@@ -490,9 +490,9 @@ The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prov
 \section{Maximum principles for the linearized operator}
 \label{Sec:MaximumPrinciple}
 
-In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' sets. In our case, the use of the extension problem requires a similar maximum principle but in pairs of sets that we will call ``extension-narrow''\!, defined next.
+In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' sets (see for instance \cite{Cabre-Topics,BerestyckiNirembergVaradhan}). In our case, the use of the extension problem requires a similar maximum principle but in pairs of sets that we will call ``extension-narrow''\!, defined next.
 
-\begin{definition}[``Extension-narrow'' pair]
+\begin{definition}[``Extension-narrow'' pair of sets]
 	Let $\Omega \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma \subset \partial_0 \Omega$ be a nonempty subset. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(\Omega,\Gamma,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
 	\begin{equation}
 	\label{Eq:Narrow}
@@ -513,7 +513,7 @@ Once the quantity  $R_a(\Omega,\Gamma, \theta)$ is defined, we can state precise
 
 \begin{proposition}[Maximum principle in ``extension-narrow'' pairs]
 	\label{Prop:MaxPrincipleNarrow}
-	Let $\Omega \subset \R^{n+1}_+$ be an open set, and let $\Gamma \subset \partial_0 \Omega$ be a nonempty subset. Assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap \Omega$ is empty. 
+	Let $\Omega \subset \R^{n+1}_+$ be an open set and let $\Gamma \subset \partial_0 \Omega$ be nonempty. Assume that there exists a nonempty open cone $E\subset \partial_0 \R^{n+1}_+ = \R^n$ such that $(E \times (0,+\infty))\cap \Omega=\varnothing$. 
 	
 	Let $a\in (-1,1)$ and let $v \in C^2 (\Omega)\cap C(\overline{\Omega})$ be a function bounded from above such that $\lambda^a v_\lambda \in C (\overline{\Omega})$, and assume that it satisfies
 	\begin{equation}
@@ -569,7 +569,7 @@ With this result available, we can now present the proof of the maximum principl
 	\quad \text{ and } \quad 
 	\Gamma_+ := \partial \Omega_+ \cap \Gamma\,,
 	$$ 
-	and by contradiction assume that $\Omega_+$ is nonempty. Then, since $b\leq 0$, it is easy to check that $v$ satisfies
+	and by contradiction assume that $\Omega_+$ is nonempty. Then, since $b\leq 0$,  $v$ satisfies
 	$$
 	\beqc{\PDEsystem}
 	-\div(\lambda^a \nabla v) &\leq& 0 & \text{ in } \Omega_+\,, \\
@@ -580,7 +580,11 @@ With this result available, we can now present the proof of the maximum principl
 	Now, we proceed in two steps in order to arrive at a contradiction.
 	
 	\textbf{Step 1.}
-	First, we claim that if $\Gamma_+$ is nonempty then $\sup_{\Omega_+} v = \sup_{\Gamma_+} v $. That is, if we call $\overline{v} = v - \sup_{\Gamma_+} v$, we then have $\overline{v} \leq 0$ in $\Omega_+$. To prove this, we use a classical Phragmen-Lindelöf-type argument, as follows. Similar methods appear, among many others, in the proof of Theorem~1.2 of \cite{BerestyckiCaffarelliNiremberg-Monotonicity}, or Section~2.4 of \cite{CabreSolaMorales}.
+	First, we claim that if $\Gamma_+$ is nonempty then $\sup_{\Omega_+} v = \sup_{\Gamma_+} v $. That is, if we call 
+	$$
+	\overline{v} := v - \sup_{\Gamma_+} v,
+	$$
+	we then have $\overline{v} \leq 0$ in $\Omega_+$. To prove this, we use a classical Phragmen-Lindelöf-type argument, as follows. Similar methods appear, among many others, in the proof of Theorem~1.2 of \cite{BerestyckiCaffarelliNiremberg-Monotonicity}, or Section~2.4 of \cite{CabreSolaMorales}.
 	
 	We now claim that, since the cone $E$ is open, there exists a nonempty open cone $F \subset E$ satisfying
 	\begin{equation}
@@ -615,7 +619,7 @@ With this result available, we can now present the proof of the maximum principl
 	\eeqc
 	$$
 	Thus, if we define 
-	$$\overline{w}:=\overline{v}/\psi\,,$$
+	$$\overline{w}:=\dfrac{\overline{v} }{\psi} = \dfrac{v - \sup_{\Gamma_+} v}{\psi}\,,$$
 	proving that $\overline{v} \leq 0$ in $\Omega_+$ is equivalent to showing that $\overline{w}\leq 0$ in $\Omega_+$, since $\psi$ is positive. Now, since $\sup_{\Gamma_+} v \geq 0$, it is easy to show that $\overline{w}$ satisfies
 	\begin{equation}
 	\label{Eq:wTildeEquationNarrow}
@@ -625,7 +629,7 @@ With this result available, we can now present the proof of the maximum principl
 	\ds \lim_{(x,\lambda)\in \Omega_+, \ |(x,\lambda)|\to +\infty} \overline{w} & \leq & 0\,.
 	\eeqc
 	\end{equation}
-	Then, by the maximum principle we deduce that $\overline{w}\leq 0$ in $\Omega_+$, which yields $\overline{v}\leq 0$ in $\Omega_+$.
+	Then, by the classical maximum principle we deduce that $\overline{w}\leq 0$ in $\Omega_+$, which yields $\overline{v}\leq 0$ in $\Omega_+$.
 	
 	Note that if $\Gamma_+$ is empty, the same argument applied to $v$ instead of $\overline{v}$ yields a contradiction with the assumption that $\Omega_+$ is nonempty. From now on in this proof, we will assume that $\Gamma_+ \neq \varnothing$.
 	
@@ -634,7 +638,7 @@ With this result available, we can now present the proof of the maximum principl
 	\label{Eq:PositiveSup}
 	M := \sup_{\Gamma_+} v > 0\,.
 	\end{equation}
-	Moreover, using also Step 1 and the hypotheses assumed on $v$ at $\partial \Omega_+\setminus \Gamma_+$, it is clear that for every $k > 0$ there exists a point $(x_k,0)\in \Gamma_+$ such that
+	Therefore, since $v\leq 0$ on $\partial \Omega_+\setminus \Gamma_+$, there exists a sequence $(x_k,0)\in \Gamma_+$ such that
 	$$
 	v(x_k) = v(x_k,0) \geq M \bpar{1- \dfrac{1}{k}}\,,
 	$$
@@ -670,9 +674,7 @@ With this result available, we can now present the proof of the maximum principl
 	\dfrac{\partial w}{\partial \nu^a} & \geq & 0 & \text{ on } \partial_0 B^+_R(x_k)  \,.
 	\eeqc
 	$$
-	Hence, $w$ fulfills the hypotheses of Proposition~\ref{Prop:WeakHarnack} and thus \eqref{Eq:WeakHarnack} holds.
-	
-	Then, if we take $R = 2\,R_a( \Omega,\Gamma, \theta)$, and $p$ as in \eqref{Eq:WeakHarnack}, we have
+	Hence, $w$ fulfills the hypotheses of Proposition~\ref{Prop:WeakHarnack} and thus \eqref{Eq:WeakHarnack} holds. As a consequence, if we take $R = 2\,R_a( \Omega,\Gamma, \theta)$ and $p$ as in \eqref{Eq:WeakHarnack}, we have
 	\begin{align*}
 	\theta^{1/p} M & \leq \left (  \dfrac{|B^+_{R/2}(x_k)\setminus   \Omega|_a}{|B^+_{R/2}(x_k)|_a}  M^p \right)^{1/p} \\
 	& \leq \left (  \dfrac{|B^+_{R/2}(x_k)\setminus  \Omega_+|_a}{|B^+_{R/2}(x_k)|_a}  M^p \right)^{1/p} \\
@@ -681,7 +683,9 @@ With this result available, we can now present the proof of the maximum principl
 	&\leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \inf_{B^+_{R/4}(x_k)} w \\
 	& \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \,  w(x_k).
 	\end{align*}
-	Here we have used the definition of $R_a( \Omega,\Gamma,\theta)$, the fact that $w \equiv M$ in $B^+_R(x_k)\setminus \Omega_+$, the scaling properties of $|\cdot |_a$ and the weak Harnack inequality \eqref{Eq:WeakHarnack}. Now, if $c_1 \overline{c}_{n,\s} R^{2\s} < 1$, then there exists $k_0>0$ depending only on $n$, $\s$, $R$, and $c_1$, such that $w(x_k) = M - v(x_k) + \phi(x_k)$ for every $k>k_0$. Therefore, for such $k$ we have
+	Here we have used the definition of $R_a( \Omega,\Gamma,\theta)$, the fact that $w \equiv M$ in $B^+_R(x_k)\setminus \Omega_+$, the scaling properties of $|\cdot |_a$ and the weak Harnack inequality \eqref{Eq:WeakHarnack}. 
+	
+	Now, if $c_1 \overline{c}_{n,\s} R^{2\s} \leq 1/2$, then $w(x_k) = M - v(x_k) + \phi(x_k)$ for $k$ large enough. Therefore, for such indices $k$ we conclude
 	\begin{align*}
 		\theta^{1/p} M &\leq  2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \{M - v(x_k) + \phi(x_k) \} \\
 		& \leq 2^{\frac{n+1+a}{p}}|B_1^+|_a^{-1/p} C_h \{1/k + c_1  \overline{c}_{n,\s} R^{2\s} \}M\,.
@@ -690,16 +694,20 @@ With this result available, we can now present the proof of the maximum principl
 	$$
 	M \bpar{1- \dfrac{C}{k}}\leq 0
 	$$
-	for some positive constant $C$ independent of $k$. Since this holds for every $k>k_0$, we conclude that $M \leq 0$, which contradicts \eqref{Eq:PositiveSup}. Therefore, our initial assumption stating that $ \Omega_+$ is not empty is false. This means that $v\leq 0$ in $\Omega$.
+	for some positive constant $C$ independent of $k$. Letting $k\to +\infty$, this leads to $M \leq 0$, which contradicts \eqref{Eq:PositiveSup}. 
+	
+	Therefore, our initial assumption stating $ \Omega_+ \neq \varnothing$ is false. This means that $v\leq 0$ in $\Omega$.
 \end{proof}
 
 
 \begin{remark}
 	\label{Remark:WeakMPNarrow}
-	Notice that the previous result (and as a consequence, Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}) is also valid if we do not require $v$ to be $C^2$ in the whole $\Omega$. Indeed, we only need to assume that the equation $\div (\lambda^a \nabla v) \leq b(x,\lambda)v$ holds pointwise where $v$ is regular, and that $v$ cannot have a local maximum at a nonregular point. In particular, this will be used in the proof of Proposition~\ref{Prop:SaddleUnderLayer} with $v = u- CU$ in $\Omega = \ocal \times (0,+\infty)$, where $u$ is a saddle-shaped solution, $U$ is defined by \eqref{Eq:DefULayer}, and $C$ is a positive constant. Note that $U$ is no more regular than Lipschitz (and thus not $C^2$) in $\{t=0, \lambda\geq 0\}$. As we will see in Section~\ref{Sec:Layer}, $U$ is only $\s$-superharmonic in $\Omega \setminus \{t=0, \lambda\geq 0\}$. Nevertheless, Proposition~\ref{Prop:MaxPrincipleNarrow} holds in this case thanks to the fact that $v = u-CU$ has, say, a ``good angle'' for the maximum principle in its nonregular points (see the proof of Proposition~\ref{Prop:SaddleUnderLayer} for the details).
+	It will be useful later to note that the previous result (and as a consequence, Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}) is also valid not requiring $v$ to be $C^2$ in the whole $\Omega$. Indeed, we only need to assume that $v\in C(\Omega)$, that the equation $\div (\lambda^a \nabla v) \leq b(x,\lambda)v$ holds pointwise where $v$ is regular, and that $v$ cannot have a local maximum at a nonregular point.
+	
+	This will be used in the proof of Proposition~\ref{Prop:SaddleUnderLayer} with $v = u- CU$ in $\Omega = \ocal \times (0,+\infty)$, where $u$ is a saddle-shaped solution, $U$ is defined by \eqref{Eq:DefULayer}, and $C$ is a positive constant. Note that $U$ is Lipschitz but not $C^2$ across $\{t=0, \lambda\geq 0\}$. Therefore, as we will see in Section~\ref{Sec:Layer}, $U$ is only $\s$-superharmonic (pointwise) in $\Omega \setminus \{t=0, \lambda\geq 0\}$. Nevertheless, by this remark, Proposition~\ref{Prop:MaxPrincipleNarrow} will hold in this case thanks to the fact that the graph of $v = u-CU$ in its nonregular points makes the ``good angle'' for the maximum principle to hold (see the proof of Proposition~\ref{Prop:SaddleUnderLayer} for the details).
 \end{remark}
 
-As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in pairs $(\Omega, \Gamma)$ with $ \Omega \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ and $\Gamma \subset \partial_0  \Omega$ contained in an $\varepsilon$-neighborhood of the Simons cone.
+As a consequence of Proposition~\ref{Prop:MaxPrincipleNarrow}, next we establish that the maximum principle holds in pairs $(\Omega, \Gamma)$ with $ \Omega \subset \ocal \times (0, +\infty) \subset \R^{2m+1}_+$ and $\Gamma \subset \partial_0  \Omega$ lying in an $\varepsilon$-neighborhood of the Simons cone.
 
 \begin{corollary}
 \label{Cor:MaxPrincipleNarrowSaddle}
@@ -766,14 +774,14 @@ Now, we define
 $$
 w := \dfrac{v}{u}\,.
 $$
-Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $\ccal\times [0,+\infty)$ and $\partial \Omega$ could intersect this set. Thus, in the following arguments we will consider the supremum of $w$ in some subset of $\partial_0 \Omega$, which is at a positive distance to the zero level set of $u$, where the supremum is finite. Then, using the maximum principle in ``extension-narrow'' pairs we will see that, if we assume that this supremum is positive, it is in fact the supremum in the whole set $\Omega$ (see the details below). After some arguments, we will arrive at a contradiction. A similar strategy was used by Cabré in \cite{Cabre-Saddle}, to prove an analogous maximum principle in the local case $\s = 1$.
+Note that $w$ is well defined in $\Omega$, since $u$ is positive in such set. The usual strategy (see \cite{BerestyckiNirembergVaradhan}) in some proofs of the maximum principle is to assume that the supremum of $w$ in $\Omega$ is positive and then arrive at a contradiction.  Nevertheless, a priori we do not know that $\sup_\Omega w< +\infty$, since $u$ vanishes on $\ccal\times [0,+\infty)$ and $\partial \Omega$ could intersect this set. Thus, in the following arguments we will consider the supremum of $w$ in a subset of $\partial_0 \Omega$ that is at a positive distance to the zero level set of $u$. Then, using the maximum principle in ``extension-narrow'' pairs we will see that, assuming this supremum to be positive, it will indeed agree with the supremum in the whole set $\Omega$ (see the details below). After some arguments, we will arrive at a contradiction. A similar strategy was used by Cabré in \cite{Cabre-Saddle}, to prove an analogous maximum principle in the local case $\s = 1$.
 
 
 Les us proceed with the details. For $\varepsilon > 0$, set
 $$
 \ocal_\varepsilon := \{t +\varepsilon < s,\ \lambda = 0 \} \quad \textrm{ and } \quad \mathcal{N}_\varepsilon := \{t < s < t+\varepsilon ,\ \lambda = 0 \}\,,
 $$
-and take $\varepsilon$ small enough such that for each set $\Gamma \subset \partial_0 \Omega$ satisfying $\Gamma \subset \mathcal{N}_\varepsilon$, the pair $(\Omega, \Gamma)$  is ``extension-narrow'' and hence the maximum principle holds in as in Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}. 
+and take $\varepsilon$ small enough such that for each set $\Gamma \subset \partial_0 \Omega$ satisfying $\Gamma \subset \mathcal{N}_\varepsilon$, the pair $(\Omega, \Gamma)$  is ``extension-narrow''. Hence the maximum principle, as in Corollary~\ref{Cor:MaxPrincipleNarrowSaddle}, holds for the pair $(\Omega, \Gamma)$. 
 
 Next, we claim that
 \begin{equation}
@@ -872,7 +880,7 @@ with $b \leq 0$. Then, $v\leq 0$ in $\Omega$.
 \end{proposition}
 
 \begin{proof}
-Since it is analogous to the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we just give here a sketch pointing out what needs to be adapted. The key fact is also that, since $u_0>0$ on $(0,+\infty)\times\{0\}$, then $u_0$ is a positive supersolution to the linearized problem. That is,
+Since it is analogous (and simpler) to the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we just sketch it here pointing out what needs to be adapted. The key fact is that $u_0$ is a positive supersolution to the linearized problem. This is an analogous situation to that of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} . That is, $u_0$ is $\s$-harmonic in $(0,+\infty)\times (0,+\infty)$, positive in $(0,+\infty)\times [0,+\infty)$, and
 \begin{equation}
 \label{Eq:u0SupersolLinearized}
 d_\s \dfrac{\partial u_0}{\partial \nu^a}  = f(u_0) > f'(u_0) u_0 \quad \textrm{ on } (0, +\infty)\times \{0\}\,,
@@ -880,26 +888,26 @@ d_\s \dfrac{\partial u_0}{\partial \nu^a}  = f(u_0) > f'(u_0) u_0 \quad \textrm{
 where we have used that $f''<0$ in $(0,1)$ and $f(0)=0$.
 
  
-Then, one defines $w := v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing  $u$ by $u_0$ in the whole argument, and also replacing  $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively. Then, \eqref{Eq:u>delta} follows immediately from the fact that $u_0(x,0)$ is increasing. The rest of the proof is completely analogous by using \eqref{Eq:u0SupersolLinearized}.
+Then, one defines $w := v/u_0$ and proceeds exactly as in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, replacing  $u$ by $u_0$ in the whole argument, and also replacing  $\ocal_\varepsilon$ and $\ncal_\varepsilon$ by $(\varepsilon,+\infty)$ and $(0,\varepsilon)$ respectively. In addition, \eqref{Eq:u>delta} follows immediately from the fact that $u_0(x,0)$ is increasing. The rest of the proof is completely analogous by using \eqref{Eq:u0SupersolLinearized}.
 \end{proof}
 
 With this maximum principle we can now prove the following monotonicity and concavity properties of the layer solution.
 
 \begin{lemma}
 \label{Lemma:MonotonicityLayer}
-Let $u_0$ be the layer solution of \eqref{Eq:LayerSolution}. Then
-$$ \frac{\partial}{\partial x} u_0(x,\lambda) > 0 \ \ \ \text{in} \ \ \ \R\times [0,+\infty)\,, $$
+Let $u_0$ be the layer solution of \eqref{Eq:LayerSolution}. Then,
+$$ \frac{\partial}{\partial x} u_0(x,\lambda) > 0 \ \ \ \text{in} \ \ \ \R\times [0,+\infty) $$
 and
-$$ \frac{\partial^2}{\partial x^2} u_0(x,\lambda) < 0 \ \ \ \text{in} \ \ \ (0,+\infty)\times [0,+\infty)\,, $$
+$$ \frac{\partial^2}{\partial x^2} u_0(x,\lambda) < 0 \ \ \ \text{in} \ \ \ (0,+\infty)\times [0,+\infty)\,. $$
 \end{lemma}
 
 \begin{proof}
 First of all, let us remark that $u_0$ has the required regularity to apply the following arguments by the results of \cite{CabreSireI} (see Section~\ref{Sec:Monotonicity} for more details).
 
 
-The monotonicity of the first derivative was already stated in Remark~4.7 of \cite{CabreSireI}, but we include here the short proof for completeness. By differentiating \eqref{Eq:LayerSolution} with respect to $x$, we obtain that $\div(\lambda^a \nabla (\partial_x u_0)) = 0$ in $\R\times (0,+\infty)$. Moreover, we also know by definition that $\partial_x u_0(x,0) > 0$ for every $x\in \R$. Then, the result follows directly from the Poisson formula.
+The monotonicity of the first derivative was already stated in Remark~4.7 of \cite{CabreSireI}, but we include here the short proof for completeness. By differentiating \eqref{Eq:LayerSolution} with respect to $x$, we obtain that $\div(\lambda^a \nabla (\partial_x u_0)) = 0$ in $\R\times (0,+\infty)$. Moreover,  $\partial_x u_0(x,0) > 0$ for $x\in \R$; see \eqref{Eq:LayerSolution}. Then, the result follows directly from the Poisson formula.
 
-Now, we show the second statement. If we call 
+Next, we show the second statement. If we call 
 $$
 v(x,\lambda) := \partial_{xx} u_0(x,\lambda)\,,
 $$
@@ -913,14 +921,18 @@ v & = & 0 & \text{ on } \{0\} \times (0,+\infty)\,.
 \end{equation*}
 Notice that $v = 0$ on $\{0\} \times (0,+\infty)$ since $v$ is an odd function with respect to the first variable (recall that $u_0$ is odd in $x$).
 
-Moreover, by repeating the argument of Lemma~4.8 in \cite{CabreSireI} for $\partial^2_{xx} u_0$, it is easy to see that $\partial_{xx} u_0(x,0) \to 0$ as $|x|\to +\infty$. Therefore, by Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D} we deduce that $v\leq 0$ in $[0,+\infty)\times [0,+\infty)$. Finally, we get that it is in fact negative in $(0,+\infty)\times [0,+\infty)$ by applying the strong maximum principle.
+Moreover, by repeating the argument of Lemma~4.8 in \cite{CabreSireI} for $\partial_{xx} u_0$, it is easy to see that $\partial_{xx} u_0(x,0) \to 0$ as $|x|\to +\infty$. Therefore, by Proposition~\ref{Prop:MaxPrincipleLinearizedOperator2D} we deduce that $v\leq 0$ in $[0,+\infty)\times [0,+\infty)$. Finally, we get that it is in fact negative in $(0,+\infty)\times [0,+\infty)$ by applying the strong maximum principle.
 \end{proof}
 
-Now we prove that the function $U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)$ is a barrier for the saddle-shaped solution. To do it, we will use a maximum principle for the linearized problem at $U$.
+Now we prove that the function 
+$$
+U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)
+$$ 
+is a barrier for the saddle-shaped solution. To do it, we will use a maximum principle for the linearized problem at $U$.
 
 
 \begin{proof}[Proof of Proposition~\ref{Prop:SaddleUnderLayer}]
-The idea is to repeat the arguments in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, but using $U$ instead of $u$ as the positive supersolution to the linearized problem with the operator 
+The idea is to repeat the arguments in the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, but using $U$ instead of $u$ as the positive supersolution to the linearized problem involving the operator 
 $$
 \mathscr{L}_U w:= d_\s \dfrac{\partial w}{\partial \nu^a}  -f'(U)w. 
 $$ 
@@ -944,10 +956,10 @@ Next, we claim that $U$ is a positive supersolution in $\ocal$ to the linearized
 $$
 \mathscr{L}_U U  = f(U) - f'(U)U> 0 \quad \text{ in } \ocal\,.
 $$
-Moreover, note that a simple computation in $(s, t, \lambda)$ variables shows that
+Moreover, a simple computation in the $(s, t, \lambda)$ variables shows that
 \begin{equation}
 \label{Eq:EqForULayer}
-\div (\lambda^a \nabla U) = \lambda^a \dfrac{m-1}{\sqrt{2}} \partial_x u_0 \bpar{\dfrac{s-t}{\sqrt{2}}, \lambda} \dfrac{t-s}{st} \quad \text{ in } \R^{2m + 1}_+ \setminus \{st=0,\ \lambda >0\}\,.
+\div (\lambda^a \nabla U) = \lambda^a \dfrac{m-1}{\sqrt{2}} \dfrac{t-s}{st} \partial_x u_0 \bpar{\dfrac{s-t}{\sqrt{2}}, \lambda}  \quad \text{ in } \R^{2m + 1}_+ \setminus \{st=0,\ \lambda >0\}\,.
 \end{equation}
 Therefore, $U$ is $\s$-superharmonic in $ (\ocal \times (0, +\infty) )\setminus \{t=0,\ \lambda > 0\}$ ---recall that $ \partial_x u_0 > 0$ by Lemma~\ref{Lemma:MonotonicityLayer}. 
 
@@ -957,14 +969,15 @@ $$ v:= u - U \quad \text{ and } \quad \Omega :=  \ocal \times (0, +\infty)\,,
 $$
 and we want to see that $v\leq 0$ in $\Omega$. First, since $u$ is $\s$-harmonic, we have that 
 $$ 
--\div (\lambda^a \nabla v) \leq 0 \quad \text{ in }\Omega \setminus \{t=0,\ \lambda > 0\}\,,
+-\div (\lambda^a \nabla v) \leq 0 \quad \text{ in }\Omega \setminus \{t=0,\ \lambda > 0\}
 $$
-and $v$ cannot have a local maximum at $\{t=0,\ \lambda \geq 0\}$. In addition, both $u$ and $U$ vanish at $\ccal \times [0,+\infty)$ and by the asymptotic behavior of $u$ (see Theorem~\ref{Th:Summary}), we have $\lim_{x\in  \ocal,\ |x|\to +\infty} v(x,0) = 0\,$. On the other hand, since $f$ is concave in $(0,1)$, we get 
+and that $v$ cannot have a local maximum at $\{t=0,\ \lambda \geq 0\}$. In addition, both $u$ and $U$ vanish at $\ccal \times [0,+\infty)$ and by the asymptotic behavior of $u$ (see Theorem~\ref{Th:Summary}), we have $\lim_{x\in  \ocal,\ |x|\to +\infty} v(x,0) = 0\,$. On the other hand, since $f$ is concave in $(0,1)$, we get 
 $$
-d_\s \dfrac{\partial v}{\partial \nu^a}  = f(u) - f(U) \leq f'(U)v \quad \text{ on } \partial_0 \Omega\,.$$
+d_\s \dfrac{\partial v}{\partial \nu^a}  = f(u) - f(U) \leq f'(U)v \quad \text{ on } \partial_0 \Omega\,.
+$$
 
 
-Collecting all these facts, we can repeat the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, using $U$ instead of $u$ as the positive supersolution to the linearized problem for $\mathscr{L}_U$ to see that $v\leq 0$ in $\Omega$. All the arguments are analogous, taking into account Remark~\ref{Remark:WeakMPNarrow} when using the maximum principles in ``extension-narrow'' pairs. Therefore, we conclude that $v\leq 0$ in $\Omega$. and, by the odd symmetry of $u$ and $U$, we get \eqref{Eq:SaddleUnderLayer}.
+Collecting all these facts, we can repeat the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, using $U$ instead of $u$ as the positive supersolution to the linearized problem for $\mathscr{L}_U$ to see that $v\leq 0$ in $\Omega$. All the arguments are analogous, taking into account Remark~\ref{Remark:WeakMPNarrow} when using the maximum principles in ``extension-narrow'' pairs. Therefore, we conclude that $v\leq 0$ in $\Omega$ and, by the odd symmetry of $u$ and $U$, we get \eqref{Eq:SaddleUnderLayer}.
 \end{proof}
 
 
@@ -974,35 +987,37 @@ Collecting all these facts, we can repeat the proof of Proposition~\ref{Prop:Max
 \section{Monotonicity properties}
 \label{Sec:Monotonicity}
 
-In this section we establish the monotonicity properties of $u$ stated in Proposition~\ref{Prop:MonotonicityProperties}. To deduce them we are going to apply the maximum principle of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} to some derivatives of $u$. Therefore, we need some regularity results that we collect next. 
+In this section we establish the monotonicity properties of $u$ stated in Proposition~\ref{Prop:MonotonicityProperties}. For this, we will apply the maximum principle of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} to some derivatives of $u$. Therefore, we need some regularity results that we collect next. 
 
-Recall that we assume that $f\in C^{2,\alpha}$ for some $\alpha\in(0,1)$. Since $u$ is a bounded solution to \eqref{Eq:AllenCahnWithExtension}, then $u\in C^\infty(\R^{2m+1}_+)$ from being $\s$-harmonic. Regarding the regularity on $\{\lambda = 0\}$, $u(\cdot,0)\in C^{2,\alpha}(\R^{2m})$ by applying Lemma 4.4 from \cite{CabreSireI}. Moreover, we have the following uniform bound:
-$$ ||u||_{C^\alpha\left(\overline{\R^{2m+1}_+}\right)} + ||\nabla_x u||_{C^\alpha\left(\overline{\R^{2m+1}_+}\right)} + ||D^2_x u||_{C^\alpha\left(\overline{\R^{2m+1}_+}\right)} \leq C, $$
+Recall that we assume that $f\in C^{2,\alpha}$ for some $\alpha\in(0,1)$. Since $u$ is a bounded solution to the first equation in \eqref{Eq:AllenCahnWithExtension}, then $u\in C^\infty(\R^{2m+1}_+)$. Regarding the regularity on $\{\lambda = 0\}$, $u(\cdot,0)\in C^{2,\alpha}(\R^{2m})$ by applying Lemma 4.4 from \cite{CabreSireI}. Moreover, \cite{CabreSireI} also gives the following uniform bound:
+$$ 
+||u||_{C^\alpha\left(\overline{\R^{2m+1}_+}\right)} + ||\nabla_x u||_{C^\alpha\left(\overline{\R^{2m+1}_+}\right)} + ||D^2_x u||_{C^\alpha\left(\overline{\R^{2m+1}_+}\right)} \leq C, 
+$$
 for some $C>0$ depending only on $m$, $\s$ , $||f||_{C^{2,\alpha}}$ and $||u||_{L^\infty(\R^{2m+1}_+)}$.
 
-Then, since the horizontal first derivatives of $u$ satisfy $\div(\lambda^a \, \nabla u_{x_i}) = 0$ and $d_\s \partial_{\nu^a}  u_{x_i} = f'(u) \,u_{x_i} \in C^\alpha(\R^{2m})$, and the  horizontal second derivatives of $u$ satisfy $\div(\lambda^a \, \nabla u_{x_i x_j}) = 0$ and $d_\s\partial_{\nu^a} u_{x_i x_j} = f''(u) \,u_{x_i}\,u_{x_j} + f'(u) \, u_{x_i\,x_j}\in C^\alpha(\R^{2m})$ for all indexes $i$ and $j$ from $1$ to $2m$, we can apply Lemma 4.5 from \cite{CabreSireI} to obtain that
+Next, since the horizontal first derivatives of $u$ satisfy $\div(\lambda^a \, \nabla u_{x_i}) = 0$ and also $d_\s \partial_{\nu^a}  u_{x_i} = f'(u) \,u_{x_i} \in C^\alpha(\R^{2m})$, and the  horizontal second derivatives of $u$ satisfy $\div(\lambda^a \, \nabla u_{x_i x_j}) = 0$ and also  $d_\s\partial_{\nu^a} u_{x_i x_j} = f''(u) \,u_{x_i}\,u_{x_j} + f'(u) \, u_{x_i\,x_j}\in C^\alpha(\R^{2m})$ for all indexes $i$ and $j$ from $1$ to $2m$, we can apply Lemma 4.5 from \cite{CabreSireI} to obtain that
 $$
 ||\lambda^a \, u_\lambda||_{C^\beta\left(\R^{2m}\times [0,1]\right)} + ||\lambda^a \, (u_{x_i})_\lambda||_{C^\beta\left(\R^{2m}\times [0,1]\right)}  + ||\lambda^a \, (u_{x_i\,x_j})_\lambda||_{C^\beta\left(\R^{2m}\times [0,1]\right)} \leq C,
 $$
-for some $C>0$ and $\beta\in(0,1)$ depending only on $m$, $\s$ , $||f||_{C^{2,\alpha}}$ and $||u||_{L^\infty(\R^{2m+1}_+)}$.
+for some $C>0$ and $\beta\in(0,1)$ depending only on $m$, $\s$, $||f||_{C^{2,\alpha}}$ and $||u||_{L^\infty(\R^{2m+1}_+)}$.
 
 Now, since $u$ depends only on $s$, $t$ and $\lambda$, from the previous results we obtain
 \begin{align*}
-u_s \in C^{2,\alpha}(\R_+^{2m+1}\setminus\{s=0,\ \lambda >0\}) \,\, &\text{ and }\,\, \lambda^a\,(u_s)_\lambda \in C^{\alpha}(\overline{\R_+^{2m+1}}\setminus\{s=0,\ \lambda >0\}),\\
-u_t \in C^{2,\alpha}(\R_+^{2m+1}\setminus\{t=0,\ \lambda >0\}) \,\, &\text{ and }\,\, \lambda^a\,(u_t)_\lambda \in C^{\alpha}(\overline{\R_+^{2m+1}}\setminus\{t=0,\ \lambda >0\}),\\
-u_{st} \in C^{2,\alpha}(\R_+^{2m+1}\setminus\{st=0,\ \lambda >0\}) \,\, &\text{ and }\,\, \lambda^a\,(u_{st})_\lambda \in C^{\alpha}(\overline{\R_+^{2m+1}}\setminus\{st=0,\ \lambda >0\}).
+u_s \in C^{2,\alpha}(\R_+^{2m+1}\setminus\{s=0,\ \lambda \geq 0\}) \,\, &\text{ and }\,\, \lambda^a\,(u_s)_\lambda \in C^{\alpha}(\overline{\R_+^{2m+1}}\setminus\{s=0,\ \lambda \geq 0\}),\\
+u_t \in C^{2,\alpha}(\R_+^{2m+1}\setminus\{t=0,\ \lambda \geq 0\}) \,\, &\text{ and }\,\, \lambda^a\,(u_t)_\lambda \in C^{\alpha}(\overline{\R_+^{2m+1}}\setminus\{t=0,\ \lambda \geq 0\}),\\
+u_{st} \in C^{2,\alpha}(\R_+^{2m+1}\setminus\{st=0,\ \lambda \geq 0\}) \,\, &\text{ and }\,\, \lambda^a\,(u_{st})_\lambda \in C^{\alpha}(\overline{\R_+^{2m+1}}\setminus\{st=0,\ \lambda \geq 0\}).
 \end{align*}
-Furthermore, as it is explained in Section~4 of \cite{Cabre-Saddle}, the regularity and the radial symmetry of $u$ yield
+Furthermore, as it is explained in Section~4 of \cite{Cabre-Saddle}, the regularity and the symmetry of $u$, in $s$ and $t$, yield
 \begin{align*}
-u_s=0 \,\text{ in } \, \{s=0,\ \lambda >0\}, \quad 
-u_t=0 \,\text{ in } \, \{t=0,\ \lambda >0\},  \quad
-u_{st}=0 \,\text{ in } \, \{st=0,\ \lambda >0\},
+u_s=0 \,\text{ in } \, \{s=0,\ \lambda \geq 0\}, \quad 
+u_t=0 \,\text{ in } \, \{t=0,\ \lambda \geq 0\},  \quad
+u_{st}=0 \,\text{ in } \, \{st=0,\ \lambda \geq 0\},
 \end{align*}
 and
 $$ u_s, \ u_t,\ u_{st} \in C(\overline{\R^{2m+1}_+}).  $$
 
 
-Before proceeding with the proof of Proposition~\ref{Prop:MonotonicityProperties}, we first need the following asymptotic result for the second derivatives of $u$, that is not proved in \cite{Cinti-Saddle, Cinti-Saddle2}. It will be used to show that $u_{st}>0$ in $\{s>t>0\}\times [0,+\infty)$.
+Before proceeding with the proof of Proposition~\ref{Prop:MonotonicityProperties}, we first need the following asymptotic result for the second derivatives of $u$. This derivative was not included in the asymptotic theorem of \cite{Cinti-Saddle, Cinti-Saddle2}. It will be used to show that $u_{st}>0$ in $\{s>t>0\}\times [0,+\infty)$.
 
 \begin{lemma}
 \label{Lemma:AsymptoticSecondDerivative}
@@ -1012,10 +1027,15 @@ for every $\lambda \in [0,+\infty)$.
 \end{lemma}
 
 \begin{proof}
-The proof follows the ones of the analogous results in \cite{Cinti-Saddle2,Cabre-Saddle,CabreTerraII}, where a compactness argument is used. Therefore, we only give here the main ideas, since the details can be found in these papers. Arguing by contradiction, let us suppose that the asymptotic result does not hold. Hence, there exists an $\varepsilon>0$ and a sequence $\{x_k\}\subset \ocal$ such that 
-$$ |D^2_x u(x_k,\lambda)-D^2_xU(x_k,\lambda)| \geq \varepsilon \ \ \ \text{ and } \ \ \ |x_k|\to+\infty. $$
+The proof follows the ones of the analogous results in \cite{Cinti-Saddle2,Cabre-Saddle,CabreTerraII}, where a compactness argument is used. Therefore, we only give here the main ideas, since the details can be found in these papers. Arguing by contradiction, we suppose that the asymptotic result does not hold. Hence, there exists an $\varepsilon>0$ and a sequence $\{x_k\}\subset \ocal$ such that 
+\begin{equation}
+	\label{Eq:AsymptoticContradiction}
+|D^2_x u(x_k,\lambda)-D^2_xU(x_k,\lambda)| \geq \varepsilon \ \ \ \text{ and } \ \ \ |x_k|\to+\infty. 
+\end{equation}
 
-Now we distinguish two cases, depending on whether the sequence $\{ \dist(x_k, \ccal) \}$ is unbounded or bounded. In the first case, we show that, up to a subsequence, the function $u_k(x,\lambda) := u(x_k-x,\lambda)$ converges, to a solution $u_\infty$ of the semilinear Neumann problem in the half-space $\R^{2m+1}_+$ given in the statement of Theorem 5.3 in \cite{Cinti-Saddle2} (see \cite{LiZhang} for the proof). Using this result and the stability of $u_\infty$ we get that $u_\infty \equiv 1$. Thus, we arrive at a contradiction since $|D^2_x u(x_k,\lambda)| \to 0$ and $|D^2_x U(x_k,\lambda)| \to 0$ from being $|x_k| \to +\infty$. In the second case, since the Simons cone converges to a hyperplane at infinity (see the details in \cite{CabreTerraII}), it can be proved that, up to a subsequence, the function $u_k(x,\lambda) := u(x_k-x,\lambda)$ converges to a positive solution $u_\infty$ of an equation in the quarter of space $\R^{2m+1}_{++} = \R^{2m+1}_{+} \cap \{x_{2m}>0\} $ with zero boundary conditions, as in the statement of Theorem 5.5 in \cite{Cinti-Saddle2} (see \cite{Tan} for the proof). Applying that theorem and the stability again, we conclude that $u_\infty$ must be the 2D solution $u_0$ depending only on the variables orthogonal to the boundary of the quarter of space. Hence, we arrive at a contradiction since it is easy to check that $D^2_x(u-U)(x_k,\lambda)$ converges to zero.
+Now we distinguish two cases, depending on whether the sequence $\{ \dist(x_k, \ccal) \}$ is unbounded or bounded. In the first case, we show that, up to a subsequence, the function $u_k(x,\lambda) := u(x_k-x,\lambda)$ converges to a solution $u_\infty$ of the semilinear Neumann problem in the half-space $\R^{2m+1}_+$ appearing in the statement of Theorem 5.3 in \cite{Cinti-Saddle2} (see \cite{LiZhang} for the proof). Using this result and the stability of $u_\infty$ we get that $u_\infty \equiv 1$. Thus  $|D^2_x u(x_k,\lambda)| \to 0$, and since $|D^2_x U(x_k,\lambda)| \to 0$, we arrive at a contradiction with \eqref{Eq:AsymptoticContradiction}. 
+
+In the second case, since the Simons cone converges to a hyperplane at infinity (see the details in \cite{CabreTerraII}), it can be proved that, up to a subsequence and a rotation, the function $u_k(x,\lambda) := u(x_k-x,\lambda)$ converges to a positive solution $u_\infty$ of an equation in the quarter-space $\R^{2m+1}_{++} = \R^{2m+1}_{+} \cap \{x_{2m}>0\} $ with zero Dirichlet boundary conditions, as in the statement of Theorem 5.5 in \cite{Cinti-Saddle2} (see \cite{Tan} for the proof). Applying this last theorem and the stability again, we conclude that $u_\infty$ must be the 2D solution $u_0$ depending only on $x_{2m}$ and $\lambda$. Hence, $D^2_x(u-U)(x_k,\lambda)$ converges to zero, and we arrive at a contradiction with \eqref{Eq:AsymptoticContradiction}.
 \end{proof}
 
 With the help of the maximum principle of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, the asymptotic result for the saddle-shaped solution and the monotonicity properties of the layer solution, we can give a proof of Proposition~\ref{Prop:MonotonicityProperties}.
@@ -1099,8 +1119,7 @@ $$
 d_\s \dfrac{\partial u_{st}}{\partial \nu^a}& = & f'(u)u_{st} + f''(u)u_s u_t \geq  f'(u)u_{st}& \text{ on }  \{ s > t > 0 , \ \lambda = 0\}\,.
 \eeqc
 $$
-Here we have used that $f''(\tau) \leq 0$ if $\tau \in (0,1)$ and that $u_s u_t \leq 0$ in  $\{ s > t > 0 , \ \lambda = 0\}$.
-Note that by symmetry, $u_{st}= 0$ on $\{s=t, \ \lambda \geq 0 \}$. Moreover, since $u_t(s,0,\lambda) = 0$ for every $s > 0$ and $\lambda \geq 0$, $u_{st}= 0$ on $\{t=0, \ \lambda \geq 0 \}$. Therefore, $u_{st}= 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\}$. Moreover, by the asymptotic result of Lemma~\ref{Lemma:AsymptoticSecondDerivative} and the monotonicity properties of the layer solution (Lemma~\ref{Lemma:MonotonicityLayer}), we have
+Here we have used that $f''(\tau) \leq 0$ if $\tau \in (0,1)$ and that $u_s u_t \leq 0$ in  $\{ s > t > 0 , \ \lambda = 0\}$. Note that by symmetry, $u_{st}= 0$ on $\{s=t, \ \lambda \geq 0 \}$. Moreover, since $u_t(s,0,\lambda) = 0$ for every $s > 0$ and $\lambda \geq 0$, $u_{st}= 0$ on $\{t=0, \ \lambda \geq 0 \}$. Therefore, $u_{st}= 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\}$. In addition, by the asymptotic result of Lemma~\ref{Lemma:AsymptoticSecondDerivative} and the monotonicity properties of the layer solution (Lemma~\ref{Lemma:MonotonicityLayer}), we have
 $$
 \liminf_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_{st}(s,t,\lambda) \geq 0\,,
 $$
@@ -1155,7 +1174,7 @@ Now, by using that $u_{st}>0$, $u_y>0$ and $-u_t>0$ in $\{s>t>0, \ \lambda >0\}$
 & \leq (-u_t) (m-1) (s^{-b}-t^{-b}) (t^{-2}-s^{-2}) \\
 & \leq 0\,.
 \end{align*}
-Note that the existence of $b>0$ such that $b(b-m+2)\leq -(m-1)$ is guaranteed by the fact of being $2m\geq 14$.
+Note that the existence of $b>0$ such that $b(b-m+2)\leq -(m-1)$ is guaranteed by the assumption $2m\geq 14$.
 
 
 
