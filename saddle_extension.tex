@@ -871,7 +871,7 @@ Let $\Omega \subset (0,+\infty) \times (0,+\infty)$ be an open set such that $\p
 Let $v \in C^2 (\Omega)\cap C(\overline{\Omega})$ be bounded from above and satisfying $\lambda^a v_\lambda \in C (\overline{\Omega})$. Assume that
 $$
 \beqc{\PDEsystem}
--\div(\lambda^a \nabla v) &\leq& b v & \text{ in } \Omega \subset (0, +\infty)\times (0,+\infty)\,, \\
+-\div(\lambda^a \nabla v) &\leq& b(x,\lambda) v & \text{ in } \Omega \subset (0, +\infty)\times (0,+\infty)\,, \\
 \mathscr{L}_{u_0} v &\leq & 0 & \text{ on } \partial_0 \Omega \subset (0,+\infty) \,, \\
 v & \leq & 0 & \text{ on } \partial_L \Omega\,,\\
 \ds \limsup_{x\in \partial_0 \Omega,\ |x|\to +\infty} v(x,0) & \leq & 0\,,
@@ -903,7 +903,7 @@ $$ \frac{\partial^2}{\partial x^2} u_0(x,\lambda) < 0 \ \ \ \text{in} \ \ \ (0,+
 \end{lemma}
 
 \begin{proof}
-First of all, let us remark that $u_0$ has the required regularity to apply the following arguments by the results of \cite{CabreSireI} (see Section~\ref{Sec:Monotonicity} for more details).
+First of all, let us remark that $u_0$ has the required regularity to apply the following arguments by the results of \cite{CabreSireI} (see Section~\ref{Sec:Monotonicity} for more details in the more involved setting of the saddle-shaped solution).
 
 
 The monotonicity of the first derivative was already stated in Remark~4.7 of \cite{CabreSireI}, but we include here the short proof for completeness. By differentiating \eqref{Eq:LayerSolution} with respect to $x$, we obtain that $\div(\lambda^a \nabla (\partial_x u_0)) = 0$ in $\R\times (0,+\infty)$. Moreover,  $\partial_x u_0(x,0) > 0$ for $x\in \R$; see \eqref{Eq:LayerSolution}. Then, the result follows directly from the Poisson formula.
@@ -927,7 +927,7 @@ Moreover, by repeating the argument of Lemma~4.8 in \cite{CabreSireI} for $\part
 
 Now we prove that the function 
 $$
-U(s,t,\lambda) := u_0 ( (s-t)/\sqrt{2}, \lambda)
+U(s,t,\lambda) := u_0 \left( \frac{s-t}{\sqrt{2}}, \lambda\right)
 $$ 
 is a barrier for the saddle-shaped solution. To do it, we will use a maximum principle for the linearized problem at $U$.
 
@@ -1047,11 +1047,11 @@ With the help of the maximum principle of Proposition~\ref{Prop:MaxPrincipleLine
 We write \eqref{Eq:AllenCahnWithExtension} in $(s,t,\lambda)$ variables:
 \begin{equation}
 \label{Eq:AllenCahnEithExtensionST}
-\beqc{\PDEsystem}
-u_{ss} + u_{tt} + u_{\lambda \lambda} + (m-1)\bpar{\dfrac{u_s}{s} + \dfrac{u_t}{t}} + \dfrac{a}{\lambda} u_\lambda  & = & 0& \text{ in } \{s>0,\ t>0,\ \lambda > 0\}\,, \\
-u_s & = & 0& \text{ on } \{s=0, \ \lambda \geq 0 \}\,, \\
-u_t& = & 0& \text{ on } \{t=0, \ \lambda \geq 0 \}\,, \\
-d_\s \dfrac{\partial u}{\partial \nu^a}& = & f(u)& \text{ on } \{\lambda = 0\}\,.
+\hspace{-0.35cm} \beqc{\PDEsystem}
+u_{ss} + u_{tt} + u_{\lambda \lambda} + (m-1)\bpar{\dfrac{u_s}{s} + \dfrac{u_t}{t}} + \dfrac{a}{\lambda} u_\lambda  & = & 0& \text{ in } \{st>0,\ \lambda > 0\}, \\
+u_s & = & 0& \text{ on } \{s=0, \ \lambda \geq 0 \}, \\
+u_t& = & 0& \text{ on } \{t=0, \ \lambda \geq 0 \}, \\
+d_\s \dfrac{\partial u}{\partial \nu^a}& = & f(u)& \text{ on } \{\lambda = 0\}.
 \eeqc
 \end{equation}
 
@@ -1062,15 +1062,15 @@ $$
 d_\s \dfrac{\partial u_s}{\partial \nu^a}& = & f'(u)u_s& \text{ on } \{s>t,\ \lambda = 0\}\,.
 \eeqc
 $$
-Since $u = 0$ on $\{s = t,\ \lambda \geq 0 \}$ and $u>0$ in $\{s > t,\ \lambda \geq 0 \}$, we have that $u_s \geq 0$ on $\partial_L \{s>t,\ \lambda > 0 \} =\{s = t,\ \lambda \geq 0 \}$. Moreover, by the asymptotic result (point (ii) of Theorem~\ref{Th:Summary}) and the monotonicity properties of the layer solution (Lemma~\ref{Lemma:MonotonicityLayer}) we have
+Since $u = 0$ on $\{s = t,\ \lambda \geq 0 \}$ and $u>0$ in $\{s > t,\ \lambda \geq 0 \}$, we have that $u_s \geq 0$ on $\partial_L \{s>t,\ \lambda > 0 \} =\{s = t,\ \lambda \geq 0 \}$. Moreover, by the asymptotic result (point (ii) of Theorem~\ref{Th:Summary}) and the monotonicity properties of the layer solution $u_0$ (Lemma~\ref{Lemma:MonotonicityLayer}), we have
 $$
 \liminf_{\{s>t\} ,\ |(s,t)|\to +\infty} u_s(s,t,\lambda) \geq 0\,.
 $$
 Indeed, if $u_0$ is the layer solution, 
 $$
-\partial_s U (x,\lambda) = \dfrac{1}{\sqrt{2}} \partial_1 u_0\bpar{\dfrac{s-t}{\sqrt{2}}, \lambda} \geq 0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_s- \partial_s U)(\cdot,\lambda)}_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
+\partial_s U (x,\lambda) = \dfrac{1}{\sqrt{2}} \partial_x u_0\bpar{\dfrac{s-t}{\sqrt{2}}, \lambda} \geq 0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_s- \partial_s U)(\cdot,\lambda)}_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
 $$
-Thus, by the maximum principle (Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}) applied to $v=-u_s$, with $b(x,\lambda) = -(m-1)\lambda^a / s^2\leq 0$, we conclude that $u_s \geq 0$ in $\{s \geq t,\ \lambda \geq 0\}$.
+Thus, by the maximum principle for the linearized operator (Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}) applied to $v=-u_s$, with $b(x,\lambda) = -(m-1)\lambda^a / s^2\leq 0$, we conclude that $u_s \geq 0$ in $\{s \geq t,\ \lambda \geq 0\}$.
 
 Similarly, if we differentiate \eqref{Eq:AllenCahnEithExtensionST} with respect to $t$, we obtain
 $$
@@ -1080,7 +1080,7 @@ u_t& = & 0& \text{ on } \{t=0, \ \lambda \geq 0 \}\,, \\
 d_\s \dfrac{\partial u_t}{\partial \nu^a}& = & f'(u)u_t& \text{ on }  \{ s > t > 0 , \ \lambda = 0\}\,.
 \eeqc
 $$
-Since $u = 0$ on $\{s = t,\ \lambda \geq 0 \}$ and $u>0$ in $\{s > t,\ \lambda \geq 0 \}$, we have that $-u_t \geq 0$ on $\{s = t,\ \lambda \geq 0 \}$. Thus, $-u_t \geq 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\} = \{s = t,\ \lambda \geq 0 \}\cup \{t=0, \ \lambda \geq 0\}$. Furthermore, the asymptotic result and the monotonicity properties of the layer solution yield
+Since $u = 0$ on $\{s = t,\ \lambda \geq 0 \}$ and $u>0$ in $\{s > t,\ \lambda \geq 0 \}$, we have that $-u_t \geq 0$ on $\{s = t,\ \lambda \geq 0 \}$. Thus, $-u_t \geq 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\} = \{s = t,\ \lambda \geq 0 \}\cup \{t=0, \ \lambda \geq 0\}$. Furthermore, the asymptotic behavior of $u$ and the monotonicity properties of the layer solution $u_0$ yield
 $$
 \limsup_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_t(s,t,\lambda) \leq 0\,.
 $$
@@ -1088,9 +1088,9 @@ Indeed,
 $$
 \partial_t U (x,\lambda) = -\dfrac{1}{\sqrt{2}} \partial_1 u_0\bpar{\dfrac{s-t}{\sqrt{2}}, \lambda} \leq 0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_t - \partial_t U) (\cdot,\lambda) }_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
 $$
-Thus, using again the maximum principle we find that $-u_t \geq 0$ in $\{ s \geq t,\ \lambda \geq 0\}$.
+Thus, using again the maximum principle for the linearized operator we find that $-u_t \geq 0$ in $\{ s \geq t,\ \lambda \geq 0\}$.
 
-By the symmetry of $u$, $u(s,t)=-u(t,s)$, we can conclude that  $u_s \geq 0$ and $u_t \leq 0$ in $\R^{2m} \times [0, +\infty)$. This fact and the strong maximum principle give that $u_s > 0$ in $(\R^{2m}\setminus \{s=0\}) \times [0, +\infty)$ and $- u_t > 0$ in $(\R^{2m}\setminus \{t=0\}) \times [0, +\infty)$.
+By the odd symmetry of $u$, i.e., $u(s,t)=-u(t,s)$, we conclude that  $u_s \geq 0$ and $u_t \leq 0$ in $\R^{2m} \times [0, +\infty)$. This fact and the strong maximum principle give that $u_s > 0$ in $(\R^{2m}\setminus \{s=0\}) \times [0, +\infty)$ and $- u_t > 0$ in $(\R^{2m}\setminus \{t=0\}) \times [0, +\infty)$.
 
 Now we check the sign of the $y$-derivative. We use that $\partial_y = (\partial_s + \partial_t)/\sqrt{2}$ to see that
 $$
@@ -1103,9 +1103,9 @@ $$
 d_\s \dfrac{\partial u_y}{\partial \nu^a}& = & f'(u)u_y& \text{ on }  \{ s > t > 0 , \ \lambda = 0\}\,.
 \eeqc
 $$
-Note that, since $u$ vanishes at $\ccal \times [0, +\infty)$, $u_y = 0$ on $\{ s=t, \ \lambda \geq 0\}$. Moreover, $u_s\geq 0$ and $u_t = 0$ on $\{t=0, \ \lambda \geq 0\}$. Therefore, $u_y \geq 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\} = \{s = t,\ \lambda \geq 0 \}\cup \{t=0, \ \lambda \geq 0\}$. Furthermore, by the asymptotic result and the monotonicity properties of the layer solution we have
+Note that, since $u$ vanishes at $\ccal \times [0, +\infty)$, $u_y = 0$ on $\{ s=t, \ \lambda \geq 0\}$. Moreover, $u_s\geq 0$ and $u_t = 0$ on $\{t=0, \ \lambda \geq 0\}$. Therefore, $u_y \geq 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\} = \{s = t,\ \lambda \geq 0 \}\cup \{t=0, \ \lambda \geq 0\}$. Furthermore, by the asymptotic behavior of $u$ and the monotonicity properties of the layer solution $u_0$ we have
 $$
-\limsup_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_y(s,t,\lambda) = 0\,,
+\liminf_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_y(s,t,\lambda) = 0\,,
 $$
 since
 $$
@@ -1113,14 +1113,14 @@ $$
 $$
 Again, by using the maximum principle of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we deduce that $u_y \geq 0$ in $\{ s \geq t,\ \lambda \geq 0\}$, and the strong maximum principle yields $u_y > 0$ on $\{ s > t,\ \lambda \geq 0\}$.
 
-Finally, we prove the last statement concerning the crossed derivatives. By differentiating \eqref{Eq:AllenCahnEithExtensionST} first with respect to $s$ and then with respect to $t$, we find
+Finally, we prove the last statement concerning the crossed derivatives. By differentiating \eqref{Eq:AllenCahnEithExtensionST}, first with respect to $s$ and then with respect to $t$, we find
 $$
 \beqc{\PDEsystem}
 \div (\lambda^a \nabla u_{st}) & = & (m-1)\lambda^a \bpar{\dfrac{1}{s^2} + \dfrac{1}{t^2} } u_{st} & \text{ in } \{ s > t > 0 ,\ \lambda > 0\}\,, \\
 d_\s \dfrac{\partial u_{st}}{\partial \nu^a}& = & f'(u)u_{st} + f''(u)u_s u_t \geq  f'(u)u_{st}& \text{ on }  \{ s > t > 0 , \ \lambda = 0\}\,.
 \eeqc
 $$
-Here we have used that $f''(\tau) \leq 0$ if $\tau \in (0,1)$ and that $u_s u_t \leq 0$ in  $\{ s > t > 0 , \ \lambda = 0\}$. Note that by symmetry, $u_{st}= 0$ on $\{s=t, \ \lambda \geq 0 \}$. Moreover, since $u_t(s,0,\lambda) = 0$ for every $s > 0$ and $\lambda \geq 0$, $u_{st}= 0$ on $\{t=0, \ \lambda \geq 0 \}$. Therefore, $u_{st}= 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\}$. In addition, by the asymptotic result of Lemma~\ref{Lemma:AsymptoticSecondDerivative} and the monotonicity properties of the layer solution (Lemma~\ref{Lemma:MonotonicityLayer}), we have
+Here we have used that $f''(\tau) \leq 0$ if $\tau \in (0,1)$ and that $u_s u_t \leq 0$ in  $\{ s > t > 0 , \ \lambda = 0\}$. Note that, by symmetry, $u_{st}= 0$ on $\{s=t, \ \lambda \geq 0 \}$. Moreover, since $u_t(s,0,\lambda) = 0$ for every $s > 0$ and $\lambda \geq 0$, $u_{st}= 0$ on $\{t=0, \ \lambda \geq 0 \}$. Therefore, $u_{st}= 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\}$. In addition, by the asymptotic result of Lemma~\ref{Lemma:AsymptoticSecondDerivative} and the monotonicity properties of the layer solution $u_0$ (Lemma~\ref{Lemma:MonotonicityLayer}), we have
 $$
 \liminf_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_{st}(s,t,\lambda) \geq 0\,,
 $$
@@ -1128,7 +1128,7 @@ since
 $$
 U_{st} (x,\lambda) = -\dfrac{1}{2} \partial_1^2 u_0\bpar{\dfrac{s-t}{\sqrt{2}}, \lambda} \geq 0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_{st} - U_{st})(\cdot,\lambda) }_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
 $$
-Hence, by the maximum principle (Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}), we deduce that $u_{st} \geq 0$ in $\{ s \geq t,\ \lambda \geq 0\}$, and the strong maximum principle yields $u_{st} > 0$ in $\{ s > t > 0,\ \lambda \geq 0\}$.
+Hence, by the maximum principle for the linearized operator (Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}), we deduce that $u_{st} \geq 0$ in $\{ s \geq t,\ \lambda \geq 0\}$, and the strong maximum principle yields $u_{st} > 0$ in $\{ s > t > 0,\ \lambda \geq 0\}$.
 \end{proof}
 
 
@@ -1156,6 +1156,7 @@ First, note that $ \varphi(t,s,\lambda) = \varphi(s,t,\lambda) $ by the symmetry
 $$ 
 d_\s \frac{\partial \varphi}{\partial \nu^a} = f'(u)\,\varphi\,. 
 $$
+
 Let us show \eqref{Eq:VarphiSupersolution1}. Since $\varphi$ is even with respect to the Simons cone, it is enough to check that $\div{(\lambda^a\,\nabla\varphi)}\leq 0$ in $\{s>t>0, \ \lambda >0\}$. By using that $\div(\lambda^a\,\nabla u) = 0$, we obtain by direct computation that 
 \begin{align*}
 \lambda^{-a} \div(\lambda^a\,\nabla \varphi) &= b(b-m+2) \left( t^{-b-2}\,u_s - s^{-b-2}\,u_t \right) \\
@@ -1201,32 +1202,32 @@ $$ \eta_\varepsilon = \begin{cases}
 Then, since $\xi\,\eta_\varepsilon(s)\,\eta_\varepsilon(t)$ has compact support in $\{st>0, \ \lambda \geq 0\}$, we can replace $\overline{\xi}$ by $\xi\,\eta_\varepsilon(s)\,\eta_\varepsilon(t)$ in the previous inequality to get
 $$
 \frac{1}{d_\s}\int_{\R^{2m}} f'(u)\,\xi^2\,\eta_\varepsilon^2(s)\,\eta_\varepsilon^2(t) \d x \leq \int_{\R^{2m+1}_+} \lambda^a\,|\nabla (\xi\,\eta_\varepsilon(s)\,\eta_\varepsilon(t))|^2 \d x \d \lambda\,. $$
-Now, we compute the terms in the right-hand side of this inequality. By using Cauchy-Schwarz, we see that, to deduce the stability condition 
+Now, we compute the terms in the right-hand side of this inequality. By using Cauchy-Schwarz, we see that to deduce the stability condition 
 $$
 \frac{1}{d_\s}\int_{\R^{2m}} f'(u)\,\xi^2 \d x  
-\leq \int_{\R^{2m+1}_+} \lambda^a |\nabla \xi|^2  \d x \d \lambda\,,
+\leq \int_{\R^{2m+1}_+} \lambda^a |\nabla \xi|^2  \d x \d \lambda
 $$
-it is enough to show that
+by letting $\varepsilon \to 0$, it is enough to show that
 $$ \int_{\R^{2m+1}_+} \lambda^a|\nabla\eta_\varepsilon(s)|^2 \d x \d \lambda  \to 0 \ \ \ \text{ as } \ \ \varepsilon \to 0\,,$$
-and the same for $\eta_\varepsilon(t)$. To see this, let $R>0$ be such that $\text{supp}(\xi)\subset \overline{B_R^+}$. Then,
+and the same for $\eta_\varepsilon(t)$. To see this, let $R>0$ be such that $\text{supp}(\xi)\subset \overline{B_R^+}$. Then, since $m\geq 3$,
 \begin{align*}
 \int_{\R^{2m+1}_+} \lambda^a|\nabla\eta_\varepsilon(s)|^2 \d x \d \lambda &\leq \frac{C}{\varepsilon^2} \int_0^R \d \lambda \, \lambda^a \int_0^\varepsilon \d s \, s^{m-1} \int_0^R \d t \,t^{m-1} \\
 &\leq C\,R^{m+a+1}\,\varepsilon^{m-2} \to 0 \ \ \ \text{ as } \ \ \varepsilon \to 0\,,
 \end{align*}
-since $m\geq 3$. The computation is analogous for $\eta_\varepsilon(t)$.
+The computation is analogous for $\eta_\varepsilon(t)$.
 \end{proof}
 
-Finally, we present the proof of the stability of the Simons cone as a nonlocal $(2\s)$-minimal surface if $2m\geq 14$ and $\s\in(0,1/2)$.
+Finally, we present the proof of the stability of the Simons cone as a nonlocal $(2\s)$-minimal surface whenever $2m\geq 14$ and $\s\in(0,1/2)$.
 
 \begin{proof}[Proof of Corollary~\ref{Cor:SimonsConeStableDim14}]
-Let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahn} with $2m\geq 14$. Consider the blow-down sequence $u_k(x) = u(kx)$ with $k\in \N$. Then, since $u$ is stable in such dimensions and $\s\in(0,1/2)$, by Thereom~2.6 in \cite{CabreCintiSerra-Stable} there exists a subsequence $k_j$ such that
+Let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahn} in dimension $2m\geq 14$. Consider the blow-down sequence $u_k(x) = u(kx)$ with $k\in \N$. Then, since $u$ is stable in such dimensions and $\s\in(0,1/2)$, by Thereom~2.6 in \cite{CabreCintiSerra-Stable} there exists a subsequence $k_j$ such that
 $$ u_{k_j} \to \chi_{\Sigma}-\chi_{\R^{2m}\setminus\Sigma} \quad \textrm{ in } L^1(B_1) \quad \textrm{ as } k_j\to+\infty\,, $$
 for some cone $\Sigma$ that is a stable set for the fractional perimeter.
 
-On the other hand, by the asymptotic result (point (ii) in Theorem~\ref{Th:Summary}) it is clear that
+On the other hand, by the asymptotic behavior of $u$ (point (ii) in Theorem~\ref{Th:Summary}) it is clear that
 $$ u_{k} \to \chi_{\ocal}-\chi_{\R^{2m}\setminus\ocal} \quad \textrm{ a.e. as } k\to+\infty\,.$$
 
-Putting all together we conclude that $\ocal$ is a stable set for the fractional perimeter if $2m\geq 14$ and $\s\in(0,1/2)$. This is the same that saying that the Simons cone is a stable nonlocal $(2\s)$-minimal surface in such dimensions.
+Putting all together we conclude that $\ocal$ is a stable set for the fractional perimeter if $2m\geq 14$ and $\s\in(0,1/2)$. This is the same as saying that the Simons cone is a stable nonlocal $(2\s)$-minimal surface in such dimensions.
 \end{proof}
 
 
