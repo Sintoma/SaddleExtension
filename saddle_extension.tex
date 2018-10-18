@@ -189,7 +189,7 @@ Universitat Polit\`ecnica de Catalunya and BGSMath, Departament de Matem\`{a}tiq
 
 
 
-\thanks{Both authors acknowledge financial support from the Spanish Ministry of Economy and Competitiveness (MINECO), through the María de Maeztu Programme for Units of Excellence in R\&D (MDM-2014-0445-16-4 and MDM-2014-0445 respectively). Moreover, both authors are supported by MINECO grants MTM2014-52402-C3-1-P and MTM2017-84214-C2-1-P, are members of the Barcelona Graduate School of Mathematics (BGSMath) and are part of the Catalan research group 2017 SGR 01392.}
+\thanks{Both authors acknowledge financial support from the Spanish Ministry of Economy and Competitiveness (MINECO), through the María de Maeztu Programme for Units of Excellence in R\&D (MDM-2014-0445-16-4 and MDM-2014-0445, respectively), are supported by MINECO grants MTM2014-52402-C3-1-P and MTM2017-84214-C2-1-P, are members of the Barcelona Graduate School of Mathematics (BGSMath), and are part of the Catalan research group 2017 SGR 01392.}
 
 
 \keywords{Fractional Allen-Cahn equation, saddle-shaped solution, Simons cone, nonlocal minimal surfaces, stability}
@@ -247,7 +247,7 @@ An important role in this paper is played by the Simons cone, which is defined i
 $$
 \mathscr{C} := \setcond{x = (x', x'') \in \R^{m}\times \R^m}{|x'| = |x''|}\,.
 $$
-It is well known that the Simons cone has zero mean curvature at every point $x \in \ccal \setminus \{0\}$, in every dimension $2m \geq 2$. However, it is only in dimensions $2m \geq 8$ that $\ccal$ is a minimizer of the area functional, as established by Bombieri, De Giorgi, and Giusti in \cite{BombieriDeGiorgiGiusti}. Regarding the fractional setting, for every $\s\in(0,1/2)$, $\ccal$ has zero \emph{nonlocal} mean curvature in every even dimension but it is not known if, in addition,  it is a minimizer of the fractional perimeter in dimensions $2m\geq 8$. We recall that it is only in dimension $2m=2$ where we have a complete classification of minimizing nonlocal minimal cones (see \cite{SavinValdinoci-Cones}). The only other result concerning the possible minimality of the Simons cone refers to its stability, a weaker property, and it is established in \cite{DaviladelPinoWei} by Dávila, del Pino, and Wei (recall that by stability we understand that the second variation of the energy functional is nonnegative). In that paper, the authors find a remarkable stability criterion for Lawson cones consisting of an inequality involving hypergeometric quantities depending on $\s$ and the dimension $n$. Although such criterion has not been checked analytically (probably a hard task), it can be verified numerically. With a numerical computation, \cite{DaviladelPinoWei} shows that, in dimensions $n \leq 6$ and for $\s $ close to zero, no Lawson cone with zero nonlocal mean curvature is stable. The Simons cone is a particular case of Lawson cone corresponding to $C_m^m(1)$ in the notation of \cite{DaviladelPinoWei}. Numerics also shows that all Lawson cones in dimension $7$ are stable if $\s$ is close to zero. These results for small $\s$ fit with the general belief that, in the fractional setting, the Simons cone should be stable (and even a minimizer) in dimensions $2m \geq 8$ (as in the local case), probably for all $\s\in(0,1/2)$, though this is still an open problem. 
+It is well known that the Simons cone has zero mean curvature at every point $x \in \ccal \setminus \{0\}$, in every dimension $2m \geq 2$. However, it is only in dimensions $2m \geq 8$ that $\ccal$ is a minimizer of the area functional, as established by Bombieri, De Giorgi, and Giusti in \cite{BombieriDeGiorgiGiusti}. Regarding the fractional setting, for every $\s\in(0,1/2)$, $\ccal$ has zero \emph{nonlocal} mean curvature in every even dimension but it is not known if, in addition,  it is a minimizer of the fractional perimeter in dimensions $2m\geq 8$. We recall that it is only in dimension $2m=2$ where we have a complete classification of minimizing nonlocal minimal cones, establishing that they must be straight lines (see \cite{SavinValdinoci-Cones}). The only other result concerning the possible minimality of the Simons cone refers to its stability, a weaker property than minimality, and it is proved in \cite{DaviladelPinoWei} by Dávila, del Pino, and Wei (recall that by stability we understand that the second variation of the energy functional is nonnegative). In that paper, the authors characterize the stability of Lawson cones through an inequality involving only two hypergeometric constants which depend only on $\s$ and the dimension $n$. It is a hard task to verify the criterion analitically, and this has not been accomplished. It seems also delicate to check it numerically, but some cases are treated in \cite{DaviladelPinoWei}. With a numerical computation, \cite{DaviladelPinoWei} finds that, in dimensions $n \leq 6$ and for $\s $ close to zero, no Lawson cone with zero nonlocal mean curvature is stable. The Simons cone is a particular case of Lawson cone corresponding to $C_m^m(1)$ in the notation of \cite{DaviladelPinoWei}. Numerics also shows that all Lawson cones in dimension $7$ are stable if $\s$ is close to zero. These results for small $\s$ fit with the general belief that, in the fractional setting, the Simons cone should be stable (and even a minimizer) in dimensions $2m \geq 8$ (as in the local case), probably for all $\s\in(0,1/2)$, though this is still an open problem. 
 
 In the present paper, we make a first contribution to the previous question by showing that the Simons cone is a stable $(2\s)$-minimal cone in dimensions $2m\geq 14$. Our proof uses the so-called saddle-shaped solution to the Allen-Cahn equation. As we will see in more detail, by the fractional Modica-Mortola type $\Gamma$-convergence result, the remarks above on the stability of the Simons cone are expected to hold also for saddle-shaped solutions. Indeed, our proof proceeds by establishing the stability of such solution to the fractional Allen-Cahn equation in dimensions $2m \geq 14$ (see Theorem~\ref{Thm:Stability} below). Then, as a consequence of this and a recent result by Cabré, Cinti, and Serra in \cite{CabreCintiSerra-Stable} (see also the comments in \cite{CabreCintiSerra-Cones}) concerning the preservation of stability along a blow-down procedure for the fractional Allen-Cahn equation, we deduce the stability of the Simons cone as a nonlocal minimal surface in these dimensions (see Corollary~\ref{Cor:SimonsConeStableDim14}). 
 
@@ -256,8 +256,7 @@ $$
 s := \sqrt{x_1^2 + \ldots + x_m^2 } \quad \text{ and } \quad 
 t := \sqrt{x_{m+1}^2 + \ldots + x_{2m}^2}\,,
 $$
-for which the Simons cone becomes $\mathscr{C} = \{s=t\}$.
-Through the paper we will also use the letter $\ocal$ to denote one the sets in which the cone divides the space:
+for which the Simons cone becomes $\mathscr{C} = \{s=t\}$. Through the paper we will also use the letter $\ocal$ to denote one the sets in which the cone divides the space:
 $$
 \ocal:= \setcond{x = (x', x'') \in \R^{m}\times \R^m}{|x'| > |x''|} = \{s > t\}.
 $$
@@ -357,7 +356,7 @@ A bounded solution to \eqref{Eq:AllenCahnWithExtension} is said to be \emph{stab
 \label{Eq:StabilityCondition}
 \int_{\R^{2m}} f'(u) \, \xi^2 \d x  \leq d_\s \int_0^\infty \int_{\R^{2m}} \lambda^a \, |\nabla \xi|^2 \d x \d \lambda 
 \end{equation}
-for every $\xi \in C^\infty_0(\overline{\R^{2m+1}_+})$.
+for every $\xi \in C^\infty_c(\overline{\R^{2m+1}_+})$.
 
 In the following theorem we collect the known results concerning saddle-shaped solutions to \eqref{Eq:AllenCahn}. 
 
@@ -858,7 +857,7 @@ Thanks to the maximum principle in $\ocal\times (0,+\infty)$ for the linearized 
 \section{The layer solution and a pointwise estimate for the saddle-shaped solution}
 \label{Sec:Layer}
 
-This section is devoted to establish some monotonicity properties of the layer solution $u_0$ and a pointwise estimate for the saddle-shaped solution (Proposition~\ref{Prop:SaddleUnderLayer}). We start with a maximum principle similar to Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, but for the linearized operator at $u_0$.
+This section is devoted to establish some monotonicity properties of the layer solution $u_0$ and a pointwise estimate for the saddle-shaped solution (Proposition~\ref{Prop:SaddleUnderLayer}). We start with a maximum principle similar to Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, but for the linearized operator at $u_0$ in the set $\{u_0 > 0\}$, which plays the role that $\ocal\times(0,+\infty)$ had for the saddle-shaped solution.
 
 \begin{proposition}
 \label{Prop:MaxPrincipleLinearizedOperator2D}
@@ -929,7 +928,7 @@ Now we prove that the function
 $$
 U(s,t,\lambda) := u_0 \left( \frac{s-t}{\sqrt{2}}, \lambda\right)
 $$ 
-is a barrier for the saddle-shaped solution. To do it, we will use a maximum principle for the linearized problem at $U$.
+is a barrier for the saddle-shaped solution. To do it, we will use a maximum principle in $\ocal \times (0,+\infty)$ for the linearized problem at $U$.
 
 
 \begin{proof}[Proof of Proposition~\ref{Prop:SaddleUnderLayer}]
@@ -994,13 +993,13 @@ Recall that we assume that $f\in C^{2,\alpha}$ for some $\alpha\in(0,1)$. Since 
 $$ 
 ||u||_{C^\alpha\left(\overline{\R^{2m+1}_+}\right)} + ||\nabla_x u||_{C^\alpha\left(\overline{\R^{2m+1}_+}\right)} + ||D^2_x u||_{C^\alpha\left(\overline{\R^{2m+1}_+}\right)} \leq C, 
 $$
-for some $C>0$ depending only on $m$, $\s$ , $||f||_{C^{2,\alpha}}$ and $||u||_{L^\infty(\R^{2m+1}_+)}$.
+for some $C>0$ depending only on $m$, $\s$ , $||f||_{C^{2,\alpha}}$, and $||u||_{L^\infty(\R^{2m+1}_+)}$.
 
-Next, since the horizontal first derivatives of $u$ satisfy $\div(\lambda^a \, \nabla u_{x_i}) = 0$ and also $d_\s \partial_{\nu^a}  u_{x_i} = f'(u) \,u_{x_i} \in C^\alpha(\R^{2m})$, and the  horizontal second derivatives of $u$ satisfy $\div(\lambda^a \, \nabla u_{x_i x_j}) = 0$ and also  $d_\s\partial_{\nu^a} u_{x_i x_j} = f''(u) \,u_{x_i}\,u_{x_j} + f'(u) \, u_{x_i\,x_j}\in C^\alpha(\R^{2m})$ for all indexes $i$ and $j$ from $1$ to $2m$, we can apply Lemma 4.5 from \cite{CabreSireI} to obtain that
+Next, since the horizontal first derivatives of $u$ satisfy $\div(\lambda^a \, \nabla u_{x_i}) = 0$ and also $d_\s \partial_{\nu^a}  u_{x_i} = f'(u) \,u_{x_i} \in C^\alpha(\R^{2m})$, and the  horizontal second derivatives of $u$ satisfy $\div(\lambda^a \, \nabla u_{x_i x_j}) = 0$ and also  $d_\s\partial_{\nu^a} u_{x_i x_j} = f''(u) \,u_{x_i}\,u_{x_j} + f'(u) \, u_{x_i\,x_j}\in C^\alpha(\R^{2m})$ for all indices $i$ and $j$ from $1$ to $2m$, we can apply Lemma 4.5 from \cite{CabreSireI} to obtain that
 $$
 ||\lambda^a \, u_\lambda||_{C^\beta\left(\R^{2m}\times [0,1]\right)} + ||\lambda^a \, (u_{x_i})_\lambda||_{C^\beta\left(\R^{2m}\times [0,1]\right)}  + ||\lambda^a \, (u_{x_i\,x_j})_\lambda||_{C^\beta\left(\R^{2m}\times [0,1]\right)} \leq C,
 $$
-for some $C>0$ and $\beta\in(0,1)$ depending only on $m$, $\s$, $||f||_{C^{2,\alpha}}$ and $||u||_{L^\infty(\R^{2m+1}_+)}$.
+for some $C>0$ and $\beta\in(0,1)$ depending only on $m$, $\s$, $||f||_{C^{2,\alpha}}$, and $||u||_{L^\infty(\R^{2m+1}_+)}$.
 
 Now, since $u$ depends only on $s$, $t$ and $\lambda$, from the previous results we obtain
 \begin{align*}
@@ -1018,7 +1017,7 @@ and
 $$ u_s, \ u_t,\ u_{st} \in C(\overline{\R^{2m+1}_+}).  $$
 
 
-Before proceeding with the proof of Proposition~\ref{Prop:MonotonicityProperties}, we first need the following asymptotic result for the second derivatives of $u$. This derivative was not included in the asymptotic theorem of \cite{Cinti-Saddle, Cinti-Saddle2}. It will be used to show that $u_{st}>0$ in $\{s>t>0\}\times [0,+\infty)$.
+Before proceeding to the proof of Proposition~\ref{Prop:MonotonicityProperties}, we first need the following asymptotic result for the second derivatives in $x$ of $u$. This derivative was not included in the asymptotic theorem of \cite{Cinti-Saddle, Cinti-Saddle2}. We will use it to show that $u_{st}>0$ in $\{s>t>0\}\times [0,+\infty)$.
 
 \begin{lemma}
 \label{Lemma:AsymptoticSecondDerivative}
@@ -1028,18 +1027,18 @@ for every $\lambda \in [0,+\infty)$.
 \end{lemma}
 
 \begin{proof}
-The proof follows the ones of the analogous results in \cite{Cinti-Saddle2,Cabre-Saddle,CabreTerraII}, where a compactness argument is used. Therefore, we only give here the main ideas, since the details can be found in these papers. Arguing by contradiction, we suppose that the asymptotic result does not hold. Hence, there exists an $\varepsilon>0$ and a sequence $\{x_k\}\subset \ocal$ such that 
+The proof follows the ones of the analogous results in \cite{Cinti-Saddle2,Cabre-Saddle,CabreTerraII}, where a compactness argument is used. Therefore, we only give here the main ideas, since the details can be found in those papers. Arguing by contradiction, we suppose that the asymptotic result does not hold. Hence, there exists an $\varepsilon>0$ and a sequence $\{x_k\}\subset \ocal$ such that 
 \begin{equation}
 	\label{Eq:AsymptoticContradiction}
 |D^2_x u(x_k,\lambda)-D^2_xU(x_k,\lambda)| \geq \varepsilon \ \ \ \text{ and } \ \ \ |x_k|\to+\infty. 
 \end{equation}
 
-Now we distinguish two cases, depending on whether the sequence $\{ \dist(x_k, \ccal) \}$ is unbounded or bounded. In the first case, we show that, up to a subsequence, the function $u_k(x,\lambda) := u(x_k-x,\lambda)$ converges to a solution $u_\infty$ of the semilinear Neumann problem in the half-space $\R^{2m+1}_+$ appearing in the statement of Theorem 5.3 in \cite{Cinti-Saddle2} (see \cite{LiZhang} for the proof). Using this result and the stability of $u_\infty$ we get that $u_\infty \equiv 1$. Thus  $|D^2_x u(x_k,\lambda)| \to 0$, and since $|D^2_x U(x_k,\lambda)| \to 0$, we arrive at a contradiction with \eqref{Eq:AsymptoticContradiction}. 
+Now we distinguish two cases, depending on whether the sequence $\{ \dist(x_k, \ccal) \}$ is unbounded or bounded. In the first case, we show that, up to a subsequence, the function $u_k(x,\lambda) := u(x+x_k,\lambda)$ converges to a solution $u_\infty$ of the semilinear Neumann problem in the half-space $\R^{2m+1}_+$ appearing in the statement of Theorem 5.3 in \cite{Cinti-Saddle2} (see \cite{LiZhang} for the proof). Using this result and the stability of $u_\infty$ we get that $u_\infty \equiv 1$. Thus  $|D^2_x u(x_k,\lambda)| \to 0$, and since $|D^2_x U(x_k,\lambda)| \to 0$, we arrive at a contradiction with \eqref{Eq:AsymptoticContradiction}. 
 
-In the second case, since the Simons cone converges to a hyperplane at infinity (see the details in \cite{CabreTerraII}), it can be proved that, up to a subsequence and a rotation, the function $u_k(x,\lambda) := u(x_k-x,\lambda)$ converges to a positive solution $u_\infty$ of an equation in the quarter-space $\R^{2m+1}_{++} = \R^{2m+1}_{+} \cap \{x_{2m}>0\} $ with zero Dirichlet boundary conditions, as in the statement of Theorem 5.5 in \cite{Cinti-Saddle2} (see \cite{Tan} for the proof). Applying this last theorem and the stability again, we conclude that $u_\infty$ must be the 2D solution $u_0$ depending only on $x_{2m}$ and $\lambda$. Hence, $D^2_x(u-U)(x_k,\lambda)$ converges to zero, and we arrive at a contradiction with \eqref{Eq:AsymptoticContradiction}.
+In the second case, we have $\dist(x_k, \ccal) = |x_k - x_k^0|$ bounded, where $x_k^0\in \ccal$. Since the Simons cone converges to a hyperplane at infinity (see the details in \cite{CabreTerraII}), it can be proved that, up to a subsequence and a rotation, the function $u_k(x,\lambda) := u(x+x_k^0,\lambda)$ converges to a positive solution $u_\infty$ of an equation in the quarter-space $\R^{2m+1}_{++} = \R^{2m+1}_{+} \cap \{x_{2m}>0\} $ with zero Dirichlet boundary conditions, as in the statement of Theorem 5.5 in \cite{Cinti-Saddle2} (see \cite{Tan} for the proof). Applying this last theorem and the stability again, we conclude that $u_\infty$ must be the 2D solution $u_0$ depending only on $x_{2m}$ and $\lambda$. Hence, $D^2_x(u-U)(x_k,\lambda)$ converges to zero, and we arrive at a contradiction with \eqref{Eq:AsymptoticContradiction}.
 \end{proof}
 
-With the help of the maximum principle of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, the asymptotic result for the saddle-shaped solution and the monotonicity properties of the layer solution, we can give a proof of Proposition~\ref{Prop:MonotonicityProperties}.
+With the help of the maximum principle of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, the asymptotic result for the saddle-shaped solution, and the monotonicity properties of the layer solution, we can prove Proposition~\ref{Prop:MonotonicityProperties}.
 
 
 
@@ -1064,11 +1063,11 @@ d_\s \dfrac{\partial u_s}{\partial \nu^a}& = & f'(u)u_s& \text{ on } \{s>t,\ \la
 $$
 Since $u = 0$ on $\{s = t,\ \lambda \geq 0 \}$ and $u>0$ in $\{s > t,\ \lambda \geq 0 \}$, we have that $u_s \geq 0$ on $\partial_L \{s>t,\ \lambda > 0 \} =\{s = t,\ \lambda \geq 0 \}$. Moreover, by the asymptotic result (point (ii) of Theorem~\ref{Th:Summary}) and the monotonicity properties of the layer solution $u_0$ (Lemma~\ref{Lemma:MonotonicityLayer}), we have
 $$
-\liminf_{\{s>t\} ,\ |(s,t)|\to +\infty} u_s(s,t,\lambda) \geq 0\,.
+\liminf_{\{s>t\} ,\ |(s,t)|\to +\infty} u_s(s,t,0) \geq 0\,.
 $$
 Indeed, if $u_0$ is the layer solution, 
 $$
-\partial_s U (x,\lambda) = \dfrac{1}{\sqrt{2}} \partial_x u_0\bpar{\dfrac{s-t}{\sqrt{2}}, \lambda} \geq 0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_s- \partial_s U)(\cdot,\lambda)}_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
+\partial_s U (x,0) = \dfrac{1}{\sqrt{2}} \partial_x u_0\bpar{\dfrac{s-t}{\sqrt{2}}, 0} \geq 0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_s- \partial_s U)(\cdot,0)}_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
 $$
 Thus, by the maximum principle for the linearized operator (Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}) applied to $v=-u_s$, with $b(x,\lambda) = -(m-1)\lambda^a / s^2\leq 0$, we conclude that $u_s \geq 0$ in $\{s \geq t,\ \lambda \geq 0\}$.
 
@@ -1076,17 +1075,16 @@ Similarly, if we differentiate \eqref{Eq:AllenCahnEithExtensionST} with respect 
 $$
 \beqc{\PDEsystem}
 \div (\lambda^a \nabla u_t) &=& (m-1) \dfrac{\lambda^a}{t^2}u_t & \text{ in } \{ s > t > 0 ,\ \lambda > 0\}\,, \\
-u_t& = & 0& \text{ on } \{t=0, \ \lambda \geq 0 \}\,, \\
 d_\s \dfrac{\partial u_t}{\partial \nu^a}& = & f'(u)u_t& \text{ on }  \{ s > t > 0 , \ \lambda = 0\}\,.
 \eeqc
 $$
-Since $u = 0$ on $\{s = t,\ \lambda \geq 0 \}$ and $u>0$ in $\{s > t,\ \lambda \geq 0 \}$, we have that $-u_t \geq 0$ on $\{s = t,\ \lambda \geq 0 \}$. Thus, $-u_t \geq 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\} = \{s = t,\ \lambda \geq 0 \}\cup \{t=0, \ \lambda \geq 0\}$. Furthermore, the asymptotic behavior of $u$ and the monotonicity properties of the layer solution $u_0$ yield
+In the lateral boundary $\partial_L \{ s > t > 0 ,\ \lambda > 0\} = \{s = t,\ \lambda \geq 0 \}\cup \{t=0, \ \lambda \geq 0\}$ we have  $-u_t \geq 0$. Indeed, $u_t= 0$ on $\{t=0, \ \lambda \geq 0\}$, and since $u = 0$ on $\{s = t,\ \lambda \geq 0 \}$ and $u>0$ in $\{s > t,\ \lambda \geq 0 \}$, it holds $-u_t \geq 0$ on $\{s = t,\ \lambda \geq 0 \}$. Furthermore, the asymptotic behavior of $u$ and the monotonicity properties of the layer solution $u_0$ yield
 $$
-\limsup_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_t(s,t,\lambda) \leq 0\,.
+\limsup_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_t(s,t,0) \leq 0\,.
 $$
 Indeed, 
 $$
-\partial_t U (x,\lambda) = -\dfrac{1}{\sqrt{2}} \partial_1 u_0\bpar{\dfrac{s-t}{\sqrt{2}}, \lambda} \leq 0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_t - \partial_t U) (\cdot,\lambda) }_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
+\partial_t U (x,0) = -\dfrac{1}{\sqrt{2}} \partial_1 u_0\bpar{\dfrac{s-t}{\sqrt{2}}, 0} \leq 0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_t - \partial_t U) (\cdot,0) }_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
 $$
 Thus, using again the maximum principle for the linearized operator we find that $-u_t \geq 0$ in $\{ s \geq t,\ \lambda \geq 0\}$.
 
@@ -1105,11 +1103,11 @@ d_\s \dfrac{\partial u_y}{\partial \nu^a}& = & f'(u)u_y& \text{ on }  \{ s > t >
 $$
 Note that, since $u$ vanishes at $\ccal \times [0, +\infty)$, $u_y = 0$ on $\{ s=t, \ \lambda \geq 0\}$. Moreover, $u_s\geq 0$ and $u_t = 0$ on $\{t=0, \ \lambda \geq 0\}$. Therefore, $u_y \geq 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\} = \{s = t,\ \lambda \geq 0 \}\cup \{t=0, \ \lambda \geq 0\}$. Furthermore, by the asymptotic behavior of $u$ and the monotonicity properties of the layer solution $u_0$ we have
 $$
-\liminf_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_y(s,t,\lambda) = 0\,,
+\liminf_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_y(s,t,0) = 0\,,
 $$
 since
 $$
-\partial_y U (x,\lambda) = \partial_y u_0(z,\lambda)=  0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_y - \partial_y U) (\cdot,\lambda) }_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
+\partial_y U (x,0) = \partial_y u_0(z,0)=  0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_y - \partial_y U) (\cdot,0) }_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
 $$
 Again, by using the maximum principle of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, we deduce that $u_y \geq 0$ in $\{ s \geq t,\ \lambda \geq 0\}$, and the strong maximum principle yields $u_y > 0$ on $\{ s > t,\ \lambda \geq 0\}$.
 
@@ -1122,11 +1120,11 @@ d_\s \dfrac{\partial u_{st}}{\partial \nu^a}& = & f'(u)u_{st} + f''(u)u_s u_t \g
 $$
 Here we have used that $f''(\tau) \leq 0$ if $\tau \in (0,1)$ and that $u_s u_t \leq 0$ in  $\{ s > t > 0 , \ \lambda = 0\}$. Note that, by symmetry, $u_{st}= 0$ on $\{s=t, \ \lambda \geq 0 \}$. Moreover, since $u_t(s,0,\lambda) = 0$ for every $s > 0$ and $\lambda \geq 0$, $u_{st}= 0$ on $\{t=0, \ \lambda \geq 0 \}$. Therefore, $u_{st}= 0$ on $\partial_L \{ s > t > 0 ,\ \lambda > 0\}$. In addition, by the asymptotic result of Lemma~\ref{Lemma:AsymptoticSecondDerivative} and the monotonicity properties of the layer solution $u_0$ (Lemma~\ref{Lemma:MonotonicityLayer}), we have
 $$
-\liminf_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_{st}(s,t,\lambda) \geq 0\,,
+\liminf_{\{s> t>0\} ,\ |(s,t)|\to +\infty}  u_{st}(s,t,0) \geq 0\,,
 $$
 since
 $$
-U_{st} (x,\lambda) = -\dfrac{1}{2} \partial_1^2 u_0\bpar{\dfrac{s-t}{\sqrt{2}}, \lambda} \geq 0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_{st} - U_{st})(\cdot,\lambda) }_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
+U_{st} (x,0) = -\dfrac{1}{2} \partial_1^2 u_0\bpar{\dfrac{s-t}{\sqrt{2}}, 0} \geq 0 \quad \text{ and } \lim_{R\to +\infty} \norm{(u_{st} - U_{st})(\cdot,0) }_{L^\infty(\R^{2m}\setminus B_{R})} = 0\,.
 $$
 Hence, by the maximum principle for the linearized operator (Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}), we deduce that $u_{st} \geq 0$ in $\{ s \geq t,\ \lambda \geq 0\}$, and the strong maximum principle yields $u_{st} > 0$ in $\{ s > t > 0,\ \lambda \geq 0\}$.
 \end{proof}
@@ -1141,23 +1139,27 @@ In this last section we prove our stability results. The first one is Theorem~\r
 
 \begin{proof}[Proof of Theorem~\ref{Thm:Stability}]
 
-Let us show that $\varphi = t^{-b}u_s - s^{-b}u_t$, with $b(b-m+2)+m-1\leq 0$ and $b>0$, is a positive supersolution of the linearized operator, that is, it satisfies 
+Let us show that $\varphi = t^{-b}u_s - s^{-b}u_t$, with $b(b-m+2)+m-1\leq 0$ and $b>0$, is a positive supersolution of the linearized operator. That is, it satisfies 
 \begin{equation}
 \label{Eq:VarphiSupersolution1}
+\varphi>0 \quad \text{ in } \overline{\R^{2m+1}_+}\setminus \{st=0, \ \lambda >0\}\,,
+\end{equation} 
+\begin{equation}
+\label{Eq:VarphiSupersolution2}
 -\div(\lambda^a \nabla \varphi) \geq 0 \quad \text{ in } \R^{2m+1}_+\setminus \{st=0, \ \lambda >0\}\,,
 \end{equation} 
 and  
 \begin{equation}
-\label{Eq:VarphiSupersolution2}
+\label{Eq:VarphiSupersolution3}
 \mathscr{L}_u \varphi \geq 0 \quad \text{ on } \R^{2m}  \setminus \{st=0\}\,.
 \end{equation} 
 
-First, note that $ \varphi(t,s,\lambda) = \varphi(s,t,\lambda) $ by the symmetry of $u$, and $\varphi>0$ in $\{st>0, \ \lambda \geq0\}$ by the monotonicity properties of $u$ (Proposition~\ref{Prop:MonotonicityProperties}). Moreover, \eqref{Eq:VarphiSupersolution2} follows readily, since $\varphi$  satisfies 
+Indeed, note that $\varphi>0$ in $\{s>t>0, \ \lambda \geq0\}$ by the monotonicity properties of $u$ (Proposition~\ref{Prop:MonotonicityProperties}). Since $\varphi$ is even with respect to the Simons cone, i.e., $ \varphi(t,s,\lambda) = \varphi(s,t,\lambda)$, it holds \eqref{Eq:VarphiSupersolution1}. Moreover, \eqref{Eq:VarphiSupersolution3} follows readily, since $\varphi$  satisfies 
 $$ 
 d_\s \frac{\partial \varphi}{\partial \nu^a} = f'(u)\,\varphi\,. 
 $$
 
-Let us show \eqref{Eq:VarphiSupersolution1}. Since $\varphi$ is even with respect to the Simons cone, it is enough to check that $\div{(\lambda^a\,\nabla\varphi)}\leq 0$ in $\{s>t>0, \ \lambda >0\}$. By using that $\div(\lambda^a\,\nabla u) = 0$, we obtain by direct computation that 
+Let us now show \eqref{Eq:VarphiSupersolution2}. Since $\varphi$ is even with respect to the Simons cone, it is enough to check that $\div{(\lambda^a\,\nabla\varphi)}\leq 0$ in $\{s>t>0, \ \lambda >0\}$. By using that $\div(\lambda^a\,\nabla u) = 0$, we obtain by direct computation that 
 \begin{align*}
 \lambda^{-a} \div(\lambda^a\,\nabla \varphi) &= b(b-m+2) \left( t^{-b-2}\,u_s - s^{-b-2}\,u_t \right) \\
 & \hspace{10mm} + (m-1) \left( t^{-b} s^{-2} u_s - s^{-b} t^{-2} u_t \right) \\
@@ -1181,12 +1183,12 @@ Note that the existence of $b>0$ such that $b(b-m+2)\leq -(m-1)$ is guaranteed b
 
 
 
-Finally, let us show that if we have a positive supersolution to the linearized operator on $\R^{2m}\setminus \{st=0\}$, we can deduce the stability of $u$. We have to check that \eqref{Eq:StabilityCondition} holds. Let us multiply \eqref{Eq:VarphiSupersolution1} by a nonnegative function $\zeta\in C^1(\R^{2m+1}_+)$ with compact support in $\{st>0, \ \lambda \geq0\}$ and integrate by parts. Thus, using \eqref{Eq:VarphiSupersolution2} we obtain
+Finally, let us show that since we have a positive supersolution to the linearized operator on $\R^{2m}\setminus \{st=0\}$, the stability of $u$ follows. We must check that \eqref{Eq:StabilityCondition} holds. To do it, let us first take nonnegative functions $\zeta\in C^1(\R^{2m+1}_+)$ with compact support in $\{st>0, \ \lambda \geq0\}$. Multiply \eqref{Eq:VarphiSupersolution2} by $\zeta$ and integrate by parts. Using \eqref{Eq:VarphiSupersolution3} we obtain
 \begin{equation}
 	\label{Eq:IneqStabilityProof1}	
 	\int_{\{st>0\}} f'(u) \, \varphi \, \zeta  \d x \leq d_\s \int_0^\infty \int_{\{st>0\}} \lambda^a \nabla{\varphi} \cdot \nabla{\zeta}  \d x \d \lambda\,.
 \end{equation}
-Now, let $\overline{\xi} \in C^\infty_0(\overline{\R^{2m+1}_+}\setminus \{st=0, \ \lambda \geq 0\})$. Since $\varphi > 0$ in $\{st>0, \lambda \geq 0\}$, taking $\zeta = \overline{\xi}^2/\varphi$ in \eqref{Eq:IneqStabilityProof1} and using the Cauchy-Schwarz inequality, we get
+Now, let $\overline{\xi} \in C^\infty_c(\overline{\R^{2m+1}_+}\setminus \{st=0, \ \lambda \geq 0\})$. Since $\varphi > 0$ in $\{st>0, \lambda \geq 0\}$, taking $\zeta = \overline{\xi}^2/\varphi$ in \eqref{Eq:IneqStabilityProof1} and using the Cauchy-Schwarz inequality, we get
 \begin{align*}
 \int_{\{st>0\}}  \! f'(u)\,\overline{\xi}^2 \d x &= \int_{\{st>0\}} \! f'(u)\,\varphi \frac{\overline{\xi}^2}{\varphi} \d x \leq d_\s \int_0^\infty \! \!  \int_{\{st>0\}} \! \lambda^a \nabla{\varphi} \cdot \nabla{\left(\frac{\overline{\xi}^2}{\varphi}\right)} \d x \d \lambda \\
 &= d_\s \int_0^\infty \! \! \int_{\{st>0\}}\!  \lambda^a\,\frac{2\overline{\xi}}{\varphi} \,\nabla \varphi\cdot \nabla \overline{\xi}  \d x \d \lambda - d_\s \int_0^\infty \! \!  \int_{\{st>0\}} \!  \lambda^a\,\frac{\overline{\xi}^2}{\varphi^2}|\nabla \varphi|^2  \d x \d \lambda \\
@@ -1194,7 +1196,7 @@ Now, let $\overline{\xi} \in C^\infty_0(\overline{\R^{2m+1}_+}\setminus \{st=0, 
 \end{align*}
 
 
-To conclude the proof, let us show that the last inequality holds for every smooth function $\xi$ with compact support in $\overline{\R^{2m+1}_+}$. This will give the stability of $u$. Take $\eta_\varepsilon\in C^\infty(\R)$ such that $0\leq \eta_\varepsilon \leq 1$ and
+To conclude the proof, let us show that the last inequality holds for every smooth function $\xi$ with compact support in $\overline{\R^{2m+1}_+}$. This will yield the stability of $u$. Take $\eta_\varepsilon\in C^\infty(\R)$ such that $0\leq \eta_\varepsilon \leq 1$ and
 $$ \eta_\varepsilon = \begin{cases}
 1 \ \ \ \text{ in } \ \ \ [\varepsilon, +\infty)\,,\\
 0 \ \ \ \text{ in } \ \ \ [0, \varepsilon/2)\,.\\
@@ -1209,7 +1211,7 @@ $$
 $$
 by letting $\varepsilon \to 0$, it is enough to show that
 $$ \int_{\R^{2m+1}_+} \lambda^a|\nabla\eta_\varepsilon(s)|^2 \d x \d \lambda  \to 0 \ \ \ \text{ as } \ \ \varepsilon \to 0\,,$$
-and the same for $\eta_\varepsilon(t)$. To see this, let $R>0$ be such that $\text{supp}(\xi)\subset \overline{B_R^+}$. Then, since $m\geq 3$,
+and the same with $\eta_\varepsilon(s)$ replaced by $\eta_\varepsilon(t)$. To see this, let $R>0$ be such that $\text{supp}(\xi)\subset \overline{B_R^+}$. Then, since $m\geq 3$,
 \begin{align*}
 \int_{\R^{2m+1}_+} \lambda^a|\nabla\eta_\varepsilon(s)|^2 \d x \d \lambda &\leq \frac{C}{\varepsilon^2} \int_0^R \d \lambda \, \lambda^a \int_0^\varepsilon \d s \, s^{m-1} \int_0^R \d t \,t^{m-1} \\
 &\leq C\,R^{m+a+1}\,\varepsilon^{m-2} \to 0 \ \ \ \text{ as } \ \ \varepsilon \to 0\,,
@@ -1220,7 +1222,7 @@ The computation is analogous for $\eta_\varepsilon(t)$.
 Finally, we present the proof of the stability of the Simons cone as a nonlocal $(2\s)$-minimal surface whenever $2m\geq 14$ and $\s\in(0,1/2)$.
 
 \begin{proof}[Proof of Corollary~\ref{Cor:SimonsConeStableDim14}]
-Let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahn} in dimension $2m\geq 14$. Consider the blow-down sequence $u_k(x) = u(kx)$ with $k\in \N$. Then, since $u$ is stable in such dimensions and $\s\in(0,1/2)$, by Thereom~2.6 in \cite{CabreCintiSerra-Stable} there exists a subsequence $k_j$ such that
+Let $u$ be the saddle-shaped solution of \eqref{Eq:AllenCahn} in dimension $2m\geq 14$. Consider the blow-down sequence $u_k(x) = u(kx)$ with $k\in \N$. On the one hand, since $u$ is stable in such dimensions and $\s\in(0,1/2)$, by Thereom~2.6 in \cite{CabreCintiSerra-Stable} there exists a subsequence $k_j$ such that
 $$ u_{k_j} \to \chi_{\Sigma}-\chi_{\R^{2m}\setminus\Sigma} \quad \textrm{ in } L^1(B_1) \quad \textrm{ as } k_j\to+\infty\,, $$
 for some cone $\Sigma$ that is a stable set for the fractional perimeter.
 
