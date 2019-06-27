@@ -208,7 +208,7 @@ Universitat Polit\`ecnica de Catalunya and BGSMath, Departament de Matem\`{a}tiq
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-In this paper we prove the uniqueness of the saddle-shaped solution to the semilinear nonlocal elliptic equation $\fraclaplacian u = f(u)$ in $\R^{2m}$, where $\s \in (0,1)$ and $f$ is of Allen-Cahn type. Moreover, we prove that this solution is stable if $2m\geq 14$. As a consequence of this result and the connection of the problem with nonlocal minimal surfaces, we show that the Simons cone $\setcond{(x', x'') \in \R^{m}\times \R^m}{|x'| = |x''|}$ is a stable nonlocal $(2\s)$-minimal surface in dimensions $2m\geq 14$.
+In this paper we prove the uniqueness of the saddle-shaped solution $u\colon \R^{2m} \to \R$ to the semilinear nonlocal elliptic equation $\fraclaplacian u = f(u)$ in $\R^{2m}$, where $\s \in (0,1)$ and $f$ is of Allen-Cahn type. Moreover, we prove that this solution is stable if $2m\geq 14$. As a consequence of this result and the connection of the problem with nonlocal minimal surfaces, we show that the Simons cone, defined by $\setcond{(x', x'') \in \R^{m}\times \R^m}{|x'| = |x''|}$, is a stable nonlocal $(2\s)$-minimal surface in dimensions $2m\geq 14$.
 
 Saddle-shaped solutions of the fractional Allen-Cahn equation are doubly radial, odd with respect to the Simons cone, and vanish only in this set. It was known that these solutions exist in all even dimensions and are unstable in dimensions $2$, $4$ and $6$. Thus, after our result, the stability remains an open problem only in dimensions $8$, $10$ and $12$.
 
@@ -299,10 +299,11 @@ d_\s \dfrac{\partial u}{\partial \nu^a} &=& f(u) & \textrm{ on } \partial \R^{n+
 \end{equation}
 
 We will always consider functions defined in $\R^{n+1}_+$ and not only in $\R^n$, and we will use the same letter to denote both the function and its trace on $\R^n$. Regarding sets in $\R^{n+1}_+$, we use the following notation. If $\Omega \subset \R^{n+1}_+$, we define
-$$
+\begin{equation}
+\label{Eq:DefBoundaries}
 \partial_L \Omega := \overline{\partial \Omega \cap \{\lambda > 0\}}
  \quad \text{ and } \quad \partial_0 \Omega := \partial \Omega \setminus \partial_L \Omega \subset \{\lambda = 0\}\,.
-$$
+\end{equation}
 We write
 $$
 B_{R}^+ := \setcond{(x,\lambda)\in \R^{n+1}_+}{|(x,\lambda)|< R},
@@ -464,16 +465,29 @@ The monotonicity properties (i) and (ii) were proved in the papers of Cinti \cit
 
 To conclude this introduction, let us comment briefly on the importance of problem \eqref{Eq:AllenCahn} and its relation with a conjecture of De Giorgi and the theory of minimal surfaces.
 
-The interest on problem~\eqref{Eq:AllenCahn} originates from a famous conjecture of De Giorgi for the classical Allen-Cahn equation. It reads as follows. Let $u$ be a bounded solution to $-\Delta  u = u - u^3 $ in $\R^n$ which is monotone in one direction, say $\partial_{x_n} u > 0$. Then, if $n\leq 8$, $u$ is one dimensional, i.e., $u$ depends only on one Euclidean variable. This conjecture was proved to be true in dimension $n=2$ by Ghoussoub and Gui in \cite{GhoussoubGui}, and in dimension $n=3$ by Ambrosio and Cabré in \cite{AmbrosioCabre}. For dimensions $4\leq n \leq 8$, it was established by Savin in \cite{Savin-DeGiorgi} but with the additional assumption 
+The interest on problem~\eqref{Eq:AllenCahn} originates from a famous conjecture of De Giorgi for the classical Allen-Cahn equation. It reads as follows. Let $u$ be a bounded solution to $-\Delta  u = u - u^3 $ in $\R^n$ which is monotone in one direction, say $\partial_{x_n} u > 0$. Then, if $n\leq 8$, $u$ is one dimensional, i.e., $u$ depends only on one Euclidean variable. This conjecture was proved to be true in dimension $n=2$ by Ghoussoub and Gui \cite{GhoussoubGui}, and in dimension $n=3$ by Ambrosio and Cabré \cite{AmbrosioCabre}. For dimensions $4\leq n \leq 8$, and under the additional assumption 
 \begin{equation}
 \label{Eq:SavinCondition}
-	\lim_{x_n \to \pm \infty} u(x',x_n) = \pm 1 \quad \text{ for all } x'\in \R^{n-1}\,.
+	\lim_{x_n \to \pm \infty} u(x',x_n) = \pm 1 \quad \text{ for all } x'\in \R^{n-1}\,,
 \end{equation}
-A counterexample to the conjecture in dimensions $n \geq 9$ was given by del~Pino, Kowalczyk and Wei in \cite{delPinoKowalczykWei}. 
+the conjecture was established by Savin \cite{Savin-DeGiorgi} (see also the previous work of Ghoussoub and Gui \cite{GhoussoubGuiOdd} in dimensions 4 and 5 for antisymmetric solutions). A counterexample to the conjecture in dimensions $n \geq 9$ was given by del~Pino, Kowalczyk and Wei \cite{delPinoKowalczykWei}. 
 
 The corresponding conjecture in the nonlocal setting, where one replaces the operator $-\Delta$ by $\fraclaplacian$, has been widely studied in the last years. In this framework, the conjecture has been proven to be true in dimension $n=2$ by Cabré and Solà-Morales in \cite{CabreSolaMorales} for $\s=1/2$, and extended to every power $0<\s<1$ by Cabré and Sire in \cite{CabreSireII} and also by Sire and Valdinoci in \cite{SireValdinoci}. In dimension $n=3$, the conjecture has been proved by Cabré and Cinti for $1/2 \leq \s < 1$ in \cite{CabreCinti-EnergyHalfL, CabreCinti-SharpEnergy} and by Dipierro, Farina, and Valdinoci for $0<\s<1/2$ in \cite{DipierroFarinaValdinoci}. Recently, in \cite{Savin-Fractional,Savin-Fractional2} Savin has established the validity of the conjecture in dimensions $4\leq n \leq 8$ and for $1/2 \leq \s < 1$, but assuming the additional hypothesis \eqref{Eq:SavinCondition}. Under the same extra assumption, the conjecture is true in the same dimensions for $0<\s<1/2$ and $\s$ close to $1/2$, as proved by Dipierro, Serra, and Valdinoci in \cite{DipierroSerraValdinoci}. The most recent result concerning the proof of the conjecture is the one by Figalli and Serra in \cite{FigalliSerra}, where they have established the conjecture in dimension $n=4$ and $\s=1/2$ without requiring the additional limiting assumption \eqref{Eq:SavinCondition}. Note that, without \eqref{Eq:SavinCondition}, the analogous result for the Laplacian in dimension $n=4$ is not known. In the forthcoming paper \cite{CabreCintiSerra-Stable}, Cabré, Cinti, and Serra prove the conjecture in dimension $n=4$ for $0<\s<1/2$ and $\s$ sufficiently close to $1/2$. A counterexample to the De Giorgi conjecture for fractional Allen-Cahn equation in dimensions $n \geq 9$ for $\s \in ( 1/2 , 1)$ has been very recently announced in \cite{ChanLiuWei}.
 
-Coming back to the local Allen-Cahn equation, while studying this conjecture by De Giorgi, another question arose naturally: do global minimizers in $\R^n$ of the Allen-Cahn energy have one-dimensional symmetry? A deep result from Savin \cite{Savin-DeGiorgi} states that in dimension $n \leq 7$ this is indeed true. On the other hand, it is conjectured that this is false for $n\geq 8$ and that the saddle-shaped solution is a counterexample (since the Simons cone is a global minimizer of the perimeter functional in these dimensions). The answer to this question would provide an alternative construction of a counterexample to the original conjecture of De Giorgi, different from the one of \cite{delPinoKowalczykWei}. This is due to a result by Jerison and Monneau \cite{JerisonMonneau}, where they show that a counterexample to the original conjecture of De Giorgi in $\R^{n+1}$ can be constructed with a rather natural procedure if there exists a global minimizer of $-\Delta u = f(u)$ in $\R^n$ which is bounded and even with respect to each coordinate. The saddle-shaped solution is of special interest in relation with the Jerison-Monneau program since it is even with respect to all the coordinate axis and it is expected to be a minimizer in high dimensions.
+Coming back to the local Allen-Cahn equation, while studying this conjecture by De Giorgi, another question arose naturally: do global minimizers in $\R^n$ of the Allen-Cahn energy have one-dimensional symmetry? A deep result from Savin \cite{Savin-DeGiorgi} states that in dimension $n \leq 7$ this is indeed true. On the other hand, Liu, Wang, and Wei \cite{LiuWangWei} have constructed minimizers in dimensions $n\geq 8$ which are not one-dimensional. We should mention that the same question for stable solutions (instead of minimizers) is still largely open, only solved in dimension $n=2$ (see \cite{GhoussoubGui,BerestyckiCaffarelliNiremberg-Qualitative}).
+
+
+%Let us make a brief remark on the recent result of Liu, Wang, and Wei \cite{LiuWangWei} concerning the existence of minimizers in $\R^8$ which are not one-dimensional. The authors proved that there exists an ordered family of solutions $W_\lambda$ with their zero level set being asymptotic to the cone $\ccal$. From this ordering, they can establish that each solution $W_\lambda$ is a minimizer of the Allen-Cahn equation. However, their construction only gives solutions $W_\lambda$ for which $\{W_\lambda = 0\}$ is far from the origin of $\R^8$ (corresponding to $\lambda$ large). Therefore, this family does not include the saddle-shaped solution ---the arguments in \cite{LiuWangWei} suggest that if the solutions $W_\lambda$ could be built for all values of the parameter $\lambda\geq 0$, the saddle-shaped solution would be the one for the limiting case $\lambda = 0$.
+
+
+\todo[inline]{ Acabar de escribir bien}
+The interest on the saddle-shaped solution comes from 
+finding a simple example of non one-dimensional minimizer of the Allen-Cahn equation (both local and fractional) in high dimensions, having the same role as the Simons cone for the theory of minimal surfaces. (Saddle solutions are expected be a more symetric example than the ones constructed in \cite{LiuWangWei} in the local case $\s = 1$). In the local setting, if the saddle-shaped solution was proved to be a miniminizer in some even dimension $2m$, we would automatically have a counterexample to the original  conjecture of De Giorgi in higher dimensions. This is due to a result by Jerison and Monneau \cite{JerisonMonneau}, where they show that such a counterexample in dimension $\R^{n+1}$ can be constructed with a rather natural procedure if there exists a global minimizer of $-\Delta u = f(u)$ in $\R^n$ which is bounded and even with respect to each coordinate. The saddle-shaped solution is of special interest in relation with the Jerison-Monneau program since it is even with respect to all the coordinate axis and it is expected to be a minimizer in high dimensions. If proved to be a minimizer, the saddle-shaped solution would provide an alternative construction of a counterexample to the original conjecture of De Giorgi, different from the one of \cite{delPinoKowalczykWei}.
+
+
+
+
+%On the other hand, it is conjectured that this is false for $n\geq 8$ and that the saddle-shaped solution is a counterexample (since the Simons cone is a global minimizer of the perimeter functional in these dimensions). The answer to this question would provide an alternative construction of a counterexample to the original conjecture of De Giorgi, different from the one of \cite{delPinoKowalczykWei}. This is due to a result by Jerison and Monneau \cite{JerisonMonneau}, where they show that a counterexample to the original conjecture of De Giorgi in $\R^{n+1}$ can be constructed with a rather natural procedure if there exists a global minimizer of $-\Delta u = f(u)$ in $\R^n$ which is bounded and even with respect to each coordinate. The saddle-shaped solution is of special interest in relation with the Jerison-Monneau program since it is even with respect to all the coordinate axis and it is expected to be a minimizer in high dimensions.
 
 Let us explain why the Allen-Cahn equation has a very strong connection with the theory of minimal surfaces. A deep result from the seventies by Modica and Mortola (see \cite{Modica,ModicaMortola}) states that considering an appropriately rescaled version of the Allen-Cahn equation, the corresponding energy functionals $\Gamma$-converge to the perimeter functional. Thus, the minimizers of the equation converge to the characteristic function of a set of minimal perimeter. This same fact holds for the equation with the fractional Laplacian, though we have two different scenarios depending on the parameter $\s \in (0,1)$. If $\s \geq 1/2$, the rescaled energy functionals associated to \eqref{Eq:AllenCahn} $\Gamma$-converge to the classical perimeter (see \cite{GiovanniBouchitteSeppecher,Gonzalez}), while in the case $\s \in (0,1/2)$ they $\Gamma$-converge to the fractional perimeter (see \cite{SavinValdinoci-GammaConvergence}). As a consequence, if the saddle-shaped solution was proved to be a minimizer in a certain dimension for some $\s \in (0,1/2)$, it would follow that the Simons cone $\ccal$ would be a minimizing nonlocal $(2\s)$-minimal surface in such dimensions. As mentioned before, this last statement is an open problem in any dimension. Our Corollary~\ref{Cor:SimonsConeStableDim14} on stability is related to this question, but for a weaker property than minimality.
 
@@ -493,7 +507,7 @@ The paper is organized as follows. In section \ref{Sec:MaximumPrinciple} we prov
 In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperator}, a maximum principle for the linearized operator. To prove it, we follow the ideas appearing in \cite{Cabre-Saddle}, where an analogous maximum principle is proved for the local case $\s = 1$. The proof for the Laplacian uses a maximum principle in ``narrow'' sets (see for instance \cite{Cabre-Topics,BerestyckiNirembergVaradhan}). In our case, the use of the extension problem requires a similar maximum principle but in pairs of sets that we will call ``extension-narrow''\!, defined next.
 
 \begin{definition}[``Extension-narrow'' pair of sets]
-	Let $\Omega \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma \subset \partial_0 \Omega$ be nonempty. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(\Omega,\Gamma,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
+	Let $\Omega \subset \R^{n+1}_+$ be an open set, not necessarily bounded, and let $\Gamma \subset \partial_0 \Omega$ be nonempty ---recall that $\partial_0 \Omega$ is defined by \eqref{Eq:DefBoundaries}. Given $\theta \in (0,1)$ and $a\in (-1,1)$, we define $R_a(\Omega,\Gamma,\theta) \in (0, +\infty]$ to be the smallest positive constant $R$ for which
 	\begin{equation}
 	\label{Eq:Narrow}
 	\dfrac{|B^+_R(x)\setminus \Omega|_a}{|B^+_R(x)|_a} \geq \theta \quad \text{ for every } x \in \Gamma\,,
@@ -508,6 +522,10 @@ In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperato
 \end{definition}
 
 Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in \Omega$, we recover the usual definition of ``narrow'' set. Here, instead, we only consider half-balls centered at points $x\in \Gamma \subset \partial_0\Omega$.
+
+\todo{Ejemplo}
+
+Let us remark that both sets $\Omega\in \R^{n+1}_+$ and $\Gamma\subset \partial_0\Omega$ play an important role in this notion of ``narrowness'', as illustrated in the following examples in $\R^2_+$. On the one hand, let $ \Omega_1 = \{\lambda>2(x-\varepsilon)\} \cap \{\lambda>-2(x+\varepsilon)\} \cap \{\lambda>0\}\subset \R^2_+ $ and let $\Gamma_1 = \partial_0 \Omega_1 = (-\varepsilon,\varepsilon)\subset \R$ ---see Figure 99(a). This pair has $R_0(\Omega_1,\Gamma_1,1/2) = +\infty$ for all $\varepsilon > 0$ even though $\Gamma_1$ is ``narrow'' in $\R$ in the usual sense if $\varepsilon$ is small enough. On the other hand, the pair consisting of $\Omega_2 = \{0<\lambda<\varepsilon\}$ and $\Gamma_2 = \partial_0 \Omega_2 = \R$ is ``extension-narrow'' if $\varepsilon$ is small enough, while $\Gamma_2$ is not ``narrow'' in the usual sense in $\R$ ---see Figure 99(b). 
 
 Once the quantity  $R_a(\Omega,\Gamma, \theta)$ is defined, we can state precisely the maximum principle in ``extension-narrow'' pairs.
 
@@ -531,7 +549,7 @@ Once the quantity  $R_a(\Omega,\Gamma, \theta)$ is defined, we can state precise
 
 
 
-Before proving this result, let us explain why we need to introduce the notion of ``extension-narrowness''\!. We will use this maximum principle in a pair $(\Omega, \Gamma)$ with $\Omega \subset \ocal \times (0,+\infty)$ and $\Gamma \subset \partial_0 \Omega$ in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ . In this case, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{2m+1}_+$, as in Figure~\ref{Fig:ExtensionNarrow}. However, $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled all $\ocal\times (0,+\infty)$. Thus, it follows readily that $(\Omega,\Gamma)$ is ``extension-narrow'' by using that balls in this notion are centered in $\Gamma$ (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
+Before proving this result, let us explain why we need to introduce the notion of ``extension-narrowness''\!. In the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} we will use this maximum principle in a pair $(\Omega, \Gamma)$ with $\Omega \subset \ocal \times (0,+\infty)$ and $\Gamma \subset \partial_0 \Omega$ in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ . In this case, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{2m+1}_+$, as in Figure~\ref{Fig:ExtensionNarrow}. However, $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled all $\ocal\times (0,+\infty)$. Thus, it follows readily that $(\Omega,\Gamma)$ is ``extension-narrow'' by using that balls in this notion are centered in $\Gamma$ (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
 
 \begin{figure}
 \input{ExtensionNarrow.tex}
@@ -1159,7 +1177,7 @@ $$
 d_\s \frac{\partial \varphi}{\partial \nu^a} = f'(u)\,\varphi\,. 
 $$
 
-Let us now show \eqref{Eq:VarphiSupersolution2}. Since $\varphi$ is even with respect to the Simons cone, it is enough to check that $\div{(\lambda^a\,\nabla\varphi)}\leq 0$ in $\{s>t>0, \ \lambda >0\}$. By using that $\div(\lambda^a\,\nabla u) = 0$, we obtain by direct computation that 
+Let us now show \eqref{Eq:VarphiSupersolution2}. Since $\varphi$ is even with respect to the Simons cone, it is enough to check that $\div{(\lambda^a\,\nabla\varphi)}\leq 0$ in $\{s>t>0, \ \lambda >0\}$. By using that $\div(\lambda^a\,\nabla u) = 0$, we obtain by a direct computation that 
 \begin{align*}
 \lambda^{-a} \div(\lambda^a\,\nabla \varphi) &= b(b-m+2) \left( t^{-b-2}\,u_s - s^{-b-2}\,u_t \right) \\
 & \hspace{10mm} + (m-1) \left( t^{-b} s^{-2} u_s - s^{-b} t^{-2} u_t \right) \\
