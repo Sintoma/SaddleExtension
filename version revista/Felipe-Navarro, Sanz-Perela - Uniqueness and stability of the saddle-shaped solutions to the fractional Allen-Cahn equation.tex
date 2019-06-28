@@ -12,7 +12,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[twoside,leqno,symbols-for-thanks, draft]{rmi}
+\documentclass[twoside,leqno,symbols-for-thanks]{rmi}
 \usepackage[colorlinks,linkcolor=black,citecolor=black,urlcolor=black, linktocpage=true,dvips]{hyperref}
 \usepackage{srcltx}
 \usepackage[english]{babel}
@@ -166,7 +166,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-In this paper we prove the uniqueness of the saddle-shaped solution $u\colon \R^{2m} \to \R$ to the semilinear nonlocal elliptic equation $\fraclaplacian u = f(u)$ in $\R^{2m}$, where $\s \in (0,1)$ and $f$ is of Allen-Cahn type. Moreover, we prove that this solution is stable if $2m\geq 14$. As a consequence of this result and the connection of the problem with nonlocal minimal surfaces, we show that the Simons cone, defined by $\setcond{(x', x'') \in \R^{m}\times \R^m}{|x'| = |x''|}$, is a stable nonlocal $(2\s)$-minimal surface in dimensions $2m\geq 14$.
+In this paper we prove the uniqueness of the saddle-shaped solution $u\colon \R^{2m} \to \R$ to the semilinear nonlocal elliptic equation $\fraclaplacian u = f(u)$ in $\R^{2m}$, where $\s \in (0,1)$ and $f$ is of Allen-Cahn type. Moreover, we prove that this solution is stable if $2m\geq 14$. As a consequence of this result and the connection of the problem with nonlocal minimal surfaces, we show that the Simons cone $\setcond{(x', x'') \in \R^{m}\times \R^m}{|x'| = |x''|}$ is a stable nonlocal $(2\s)$-minimal surface in dimensions $2m\geq 14$.
 
 Saddle-shaped solutions of the fractional Allen-Cahn equation are doubly radial, odd with respect to the Simons cone, and vanish only in this set. It was known that these solutions exist in all even dimensions and are unstable in dimensions $2$, $4$, and $6$. Thus, after our result, the stability remains an open problem only in dimensions $8$, $10$, and $12$.
 
@@ -240,11 +240,11 @@ In the nonlocal framework, there are only two works concerning saddle-shaped sol
 
 In the present paper, we prove further properties of these solutions, the main ones being uniqueness and, when $2m\geq 14$, stability. Uniqueness is important since then the saddle-shaped solution becomes a canonical object associated to the Allen-Cahn equation and the Simons cone. 
 
-In \cite{Cinti-Saddle,Cinti-Saddle2}, the main tool used is the extension problem for the fractional Laplacian, due to Caffarelli and Silvestre \cite{CaffarelliSilvestre} (see \eqref{Eq:AllenCahnWithExtension} below). This is also the approach of the present paper. It should be remarked that the extension technique has the limitation that it only works for the fractional Laplacian, and therefore the same arguments cannot be carried out for more general integro-differential operators of the form
+In \cite{Cinti-Saddle,Cinti-Saddle2}, the main tool used is the extension problem for the fractional Laplacian (see \eqref{Eq:AllenCahnWithExtension} below and \cite{CaffarelliSilvestre}). This is also the approach of the present paper. It should be remarked that the extension technique has the limitation that it only works for the fractional Laplacian, and therefore the same arguments cannot be carried out for more general integro-differential operators of the form
 $$
 L_K u(x) = \PV \int_{\R^n} \{u(x) - u(\tilde{x})\} K(x-\tilde{x})\d \tilde{x}.
 $$
-In two forthcoming papers \cite{FelipeSanz-Perela:IntegroDifferentialI,FelipeSanz-Perela:IntegroDifferentialII} we address this problem by studying saddle-shaped solutions to equation $L_K u = f(u)$ in $\R^{2m}$, where $L_K$ is an elliptic integro-differential operator of the previous form with a radially symmetric kernel $K$. One of the most basic tools that we need is a maximum principle for the operator acting on  functions which are odd with respect to the Simons cone. In \cite{FelipeSanz-Perela:IntegroDifferentialI} we find a sufficient condition to have such a maximum principle and, as we will see there, this will require a certain convexity property of the kernel $K$.
+In two forthcoming papers \cite{FelipeSanz-Perela:IntegroDifferentialI,FelipeSanz-Perela:IntegroDifferentialII} we address this problem by studying saddle-shaped solutions to equation $L_K u = f(u)$ in $\R^{2m}$, where $L_K$ is an elliptic integro-differential operator of the previous form with a radially symmetric kernel $K$. One of the most basic tools that we need is a maximum principle for the operator acting on  functions which are odd with respect to the Simons cone. In \cite{FelipeSanz-Perela:IntegroDifferentialI} we find a necessary and sufficient condition to have such a maximum principle and, as we will see there, this will require a certain convexity property of the kernel $K$.
 
 Let us now introduce the extension problem for the fractional Laplacian, which is the main tool used in this paper. First we should settle the notation. We call $\R^{n+1}_+ := \R^n \times (0, +\infty)$ and denote points by $(x,\lambda)\in \R^{n+1}_+$ with $x\in \R^n$ and $\lambda > 0$. As it is well known, see~\cite{CaffarelliSilvestre}, if $u:\R^{n+1}_+ \to \R$ solves $\div(\lambda^a \nabla u) = 0$ in $\R^{n+1}_+$ with $a=1-2\s$, then
 $$
@@ -433,7 +433,7 @@ The interest on problem~\eqref{Eq:AllenCahn} originates from a famous conjecture
 \end{equation}
 the conjecture was established by Savin \cite{Savin-DeGiorgi} (see also the previous work of Ghoussoub and Gui \cite{GhoussoubGui-odd} in dimensions 4 and 5 for antisymmetric solutions). A counterexample to the conjecture in dimensions $n \geq 9$ was given by del~Pino, Kowalczyk and Wei \cite{delPinoKowalczykWei}. 
 
-The corresponding conjecture in the nonlocal setting, where one replaces the operator $-\Delta$ by $\fraclaplacian$, has been widely studied in the last years. In this framework, the conjecture has been proven to be true in dimension $n=2$ by Cabr\'e and Sol\`a-Morales in \cite{CabreSolaMorales} for $\s=1/2$, and extended to every power $0<\s<1$ by Cabré and Sire in \cite{CabreSireII} and also by Sire and Valdinoci in \cite{SireValdinoci}. In dimension $n=3$, the conjecture has been proved by Cabr\'e and Cinti for $1/2 \leq \s < 1$ in \cite{CabreCinti-EnergyHalfL, CabreCinti-SharpEnergy} and by Dipierro, Farina, and Valdinoci for $0<\s<1/2$ in \cite{DipierroFarinaValdinoci}. Recently, in \cite{Savin-Fractional,Savin-Fractional2} Savin has established the validity of the conjecture in dimensions $4\leq n \leq 8$ and for $1/2 \leq \s < 1$, but assuming the additional hypothesis \eqref{Eq:SavinCondition}. Under the same extra assumption, the conjecture is true in the same dimensions for $0<\s<1/2$ and $\s$ close to $1/2$, as proved by Dipierro, Serra, and Valdinoci in \cite{DipierroSerraValdinoci}. The most recent result concerning the proof of the conjecture is the one by Figalli and Serra in \cite{FigalliSerra}, where they have established the conjecture in dimension $n=4$ and $\s=1/2$ without requiring the additional limiting assumption \eqref{Eq:SavinCondition}. Note that, without \eqref{Eq:SavinCondition}, the analogous result for the Laplacian in dimension $n=4$ is not known. In the forthcoming paper \cite{CabreCintiSerra-Stable}, Cabr\'e, Cinti, and Serra prove the conjecture in dimension $n=4$ for $0<\s<1/2$ and $\s$ sufficiently close to $1/2$. A counterexample to the De Giorgi conjecture for fractional Allen-Cahn equation in dimensions $n \geq 9$ for $\s \in ( 1/2 , 1)$ has been very recently announced in \cite{ChanLiuWei}.
+The corresponding conjecture in the nonlocal setting, where one replaces the operator $-\Delta$ by $\fraclaplacian$, has been widely studied in the last years. In this framework, the conjecture has been proven to be true in dimension $n=2$ by Cabr\'e and Sol\`a-Morales in \cite{CabreSolaMorales} for $\s=1/2$, and extended to every power $0<\s<1$ by Cabr\'e and Sire in \cite{CabreSireII} and also by Sire and Valdinoci in \cite{SireValdinoci}. In dimension $n=3$, the conjecture has been proved by Cabr\'e and Cinti for $1/2 \leq \s < 1$ in \cite{CabreCinti-EnergyHalfL, CabreCinti-SharpEnergy} and by Dipierro, Farina, and Valdinoci for $0<\s<1/2$ in \cite{DipierroFarinaValdinoci}. Recently, in \cite{Savin-Fractional,Savin-Fractional2} Savin has established the validity of the conjecture in dimensions $4\leq n \leq 8$ and for $1/2 \leq \s < 1$, but assuming the additional hypothesis \eqref{Eq:SavinCondition}. Under the same extra assumption, the conjecture is true in the same dimensions for $0<\s<1/2$ and $\s$ close to $1/2$, as proved by Dipierro, Serra, and Valdinoci in \cite{DipierroSerraValdinoci}. The most recent result concerning the proof of the conjecture is the one by Figalli and Serra in \cite{FigalliSerra}, where they have established the conjecture in dimension $n=4$ and $\s=1/2$ without requiring the additional limiting assumption \eqref{Eq:SavinCondition}. Note that, without \eqref{Eq:SavinCondition}, the analogous result for the Laplacian in dimension $n=4$ is not known. In the forthcoming paper \cite{CabreCintiSerra-Stable}, Cabr\'e, Cinti, and Serra prove the conjecture in dimension $n=4$ for $0<\s<1/2$ and $\s$ sufficiently close to $1/2$. A counterexample to the De Giorgi conjecture for fractional Allen-Cahn equation in dimensions $n \geq 9$ for $\s \in ( 1/2 , 1)$ has been very recently announced in \cite{ChanLiuWei}.
 
 Coming back to the local Allen-Cahn equation, while studying this conjecture by De Giorgi, another question arose naturally: do global minimizers in $\R^n$ of the Allen-Cahn energy have one-dimensional symmetry? A deep result from Savin \cite{Savin-DeGiorgi} states that in dimension $n \leq 7$ this is indeed true. On the other hand, Liu, Wang, and Wei \cite{LiuWangWei} have constructed minimizers in dimensions $n\geq 8$ which are not one-dimensional. We should mention that the same question for stable solutions (instead of minimizers) is still largely open, only solved in dimension $n=2$ (see \cite{GhoussoubGui,BerestyckiCaffarelliNiremberg-Qualitative}).
 
@@ -476,7 +476,7 @@ In this section we establish Proposition~\ref{Prop:MaxPrincipleLinearizedOperato
 Note that if in \eqref{Eq:Narrow} we consider $a=0$ and full balls centered at every point $x\in \Omega$, we recover the usual definition of ``narrow'' set. Here, instead, we only consider half-balls centered at points $x\in \Gamma \subset \partial_0\Omega$.
 
 
-Let us remark that both sets $\Omega\in \R^{n+1}_+$ and $\Gamma\subset \partial_0\Omega$ play an important role in this notion of ``narrowness'', as illustrated in the following examples in $\R^2_+$. On the one hand, let $ \Omega_1 = \{\lambda>2(x-\varepsilon)\} \cap \{\lambda>-2(x+\varepsilon)\} \cap \{\lambda>0\}\subset \R^2_+ $ and let $\Gamma_1 = \partial_0 \Omega_1 = (-\varepsilon,\varepsilon)\subset \R$ ---see Figure~\ref{Fig:Examples}~(a). This pair has $R_0(\Omega_1,\Gamma_1,1/2) = +\infty$ for all $\varepsilon > 0$ even though $\Gamma_1$ is ``narrow'' in $\R$ in the usual sense if $\varepsilon$ is small enough. On the other hand, the pair consisting of $\Omega_2 = \{0<\lambda<\varepsilon\}$ and $\Gamma_2 = \partial_0 \Omega_2 = \R$ is ``extension-narrow'' if $\varepsilon$ is small enough, while $\Gamma_2$ is not ``narrow'' in the usual sense in $\R$ ---see Figure~\ref{Fig:Examples}~(b). 
+Let us remark that both sets $\Omega\in \R^{n+1}_+$ and $\Gamma\subset \partial_0\Omega$ play an important role in this notion of ``narrowness'', as illustrated in the following examples in $\R^2_+$. On the one hand, let $ \Omega_1 = \{\lambda>(x-\varepsilon)/2\} \cap \{\lambda>-(x+\varepsilon)/2\} \cap \{\lambda>0\}\subset \R^2_+ $ and let $\Gamma_1 = \partial_0 \Omega_1 = (-\varepsilon,\varepsilon)\subset \R$ ---see Figure~\ref{Fig:Examples}~(a). This pair has $R_0(\Omega_1,\Gamma_1,1/2) = +\infty$ for all $\varepsilon > 0$ even though $\Gamma_1$ is ``narrow'' in $\R$ in the usual sense if $\varepsilon$ is small enough. On the other hand, the pair consisting of $\Omega_2 = \{0<\lambda<\varepsilon\}$ and $\Gamma_2 = \partial_0 \Omega_2 = \R$ is ``extension-narrow'' if $\varepsilon$ is small enough, while $\Gamma_2$ is not ``narrow'' in the usual sense in $\R$ ---see Figure~\ref{Fig:Examples}~(b). 
 
 \begin{figure}
 	\input{Examples.tex}
@@ -507,7 +507,7 @@ Once the quantity  $R_a(\Omega,\Gamma, \theta)$ is defined, we can state precise
 
 
 
-Before proving this result, let us explain why we need to introduce the notion of ``extension-narrowness''\!. In the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} we will use this maximum principle in a pair $(\Omega, \Gamma)$ with $\Omega \subset \ocal \times (0,+\infty)$ and $\Gamma \subset \partial_0 \Omega$ in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ . In this case, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{2m+1}_+$, as in Figure~\ref{Fig:ExtensionNarrow}. However, $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled all $\ocal\times (0,+\infty)$. Thus, it follows readily that $(\Omega,\Gamma)$ is ``extension-narrow'' by using that balls in this notion are centered in $\Gamma$ (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
+Before proving this result, let us explain why we need to introduce the notion of ``extension-narrowness''\!. In the proof of Proposition~\ref{Prop:MaxPrincipleLinearizedOperator} we will use this maximum principle in a pair $(\Omega, \Gamma)$ with $\Omega \subset \ocal \times (0,+\infty)$, and $\Gamma \subset \partial_0 \Omega$ in an $\varepsilon$-neighborhood in $\ocal$ of the cone $\ccal$ . In this case, $\Omega$ could  be very big (and not ``narrow'' in the usual sense) in $\R^{2m+1}_+$, as in Figure~\ref{Fig:ExtensionNarrow}. However, $\ocal^c\times (0,+\infty)$ is contained in the complement of $\Omega$ --- even if $\Omega$ filled all $\ocal\times (0,+\infty)$. Thus, it follows readily that $(\Omega,\Gamma)$ is ``extension-narrow'' by using that balls in this notion are centered in $\Gamma$ (see Corollary~\ref{Cor:MaxPrincipleNarrowSaddle} below for the details).
 
 \begin{figure}
 	\input{ExtensionNarrow.tex}
@@ -1243,7 +1243,7 @@ The authors thank Xavier Cabr\'e for his guidance and useful discussions on the 
 
 
 \bibitem{AlbertiBouchitteSeppecher}
-\RMIauthor{Alberti, G. and Bouchitt\'e, G. and Seppecher, P.}
+\RMIauthor{Alberti, G., Bouchitt\'e, G. and Seppecher, P.}
 \RMIpaper{Phase transition with the line-tension effect}
 \RMIjournal{Arch. Rational Mech. Anal.} {\bf 144} (1998), 1--46.
 
@@ -1251,40 +1251,40 @@ The authors thank Xavier Cabr\'e for his guidance and useful discussions on the 
 \bibitem{AmbrosioCabre}
 \RMIauthor{Ambrosio, L. and Cabr\'{e}, X.}
 \RMIpaper{Entire solutions of semilinear elliptic equations in $\mathbb{R}^3$ and a conjecture of De Giorgi}
-\RMIjournal{J. Amer. Math. Soc.} {\bf 167} (2000), 725--739.
+\RMIjournal{J. Amer. Math. Soc.} {\bf 13} (2000), 725--739.
 
 
 
 \bibitem{BerestyckiCaffarelliNiremberg-Qualitative}
-\RMIauthor{Berestycki, H. and Caffarelli, L. and Nirenberg, L.}
+\RMIauthor{Berestycki, H., Caffarelli, L. and Nirenberg, L.}
 \RMIpaper{Further qualitative properties for elliptic equations inunbounded domains}
 \RMIjournal{Ann. Scuola Norm. Sup. Pisa Cl. Sci. (4)} {\bf 25} (1997), 69--94.
 
 
 
 \bibitem{BerestyckiCaffarelliNiremberg-Monotonicity}
-\RMIauthor{Berestycki, H. and Caffarelli, L. and Nirenberg, L.}
+\RMIauthor{Berestycki, H., Caffarelli, L. and Nirenberg, L.}
 \RMIpaper{Monotonicity for elliptic equations in unbounded Lipschitz domains}
 \RMIjournal{Comm. Pure Appl. Math.} {\bf 50} (1997), 1089--1111.
 
 
 
 \bibitem{BerestyckiNirembergVaradhan}
-\RMIauthor{Berestycki, H. and Nirenberg, L. and Varadhan, S.~R.~S.}
+\RMIauthor{Berestycki, H., Nirenberg, L. and Varadhan, S.~R.~S.}
 \RMIpaper{The principal eigenvalue and maximum principle for second-order elliptic operators in general domains}
 \RMIjournal{Comm. Pure Appl. Math.} {\bf 47} (1994), 47--92.
 
 
 
 \bibitem{BogdanEtAl}
-\RMIauthor{Bogdan, K. and Grzywny, T. and Ryznar, M.}
+\RMIauthor{Bogdan, K., Grzywny, T. and Ryznar, M.}
 \RMIpaper{Heat kernel estimates for the fractional Laplacian with Dirichlet conditions}
 \RMIjournal{Ann. Probab.} {\bf 38} (2010), 1901--1923.
 
 
 
 \bibitem{BombieriDeGiorgiGiusti}
-\RMIauthor{Bombieri, E. and De Giorgi, E. and Giusti, E.}
+\RMIauthor{Bombieri, E., De Giorgi, E. and Giusti, E.}
 \RMIpaper{Minimal cones and the Bernstein problem}
 \RMIjournal{Inv. Math.} {\bf 7} (1969), 243--268.
 
@@ -1319,14 +1319,14 @@ The authors thank Xavier Cabr\'e for his guidance and useful discussions on the 
 
 
 \bibitem{CabreCintiSerra-Cones}
-\RMIauthor{Cabr\'e, X. and Cinti, E. and Serra, J.}
+\RMIauthor{Cabr\'e, X., Cinti, E. and Serra, J.}
 \RMIpaper{Stable $s$-minimal cones in $\mathbb{R}^3$ are flat for $s\sim1$}
 To appear in \RMIjournal{J. Reine Angew. Math.}
 
 
 
 \bibitem{CabreCintiSerra-Stable}
-\RMIauthor{Cabr\'e, X. and Cinti, E. and Serra, J.}
+\RMIauthor{Cabr\'e, X., Cinti, E. and Serra, J.}
 \RMIpaper{Stable solutions to the fractional Allen-Cahn equation}
 Preprint (2019).
 
@@ -1335,7 +1335,7 @@ Preprint (2019).
 \bibitem{CabreSireI}
 \RMIauthor{Cabr\'e, X. and Sire, Y.}
 \RMIpaper{Nonlinear equations for fractional Laplacians, I: Regularity, maximum principles, and Hamiltonian estimates}
-\RMIjournal{Ann. Inst. H. Poincaré Anal. Non Linéaire} {\bf 31} (2014), 23--53.
+\RMIjournal{Ann. Inst. H. Poincar\'e Anal. Non Lin\'eaire} {\bf 31} (2014), 23--53.
 
 
 
@@ -1377,14 +1377,14 @@ Preprint (2019).
 
 
 \bibitem{CaffarelliValdinoci}
-\RMIauthor{Caffarelli, L.  and Valdinoci, E. }
+\RMIauthor{Caffarelli, L.  and Valdinoci, E.}
 \RMIpaper{Regularity properties of nonlocal minimal surfaces via limiting arguments}
 \RMIjournal{Adv. Math.} {\bf 248} (2013), 843--871.
 
 
 
 \bibitem{ChanLiuWei}
-\RMIauthor{Chan, H. and Liu, Y. and Wei, J.}
+\RMIauthor{Chan, H., Liu, Y. and Wei, J.}
 \RMIpaper{A gluing construction for fractional elliptic equations. Part I: a model problem on the catenoid}
 Preprint (2017).
 
@@ -1405,35 +1405,35 @@ Preprint (2017).
 
 
 \bibitem{DangFifePeletier}
-\RMIauthor{Dang, H. and Fife, P.~C. and Peletier, L.~A.}
+\RMIauthor{Dang, H., Fife, P.~C. and Peletier, L.~A.}
 \RMIpaper{Saddle solutions of the bistable diffusion equation}
 \RMIjournal{Z. Angew. Math. Phys.} {\bf 43} (1992), 984--998.
 
 
 
 \bibitem{DaviladelPinoWei}
-\RMIauthor{D{\'a}vila, J and del Pino, M. and Wei, J.}
+\RMIauthor{D{\'a}vila, J., del Pino, M. and Wei, J.}
 \RMIpaper{Nonlocal $s$-minimal surfaces and Lawson cones}
 \RMIjournal{J. Differential Geom.} \textbf{109} (2018), 111--175.
 
 
 
 \bibitem{delPinoKowalczykWei}
-\RMIauthor{del Pino, M. and Kowalczyk, M. and Wei, J.}
+\RMIauthor{del Pino, M., Kowalczyk, M. and Wei, J.}
 \RMIpaper{On De Giorgi's conjecture in dimension $N\geq9$}
 \RMIjournal{Ann. of Math.} \textbf{174} (2011), 1485--1569.
 
 
 
 \bibitem{DipierroFarinaValdinoci}
-\RMIauthor{Dipierro, S. and Farina, A. and Valdinoci, E.}
+\RMIauthor{Dipierro, S., Farina, A. and Valdinoci, E.}
 \RMIpaper{A three-dimensional symmetry result for a phase transition equation in the genuinely nonlocal regime}
-\RMIjournal{Calc. Var. Partial Differential Equations} \textbf{57} (2018)
+\RMIjournal{Calc. Var. Partial Differential Equations} \textbf{57} (2018) Art. 15, 21.
 
 
 
 \bibitem{DipierroSerraValdinoci}
-\RMIauthor{Dipierro, S. and Serra, J. and Valdinoci, E.}
+\RMIauthor{Dipierro, S., Serra, J. and Valdinoci, E.}
 \RMIpaper{Improvement of flatness for nonlocal phase transitions}
 Preprint (2017)
 
@@ -1496,7 +1496,7 @@ Preprint (2017)
 
 
 \bibitem{LiuWangWei}
-\RMIauthor{Liu, Y. and Wang, K. and Wei, J.}
+\RMIauthor{Liu, Y., Wang, K. and Wei, J.}
 \RMIpaper{Global minimizers of the {A}llen-{C}ahn equation in dimension	{$n\geq 8$}}
 \RMIjournal{J. Math. Pures Appl. (9)} \textbf{108} (2017), 818--840.
 
@@ -1506,7 +1506,7 @@ Preprint (2017)
 \RMIauthor{Modica, L.}
 \RMIpaper{{$\Gamma $}-convergence to minimal surfaces problem and global solutions of {$\Delta u=2(u^{3}-u)$}}
 In \RMIbook{Proceedings of the {I}nternational {M}eeting on {R}ecent {M}ethods in {N}onlinear {A}nalysis
-({R}ome, 1978)}, Pitagora, Bologna (1979), 223--244.
+({R}ome, 1978)} Pitagora, Bologna (1979), 223--244.
 
 
 
@@ -1562,7 +1562,7 @@ Preprint (2018).
 
 \bibitem{Schatzman}
 \RMIauthor{Schatzman, M.}
-\RMIpaper{On the stability of the saddle solution of Allen–Cahn's equation}
+\RMIpaper{On the stability of the saddle solution of Allen-Cahn's equation}
 \RMIjournal{Proc. Roy. Soc. Edinburgh Sect. A} \textbf{125} (1995), 1241--1275.
 
 
